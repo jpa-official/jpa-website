@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PROJECT — JUNGLIM PLANNING ADVISORY ©2026</title>
+<meta name="description" content="JUNGLIM PLANNING ADVISORY — Project detail." />
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/project-detail.css" />
+</head>
+<body class="project-detail-page">
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">
+      <img src="images/jpa-logo.png" alt="jpa." class="loader-logo-img" />
+    </div>
+    <div class="loader-progress">
+      <div class="loader-bar"></div>
+      <div class="loader-percent"><span id="loaderPercent">0</span>%</div>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="jpa home">
+      <img src="images/jpa-logo.png" alt="jpa." class="logo-img" />
+    </a>
+    <nav class="main-nav">
+      <a href="about.html">ABOUT</a>
+      <a href="services.html">SERVICES</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="index.html#contact">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+<main id="pdMain">
+
+  <!-- HERO -->
+  <section class="pd-hero" id="pdHero">
+    <h1 class="pd-title" id="pdTitle">PROJECT NAME</h1>
+    <p class="pd-name-ko" id="pdNameKo"></p>
+  </section>
+
+  <!-- META ROW -->
+  <section class="pd-meta">
+    <div class="pd-meta-row">
+      <div class="pd-meta-col">
+        <span class="pd-meta-label">LOCATION</span>
+        <span class="pd-meta-val" id="pdMetaLocation">—</span>
+      </div>
+      <div class="pd-meta-col">
+        <span class="pd-meta-label">YEAR</span>
+        <span class="pd-meta-val" id="pdMetaYear">—</span>
+      </div>
+      <div class="pd-meta-col">
+        <span class="pd-meta-label">CATEGORY</span>
+        <span class="pd-meta-val" id="pdMetaCategory">—</span>
+      </div>
+      <div class="pd-meta-col">
+        <span class="pd-meta-label">SCOPE</span>
+        <span class="pd-meta-val" id="pdMetaScope">—</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN IMAGE -->
+  <section class="pd-main-img" id="pdMainImg"></section>
+
+  <!-- BODY -->
+  <section class="pd-body-section" id="pdBodySection">
+    <div class="pd-body-inner">
+      <div class="pd-body-ko" id="pdBodyKo"></div>
+      <div class="pd-body-en" id="pdBodyEn"></div>
+    </div>
+  </section>
+
+  <!-- EXTRA IMAGES -->
+  <section class="pd-extra-imgs" id="pdExtraImgs"></section>
+
+  <!-- PREV / NEXT -->
+  <section class="pd-nav-section">
+    <a class="pd-nav-link pd-prev" id="pdPrev" href="#">
+      <span class="pd-nav-arrow">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="pd-nav-meta">
+        <span class="pd-nav-label">PREV PROJECT</span>
+        <span class="pd-nav-name" id="pdPrevName">—</span>
+      </span>
+    </a>
+    <a class="pd-nav-link pd-next" id="pdNext" href="#">
+      <span class="pd-nav-meta pd-nav-meta-right">
+        <span class="pd-nav-label">NEXT PROJECT</span>
+        <span class="pd-nav-name" id="pdNextName">—</span>
+      </span>
+      <span class="pd-nav-arrow">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+    </a>
+  </section>
+
+</main>
+
+<!-- NOT FOUND -->
+<section class="pd-notfound" id="pdNotFound" hidden>
+  <div class="pd-nf-inner">
+    <span class="pd-nf-label">404</span>
+    <h2 class="pd-nf-title">PROJECT NOT FOUND</h2>
+    <p>요청하신 프로젝트를 찾을 수 없습니다.</p>
+    <a href="projects.html" class="pd-back-link">← BACK TO PROJECTS</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-col">
+      <p>JUNGLIM PLANNING ADVISORY</p>
+      <a href="mailto:official@jpa.company">official@jpa.company</a>
+      <p>+82 2 708 8548</p>
+    </div>
+    <div class="footer-col footer-links">
+      <a href="about.html">ABOUT</a>
+      <a href="services.html">SERVICES</a>
+      <a href="projects.html">PROJECTS</a>
+    </div>
+  </div>
+  <div class="footer-mega">
+    <h2 class="mega-title">
+      <span>JUNGLIM PLANNING</span>
+      <span>ADVISORY ©2026.</span>
+    </h2>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/projects-data.js"></script>
+<script src="js/project-detail.js"></script>
+</body>
+</html>

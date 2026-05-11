@@ -1,0 +1,281 @@
+﻿/* ============================================
+   PROJECTS PAGE
+   ============================================ */
+
+.pj-main {
+  padding-top: 100px;
+}
+
+/* ---------- HERO ---------- */
+.pj-hero {
+  padding: 60px 40px 80px;
+}
+.pj-hero-title {
+  font-family: 'Switzer', sans-serif;
+  font-weight: 600;
+  font-size: clamp(52px, 9.5vw, 156px);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+/* ---------- FILTER ---------- */
+.pj-filter-wrap {
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+  padding: 0 40px;
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+.pj-filter {
+  display: flex;
+  flex: 1;
+  gap: 0;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.pj-filter::-webkit-scrollbar { display: none; }
+
+/* view toggle */
+.pj-view-toggle {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  border-left: 1px solid rgba(0,0,0,0.15);
+  padding-left: 20px;
+  flex-shrink: 0;
+}
+.pj-view-btn {
+  appearance: none;
+  background: transparent;
+  border: none;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  opacity: 0.3;
+  transition: opacity 0.25s ease, background 0.25s ease;
+  cursor: pointer;
+}
+.pj-view-btn svg { width: 18px; height: 18px; }
+.pj-view-btn:hover { opacity: 0.6; }
+.pj-view-btn.active { opacity: 1; background: rgba(0,0,0,0.06); }
+
+.pj-filter-btn {
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--black);
+  padding: 18px 20px;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.3s ease, border-bottom-color 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.pj-filter-btn:first-child { padding-left: 0; }
+.pj-filter-btn:hover { opacity: 0.75; }
+.pj-filter-btn.active {
+  opacity: 1;
+  border-bottom-color: var(--black);
+}
+
+/* ---------- PROJECT LIST ---------- */
+.pj-list {
+  border-top: 1px solid var(--black);
+}
+
+.pj-item {
+  display: block;
+  text-decoration: none;
+  color: var(--black);
+  border-bottom: 1px solid var(--black);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--transition), transform 0.7s var(--transition);
+}
+.pj-item.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pj-item-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--black);
+}
+.pj-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s var(--transition);
+}
+.pj-item:hover .pj-item-img img {
+  transform: scale(1.03);
+}
+.pj-item-img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #111;
+}
+
+.pj-item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 22px 40px 30px;
+  gap: 20px;
+}
+.pj-item-name {
+  font-family: 'Switzer', sans-serif;
+  font-weight: 600;
+  font-size: clamp(16px, 2vw, 24px);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.pj-item-desc {
+  font-size: 13px;
+  opacity: 0.6;
+  letter-spacing: 0.01em;
+  font-family: 'Pretendard Variable', Pretendard, sans-serif;
+}
+.pj-item-cat {
+  font-family: 'Switzer', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding-top: 4px;
+  flex-shrink: 0;
+}
+
+.pj-empty {
+  padding: 80px 40px;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  font-weight: 600;
+  opacity: 0.4;
+}
+
+/* ---------- LIST VIEW ---------- */
+.pj-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0 40px;
+  min-height: 76px;
+  border-bottom: 1px solid var(--black);
+  text-decoration: none;
+  color: var(--black);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s var(--transition), transform 0.6s var(--transition), color 0.4s var(--transition);
+}
+.pj-row.in-view { opacity: 1; transform: translateY(0); }
+.pj-row::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--black);
+  transform: translateY(101%);
+  transition: transform 0.5s var(--transition);
+  z-index: -1;
+}
+.pj-row:hover::before { transform: translateY(0); }
+.pj-row:hover { color: var(--white); }
+
+.pj-row-num {
+  font-family: 'Switzer', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  opacity: 0.35;
+  width: 48px;
+  flex-shrink: 0;
+}
+.pj-row-name {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 32px 0 0;
+}
+.pj-row-en {
+  font-family: 'Switzer', sans-serif;
+  font-weight: 600;
+  font-size: clamp(14px, 1.6vw, 20px);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+.pj-row-ko {
+  font-family: 'Pretendard Variable', Pretendard, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.5;
+  letter-spacing: 0;
+}
+.pj-row-cat {
+  font-family: 'Switzer', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  width: 130px;
+  flex-shrink: 0;
+}
+.pj-row-loc {
+  font-family: 'Switzer', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  opacity: 0.45;
+  width: 90px;
+  flex-shrink: 0;
+  text-align: right;
+}
+.pj-row-year {
+  font-family: 'Switzer', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  opacity: 0.45;
+  width: 54px;
+  flex-shrink: 0;
+  text-align: right;
+}
+.pj-row:hover .pj-row-num,
+.pj-row:hover .pj-row-ko,
+.pj-row:hover .pj-row-cat,
+.pj-row:hover .pj-row-loc,
+.pj-row:hover .pj-row-year { opacity: 0.65; }
+
+@media (max-width: 768px) {
+  .pj-hero { padding: 40px 20px 50px; }
+  .pj-filter-wrap { padding: 0 20px; }
+  .pj-filter-btn { padding: 16px 14px; font-size: 10px; }
+  .pj-item-info { padding: 16px 20px 24px; flex-direction: column; gap: 8px; }
+  .pj-row { padding: 0 20px; min-height: 68px; }
+  .pj-row-cat, .pj-row-loc, .pj-row-year { display: none; }
+  .pj-view-toggle { padding-left: 12px; }
+}

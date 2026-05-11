@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PROJECTS — JUNGLIM PLANNING ADVISORY ©2026</title>
+<meta name="description" content="JUNGLIM PLANNING ADVISORY — Selected projects." />
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/projects.css" />
+</head>
+<body class="projects-page">
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">
+      <img src="images/jpa-logo.png" alt="jpa." class="loader-logo-img" />
+    </div>
+    <div class="loader-progress">
+      <div class="loader-bar"></div>
+      <div class="loader-percent"><span id="loaderPercent">0</span>%</div>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="jpa home">
+      <img src="images/jpa-logo.png" alt="jpa." class="logo-img" />
+    </a>
+    <nav class="main-nav">
+      <a href="about.html">ABOUT</a>
+      <a href="services.html">SERVICES</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="index.html#contact">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+<main class="pj-main">
+
+  <!-- HERO -->
+  <section class="pj-hero">
+    <h1 class="pj-hero-title">END-TO-END<br>SPATIAL SOLUTIONS</h1>
+  </section>
+
+  <!-- FILTER -->
+  <div class="pj-filter-wrap">
+    <div class="pj-filter" id="projFilter">
+      <button class="pj-filter-btn active" data-filter="all">ALL</button>
+      <button class="pj-filter-btn" data-filter="Mixed-use">MIXED-USE</button>
+      <button class="pj-filter-btn" data-filter="Office">OFFICE</button>
+      <button class="pj-filter-btn" data-filter="Housing">HOUSING</button>
+      <button class="pj-filter-btn" data-filter="Industrial">INDUSTRIAL</button>
+      <button class="pj-filter-btn" data-filter="Retail">RETAIL</button>
+      <button class="pj-filter-btn" data-filter="Hospitality">HOSPITALITY</button>
+      <button class="pj-filter-btn" data-filter="Metaverse">METAVERSE</button>
+    </div>
+    <div class="pj-view-toggle" id="viewToggle">
+      <button class="pj-view-btn active" data-view="gallery" title="Gallery view" aria-label="Gallery view">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="7" height="7" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="11" y="2" width="7" height="7" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="2" y="11" width="7" height="7" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="11" y="11" width="7" height="7" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </button>
+      <button class="pj-view-btn" data-view="list" title="List view" aria-label="List view">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="2" y1="5" x2="18" y2="5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="2" y1="10" x2="18" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="2" y1="15" x2="18" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- PROJECT LIST -->
+  <div class="pj-list" id="pjList"></div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-col">
+      <p>JUNGLIM PLANNING ADVISORY</p>
+      <a href="mailto:official@jpa.company">official@jpa.company</a>
+      <p>+82 2 708 8548</p>
+    </div>
+    <div class="footer-col footer-links">
+      <a href="about.html">ABOUT</a>
+      <a href="services.html">SERVICES</a>
+      <a href="projects.html">PROJECTS</a>
+    </div>
+  </div>
+  <div class="footer-mega">
+    <h2 class="mega-title">
+      <span>JUNGLIM PLANNING</span>
+      <span>ADVISORY ©2026.</span>
+    </h2>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/projects-data.js"></script>
+<script src="js/projects.js"></script>
+</body>
+</html>
