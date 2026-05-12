@@ -13,8 +13,7 @@
   const project = PROJECTS.find(p => p.id === id);
 
   if (!project) {
-    if ($main) $main.style.display = 'none';
-    if ($notFound) $notFound.hidden = false;
+    window.location.href = 'projects.html';
     return;
   }
 
