@@ -5,11 +5,18 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ---------- LOADER PARTICLES ---------- */
+  /* ---------- LOADER ---------- */
   const loader = document.getElementById('loader');
   const canvas = document.getElementById('loaderCanvas');
-  const ctx    = canvas.getContext('2d');
 
+  /* 캔버스 없는 페이지(about, projects 등)는 로더 즉시 숨김 */
+  if (!canvas) {
+    if (loader) {
+      loader.classList.add('hidden');
+      document.body.classList.add('loaded');
+    }
+  } else {
+  const ctx = canvas.getContext('2d');
   canvas.width  = window.innerWidth;
   canvas.height = window.innerHeight;
 
@@ -101,7 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     requestAnimationFrame(frame);
-  });
+  }); // _logoReady.then
+  } // canvas 존재 시 블록 끝
 
   /* ---------- HEADER HIDE ON SCROLL DOWN ---------- */
   const header = document.getElementById('siteHeader');
