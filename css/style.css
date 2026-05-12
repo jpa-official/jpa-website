@@ -56,67 +56,15 @@ button { font-family: inherit; }
 .loader {
   position: fixed; inset: 0;
   background: var(--black);
-  color: var(--white);
   z-index: 10000;
-  display: flex; align-items: center; justify-content: center;
-  flex-direction: column;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 .loader.hidden { opacity: 0; visibility: hidden; }
 
-.loader-inner {
-  text-align: center;
-  width: 90%; max-width: 500px;
-}
-.loader-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 1;
-}
-.loader-logo-img {
-  width: clamp(180px, 40vw, 420px);
-  height: auto;
+#loaderCanvas {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
   display: block;
-  /* 검정 로고 → 어두운 로더 배경 위에서 흰색으로 반전 */
-  filter: invert(1);
-  opacity: 0;
-  transform: translateY(40px) scale(0.96);
-  animation: logoIn 0.9s var(--transition) 0.2s forwards;
-}
-
-@keyframes logoIn {
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-.loader-progress {
-  margin-top: 40px;
-  position: relative;
-}
-.loader-bar {
-  width: 100%; height: 1px;
-  background: rgba(255,255,255,0.2);
-  position: relative;
-  overflow: hidden;
-}
-.loader-bar::after {
-  content: '';
-  position: absolute; left: 0; top: 0; bottom: 0;
-  width: 0%;
-  background: var(--white);
-  animation: loadBar 2s ease forwards;
-}
-@keyframes loadBar {
-  to { width: 100%; }
-}
-.loader-percent {
-  margin-top: 12px;
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  opacity: 0.7;
 }
 
 /* ============================================
@@ -140,7 +88,7 @@ button { font-family: inherit; }
   color: var(--white);
 }
 .logo {
-  width: 78px;
+  width: 60px;
   display: block;
   margin-right: auto;
   margin-left: 0;
