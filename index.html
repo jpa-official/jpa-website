@@ -18,15 +18,7 @@
 
 <!-- LOADER / INTRO -->
 <div class="loader" id="loader">
-  <div class="loader-inner">
-    <div class="loader-logo">
-      <img src="images/jpa-logo.png" alt="jpa." class="loader-logo-img" />
-    </div>
-    <div class="loader-progress">
-      <div class="loader-bar"></div>
-      <div class="loader-percent"><span id="loaderPercent">0</span>%</div>
-    </div>
-  </div>
+  <canvas id="loaderCanvas"></canvas>
 </div>
 
 
@@ -198,6 +190,7 @@
 </footer>
 
 <script src="js/projects-data.js"></script>
+<script src="js/logo-data.js"></script>
 <script src="js/main.js"></script>
 <script>
   /* Contact form — Formspree AJAX submit */
