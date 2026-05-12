@@ -27,7 +27,7 @@ window.PROJECTS = [
   },
   {
     id: 'tea-the-han',
-    thumbnail: '',
+    thumbnail: 'images/projects/tea-the-han.jpg',
     name: 'Tea the Han',
     nameKo: '북촌 티더한',
     desc: 'HAN_북촌 TEA THE HAN 공간브랜딩 및 공간경험·환경디자인',
@@ -320,7 +320,7 @@ window.PROJECTS = [
   },
   {
     id: 'nft-lifestyle-platform',
-    thumbnail: '',
+    thumbnail: 'images/projects/nft-lifestyle-platform.png',
     name: 'NFT Lifestyle Platform',
     nameKo: '건축 및 공간 NFT 라이프스타일 플랫폼 구축',
     desc: '건축 및 공간 NFT 라이프스타일 플랫폼 구축',
@@ -342,7 +342,7 @@ window.PROJECTS = [
   },
   {
     id: 'lgbr-senior-residence',
-    thumbnail: '',
+    thumbnail: 'images/projects/lgbr-senior-residence.jpg',
     name: 'LGBR Senior Residence',
     nameKo: 'LGBR 공간연구소 시니어주거 미래전망, 공간 가이드라인 수립',
     desc: 'LGBR 공간연구소 시니어주거 미래전망, 공간 가이드라인 수립',
@@ -364,7 +364,7 @@ window.PROJECTS = [
   },
   {
     id: 'crackin',
-    thumbnail: '',
+    thumbnail: 'images/projects/crackin.jpg',
     name: "Crack'in",
     nameKo: '크래킹커피 1호점 — 공간기획 및 공간경험설계',
     desc: '크래킹커피 1호점 — 공간기획 및 공간경험설계',
@@ -386,7 +386,7 @@ window.PROJECTS = [
   },
   {
     id: 'katsu-shoshin',
-    thumbnail: '',
+    thumbnail: 'images/projects/katsu-shoshin.jpg',
     name: 'Katsu Shoshin',
     nameKo: '카츠쇼신 1호점 — 공간기획 및 공간경험설계',
     desc: '카츠쇼신 1호점 — 공간기획 및 공간경험설계',
@@ -408,7 +408,7 @@ window.PROJECTS = [
   },
   {
     id: 'slipper-mansion',
-    thumbnail: '',
+    thumbnail: 'images/projects/slipper-mansion.jpg',
     name: 'Slipper Mansion',
     nameKo: 'jpa. 브랜디드 스페이스 — 슬리퍼맨션',
     desc: 'jpa. 브랜디드 스페이스 — 슬리퍼맨션',
