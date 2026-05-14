@@ -427,5 +427,21 @@ window.PROJECTS = [
       'Slipper Mansion is a space independently planned and designed by jpa, serving both as a workplace for its members and as a testbed for its spatial business. Based on the experience of taking off one\'s shoes and the comfort and inspiration associated with home, it was conceived under the concept of a "Home-like Studio."',
       'It includes a variety of spatial settings such as the Idea LAB, Personal Zone, Chill Lounge, and Nomadic Terrace, each designed to support different work styles and needs. It was also planned as a creative studio for designers and marketers, while accommodating brand pop-ups, small gatherings, and rental events. Visual elements—including signage, furniture, and even the slippers—were all custom-designed to create a consistent and cohesive experience.'
     ]
+  },
+  {
+    id: 'luxury-house-hildesheim',
+    thumbnail: '',
+    name: 'Luxury House Hildesheim',
+    nameKo: '힐데스하임 고급 주택 공간 환경 설계',
+    desc: '힐데스하임 고급 주택 공간 환경 설계',
+    category: 'Housing',
+    location: 'OCHANG',
+    year: '2024',
+    client: 'Confidential',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '',
+    body: [],
+    bodyEn: []
   }
 ];
