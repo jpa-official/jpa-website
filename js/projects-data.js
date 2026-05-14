@@ -320,7 +320,7 @@ window.PROJECTS = [
   },
   {
     id: 'nft-lifestyle-platform',
-    thumbnail: 'images/projects/nft-lifestyle-platform.png',
+    thumbnail: 'images/projects/nft-lifestyle-platform.jpg',
     name: 'NFT Lifestyle Platform',
     nameKo: '건축 및 공간 NFT 라이프스타일 플랫폼 구축',
     desc: '건축 및 공간 NFT 라이프스타일 플랫폼 구축',
