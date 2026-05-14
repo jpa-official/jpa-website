@@ -592,7 +592,10 @@
   .cic-intro { gap: 0; padding-top: 20px; }
   .cic-title { display: none; }
   .process-intro p { font-size: 13px; line-height: 1.6; }
-  .proc-step { padding: 20px 16px 16px; }
+  .process { padding-bottom: 40px; }
+  .proc-step { padding: 16px 14px 14px; gap: 8px; }
+  .proc-step p { margin-top: 4px; }
+  .proc-arrow { padding: 2px 0; }
 }
 
 /* ---------- ACTIVE MENU ---------- */
