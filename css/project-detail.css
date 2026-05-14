@@ -246,8 +246,10 @@
   .project-detail-page main { padding-top: 65px; }
   .pd-hero { padding: 20px 20px 24px; }
   .pd-meta { padding: 0 20px; }
-  .pd-meta-row { flex-wrap: wrap; gap: 0; }
-  .pd-meta-col { padding: 16px 20px 16px 0; margin-right: 20px; min-width: 100px; }
+  .pd-meta-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .pd-meta-col { border-right: none; margin-right: 0; padding: 16px 0; }
+  .pd-meta-col:nth-child(odd) { padding-right: 16px; }
+  .pd-meta-label { letter-spacing: 0.06em; }
   .pd-body-section { padding: 40px 20px 60px; }
   .pd-body-inner { grid-template-columns: 1fr; gap: 30px; }
   .pd-nav-section { grid-template-columns: 1fr; }
