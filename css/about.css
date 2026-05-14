@@ -579,11 +579,10 @@
 @media (max-width: 768px) {
   .about-hero-desc { font-size: 13px; line-height: 1.6; }
   .intro-body { font-size: 13px; gap: 16px; line-height: 1.6; }
-  .cic-body { font-size: 13px; gap: 14px; line-height: 1.6; }
+  .cic-body { font-size: 13px; line-height: 1.6; font-weight: 500; letter-spacing: -0.01em; gap: 14px; }
   .phi-content p { font-size: 13px; line-height: 1.6; }
   .cic-section .section-head { padding-bottom: 0; }
   .cic-intro { padding-top: 20px; padding-bottom: 40px; }
-  .cic-body { font-size: 13px; line-height: 1.6; font-weight: 350; letter-spacing: 0; }
   .phi-content h3 { font-size: 22px; }
   .process-intro p { font-size: 13px; line-height: 1.6; }
   .process { padding-bottom: 40px; }
