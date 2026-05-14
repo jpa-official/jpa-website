@@ -173,15 +173,17 @@ button { font-family: inherit; }
 @media (max-width: 768px) {
   .site-header { padding: 18px 20px; }
   .logo { width: 46px; }
-  .main-nav { gap: 12px; flex-wrap: nowrap; }
-  .main-nav a { font-size: 10px; letter-spacing: 0.08em; }
+  .main-nav {
+    gap: 16px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .main-nav::-webkit-scrollbar { display: none; }
+  .main-nav a { font-size: 10px; letter-spacing: 0.06em; }
   .main-nav a[href="#contact"],
   .main-nav a[href="index.html#contact"] { display: none; }
-}
-
-@media (max-width: 480px) {
-  .main-nav { gap: 8px; }
-  .main-nav a { font-size: 8.5px; letter-spacing: 0.06em; }
 }
 
 /* ============================================
