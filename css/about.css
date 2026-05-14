@@ -584,10 +584,10 @@
 }
 
 @media (max-width: 768px) {
-  .about-hero-desc { font-size: 12px; }
-  .intro-body { font-size: 12px; gap: 16px; }
-  .cic-body { font-size: 12px; gap: 14px; }
-  .phi-content p { font-size: 12px; }
+  .about-hero-desc { font-size: 12px; line-height: 1.6; }
+  .intro-body { font-size: 12px; gap: 16px; line-height: 1.6; }
+  .cic-body { font-size: 12px; gap: 14px; line-height: 1.6; }
+  .phi-content p { font-size: 12px; line-height: 1.6; }
 }
 
 /* ---------- ACTIVE MENU ---------- */
