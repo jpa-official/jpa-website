@@ -440,8 +440,14 @@ window.PROJECTS = [
     client: 'Confidential',
     scopeCode: 'DS · SP · SD',
     scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: '',
-    body: [],
-    bodyEn: []
+    summary: '주택단지 내 가장 높은 지점에 위치한 본 대지는 전면으로 시내 전경과 단지 조경을 동시에 조망할 수 있는 입지적 특성을 지니고 있습니다.',
+    body: [
+      '주택단지 내 가장 높은 지점에 위치한 본 대지는 전면으로 시내 전경과 단지 조경을 동시에 조망할 수 있는 입지적 특성을 지니고 있습니다. 이러한 풍경과 정면으로 마주하는 배치를 건물의 기본 구성 개념으로 설정하였으며, 전면에서는 원경의 도시 풍경과 단지 전경이 펼쳐지고, 배면에서는 경사진 녹지와 맞닿아 근경의 자연을 마주하도록 계획하였습니다.',
+      '외장 마감은 트레버틴 석재와 알루미늄 아노다이징 패널을 적용하여 단순하면서도 부드러운 톤으로 건물을 구성하였습니다. 이를 통해 주변 환경과 조화를 이루는 동시에, 지형과 풍경에 자연스럽게 반응하는 건축을 구현하고자 하였습니다.'
+    ],
+    bodyEn: [
+      'The site, located at the highest point within the residential complex, has the locational characteristic of overlooking both the city view and the landscape of the complex from the front. The building was planned based on the concept of directly facing these views. From the front, distant views of the city and the complex landscape unfold, while the rear faces the nearby natural scenery connected to the sloping green area.',
+      'Travertine stone and anodized aluminum panels were applied as exterior finishing materials to create a simple yet soft-toned building composition. Through this, the architecture was intended to harmonize with the surrounding environment while naturally responding to the topography and landscape.'
+    ]
   }
 ];
