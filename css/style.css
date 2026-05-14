@@ -296,8 +296,8 @@ button { font-family: inherit; }
   .more-link { font-size: 11px; }
   .srv-title { font-size: 14px; }
   .srv-num { font-size: 11px; }
-  .project-meta h4 { font-size: 11px; }
-  .project-meta p { font-size: 10px; }
+  .project-meta h4 { font-size: 9px; }
+  .project-meta p { font-size: 8px; }
   .mp-text { font-size: 15px; }
 }
 
