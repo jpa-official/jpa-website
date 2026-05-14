@@ -175,6 +175,8 @@ button { font-family: inherit; }
   .logo { width: 46px; }
   .main-nav { gap: 12px; flex-wrap: nowrap; }
   .main-nav a { font-size: 10px; letter-spacing: 0.08em; }
+  .main-nav a[href="#contact"],
+  .main-nav a[href="index.html#contact"] { display: none; }
 }
 
 @media (max-width: 480px) {

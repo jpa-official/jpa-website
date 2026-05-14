@@ -591,6 +591,7 @@
   .cic-section .section-head { padding-bottom: 0; }
   .cic-intro { gap: 0; padding-top: 20px; }
   .cic-title { display: none; }
+  .phi-content h3 { font-size: 22px; }
   .process-intro p { font-size: 13px; line-height: 1.6; }
   .process { padding-bottom: 40px; }
   .proc-step { padding: 16px 14px 14px; gap: 8px; }
