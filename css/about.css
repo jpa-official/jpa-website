@@ -199,18 +199,10 @@
 
 /* CIC Intro */
 .cic-intro {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  padding: 0 40px 80px;
-  align-items: start;
+  padding: 0 40px 70px;
 }
 .cic-title {
-  font-family: 'Switzer', sans-serif;
-  font-weight: 600;
-  font-size: clamp(40px, 6vw, 96px);
-  line-height: 0.95;
-  letter-spacing: -0.03em;
+  display: none;
 }
 .cic-title .line { display: block; overflow: hidden; }
 .cic-title .word {
@@ -224,12 +216,14 @@
 .numbers.in-view .cic-title .line:nth-child(2) .word:nth-child(2) { transition-delay: 0.3s; }
 
 .cic-body {
-  font-size: 15px;
-  line-height: 1.8;
+  font-size: clamp(18px, 2vw, 26px);
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  font-weight: 500;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 560px;
+  max-width: 1100px;
 }
 .cic-body strong {
   font-weight: 700;
@@ -589,8 +583,8 @@
   .cic-body { font-size: 13px; gap: 14px; line-height: 1.6; }
   .phi-content p { font-size: 13px; line-height: 1.6; }
   .cic-section .section-head { padding-bottom: 0; }
-  .cic-intro { gap: 0; padding-top: 20px; }
-  .cic-title { display: none; }
+  .cic-intro { padding-top: 20px; padding-bottom: 40px; }
+  .cic-body { font-size: 13px; line-height: 1.6; font-weight: 350; letter-spacing: 0; }
   .phi-content h3 { font-size: 22px; }
   .process-intro p { font-size: 13px; line-height: 1.6; }
   .process { padding-bottom: 40px; }
