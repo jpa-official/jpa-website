@@ -584,14 +584,14 @@
 }
 
 @media (max-width: 768px) {
-  .about-hero-desc { font-size: 12px; line-height: 1.6; }
-  .intro-body { font-size: 12px; gap: 16px; line-height: 1.6; }
-  .cic-body { font-size: 12px; gap: 14px; line-height: 1.6; }
-  .phi-content p { font-size: 12px; line-height: 1.6; }
+  .about-hero-desc { font-size: 13px; line-height: 1.6; }
+  .intro-body { font-size: 13px; gap: 16px; line-height: 1.6; }
+  .cic-body { font-size: 13px; gap: 14px; line-height: 1.6; }
+  .phi-content p { font-size: 13px; line-height: 1.6; }
   .cic-section .section-head { padding-bottom: 0; }
   .cic-intro { gap: 0; padding-top: 20px; }
   .cic-title { display: none; }
-  .process-intro p { font-size: 12px; line-height: 1.6; }
+  .process-intro p { font-size: 13px; line-height: 1.6; }
   .proc-step { padding: 20px 16px 16px; }
 }
 
