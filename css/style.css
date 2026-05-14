@@ -214,7 +214,7 @@ button { font-family: inherit; }
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-bottom: 0;
+  padding-bottom: 80px;
 }
 
 .hero-title {
@@ -223,7 +223,7 @@ button { font-family: inherit; }
   font-size: clamp(34px, 6.5vw, 116px);
   line-height: 0.92;
   letter-spacing: -0.04em;
-  margin-top: 40px;
+  margin-top: auto;
 }
 .hero-title .line {
   display: block;
@@ -243,10 +243,6 @@ button { font-family: inherit; }
 .hero.in-view .hero-title .line:nth-child(2) .word:nth-child(2) { transition-delay: 0.56s; }
 
 .hero-bottom {
-  position: absolute;
-  bottom: 80px;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -290,7 +286,11 @@ button { font-family: inherit; }
 
 @media (max-width: 768px) {
   .hero { padding: 100px 20px 0; }
-  .hero-bottom { flex-direction: column; align-items: flex-start; }
+  .hero-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 60px;
+  }
 }
 
 
@@ -402,11 +402,11 @@ body, .hero-title, .hero-desc, .more-link, .main-nav a,
 
 @media (max-width: 768px) {
   .service-item {
-    grid-template-columns: 50px 1fr;
-    padding: 24px 20px;
-    gap: 12px;
+    grid-template-columns: 40px 1fr auto;
+    padding: 20px;
+    gap: 8px;
   }
-  .srv-kr { grid-column: 1 / -1; opacity: 0.6; font-size: 12px; }
+  .srv-kr { opacity: 0.6; font-size: 12px; }
 }
 
 /* ============================================

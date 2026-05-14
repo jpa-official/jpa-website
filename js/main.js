@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const oy = Math.round((cH - sH) / 2);
 
     /* 파티클: 사방에서 Bezier 곡선으로 수렴 */
+    const isMobile = cW < 768;
     const particles = sample.map(([tx, ty]) => {
       const angle = Math.random() * Math.PI * 2;
       const dist  = 160 + Math.random() * Math.max(cW, cH) * 0.4;
@@ -71,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cpX: (sx + ftx) / 2 + (Math.random() - 0.5) * 260,
         cpY: (sy + fty) / 2 + (Math.random() - 0.5) * 200,
         delay: Math.random() * 0.2,
-        size:  Math.random() * 3 + 4
+        size:  isMobile ? Math.random() * 1.8 + 2 : Math.random() * 3 + 4
       };
     });
 
