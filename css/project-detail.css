@@ -251,6 +251,9 @@
   .pd-meta-col:last-child { grid-column: 1 / -1; border-top: 1px solid rgba(0,0,0,0.1); }
   .pd-meta-label { letter-spacing: 0.06em; }
   .pd-body-section { padding: 40px 20px 60px; }
+  .pd-body-ko p, .pd-body-en p { font-size: 13px; }
+  .pd-body-en p { font-weight: 400; }
+  .pd-body-ko p { font-weight: 300; }
   .pd-body-inner { grid-template-columns: 1fr; gap: 30px; }
   .pd-nav-section { grid-template-columns: 1fr; }
   .pd-nav-link { padding: 30px 20px; }
