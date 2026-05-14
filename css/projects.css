@@ -299,7 +299,6 @@
 @media (max-width: 768px) {
   .pj-main { padding-top: 65px; }
   .pj-hero { padding: 24px 20px 50px; }
-  .pj-hero-title { font-size: 22px; }
   .pj-item-name { font-size: 13px; }
   .pj-filter-wrap { padding: 0 20px; }
   .pj-filter-btn { padding: 16px 14px; font-size: 10px; }

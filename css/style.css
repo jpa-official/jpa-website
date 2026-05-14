@@ -287,7 +287,6 @@ button { font-family: inherit; }
 
 @media (max-width: 768px) {
   .hero { padding: 100px 20px 0; }
-  .hero-title { font-size: clamp(22px, 6vw, 34px); }
   .hero-bottom {
     flex-direction: column;
     align-items: flex-start;
@@ -753,10 +752,8 @@ body, .hero-title, .hero-desc, .more-link, .main-nav a,
 @media (max-width: 768px) {
   .contact-inner { padding: 0 20px; }
   .contact-form { grid-template-columns: 1fr; gap: 0; }
-  .contact-title { font-size: clamp(20px, 5.5vw, 28px); }
   .cf-field input { padding: 16px 0; font-size: 12px; }
   .cf-submit { font-size: 15px; }
-  .mega-title { font-size: clamp(14px, 4.5vw, 22px); }
   .footer-top { padding: 30px 20px; }
   .footer-mega { padding: 40px 20px; }
 }
