@@ -830,6 +830,6 @@ body, .hero-title, .hero-desc, .more-link, .main-nav a,
   .srv-num { font-size: 11px; }
   .mp-text { font-size: 15px; }
   .project-meta { padding: 10px 0; }
-  .project-meta h4 { font-size: 9px; }
-  .project-meta p { font-size: 8px; }
+  .project-meta h4 { font-size: 12px; }
+  .project-meta p { font-size: 10px; }
 }
