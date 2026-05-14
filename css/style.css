@@ -294,12 +294,6 @@ button { font-family: inherit; }
   }
   .hero-desc { font-size: 12px; }
   .more-link { font-size: 11px; }
-  .srv-title { font-size: 14px; }
-  .srv-num { font-size: 11px; }
-  .project-meta { padding: 10px 0; }
-  .project-meta h4 { font-size: 9px; }
-  .project-meta p { font-size: 8px; }
-  .mp-text { font-size: 15px; }
 }
 
 
@@ -829,4 +823,13 @@ body, .hero-title, .hero-desc, .more-link, .main-nav a,
    ============================================ */
 .parallax {
   will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .srv-title { font-size: 14px; }
+  .srv-num { font-size: 11px; }
+  .mp-text { font-size: 15px; }
+  .project-meta { padding: 10px 0; }
+  .project-meta h4 { font-size: 9px; }
+  .project-meta p { font-size: 8px; }
 }
