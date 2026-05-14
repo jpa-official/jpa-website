@@ -256,7 +256,6 @@
   gap: 16px;
   padding: 60px 40px;
   border-right: 1px solid var(--black);
-  border-bottom: 1px solid var(--black);
   position: relative;
   overflow: hidden;
   transition: background 0.4s var(--transition), color 0.4s var(--transition);
