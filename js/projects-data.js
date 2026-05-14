@@ -440,9 +440,17 @@ window.PROJECTS = [
     client: 'Confidential',
     scopeCode: 'DS · SP · SD',
     scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: '',
-    body: [],
-    bodyEn: []
+    summary: '광화문광장은 서울의 문화·역사적 중심지이자 국가를 상징하는 주요 공간입니다. 본 프로젝트는 세종로공원과 사계정원 일대를 국가 상징의 시작점이자 중심 공간으로 새롭게 정의하였습니다.',
+    body: [
+      '광화문광장은 서울의 문화·역사적 중심지이자 국가를 상징하는 주요 공간입니다. 본 프로젝트는 세종로공원과 사계정원 일대를 국가 상징의 시작점이자 중심 공간으로 새롭게 정의하였습니다. \'SEOUL GROUND ONE\'은 과거를 기억하고 미래로 이어지는 연결을 목표로 하며, 서울의 역사와 문화 축을 강화해 세계와 연결되는 대한민국 중심지의 장소성을 제안합니다.',
+      '\'모두의 공원\'은 기존 광화문광장에서 경험하기 어려웠던 풍부한 녹지를 제공하여 시민을 위한 진정한 공원으로 계획되었습니다. 주변 환경과 조화를 이루며 다양한 공간 경험을 제공하고, 상부 공원과 하부 시설을 통합해 역사와 현대를 연결하는 상징적 흐름을 형성합니다. 또한 하부에는 식음 중심의 편의시설을 배치해 광장과 공원을 찾는 방문객들이 머무를 수 있는 공간을 마련하였습니다.',
+      '\'하나의 정원\'은 상징 조형물이 위치한 공간으로, 희생과 감사의 의미를 되새길 수 있도록 계획되었습니다. 광화문광장보다 낮은 레벨로 조성해 몰입감을 높였으며, 6·25전쟁 당시 대한민국을 지원한 22개 국가를 상징하는 미디어월과 조형물을 함께 배치해 감사와 희생을 기리는 공간으로 구성하였습니다.'
+    ],
+    bodyEn: [
+      'Gwanghwamun Square is a symbolic space at the cultural and historical center of Seoul. This project redefines the Sejong-ro Park and Four Seasons Garden area as the starting point and center of national symbolism. "SEOUL GROUND ONE" connects the memory of the past with the future, strengthening Seoul\'s historical and cultural identity as a place connected to the world.',
+      '"Park for Everyone" was planned as a true public park with rich greenery and diverse spatial experiences. The integration of the upper park and lower-level facilities creates a symbolic connection between history and the present, while food and beverage amenities encourage visitors to stay and enjoy the space.',
+      '"One Garden" is a commemorative space centered around a symbolic monument reflecting sacrifice and gratitude. Set at a lower level than Gwanghwamun Square, it includes a media wall representing the 22 nations that supported South Korea during the Korean War, creating an immersive place of remembrance.'
+    ]
   },
   {
     id: 'luxury-house-hildesheim',
