@@ -34,7 +34,7 @@
 .about-hero-title {
   font-family: 'Switzer', sans-serif;
   font-weight: 600;
-  font-size: clamp(48px, 10vw, 180px);
+  font-size: clamp(32px, 6.5vw, 110px);
   line-height: 0.92;
   letter-spacing: -0.04em;
 }
@@ -48,9 +48,9 @@
   opacity: 0;
   animation: wordUp 1s var(--transition) forwards;
 }
-.about-hero-title .line:nth-child(1) .word { animation-delay: 0.5s; }
-.about-hero-title .line:nth-child(2) .word { animation-delay: 0.65s; }
-.about-hero-title .line:nth-child(3) .word { animation-delay: 0.8s; }
+.about-hero-title .line:nth-child(1) .word:nth-child(1) { animation-delay: 0.5s; }
+.about-hero-title .line:nth-child(1) .word:nth-child(2) { animation-delay: 0.62s; }
+.about-hero-title .line:nth-child(2) .word { animation-delay: 0.75s; }
 
 @keyframes wordUp {
   to { transform: translateY(0); opacity: 1; }
@@ -553,7 +553,7 @@
   font-family: 'Switzer', sans-serif;
   font-size: clamp(16px, 2vw, 22px);
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.01em;
   padding: 20px 40px;
   color: var(--black);
   border: 1px solid var(--black);

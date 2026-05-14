@@ -101,9 +101,62 @@ document.addEventListener('DOMContentLoaded', () => {
       if (prog < 1) {
         requestAnimationFrame(frame);
       } else {
-        loader.classList.add('hidden');
-        document.body.classList.add('loaded');
-        triggerHero();
+        const logoEl      = document.getElementById('loaderLogo');
+        const enterPrompt = document.getElementById('loaderEnter');
+
+        /* 점들이 수축하며 사라지고, 그 위로 PNG 로고가 나타나는 dissolve */
+        const DISSOLVE = 1400;
+        let d0 = null;
+
+        function smoothstep(t) { return t * t * (3 - 2 * t); }
+
+        function dissolveFrame(ts) {
+          if (!d0) d0 = ts;
+          const t  = Math.min((ts - d0) / DISSOLVE, 1);
+          const e  = smoothstep(t);
+
+          ctx.clearRect(0, 0, cW, cH);
+          particles.forEach(p => {
+            const size = p.size * (1 - e);
+            if (size < 0.15) return;
+            ctx.beginPath();
+            ctx.arc(p.tx, p.ty, size, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255,255,255,${(1 - e) * 0.9 + 0.05})`;
+            ctx.fill();
+          });
+
+          /* 로고는 t=0.25부터 서서히 등장 */
+          if (logoEl) {
+            const lt = Math.max(0, (t - 0.25) / 0.75);
+            logoEl.style.opacity = String(smoothstep(lt));
+          }
+
+          if (t < 1) {
+            requestAnimationFrame(dissolveFrame);
+          } else {
+            canvas.style.opacity = '0';
+            if (logoEl) logoEl.style.opacity = '1';
+
+            setTimeout(() => {
+              if (enterPrompt) enterPrompt.classList.add('visible');
+              loader.classList.add('ready');
+
+              let entered = false;
+              function enterSite(e) {
+                if (entered) return;
+                entered = true;
+                if (e.type === 'touchend') e.preventDefault();
+                loader.classList.add('hidden');
+                document.body.classList.add('loaded');
+                triggerHero();
+              }
+              loader.addEventListener('click', enterSite);
+              loader.addEventListener('touchend', enterSite, { passive: false });
+            }, 0);
+          }
+        }
+
+        requestAnimationFrame(dissolveFrame);
       }
     }
 
