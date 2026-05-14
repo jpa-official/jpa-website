@@ -583,6 +583,12 @@
   .about-cta { padding: 80px 20px 0; }
 }
 
+@media (max-width: 768px) {
+  .intro-body { font-size: 12px; gap: 16px; }
+  .cic-body { font-size: 12px; gap: 14px; }
+  .phi-content p { font-size: 12px; }
+}
+
 /* ---------- ACTIVE MENU ---------- */
 .main-nav a.active {
   position: relative;
