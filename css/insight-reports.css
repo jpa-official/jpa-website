@@ -337,7 +337,7 @@
 
 @media (max-width: 768px) {
   .ir-main { padding-top: 65px; }
-  .ir-hero { padding: 24px 20px 80px; }
+  .ir-hero { padding: 24px 20px 60px; min-height: auto; align-items: flex-start; }
   .ir-filter-wrap { padding: 0 20px; }
   .ir-filter-btn { padding: 16px 12px; font-size: 10px; }
   .ir-item-inner { padding: 28px 20px; grid-template-columns: 40px 1fr; gap: 16px; }
