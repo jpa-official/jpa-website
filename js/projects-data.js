@@ -429,6 +429,22 @@ window.PROJECTS = [
     ]
   },
   {
+    id: 'sejong-ro-park-ground-one',
+    thumbnail: '',
+    name: 'Sejong-ro Park — Ground One',
+    nameKo: '세종로 공원 및 상징조형물 조성 설계공모',
+    desc: '세종로 공원 및 상징조형물 조성 설계공모',
+    category: 'Mixed-use',
+    location: 'SEOUL',
+    year: '2024',
+    client: 'Confidential',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '',
+    body: [],
+    bodyEn: []
+  },
+  {
     id: 'luxury-house-hildesheim',
     thumbnail: '',
     name: 'Luxury House Hildesheim',
