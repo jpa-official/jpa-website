@@ -248,6 +248,7 @@
   .pd-meta { padding: 0 20px; }
   .pd-meta-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; }
   .pd-meta-col { border-right: none; margin-right: 0; padding: 16px 0; }
+  .pd-meta-col:last-child { grid-column: 1 / -1; border-top: 1px solid rgba(0,0,0,0.1); }
   .pd-meta-label { letter-spacing: 0.06em; }
   .pd-body-section { padding: 40px 20px 60px; }
   .pd-body-inner { grid-template-columns: 1fr; gap: 30px; }
