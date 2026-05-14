@@ -580,7 +580,7 @@
 .cta-link:hover .arrow-icon { transform: translateX(4px); }
 
 @media (max-width: 768px) {
-  .about-cta { padding: 80px 20px 0; }
+  .about-cta { padding: 80px 20px 60px; }
 }
 
 @media (max-width: 768px) {
@@ -591,6 +591,8 @@
   .cic-section .section-head { padding-bottom: 0; }
   .cic-intro { gap: 0; padding-top: 20px; }
   .cic-title { display: none; }
+  .process-intro p { font-size: 12px; line-height: 1.6; }
+  .proc-step { padding: 20px 16px 16px; }
 }
 
 /* ---------- ACTIVE MENU ---------- */
