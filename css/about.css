@@ -87,6 +87,8 @@
     align-items: flex-start;
     min-height: auto;
   }
+  .about-hero-title { font-size: 22px; }
+  .about-hero-subtitle { font-size: 13px; }
 }
 
 /* ---------- INTRO ---------- */
