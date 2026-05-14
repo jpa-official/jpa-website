@@ -427,6 +427,7 @@ body, .hero-title, .hero-desc, .more-link, .main-nav a,
     z-index: 2;
   }
   .srv-kr { opacity: 0.6; font-size: 12px; }
+  .srv-title br { display: none; }
 }
 
 /* ============================================
