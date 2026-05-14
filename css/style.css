@@ -172,6 +172,7 @@ button { font-family: inherit; }
 
 @media (max-width: 768px) {
   .site-header { padding: 18px 20px; }
+  .logo { width: 46px; }
   .main-nav { gap: 12px; flex-wrap: nowrap; }
   .main-nav a { font-size: 10px; letter-spacing: 0.08em; }
 }

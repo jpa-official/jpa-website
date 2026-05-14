@@ -297,8 +297,8 @@
 .pj-row:hover .pj-row-year { opacity: 0.65; }
 
 @media (max-width: 768px) {
-  .pj-main { padding-top: 55px; }
-  .pj-hero { padding: 10px 20px 50px; }
+  .pj-main { padding-top: 65px; }
+  .pj-hero { padding: 24px 20px 50px; }
   .pj-filter-wrap { padding: 0 20px; }
   .pj-filter-btn { padding: 16px 14px; font-size: 10px; }
   .pj-item-info { padding: 16px 20px 24px; flex-direction: column; gap: 8px; }
