@@ -430,7 +430,7 @@ window.PROJECTS = [
   },
   {
     id: 'sejong-ro-park-ground-one',
-    thumbnail: '',
+    thumbnail: 'images/projects/sejong-ro-park-ground-one.jpg',
     name: 'Sejong-ro Park — Ground One',
     nameKo: '세종로 공원 및 상징조형물 조성 설계공모',
     desc: '세종로 공원 및 상징조형물 조성 설계공모',
@@ -454,7 +454,7 @@ window.PROJECTS = [
   },
   {
     id: 'luxury-house-hildesheim',
-    thumbnail: '',
+    thumbnail: 'images/projects/luxury-house-hildesheim.jpg',
     name: 'Luxury House Hildesheim',
     nameKo: '힐데스하임 고급 주택 공간 환경 설계',
     desc: '힐데스하임 고급 주택 공간 환경 설계',
