@@ -296,6 +296,8 @@
   .numbers-grid { grid-template-columns: repeat(2, 1fr); }
   .num-block:nth-child(2) { border-right: 0; }
   .num-block { padding: 40px 20px; }
+  .num-value { font-size: 36px; }
+  .num-suffix { font-size: 28px; }
 }
 
 /* ---------- PROCESS ---------- */
