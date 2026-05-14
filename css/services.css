@@ -356,4 +356,5 @@
   .sv-members-grid { grid-template-columns: 1fr; }
   .sv-member { border-right: none; }
   .sv-member:nth-child(2n) { border-right: none; }
+  .sv-member:nth-child(3n) { border-right: none; }
 }
