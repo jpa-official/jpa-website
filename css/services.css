@@ -342,6 +342,7 @@
   .sv-hero { padding: 24px 20px 40px; }
   .sv-title-en { font-size: 18px; }
   .sv-header { padding: 28px 20px; gap: 20px; }
+  .sv-title-wrap { flex-direction: column; gap: 4px; align-items: flex-start; }
   .sv-cols { padding: 32px 20px 40px; grid-template-columns: 1fr; }
   .sv-members { padding: 60px 20px 60px; }
   .sv-members-grid { grid-template-columns: 1fr 1fr; }
