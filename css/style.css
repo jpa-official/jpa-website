@@ -291,6 +291,7 @@ button { font-family: inherit; }
     align-items: flex-start;
     padding-bottom: 60px;
   }
+  .project-meta h4 { font-size: 13px; }
 }
 
 
