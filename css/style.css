@@ -826,7 +826,7 @@ body, .hero-title, .hero-desc, .more-link, .main-nav a,
 }
 
 @media (max-width: 768px) {
-  .srv-title { font-size: 14px; }
+  .srv-title { font-size: 17px; }
   .srv-num { font-size: 11px; }
   .mp-text { font-size: 15px; }
   .project-meta { padding: 10px 0; }
