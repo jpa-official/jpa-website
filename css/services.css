@@ -286,7 +286,7 @@
 .sv-partners-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 2px;
+  gap: 1px;
   background: var(--black);
 }
 .sv-partner-card {
