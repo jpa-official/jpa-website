@@ -338,11 +338,14 @@
 @media (max-width: 768px) {
   .ir-main { padding-top: 65px; }
   .ir-hero { padding: 24px 20px 60px; min-height: auto; align-items: flex-start; }
-  .ir-item-title { font-size: 14px; }
   .ir-filter-wrap { padding: 0 20px; }
-  .ir-filter-btn { padding: 16px 12px; font-size: 10px; }
-  .ir-item-inner { padding: 28px 20px; grid-template-columns: 40px 1fr; gap: 16px; }
-  .ir-item-title { font-size: clamp(20px, 6vw, 32px); }
+  .ir-filter-btn { padding: 16px 12px; font-size: 10px; letter-spacing: 0.05em; }
+  .ir-item-inner { padding: 16px 20px; grid-template-columns: 1fr; gap: 8px; }
+  .ir-item-num { display: none; }
+  .ir-item-meta { display: none; }
+  .ir-item-title { font-size: 15px; line-height: 1.3; margin-bottom: 8px; }
+  .ir-item-summary { font-size: 11px; line-height: 1.6; }
+  .ir-item-cat { margin-bottom: 8px; }
 }
 
 /* ============================================
