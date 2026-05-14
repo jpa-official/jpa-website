@@ -3,6 +3,7 @@
    ============================================ */
 
 window.PROJECTS = [
+  /* ---- 2026 ---- */
   {
     id: 'gwanghwa169',
     thumbnail: 'images/projects/gwanghwa169.jpg',
@@ -33,7 +34,7 @@ window.PROJECTS = [
     desc: 'HAN_북촌 TEA THE HAN 공간브랜딩 및 공간경험·환경디자인',
     category: 'Retail',
     location: 'SEOUL',
-    year: '2025',
+    year: '2026',
     client: 'HAN',
     scopeCode: 'DS · SP · SD',
     scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
@@ -44,6 +45,7 @@ window.PROJECTS = [
     ],
     bodyEn: []
   },
+  /* ---- 2025 ---- */
   {
     id: 'sejong-center',
     thumbnail: 'images/projects/sejong-center.jpg',
@@ -103,7 +105,7 @@ window.PROJECTS = [
       '사업 측면에서는 자율주택정비사업 방식을 적용해 공공기여 부담과 인허가 리스크를 줄이고, 용적률 및 연면적을 극대화하여 사업성과 안정성을 확보했다. 저층부에는 리테일과 입주자 커뮤니티 공간을 결합하고, 골목길의 흐름을 반영한 동선과 개방형 입면을 적용해 지역과 자연스럽게 연결되도록 했다.'
     ],
     bodyEn: [
-      'Muk-dong G:ROUND is a co-living and retail mixed-use development in Jungnang-gu that responds to young adults\' housing needs while revitalizing the local neighborhood. Reflecting the context of the existing residential area, the project proposes an integrated living experience that goes beyond conventional housing.',
+      'Muk-dong G:ROUND is a co-living and retail mixed-use development in Jungnang-gu that responds to young adults\'s housing needs while revitalizing the local neighborhood. Reflecting the context of the existing residential area, the project proposes an integrated living experience that goes beyond conventional housing.',
       'From a development perspective, the project adopts a self-managed housing improvement model to reduce public contribution burdens and approval risks, while maximizing floor area ratio and gross floor area to enhance feasibility. At the lower levels, retail and resident community spaces are combined, with circulation and an open façade designed to connect naturally with the surrounding streets.'
     ]
   },
@@ -152,66 +154,6 @@ window.PROJECTS = [
     ]
   },
   {
-    id: 'sfc-oled-community',
-    thumbnail: '',
-    name: 'SFC Community Center',
-    nameKo: 'SFC OLED 캠퍼스 커뮤니티센터 공간기획 및 공간환경설계',
-    desc: 'SFC OLED 캠퍼스 커뮤니티센터 공간기획 및 공간환경설계',
-    category: 'Industrial',
-    location: 'OCHANG',
-    year: '2024',
-    client: 'SFC',
-    scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: 'SFC OLED 캠퍼스의 임직원의 협업·재충전·교류가 일어나는 통합 커뮤니티 센터.',
-    body: [
-      'SFC OLED 캠퍼스의 커뮤니티 센터는 임직원의 일과를 풍성하게 만드는 통합 공간이다. jpa.는 다이닝, 라운지, 피트니스, 회의·이벤트 등 다층적 프로그램을 캠퍼스 일상 시퀀스에 맞춰 배치했다.',
-      '산업단지 특유의 기능 중심 구성을 넘어, 임직원의 라이프스타일과 웰빙을 함께 고려한 캠퍼스형 공간 모델을 구현했다.'
-    ],
-    bodyEn: []
-  },
-  {
-    id: 'sfc-oled-storage',
-    thumbnail: '',
-    name: 'SFC Storage Center',
-    nameKo: 'SFC OLED 캠퍼스 스토리지센터 공간기획 및 공간환경설계',
-    desc: 'SFC OLED 캠퍼스 스토리지센터 공간기획 및 공간환경설계',
-    category: 'Industrial',
-    location: 'OCHANG',
-    year: '2024',
-    client: 'SFC',
-    scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: '산업 운영의 효율과 환경의 품격을 동시에 담은 스토리지 센터.',
-    body: [
-      'SFC OLED 캠퍼스의 스토리지 센터는 산업 운영의 핵심 인프라이자, 캠퍼스 외관의 일부이다. jpa.는 기능적 효율과 동시에, 산업 시설이 지닐 수 있는 환경의 품격을 함께 고려한 공간환경 설계를 진행했다.',
-      '내부 운영 동선의 효율성과 외부 마감의 미학을 분리하지 않고 통합적으로 설계하여, 산업 시설의 새로운 표준을 제시한다.'
-    ],
-    bodyEn: []
-  },
-  {
-    id: 'sfc-biopark',
-    thumbnail: 'images/projects/sfc-biopark.jpg',
-    name: 'SFC Biopark',
-    nameKo: 'SFC BIOPARK 공간기획 및 공간환경설계',
-    desc: 'SFC BIOPARK 공간기획 및 공간환경설계',
-    category: 'Industrial',
-    location: 'OCHANG',
-    year: '2024',
-    client: 'SFC',
-    scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: '이 프로젝트는 새로운 SFC BIO 연구센터를 위한 공간 브랜딩 및 디자인 이니셔티브로, 기획 단계부터 실행까지 회사의 브랜드 가치를 건축 공간에 통합하는 것을 목표로 한다.',
-    body: [
-      '이 프로젝트는 새로운 SFC BIO 연구센터를 위한 공간 브랜딩 및 디자인 이니셔티브로, 기획 단계부터 실행까지 회사의 브랜드 가치를 건축 공간에 통합하는 것을 목표로 한다. 브랜드의 아이덴티티를 "끊임없이 변화하는 환경에 유연하게 반응하는 존재"로 설정하고, 이를 공간 브랜딩에 반영하였다.',
-      '"순수하고 정밀한 축(Pure and Precise Axis)"이라는 개념을 통해 반응적인 환경을 만들어내는 공간 아이덴티티를 제안하였다. 이 개념은 모든 공간을 연결하는 주요 동선이자 상징적 요소인 긴 유리 복도, 즉 "HEART SPACE"로 구현되었다. 이 공간은 사무와 생산 공간을 연결하고, 고객과 회사를 잇고, 사람과 자연을 이어주는 중심 공간으로서 다양한 상호작용을 가능하게 하며 브랜드의 핵심 역할을 수행한다.'
-    ],
-    bodyEn: [
-      'This project is a spatial branding and design initiative for the new SFC BIO Research Center, aimed at integrating the company\'s brand values into the built environment from planning through execution. The brand identity was defined as one that responds flexibly to a constantly changing environment, and this idea was translated into the spatial concept.',
-      'Under the concept of "Pure and Precise Axis," the project proposes a responsive spatial identity centered on a long glass corridor called "HEART SPACE." As the symbolic spine of the project, it connects office and production areas, links the company with visitors, and brings people and nature together. The design was developed from the site\'s unique linear form, creating a dramatic spatial experience that expresses the essence of the brand while allowing seamless connection to future buildings.'
-    ]
-  },
-  {
     id: 'seoul-station-it',
     thumbnail: 'images/projects/seoul-station-it.jpg',
     name: 'Seoul Station — IT Seoul',
@@ -231,113 +173,6 @@ window.PROJECTS = [
     bodyEn: [
       'Under the theme "IT SEOUL SEOUL – Urban Breathway," this project reimagines Seoul Station and its surrounding area as a new symbolic urban gateway by reconnecting fragmented parts of the city. It focuses on strengthening urban connectivity, redefining Seoul Station as Korea\'s national central station, and transforming vehicle-oriented infrastructure into citizen-centered public space.',
       'The proposal introduces a vertical zoning concept of "Upper Seoul" and "Lower Seoul," supported by key elements such as an integrated transit hub, pedestrian-oriented streets, open public decks, green spaces, and K-brand cultural content. Through this approach, the project positions Seoul Station as a new urban center that connects movement, culture, and identity.'
-    ]
-  },
-  {
-    id: 'la-venice-c4-1bl',
-    thumbnail: 'images/projects/la-venice-c4-1bl.jpg',
-    name: 'LaVenice C4-1BL',
-    nameKo: '김포 라베니체 C4-1BL 복합문화공간 공간기획',
-    desc: '김포 라베니체 C4-1BL 복합문화공간 공간기획',
-    category: 'Mixed-use',
-    location: 'GIMPO',
-    year: '2024',
-    client: 'Confidential',
-    scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: '김포 라베니체 프로젝트는 30·40 영패밀리가 많은 베드타운형 도시인 김포의 입지적 강점을 바탕으로, 주변 거주민뿐 아니라 외부 방문객까지 끌어들이는 문화 앵커시설을 제안한다.',
-    body: [
-      '김포 라베니체 프로젝트는 30·40 영패밀리가 많은 베드타운형 도시인 김포의 입지적 강점을 바탕으로, 주변 거주민뿐 아니라 외부 방문객까지 끌어들이는 문화 앵커시설을 제안하는 데 목적이 있다. 특히 라베니체가 F&B 중심으로 구성되어 일상적 방문 수요가 약해지는 한계를 극복하고, 대상지 건축을 통해 라베니체 전체의 활성화를 도모하고자 했다.',
-      '메인 테마를 음악으로 설정하고, 음악을 "듣는", "사는", "체험하는" 공간으로 프로그램을 구성했다. 1층은 누구나 머물 수 있는 공유공간이자 행사와 이벤트가 가능한 열린 공간으로, 상층부는 음악 관련 리테일과 F&B 공간으로, 최상층은 라베니체를 조망할 수 있는 루프탑 뷰포인트로 계획하였다.'
-    ],
-    bodyEn: []
-  },
-  {
-    id: 'cheonan-cultural',
-    thumbnail: 'images/projects/cheonan-cultural.jpg',
-    name: 'Cheonan Cultural Facility',
-    nameKo: '천안 백석동 복합문화공간 공간기획',
-    desc: '천안 백석동 복합문화공간 공간기획',
-    category: 'Mixed-use',
-    location: 'CHEONAN',
-    year: '2024',
-    client: '천안시',
-    scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: '천안 프로젝트는 충청남도권의 젊고 잠재력 있는 도시인 천안의 중심 입지를 바탕으로, 문화와 상업을 함께 경험할 수 있는 새로운 복합문화공간을 제안한다.',
-    body: [
-      '천안 프로젝트는 충청남도권의 젊고 잠재력 있는 도시인 천안의 중심 입지를 바탕으로, 문화와 상업을 함께 경험할 수 있는 새로운 복합문화공간을 제안한다. 인근 주거지에서의 접근성이 뛰어난 대상지에 주변 수요를 수용할 수 있는 차별화된 상업 프로그램을 개발하고자 했다.',
-      '넓은 대지를 활용해 지하에는 충분한 주차시설을 배치하고, 그 상부에는 공원을 조성해 보행과 차량을 완전히 분리한 보행 중심 환경을 계획했다. 공원부에는 펫 중심의 토탈 케어 센터를 제안해 인근은 물론 주변 지역까지 수요를 확장하고, 사업성과 공공성을 함께 담아냈다.'
-    ],
-    bodyEn: [
-      'This Cheonan project proposes a new mixed-use cultural destination that combines commerce, culture, and public space in a highly accessible central location. Designed to serve nearby residential communities, it introduces a differentiated commercial program that responds to local demand while creating a broader destination appeal.',
-      'The plan places parking underground and creates a pedestrian-focused environment above, organized into a plaza and a park with distinct experiences. Small-scale retail, outdoor terraces, music-themed tenants, and a pet-oriented care center work together to attract visitors while balancing business viability with public value.'
-    ]
-  },
-  {
-    id: 'hanwha-hotel-resort',
-    thumbnail: 'images/projects/hanwha-hotel-resort.jpg',
-    name: 'Hanwha Hotel & Resort',
-    nameKo: '한화 호텔앤드리조트 양평부지 최유효 개발전략 마스터플랜',
-    desc: '한화 호텔앤드리조트 양평부지 최유효 개발전략 마스터플랜',
-    category: 'Hospitality',
-    location: 'YANGPYEONG',
-    year: '2024',
-    client: '한화 호텔 & 리조트',
-    scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: '"천혜의 100년 숲과 함께 일상과 비일상을 유연하게 넘나드는 Liquid Life를 실현하는 미래형 복합단지"를 마스터 콘셉트로 제안했다.',
-    body: [
-      '"천혜의 100년 숲과 함께 일상과 비일상을 유연하게 넘나드는 Liquid Life를 실현하는 미래형 복합단지"를 마스터 콘셉트로 제안했다. 이 개념은 도심의 일상과 휴양·여가의 비일상적 경험이 공존하고, 건강한 라이프스타일과 취향 기반의 소셜네트워크, 창의적 영감과 생산이 자연스럽게 이어지는 새로운 공간 경험을 의미한다.',
-      '약 6만 평 규모의 동막지구는 휴양과 업무가 공존하는 Creative Town으로, 약 11만 평 규모의 콘도지구는 교류와 콘텐츠 중심의 Networking Town으로 계획해 차별화된 라이프스타일 프로그램을 제안했다. 이를 통해 휴양·일·문화가 일상 속에서 지속되는 Hanwha Liquid-Life District 마스터플랜을 구축했다.'
-    ],
-    bodyEn: [
-      'The master concept proposes a future-oriented mixed-use district that embodies Liquid Life—a flexible lifestyle where everyday living, leisure, work, and culture flow seamlessly together within a century-old natural forest. It envisions a new spatial experience where urban routine and retreat coexist, healthy lifestyles unfold, social connections form naturally, and creativity can emerge.',
-      'The Dongmak District is conceived as Creative Town, where leisure and work coexist, while the Condo District is planned as Networking Town, centered on shared interests, lifestyle content, and social exchange. Through this Hanwha Liquid-Life District master plan, the project aims to strengthen Hanwha Hotels & Resorts\' brand value, expand its business model, and propose a new value chain for the future of the leisure industry.'
-    ]
-  },
-  {
-    id: 'courtyard-marriott-pyeongtaek',
-    thumbnail: 'images/projects/courtyard-marriott-pyeongtaek.jpg',
-    name: 'Courtyard by Marriott Pyeongtaek',
-    nameKo: '코트야드 바이 메리어트 평택',
-    desc: '코트야드 바이 메리어트 평택',
-    category: 'Hospitality',
-    location: 'PYEONGTAEK',
-    year: '2024',
-    client: 'Marriott',
-    scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: '평택 고덕국제신도시의 새로운 수요, 그리고 근방에 들어선 삼성 반도체 공장 및 벤더사의 수요를 위해 230실 규모의 코트야드 바이 메리어트 브랜드 호텔 프로젝트이다.',
-    body: [
-      '평택 고덕국제신도시의 새로운 수요, 그리고 근방에 들어선 삼성 반도체 공장 및 벤더사의 수요를 위해 230실 규모의 코트야드 바이 메리어트 브랜드 호텔 프로젝트이다. 스케줄 상 규모검토부터 프로그램 세팅을 진행하였고, 계획설계부터 개발행위허가를 포함한 각종 인허가를 수행하였다.',
-      '계획관리지역으로서 4층 이하, 최고높이 16m 이하, 지하 10m 이하로 개발하되 인프라 없는 구릉지에 230실을 확보하기 위한 방안으로 원형의 매스 디자인을 통해 객실과 중정을 품은 호텔을 완성하였다. 내부공간은 중정을 품은 로비와 아뜨리움 구성으로 새로운 공간경험이 가능하게 하였으며, 녹색건축인증과 LEED Certified 획득을 위한 각종 에너지 기법을 적용하였다.'
-    ],
-    bodyEn: [
-      'This project is a 230-key Courtyard by Marriott hotel in Pyeongtaek Godeok International New Town, planned to serve growing demand from the nearby Samsung semiconductor campus and related vendors. The work covered early scale studies, program planning, schematic design, and the full approval process, including development permits.',
-      'To accommodate 230 rooms on a constrained hilly site within strict zoning limits, the design adopts a circular massing strategy organized around a central courtyard. The project creates a distinctive spatial experience through a sculptural façade, courtyard lobby, and atrium, while incorporating energy-efficient elements to support Green Building Certification and LEED Certified goals.'
-    ]
-  },
-  {
-    id: 'nft-lifestyle-platform',
-    thumbnail: 'images/projects/nft-lifestyle-platform.jpg',
-    name: 'NFT Lifestyle Platform',
-    nameKo: '건축 및 공간 NFT 라이프스타일 플랫폼 구축',
-    desc: '건축 및 공간 NFT 라이프스타일 플랫폼 구축',
-    category: 'Metaverse',
-    location: 'METAVERSE',
-    year: '2024',
-    client: 'Confidential',
-    scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: '힐링그라운드 프로젝트는 미래에 상상과 현실이 조우하는 공간환경과 공간경험을 실현한다. 메타버스 건축 작업을 통해 신앙과 예술을 결합하는 경험을 새로운 관점으로 제안하는 프로젝트이다.',
-    body: [
-      '힐링그라운드 프로젝트는 미래에 상상과 현실이 조우하는 공간환경(사람, 자연, 도시, 건축)과 공간경험(콘텐츠, 프로그램)을 실현한다. 메타버스 건축 작업을 통해 신앙과 예술을 결합하는 경험을 새로운 관점으로 제안하는 프로젝트이다.',
-      '프로젝트의 핵심 컨셉은 "회복의 빛"으로, 이를 통해 공간이 주는 힘을 최대한 활용하여 공간 경험을 제공하는 것이다. 비정형 지붕 구조 사이로 들어오는 강력한 빛으로 가장 깊은 곳에 위치한 코이노니아홀을 가장 밝은 공간이 될 수 있도록 하여 회복의 빛을 경험하도록 하였다.'
-    ],
-    bodyEn: [
-      'The Healing Ground Project proposes a future spatial experience where imagination and reality meet, bringing together people, nature, the city, and architecture through metaverse design. By combining faith and art, the project presents a new perspective on spiritual and artistic experience while focusing not only on form, but also on the user journey.',
-      'Its core concept, "Light of Restoration," uses space itself as a medium for healing. Strong light enters through the irregular roof, making the deepest space the brightest and allowing visitors to experience the restorative power of light. The architecture blurs the boundary between building and site, creating a poetic landscape that takes advantage of the metaverse to deliver a beauty difficult to achieve in reality.'
     ]
   },
   {
@@ -426,6 +261,174 @@ window.PROJECTS = [
     bodyEn: [
       'Slipper Mansion is a space independently planned and designed by jpa, serving both as a workplace for its members and as a testbed for its spatial business. Based on the experience of taking off one\'s shoes and the comfort and inspiration associated with home, it was conceived under the concept of a "Home-like Studio."',
       'It includes a variety of spatial settings such as the Idea LAB, Personal Zone, Chill Lounge, and Nomadic Terrace, each designed to support different work styles and needs. It was also planned as a creative studio for designers and marketers, while accommodating brand pop-ups, small gatherings, and rental events. Visual elements—including signage, furniture, and even the slippers—were all custom-designed to create a consistent and cohesive experience.'
+    ]
+  },
+  /* ---- 2024 ---- */
+  {
+    id: 'sfc-oled-community',
+    thumbnail: '',
+    name: 'SFC Community Center',
+    nameKo: 'SFC OLED 캠퍼스 커뮤니티센터 공간기획 및 공간환경설계',
+    desc: 'SFC OLED 캠퍼스 커뮤니티센터 공간기획 및 공간환경설계',
+    category: 'Industrial',
+    location: 'OCHANG',
+    year: '2024',
+    client: 'SFC',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: 'SFC OLED 캠퍼스의 임직원의 협업·재충전·교류가 일어나는 통합 커뮤니티 센터.',
+    body: [
+      'SFC OLED 캠퍼스의 커뮤니티 센터는 임직원의 일과를 풍성하게 만드는 통합 공간이다. jpa.는 다이닝, 라운지, 피트니스, 회의·이벤트 등 다층적 프로그램을 캠퍼스 일상 시퀀스에 맞춰 배치했다.',
+      '산업단지 특유의 기능 중심 구성을 넘어, 임직원의 라이프스타일과 웰빙을 함께 고려한 캠퍼스형 공간 모델을 구현했다.'
+    ],
+    bodyEn: []
+  },
+  {
+    id: 'sfc-oled-storage',
+    thumbnail: '',
+    name: 'SFC Storage Center',
+    nameKo: 'SFC OLED 캠퍼스 스토리지센터 공간기획 및 공간환경설계',
+    desc: 'SFC OLED 캠퍼스 스토리지센터 공간기획 및 공간환경설계',
+    category: 'Industrial',
+    location: 'OCHANG',
+    year: '2024',
+    client: 'SFC',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '산업 운영의 효율과 환경의 품격을 동시에 담은 스토리지 센터.',
+    body: [
+      'SFC OLED 캠퍼스의 스토리지 센터는 산업 운영의 핵심 인프라이자, 캠퍼스 외관의 일부이다. jpa.는 기능적 효율과 동시에, 산업 시설이 지닐 수 있는 환경의 품격을 함께 고려한 공간환경 설계를 진행했다.',
+      '내부 운영 동선의 효율성과 외부 마감의 미학을 분리하지 않고 통합적으로 설계하여, 산업 시설의 새로운 표준을 제시한다.'
+    ],
+    bodyEn: []
+  },
+  {
+    id: 'sfc-biopark',
+    thumbnail: 'images/projects/sfc-biopark.jpg',
+    name: 'SFC Biopark',
+    nameKo: 'SFC BIOPARK 공간기획 및 공간환경설계',
+    desc: 'SFC BIOPARK 공간기획 및 공간환경설계',
+    category: 'Industrial',
+    location: 'OCHANG',
+    year: '2024',
+    client: 'SFC',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '이 프로젝트는 새로운 SFC BIO 연구센터를 위한 공간 브랜딩 및 디자인 이니셔티브로, 기획 단계부터 실행까지 회사의 브랜드 가치를 건축 공간에 통합하는 것을 목표로 한다.',
+    body: [
+      '이 프로젝트는 새로운 SFC BIO 연구센터를 위한 공간 브랜딩 및 디자인 이니셔티브로, 기획 단계부터 실행까지 회사의 브랜드 가치를 건축 공간에 통합하는 것을 목표로 한다. 브랜드의 아이덴티티를 "끊임없이 변화하는 환경에 유연하게 반응하는 존재"로 설정하고, 이를 공간 브랜딩에 반영하였다.',
+      '"순수하고 정밀한 축(Pure and Precise Axis)"이라는 개념을 통해 반응적인 환경을 만들어내는 공간 아이덴티티를 제안하였다. 이 개념은 모든 공간을 연결하는 주요 동선이자 상징적 요소인 긴 유리 복도, 즉 "HEART SPACE"로 구현되었다. 이 공간은 사무와 생산 공간을 연결하고, 고객과 회사를 잇고, 사람과 자연을 이어주는 중심 공간으로서 다양한 상호작용을 가능하게 하며 브랜드의 핵심 역할을 수행한다.'
+    ],
+    bodyEn: [
+      'This project is a spatial branding and design initiative for the new SFC BIO Research Center, aimed at integrating the company\'s brand values into the built environment from planning through execution. The brand identity was defined as one that responds flexibly to a constantly changing environment, and this idea was translated into the spatial concept.',
+      'Under the concept of "Pure and Precise Axis," the project proposes a responsive spatial identity centered on a long glass corridor called "HEART SPACE." As the symbolic spine of the project, it connects office and production areas, links the company with visitors, and brings people and nature together. The design was developed from the site\'s unique linear form, creating a dramatic spatial experience that expresses the essence of the brand while allowing seamless connection to future buildings.'
+    ]
+  },
+  {
+    id: 'la-venice-c4-1bl',
+    thumbnail: 'images/projects/la-venice-c4-1bl.jpg',
+    name: 'LaVenice C4-1BL',
+    nameKo: '김포 라베니체 C4-1BL 복합문화공간 공간기획',
+    desc: '김포 라베니체 C4-1BL 복합문화공간 공간기획',
+    category: 'Mixed-use',
+    location: 'GIMPO',
+    year: '2024',
+    client: 'Confidential',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '김포 라베니체 프로젝트는 30·40 영패밀리가 많은 베드타운형 도시인 김포의 입지적 강점을 바탕으로, 주변 거주민뿐 아니라 외부 방문객까지 끌어들이는 문화 앵커시설을 제안한다.',
+    body: [
+      '김포 라베니체 프로젝트는 30·40 영패밀리가 많은 베드타운형 도시인 김포의 입지적 강점을 바탕으로, 주변 거주민뿐 아니라 외부 방문객까지 끌어들이는 문화 앵커시설을 제안하는 데 목적이 있다. 특히 라베니체가 F&B 중심으로 구성되어 일상적 방문 수요가 약해지는 한계를 극복하고, 대상지 건축을 통해 라베니체 전체의 활성화를 도모하고자 했다.',
+      '메인 테마를 음악으로 설정하고, 음악을 "듣는", "사는", "체험하는" 공간으로 프로그램을 구성했다. 1층은 누구나 머물 수 있는 공유공간이자 행사와 이벤트가 가능한 열린 공간으로, 상층부는 음악 관련 리테일과 F&B 공간으로, 최상층은 라베니체를 조망할 수 있는 루프탑 뷰포인트로 계획하였다.'
+    ],
+    bodyEn: []
+  },
+  {
+    id: 'cheonan-cultural',
+    thumbnail: 'images/projects/cheonan-cultural.jpg',
+    name: 'Cheonan Cultural Facility',
+    nameKo: '천안 백석동 복합문화공간 공간기획',
+    desc: '천안 백석동 복합문화공간 공간기획',
+    category: 'Mixed-use',
+    location: 'CHEONAN',
+    year: '2024',
+    client: '천안시',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '천안 프로젝트는 충청남도권의 젊고 잠재력 있는 도시인 천안의 중심 입지를 바탕으로, 문화와 상업을 함께 경험할 수 있는 새로운 복합문화공간을 제안한다.',
+    body: [
+      '천안 프로젝트는 충청남도권의 젊고 잠재력 있는 도시인 천안의 중심 입지를 바탕으로, 문화와 상업을 함께 경험할 수 있는 새로운 복합문화공간을 제안한다. 인근 주거지에서의 접근성이 뛰어난 대상지에 주변 수요를 수용할 수 있는 차별화된 상업 프로그램을 개발하고자 했다.',
+      '넓은 대지를 활용해 지하에는 충분한 주차시설을 배치하고, 그 상부에는 공원을 조성해 보행과 차량을 완전히 분리한 보행 중심 환경을 계획했다. 공원부에는 펫 중심의 토탈 케어 센터를 제안해 인근은 물론 주변 지역까지 수요를 확장하고, 사업성과 공공성을 함께 담아냈다.'
+    ],
+    bodyEn: [
+      'This Cheonan project proposes a new mixed-use cultural destination that combines commerce, culture, and public space in a highly accessible central location. Designed to serve nearby residential communities, it introduces a differentiated commercial program that responds to local demand while creating a broader destination appeal.',
+      'The plan places parking underground and creates a pedestrian-focused environment above, organized into a plaza and a park with distinct experiences. Small-scale retail, outdoor terraces, music-themed tenants, and a pet-oriented care center work together to attract visitors while balancing business viability with public value.'
+    ]
+  },
+  {
+    id: 'hanwha-hotel-resort',
+    thumbnail: 'images/projects/hanwha-hotel-resort.jpg',
+    name: 'Hanwha Hotel & Resort',
+    nameKo: '한화 호텔앤드리조트 양평부지 최유효 개발전략 마스터플랜',
+    desc: '한화 호텔앤드리조트 양평부지 최유효 개발전략 마스터플랜',
+    category: 'Hospitality',
+    location: 'YANGPYEONG',
+    year: '2024',
+    client: '한화 호텔 & 리조트',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '"천혜의 100년 숲과 함께 일상과 비일상을 유연하게 넘나드는 Liquid Life를 실현하는 미래형 복합단지"를 마스터 콘셉트로 제안했다.',
+    body: [
+      '"천혜의 100년 숲과 함께 일상과 비일상을 유연하게 넘나드는 Liquid Life를 실현하는 미래형 복합단지"를 마스터 콘셉트로 제안했다. 이 개념은 도심의 일상과 휴양·여가의 비일상적 경험이 공존하고, 건강한 라이프스타일과 취향 기반의 소셜네트워크, 창의적 영감과 생산이 자연스럽게 이어지는 새로운 공간 경험을 의미한다.',
+      '약 6만 평 규모의 동막지구는 휴양과 업무가 공존하는 Creative Town으로, 약 11만 평 규모의 콘도지구는 교류와 콘텐츠 중심의 Networking Town으로 계획해 차별화된 라이프스타일 프로그램을 제안했다. 이를 통해 휴양·일·문화가 일상 속에서 지속되는 Hanwha Liquid-Life District 마스터플랜을 구축했다.'
+    ],
+    bodyEn: [
+      'The master concept proposes a future-oriented mixed-use district that embodies Liquid Life—a flexible lifestyle where everyday living, leisure, work, and culture flow seamlessly together within a century-old natural forest. It envisions a new spatial experience where urban routine and retreat coexist, healthy lifestyles unfold, social connections form naturally, and creativity can emerge.',
+      'The Dongmak District is conceived as Creative Town, where leisure and work coexist, while the Condo District is planned as Networking Town, centered on shared interests, lifestyle content, and social exchange. Through this Hanwha Liquid-Life District master plan, the project aims to strengthen Hanwha Hotels & Resorts\'s brand value, expand its business model, and propose a new value chain for the future of the leisure industry.'
+    ]
+  },
+  {
+    id: 'courtyard-marriott-pyeongtaek',
+    thumbnail: 'images/projects/courtyard-marriott-pyeongtaek.jpg',
+    name: 'Courtyard by Marriott Pyeongtaek',
+    nameKo: '코트야드 바이 메리어트 평택',
+    desc: '코트야드 바이 메리어트 평택',
+    category: 'Hospitality',
+    location: 'PYEONGTAEK',
+    year: '2024',
+    client: 'Marriott',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '평택 고덕국제신도시의 새로운 수요, 그리고 근방에 들어선 삼성 반도체 공장 및 벤더사의 수요를 위해 230실 규모의 코트야드 바이 메리어트 브랜드 호텔 프로젝트이다.',
+    body: [
+      '평택 고덕국제신도시의 새로운 수요, 그리고 근방에 들어선 삼성 반도체 공장 및 벤더사의 수요를 위해 230실 규모의 코트야드 바이 메리어트 브랜드 호텔 프로젝트이다. 스케줄 상 규모검토부터 프로그램 세팅을 진행하였고, 계획설계부터 개발행위허가를 포함한 각종 인허가를 수행하였다.',
+      '계획관리지역으로서 4층 이하, 최고높이 16m 이하, 지하 10m 이하로 개발하되 인프라 없는 구릉지에 230실을 확보하기 위한 방안으로 원형의 매스 디자인을 통해 객실과 중정을 품은 호텔을 완성하였다. 내부공간은 중정을 품은 로비와 아뜨리움 구성으로 새로운 공간경험이 가능하게 하였으며, 녹색건축인증과 LEED Certified 획득을 위한 각종 에너지 기법을 적용하였다.'
+    ],
+    bodyEn: [
+      'This project is a 230-key Courtyard by Marriott hotel in Pyeongtaek Godeok International New Town, planned to serve growing demand from the nearby Samsung semiconductor campus and related vendors. The work covered early scale studies, program planning, schematic design, and the full approval process, including development permits.',
+      'To accommodate 230 rooms on a constrained hilly site within strict zoning limits, the design adopts a circular massing strategy organized around a central courtyard. The project creates a distinctive spatial experience through a sculptural façade, courtyard lobby, and atrium, while incorporating energy-efficient elements to support Green Building Certification and LEED Certified goals.'
+    ]
+  },
+  {
+    id: 'nft-lifestyle-platform',
+    thumbnail: 'images/projects/nft-lifestyle-platform.jpg',
+    name: 'NFT Lifestyle Platform',
+    nameKo: '건축 및 공간 NFT 라이프스타일 플랫폼 구축',
+    desc: '건축 및 공간 NFT 라이프스타일 플랫폼 구축',
+    category: 'Metaverse',
+    location: 'METAVERSE',
+    year: '2024',
+    client: 'Confidential',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '힐링그라운드 프로젝트는 미래에 상상과 현실이 조우하는 공간환경과 공간경험을 실현한다. 메타버스 건축 작업을 통해 신앙과 예술을 결합하는 경험을 새로운 관점으로 제안하는 프로젝트이다.',
+    body: [
+      '힐링그라운드 프로젝트는 미래에 상상과 현실이 조우하는 공간환경(사람, 자연, 도시, 건축)과 공간경험(콘텐츠, 프로그램)을 실현한다. 메타버스 건축 작업을 통해 신앙과 예술을 결합하는 경험을 새로운 관점으로 제안하는 프로젝트이다.',
+      '프로젝트의 핵심 컨셉은 "회복의 빛"으로, 이를 통해 공간이 주는 힘을 최대한 활용하여 공간 경험을 제공하는 것이다. 비정형 지붕 구조 사이로 들어오는 강력한 빛으로 가장 깊은 곳에 위치한 코이노니아홀을 가장 밝은 공간이 될 수 있도록 하여 회복의 빛을 경험하도록 하였다.'
+    ],
+    bodyEn: [
+      'The Healing Ground Project proposes a future spatial experience where imagination and reality meet, bringing together people, nature, the city, and architecture through metaverse design. By combining faith and art, the project presents a new perspective on spiritual and artistic experience while focusing not only on form, but also on the user journey.',
+      'Its core concept, "Light of Restoration," uses space itself as a medium for healing. Strong light enters through the irregular roof, making the deepest space the brightest and allowing visitors to experience the restorative power of light. The architecture blurs the boundary between building and site, creating a poetic landscape that takes advantage of the metaverse to deliver a beauty difficult to achieve in reality.'
     ]
   },
   {
