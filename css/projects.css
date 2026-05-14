@@ -306,5 +306,6 @@
   .pj-row { padding: 0 20px; min-height: 68px; }
   .pj-row-cat, .pj-row-loc, .pj-row-year { display: none; }
   .pj-item-cat { display: none; }
+  .pj-view-toggle { display: none; }
   .pj-view-toggle { padding-left: 12px; }
 }

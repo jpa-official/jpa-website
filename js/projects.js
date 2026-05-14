@@ -1,6 +1,6 @@
 const PROJECTS = window.PROJECTS || [];
 let currentFilter = 'all';
-let currentView = 'gallery';
+let currentView = window.innerWidth <= 768 ? 'gallery' : 'gallery';
 
 const $list = document.getElementById('pjList');
 const $filter = document.getElementById('projFilter');
@@ -93,6 +93,7 @@ $filter.addEventListener('click', (e) => {
 });
 
 $viewToggle.addEventListener('click', (e) => {
+  if (window.innerWidth <= 768) return;
   const btn = e.target.closest('.pj-view-btn');
   if (!btn || btn.dataset.view === currentView) return;
   currentView = btn.dataset.view;
