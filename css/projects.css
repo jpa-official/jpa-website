@@ -117,6 +117,15 @@
 /* ---------- PROJECT LIST ---------- */
 .pj-list {
   border-top: 1px solid var(--black);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+.pj-item:nth-child(odd) {
+  border-right: 1px solid var(--black);
+}
+.pj-row {
+  grid-column: 1 / -1;
 }
 
 .pj-item {
@@ -297,6 +306,8 @@
 .pj-row:hover .pj-row-year { opacity: 0.65; }
 
 @media (max-width: 768px) {
+  .pj-list { grid-template-columns: 1fr; }
+  .pj-item:nth-child(odd) { border-right: none; }
   .pj-main { padding-top: 65px; }
   .pj-hero { padding: 24px 20px 50px; }
   .pj-item-name { font-size: 15px; }
