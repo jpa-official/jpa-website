@@ -302,7 +302,7 @@
   .pj-item-name { font-size: 15px; }
   .pj-item-desc { font-size: 11px; }
   .pj-filter-wrap { padding: 0 20px; }
-  .pj-filter-btn { padding: 16px 14px; font-size: 10px; }
+  .pj-filter-btn { padding: 16px 14px; font-size: 10px; letter-spacing: 0.05em; }
   .pj-item-info { padding: 8px 20px 12px; flex-direction: column; gap: 4px; }
   .pj-row { padding: 0 20px; min-height: 68px; }
   .pj-row-cat, .pj-row-loc, .pj-row-year { display: none; }
