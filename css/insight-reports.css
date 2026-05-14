@@ -338,8 +338,9 @@
 @media (max-width: 768px) {
   .ir-main { padding-top: 65px; }
   .ir-hero { padding: 24px 20px 60px; min-height: auto; align-items: flex-start; }
+  .page-tag { display: none; }
   .ir-filter-wrap { padding: 0 20px; }
-  .ir-filter-btn { padding: 16px 12px; font-size: 10px; letter-spacing: 0.05em; }
+  .ir-filter-btn { padding: 16px 12px; font-size: 10px; letter-spacing: 0.02em; }
   .ir-item-inner { padding: 16px 20px; grid-template-columns: 1fr; gap: 8px; }
   .ir-item-num { display: none; }
   .ir-item-meta { display: none; }
