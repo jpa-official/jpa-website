@@ -349,6 +349,7 @@
   .sv-member:nth-child(3n) { border-right: 1px solid rgba(0,0,0,0.15); }
   .sv-member:nth-child(2n) { border-right: none; }
   .sv-partners { padding: 60px 20px 0; }
+  .sv-partners-header { margin-bottom: 24px; }
   .sv-partners-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
