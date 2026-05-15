@@ -86,8 +86,7 @@
 }
 .pd-main-img img {
   width: 100%;
-  max-height: 78vh;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
