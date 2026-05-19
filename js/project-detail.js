@@ -86,29 +86,16 @@
         counter.textContent = `${current + 1} / ${allImages.length}`;
       }
 
-      let autoSlideTimer = null;
-      function startAutoSlide() {
-        if (!window.matchMedia('(max-width: 900px)').matches) return;
-        autoSlideTimer = setInterval(() => goTo(current + 1), 4000);
-      }
-      function stopAutoSlide() {
-        clearInterval(autoSlideTimer);
-        autoSlideTimer = null;
-      }
-
-      btnPrev.addEventListener('click', () => { stopAutoSlide(); goTo(current - 1); });
-      btnNext.addEventListener('click', () => { stopAutoSlide(); goTo(current + 1); });
+      btnPrev.addEventListener('click', () => goTo(current - 1));
+      btnNext.addEventListener('click', () => goTo(current + 1));
 
       let touchStartX = 0;
       track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
       track.addEventListener('touchend', e => {
         const diff = touchStartX - e.changedTouches[0].clientX;
         if (Math.abs(diff) < 40) return;
-        stopAutoSlide();
         goTo(diff > 0 ? current + 1 : current - 1);
       }, { passive: true });
-
-      startAutoSlide();
 
       $mainImg.appendChild(btnPrev);
       $mainImg.appendChild(btnNext);
