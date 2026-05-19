@@ -7,6 +7,7 @@ window.PROJECTS = [
   {
     id: 'gwanghwa169',
     thumbnail: 'images/projects/gwanghwa169.jpg',
+    images: ['images/projects/gwanghwa169-2.jpg', 'images/projects/gwanghwa169-3.jpg'],
     name: 'Gwanghwa169',
     nameKo: '광화문169',
     desc: '광화문169 공간경험 및 공간환경설계',
@@ -71,6 +72,7 @@ window.PROJECTS = [
   {
     id: 'yonsei-wonju',
     thumbnail: 'images/projects/yonsei-wonju.jpg',
+    images: ['images/projects/yonsei-wonju-2.jpg', 'images/projects/yonsei-wonju-3.jpg', 'images/projects/yonsei-wonju-4.jpg'],
     name: 'Yonsei University Wonju College',
     nameKo: '연세대학교 원주의과대학 공간디자인',
     desc: '연세대학교 원주의과대학 공간디자인',
@@ -90,6 +92,7 @@ window.PROJECTS = [
   {
     id: 'loft-one-ground',
     thumbnail: 'images/projects/loft-one-ground.jpg',
+    images: ['images/projects/loft-one-ground-2.jpg', 'images/projects/loft-one-ground-3.jpg', 'images/projects/loft-one-ground-4.jpg', 'images/projects/loft-one-ground-5.jpg'],
     name: 'Loft-One G:ROUND',
     nameKo: '중랑구 묵동70번지 임대주택 개발사업기획 및 공간기획',
     desc: '중랑구 묵동70번지 임대주택 개발사업기획 및 공간기획',
@@ -112,6 +115,7 @@ window.PROJECTS = [
   {
     id: 'odyssey-village',
     thumbnail: 'images/projects/odyssey-village.jpg',
+    images: ['images/projects/odyssey-village-2.png'],
     name: 'Odyssey Village',
     nameKo: '인천 운북동 시니어타운 공간기획',
     desc: '인천 운북동 시니어타운 공간기획',
@@ -134,6 +138,7 @@ window.PROJECTS = [
   {
     id: 'innocean-hq',
     thumbnail: 'images/projects/innocean-hq.jpg',
+    images: ['images/projects/innocean-2.jpg', 'images/projects/innocean-3.jpg', 'images/projects/innocean-diagram-2.jpeg'],
     name: 'Innocean Headquarter',
     nameKo: '이노션 사옥 공간기획 컨설팅, 공간경험설계',
     desc: '이노션 사옥 공간기획 컨설팅, 공간경험설계',
@@ -156,6 +161,7 @@ window.PROJECTS = [
   {
     id: 'seoul-station-it',
     thumbnail: 'images/projects/seoul-station-it.jpg',
+    images: ['images/projects/seoul-station-it-2.jpg'],
     name: 'Seoul Station — IT Seoul',
     nameKo: '서울역 일대 공간기획 국제 공모',
     desc: '서울역 일대 공간기획 국제 공모',
@@ -200,6 +206,7 @@ window.PROJECTS = [
   {
     id: 'crackin',
     thumbnail: 'images/projects/crackin.jpg',
+    images: ['images/projects/carckin-2.jpg', 'images/projects/carckin-3.jpg'],
     name: "Crack'in",
     nameKo: '크래킹커피 1호점 — 공간기획 및 공간경험설계',
     desc: '크래킹커피 1호점 — 공간기획 및 공간경험설계',
@@ -222,6 +229,7 @@ window.PROJECTS = [
   {
     id: 'katsu-shoshin',
     thumbnail: 'images/projects/katsu-shoshin.jpg',
+    images: ['images/projects/katsu-shoshin-2.jpg', 'images/projects/katsu-shoshin-3.jpg'],
     name: 'Katsu Shoshin',
     nameKo: '카츠쇼신 1호점 — 공간기획 및 공간경험설계',
     desc: '카츠쇼신 1호점 — 공간기획 및 공간경험설계',
@@ -244,6 +252,7 @@ window.PROJECTS = [
   {
     id: 'slipper-mansion',
     thumbnail: 'images/projects/slipper-mansion.jpg',
+    images: ['images/projects/slipper-mansion-2.jpg', 'images/projects/slipper-mansion-3.jpg', 'images/projects/slipper-mansion-4.jpg'],
     name: 'Slipper Mansion',
     nameKo: 'jpa. 브랜디드 스페이스 — 슬리퍼맨션',
     desc: 'jpa. 브랜디드 스페이스 — 슬리퍼맨션',
@@ -305,6 +314,7 @@ window.PROJECTS = [
   {
     id: 'sfc-biopark',
     thumbnail: 'images/projects/sfc-biopark.jpg',
+    images: ['images/projects/sfc-biopark-2.jpg', 'images/projects/sfc-biopark-3.jpg'],
     name: 'SFC Biopark',
     nameKo: 'SFC BIOPARK 공간기획 및 공간환경설계',
     desc: 'SFC BIOPARK 공간기획 및 공간환경설계',
@@ -327,6 +337,7 @@ window.PROJECTS = [
   {
     id: 'la-venice-c4-1bl',
     thumbnail: 'images/projects/la-venice-c4-1bl.jpg',
+    images: ['images/projects/la-venice-c4-1bl-2.jpg'],
     name: 'LaVenice C4-1BL',
     nameKo: '김포 라베니체 C4-1BL 복합문화공간 공간기획',
     desc: '김포 라베니체 C4-1BL 복합문화공간 공간기획',
@@ -390,6 +401,7 @@ window.PROJECTS = [
   {
     id: 'courtyard-marriott-pyeongtaek',
     thumbnail: 'images/projects/courtyard-marriott-pyeongtaek.jpg',
+    images: ['images/projects/courtyard-marriott-pyeongtaek-2.jpg'],
     name: 'Courtyard by Marriott Pyeongtaek',
     nameKo: '코트야드 바이 메리어트 평택',
     desc: '코트야드 바이 메리어트 평택',
@@ -434,6 +446,7 @@ window.PROJECTS = [
   {
     id: 'sejong-ro-park-ground-one',
     thumbnail: 'images/projects/sejong-ro-park-ground-one.jpg',
+    images: ['images/projects/sejong-ro-park-ground-one-2.jpg', 'images/projects/sejong-ro-park-ground-one-3.jpg', 'images/projects/sejong-ro-park-ground-one-4.jpg', 'images/projects/sejong-ro-park-ground-one-5.jpg', 'images/projects/sejong-ro-park-ground-one-6.jpg'],
     name: 'Sejong-ro Park — Ground One',
     nameKo: '세종로 공원 및 상징조형물 조성 설계공모',
     desc: '세종로 공원 및 상징조형물 조성 설계공모',
