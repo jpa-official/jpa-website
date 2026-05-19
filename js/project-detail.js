@@ -58,15 +58,19 @@
       });
       $mainImg.appendChild(track);
 
+      const isMobile = window.matchMedia('(max-width: 900px)').matches;
+
       const btnPrev = document.createElement('button');
       btnPrev.className = 'pd-slider-btn pd-slider-prev';
       btnPrev.setAttribute('aria-label', 'Previous image');
       btnPrev.innerHTML = `<svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+      if (isMobile) btnPrev.style.display = 'none';
 
       const btnNext = document.createElement('button');
       btnNext.className = 'pd-slider-btn pd-slider-next';
       btnNext.setAttribute('aria-label', 'Next image');
       btnNext.innerHTML = `<svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+      if (isMobile) btnNext.style.display = 'none';
 
       const counter = document.createElement('div');
       counter.className = 'pd-slider-counter';
@@ -82,8 +86,29 @@
         counter.textContent = `${current + 1} / ${allImages.length}`;
       }
 
-      btnPrev.addEventListener('click', () => goTo(current - 1));
-      btnNext.addEventListener('click', () => goTo(current + 1));
+      let autoSlideTimer = null;
+      function startAutoSlide() {
+        if (!window.matchMedia('(max-width: 900px)').matches) return;
+        autoSlideTimer = setInterval(() => goTo(current + 1), 4000);
+      }
+      function stopAutoSlide() {
+        clearInterval(autoSlideTimer);
+        autoSlideTimer = null;
+      }
+
+      btnPrev.addEventListener('click', () => { stopAutoSlide(); goTo(current - 1); });
+      btnNext.addEventListener('click', () => { stopAutoSlide(); goTo(current + 1); });
+
+      let touchStartX = 0;
+      track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) < 40) return;
+        stopAutoSlide();
+        goTo(diff > 0 ? current + 1 : current - 1);
+      }, { passive: true });
+
+      startAutoSlide();
 
       $mainImg.appendChild(btnPrev);
       $mainImg.appendChild(btnNext);
