@@ -206,7 +206,7 @@ window.PROJECTS = [
   {
     id: 'crackin',
     thumbnail: 'images/projects/crackin.jpg',
-    images: ['images/projects/carckin-2.jpg', 'images/projects/carckin-3.jpg'],
+    images: ['images/projects/crackin-2.jpg', 'images/projects/crackin-3.jpg'],
     name: "Crack'in",
     nameKo: '크래킹커피 1호점 — 공간기획 및 공간경험설계',
     desc: '크래킹커피 1호점 — 공간기획 및 공간경험설계',
