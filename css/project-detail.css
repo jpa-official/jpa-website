@@ -82,7 +82,9 @@
 /* ---------- MAIN IMAGE ---------- */
 .pd-main-img {
   width: 100%;
-  background: var(--black);
+  padding: 0 40px;
+  box-sizing: border-box;
+  background: var(--white);
 }
 .pd-main-img img {
   width: 100%;
@@ -93,9 +95,11 @@
 /* ---------- SLIDER ---------- */
 .pd-slider {
   position: relative;
+}
+.pd-slider-track {
+  position: relative;
   overflow: hidden;
 }
-.pd-slider-track { position: relative; }
 .pd-slide { display: none; }
 .pd-slide.active {
   display: block;
@@ -128,12 +132,12 @@
 }
 .pd-slider-btn:hover { background: rgba(0,0,0,0.8); }
 .pd-slider-btn svg { width: 22px; height: 22px; }
-.pd-slider-prev { left: 20px; }
-.pd-slider-next { right: 20px; }
+.pd-slider-prev { left: 16px; }
+.pd-slider-next { right: 16px; }
 .pd-slider-counter {
   position: absolute;
   bottom: 16px;
-  right: 20px;
+  right: 16px;
   background: rgba(0,0,0,0.45);
   color: #fff;
   font-family: 'Switzer', sans-serif;
@@ -302,6 +306,7 @@
   .pd-meta-col { border-right: none; margin-right: 0; padding: 16px 0; }
   .pd-meta-col:last-child { grid-column: 1 / -1; border-top: 1px solid rgba(0,0,0,0.1); }
   .pd-meta-label { letter-spacing: 0.06em; }
+  .pd-main-img { padding: 0 20px; }
   .pd-body-section { padding: 40px 20px 60px; }
   .pd-body-ko p, .pd-body-en p { font-size: 13px; }
   .pd-body-en p { font-weight: 400; }
