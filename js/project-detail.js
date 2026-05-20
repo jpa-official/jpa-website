@@ -48,7 +48,7 @@
       track.className = 'pd-slider-track';
       allImages.forEach((src, i) => {
         const slide = document.createElement('div');
-        slide.className = 'pd-slide' + (i === 0 ? ' active' : '');
+        slide.className = 'pd-slide' + (i === 0 ? ' active pd-slide-main' : '');
         const img = document.createElement('img');
         img.src = src;
         img.alt = project.name;
