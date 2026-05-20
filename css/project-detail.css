@@ -99,15 +99,13 @@
 .pd-slider-track {
   position: relative;
   overflow: hidden;
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
 }
-.pd-slide { display: none; }
-.pd-slide.active {
-  display: block;
-  animation: pd-fade 0.35s ease;
-}
-@keyframes pd-fade {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+.pd-slide {
+  flex-shrink: 0;
+  width: 100%;
 }
 .pd-slide img {
   width: 100%;
@@ -118,8 +116,6 @@
 /* sub slides */
 .pd-slide:not(.pd-slide-main) {
   background: #fff;
-}
-.pd-slide:not(.pd-slide-main).active {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -340,6 +336,6 @@
   .pd-slider-btn { display: none; }
   .pd-extra-img { height: auto; }
   .pd-extra-img img { width: 100%; height: auto; }
-  .pd-slide:not(.pd-slide-main).active { display: block; min-height: unset; }
+  .pd-slide:not(.pd-slide-main) { min-height: unset; }
   .pd-slide:not(.pd-slide-main) img { width: 100%; height: auto; }
 }

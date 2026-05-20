@@ -83,6 +83,7 @@
         slides[current].classList.remove('active');
         current = (n + allImages.length) % allImages.length;
         slides[current].classList.add('active');
+        track.style.transform = `translateX(-${current * 100}%)`;
         counter.textContent = `${current + 1} / ${allImages.length}`;
       }
 
@@ -93,8 +94,11 @@
       track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
       track.addEventListener('touchend', e => {
         const diff = touchStartX - e.changedTouches[0].clientX;
-        if (Math.abs(diff) < 40) return;
-        goTo(diff > 0 ? current + 1 : current - 1);
+        if (Math.abs(diff) < 10) {
+          goTo(current + 1);
+        } else if (Math.abs(diff) >= 40) {
+          goTo(diff > 0 ? current + 1 : current - 1);
+        }
       }, { passive: true });
 
       $mainImg.appendChild(btnPrev);
