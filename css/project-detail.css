@@ -117,7 +117,7 @@
 
 /* sub slides */
 .pd-slide:not(.pd-slide-main) {
-  background: #111;
+  background: #fff;
 }
 .pd-slide:not(.pd-slide-main).active {
   display: flex;
