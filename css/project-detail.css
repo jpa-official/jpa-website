@@ -322,4 +322,6 @@
   .pd-nav-link { padding: 30px 20px; }
   .pd-prev { border-right: none; border-bottom: 1px solid var(--black); }
   .pd-slider-btn { display: none; }
+  .pd-extra-img { height: auto; }
+  .pd-extra-img img { width: 100%; height: auto; }
 }
