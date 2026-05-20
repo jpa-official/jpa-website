@@ -34,28 +34,79 @@
     : (project.scope || '—');
   setText('pdMetaScope', scopeVal);
 
-  // Main image (thumbnail only)
+  // Main image + slider
   const $mainImg = document.getElementById('pdMainImg');
-  if ($mainImg && project.thumbnail) {
-    const img = document.createElement('img');
-    img.src = project.thumbnail;
-    img.alt = project.name;
-    $mainImg.appendChild(img);
-  }
+  if ($mainImg) {
+    const allImages = [];
+    if (project.thumbnail) allImages.push(project.thumbnail);
+    if (Array.isArray(project.images)) allImages.push(...project.images);
 
-  // Extra images (below body text)
-  const $extraImgs = document.getElementById('pdExtraImgs');
-  if ($extraImgs && Array.isArray(project.images) && project.images.length) {
-    project.images.forEach(src => {
-      const div = document.createElement('div');
-      div.className = 'pd-extra-img';
+    if (allImages.length > 1) {
+      $mainImg.classList.add('pd-slider');
+
+      const track = document.createElement('div');
+      track.className = 'pd-slider-track';
+      allImages.forEach((src, i) => {
+        const slide = document.createElement('div');
+        slide.className = 'pd-slide' + (i === 0 ? ' active' : '');
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = project.name;
+        img.loading = i === 0 ? 'eager' : 'lazy';
+        slide.appendChild(img);
+        track.appendChild(slide);
+      });
+      $mainImg.appendChild(track);
+
+      const isMobile = window.matchMedia('(max-width: 900px)').matches;
+
+      const btnPrev = document.createElement('button');
+      btnPrev.className = 'pd-slider-btn pd-slider-prev';
+      btnPrev.setAttribute('aria-label', 'Previous image');
+      btnPrev.innerHTML = `<svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+      if (isMobile) btnPrev.style.display = 'none';
+
+      const btnNext = document.createElement('button');
+      btnNext.className = 'pd-slider-btn pd-slider-next';
+      btnNext.setAttribute('aria-label', 'Next image');
+      btnNext.innerHTML = `<svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+      if (isMobile) btnNext.style.display = 'none';
+
+      const counter = document.createElement('div');
+      counter.className = 'pd-slider-counter';
+      counter.textContent = `1 / ${allImages.length}`;
+
+      let current = 0;
+      const slides = track.querySelectorAll('.pd-slide');
+
+      function goTo(n) {
+        slides[current].classList.remove('active');
+        current = (n + allImages.length) % allImages.length;
+        slides[current].classList.add('active');
+        counter.textContent = `${current + 1} / ${allImages.length}`;
+      }
+
+      btnPrev.addEventListener('click', () => goTo(current - 1));
+      btnNext.addEventListener('click', () => goTo(current + 1));
+
+      let touchStartX = 0;
+      track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) < 40) return;
+        goTo(diff > 0 ? current + 1 : current - 1);
+      }, { passive: true });
+
+      $mainImg.appendChild(btnPrev);
+      $mainImg.appendChild(btnNext);
+      $mainImg.appendChild(counter);
+
+    } else if (allImages.length === 1) {
       const img = document.createElement('img');
-      img.src = src;
+      img.src = allImages[0];
       img.alt = project.name;
-      img.loading = 'lazy';
-      div.appendChild(img);
-      $extraImgs.appendChild(div);
-    });
+      $mainImg.appendChild(img);
+    }
   }
 
   // Body — Korean
