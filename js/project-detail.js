@@ -52,7 +52,7 @@
         const img = document.createElement('img');
         img.src = src;
         img.alt = project.name;
-        img.loading = i === 0 ? 'eager' : 'lazy';
+        img.loading = 'eager';
         slide.appendChild(img);
         track.appendChild(slide);
       });
