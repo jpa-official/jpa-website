@@ -95,10 +95,9 @@
 /* ---------- SLIDER ---------- */
 .pd-slider {
   position: relative;
+  overflow: hidden;
 }
 .pd-slider-track {
-  position: relative;
-  overflow: hidden;
   display: flex;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;

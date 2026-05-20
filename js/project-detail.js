@@ -83,7 +83,7 @@
         slides[current].classList.remove('active');
         current = (n + allImages.length) % allImages.length;
         slides[current].classList.add('active');
-        track.style.transform = `translateX(-${current * 100}%)`;
+        track.style.transform = `translateX(-${current * $mainImg.offsetWidth}px)`;
         counter.textContent = `${current + 1} / ${allImages.length}`;
       }
 
