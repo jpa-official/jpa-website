@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const px  = sCtx.getImageData(0, 0, sW, sH).data;
     const raw = [];
-    for (let y = 0; y < sH; y += 6) {
-      for (let x = 0; x < sW; x += 6) {
+    for (let y = 0; y < sH; y += 4) {
+      for (let x = 0; x < sW; x += 4) {
         const i = (y * sW + x) * 4;
         if (px[i + 3] > 120 && px[i] < 100) raw.push([x, y]);
       }
@@ -68,20 +68,20 @@ document.addEventListener('DOMContentLoaded', () => {
         cpX: (sx + ftx) / 2 + (Math.random() - 0.5) * 240,
         cpY: (sy + fty) / 2 + (Math.random() - 0.5) * 180,
         /* wander oscillation params */
-        ax:  8  + Math.random() * 16,
-        ay:  6  + Math.random() * 14,
+        ax:  3  + Math.random() * 5,
+        ay:  3  + Math.random() * 4,
         wx:  0.25 + Math.random() * 0.55,
         wy:  0.20 + Math.random() * 0.60,
         phx: Math.random() * Math.PI * 2,
         phy: Math.random() * Math.PI * 2,
-        size: isMobile ? Math.random() * 1.8 + 2 : Math.random() * 3 + 4,
+        size: isMobile ? Math.random() * 1.0 + 1.2 : Math.random() * 1.2 + 1.5,
         cx: sx, cy: sy   /* current drawn position, updated each frame */
       };
     });
 
     const CONVERGE_DUR = 1000;
-    const SETTLE_DUR   = 500;
-    const DISSOLVE_DUR = 1200;
+    const SETTLE_DUR   = 400;
+    const DISSOLVE_DUR = 1000;
 
     /* phase: 'converge' → 'wander' → 'settle' → 'dissolve' */
     let phase         = 'converge';
@@ -201,34 +201,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (logoEl) {
-          const lt = Math.max(0, (t - 0.3) / 0.7);
+          const lt = Math.max(0, (t - 0.15) / 0.85);
           logoEl.style.opacity = String(smoothstep(lt));
         }
 
         if (t >= 1) {
           canvas.style.opacity = '0';
           if (logoEl) logoEl.style.opacity = '1';
-
-          /* "CLICK TO ENTER" 힌트 리셋 후 표시 */
-          if (enterPrompt) {
-            enterPrompt.classList.remove('visible');
-            enterPrompt.textContent = 'CLICK TO ENTER';
-            setTimeout(() => enterPrompt.classList.add('visible'), 80);
-          }
-          loader.classList.add('ready');
-
-          /* ---- 두 번째 클릭: 메인 페이지 진입 ---- */
-          let entered = false;
-          function enterSite(ev) {
-            if (entered) return;
-            entered = true;
-            if (ev.type === 'touchend') ev.preventDefault();
+          /* 로고가 잠깐 보인 뒤 자연스럽게 메인 페이지로 진입 */
+          setTimeout(() => {
             loader.classList.add('hidden');
             document.body.classList.add('loaded');
             triggerHero();
-          }
-          loader.addEventListener('click',    enterSite);
-          loader.addEventListener('touchend', enterSite, { passive: false });
+          }, 450);
           return; /* RAF 종료 */
         }
       }
