@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cW = canvas.width;
     const cH = canvas.height;
 
-    /* --- 실제 로고 이미지에서 점 좌표 샘플링 --- */
+    /* --- 로고 이미지에서 점 좌표 샘플링 --- */
     const sW  = Math.min(Math.round(cW * 0.52), 480);
     const sH  = Math.round(sW * logoImg.naturalHeight / logoImg.naturalWidth);
     const sc  = document.createElement('canvas');
@@ -47,118 +47,193 @@ document.addEventListener('DOMContentLoaded', () => {
         if (px[i + 3] > 120 && px[i] < 100) raw.push([x, y]);
       }
     }
-
-    /* 셔플 */
     for (let i = raw.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [raw[i], raw[j]] = [raw[j], raw[i]];
     }
-    const sample = raw;
     const ox = Math.round((cW - sW) / 2);
     const oy = Math.round((cH - sH) / 2);
 
-    /* 파티클: 사방에서 Bezier 곡선으로 수렴 */
     const isMobile = cW < 768;
-    const particles = sample.map(([tx, ty]) => {
-      const angle = Math.random() * Math.PI * 2;
-      const dist  = 160 + Math.random() * Math.max(cW, cH) * 0.4;
-      const sx    = cW / 2 + Math.cos(angle) * dist;
-      const sy    = cH / 2 + Math.sin(angle) * dist;
+    const particles = raw.map(([tx, ty]) => {
       const ftx   = tx + ox;
       const fty   = ty + oy;
+      const angle = Math.random() * Math.PI * 2;
+      const dist  = 140 + Math.random() * Math.max(cW, cH) * 0.38;
+      const sx    = cW / 2 + Math.cos(angle) * dist;
+      const sy    = cH / 2 + Math.sin(angle) * dist;
       return {
         sx, sy,
         tx: ftx, ty: fty,
-        cpX: (sx + ftx) / 2 + (Math.random() - 0.5) * 260,
-        cpY: (sy + fty) / 2 + (Math.random() - 0.5) * 200,
-        delay: Math.random() * 0.2,
-        size:  isMobile ? Math.random() * 1.8 + 2 : Math.random() * 3 + 4
+        cpX: (sx + ftx) / 2 + (Math.random() - 0.5) * 240,
+        cpY: (sy + fty) / 2 + (Math.random() - 0.5) * 180,
+        /* wander oscillation params */
+        ax:  8  + Math.random() * 16,
+        ay:  6  + Math.random() * 14,
+        wx:  0.25 + Math.random() * 0.55,
+        wy:  0.20 + Math.random() * 0.60,
+        phx: Math.random() * Math.PI * 2,
+        phy: Math.random() * Math.PI * 2,
+        size: isMobile ? Math.random() * 1.8 + 2 : Math.random() * 3 + 4,
+        cx: sx, cy: sy   /* current drawn position, updated each frame */
       };
     });
 
-    const DURATION = 1600;
-    let t0 = null;
-    function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+    const CONVERGE_DUR = 1000;
+    const SETTLE_DUR   = 500;
+    const DISSOLVE_DUR = 1200;
 
+    /* phase: 'converge' → 'wander' → 'settle' → 'dissolve' */
+    let phase         = 'converge';
+    let convergeStart = null;
+    let wanderStart   = null;
+    let settleStart   = null;
+    let dissolveStart = null;
+
+    function easeOut(t)    { return 1 - Math.pow(1 - t, 3); }
+    function easeInOut(t)  { return t < 0.5 ? 2*t*t : 1 - Math.pow(-2*t+2,2)/2; }
+    function smoothstep(t) { return t * t * (3 - 2 * t); }
+
+    const logoEl      = document.getElementById('loaderLogo');
+    const enterPrompt = document.getElementById('loaderEnter');
+
+    /* ---- 첫 번째 클릭: wander 중단 → settle 시작 ---- */
+    let firstClicked = false;
+    let hintShown    = false;
+
+    function onFirstClick() {
+      if (firstClicked) return;
+      if (phase !== 'converge' && phase !== 'wander') return;
+      firstClicked = true;
+      loader.removeEventListener('click',    onFirstClick);
+      loader.removeEventListener('touchend', onFirstClick);
+      /* 현재 위치 스냅샷 → settle 보간 시작점 */
+      particles.forEach(p => { p.snapX = p.cx; p.snapY = p.cy; });
+      /* 첫 클릭 힌트 숨김 */
+      if (enterPrompt && hintShown) {
+        enterPrompt.classList.remove('visible');
+      }
+      phase = 'settle';
+    }
+
+    loader.addEventListener('click',    onFirstClick);
+    loader.addEventListener('touchend', onFirstClick, { passive: true });
+
+    /* ---- RAF 메인 루프 ---- */
     function frame(ts) {
-      if (!t0) t0 = ts;
-      const prog = Math.min((ts - t0) / DURATION, 1);
-
       ctx.clearRect(0, 0, cW, cH);
 
-      particles.forEach(p => {
-        const local = Math.max(0, (prog - p.delay) / (1 - p.delay));
-        const e     = easeOut(Math.min(local, 1));
-        const mt    = 1 - e;
-        const x     = mt * mt * p.sx + 2 * mt * e * p.cpX + e * e * p.tx;
-        const y     = mt * mt * p.sy + 2 * mt * e * p.cpY + e * e * p.ty;
+      /* ── CONVERGE ── */
+      if (phase === 'converge') {
+        if (!convergeStart) convergeStart = ts;
+        const prog = Math.min((ts - convergeStart) / CONVERGE_DUR, 1);
+        const e    = easeOut(prog);
 
-        ctx.beginPath();
-        ctx.arc(x, y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255,255,255,${0.2 + e * 0.8})`;
-        ctx.fill();
-      });
+        particles.forEach(p => {
+          const mt = 1 - e;
+          p.cx = mt*mt*p.sx + 2*mt*e*p.cpX + e*e*p.tx;
+          p.cy = mt*mt*p.sy + 2*mt*e*p.cpY + e*e*p.ty;
+          ctx.beginPath();
+          ctx.arc(p.cx, p.cy, p.size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255,255,255,${0.2 + e * 0.8})`;
+          ctx.fill();
+        });
 
-      if (prog < 1) {
-        requestAnimationFrame(frame);
-      } else {
-        const logoEl      = document.getElementById('loaderLogo');
-        const enterPrompt = document.getElementById('loaderEnter');
-
-        /* 점들이 수축하며 사라지고, 그 위로 PNG 로고가 나타나는 dissolve */
-        const DISSOLVE = 1400;
-        let d0 = null;
-
-        function smoothstep(t) { return t * t * (3 - 2 * t); }
-
-        function dissolveFrame(ts) {
-          if (!d0) d0 = ts;
-          const t  = Math.min((ts - d0) / DISSOLVE, 1);
-          const e  = smoothstep(t);
-
-          ctx.clearRect(0, 0, cW, cH);
-          particles.forEach(p => {
-            const size = p.size * (1 - e);
-            if (size < 0.15) return;
-            ctx.beginPath();
-            ctx.arc(p.tx, p.ty, size, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(255,255,255,${(1 - e) * 0.9 + 0.05})`;
-            ctx.fill();
-          });
-
-          /* 로고는 t=0.25부터 서서히 등장 */
-          if (logoEl) {
-            const lt = Math.max(0, (t - 0.25) / 0.75);
-            logoEl.style.opacity = String(smoothstep(lt));
-          }
-
-          if (t < 1) {
-            requestAnimationFrame(dissolveFrame);
-          } else {
-            canvas.style.opacity = '0';
-            if (logoEl) logoEl.style.opacity = '1';
-
-            setTimeout(() => {
-              if (enterPrompt) enterPrompt.classList.add('visible');
-              loader.classList.add('ready');
-
-              let entered = false;
-              function enterSite(e) {
-                if (entered) return;
-                entered = true;
-                if (e.type === 'touchend') e.preventDefault();
-                loader.classList.add('hidden');
-                document.body.classList.add('loaded');
-                triggerHero();
-              }
-              loader.addEventListener('click', enterSite);
-              loader.addEventListener('touchend', enterSite, { passive: false });
-            }, 0);
-          }
+        if (prog >= 1) {
+          phase = 'wander';
+          wanderStart = ts;
         }
 
-        requestAnimationFrame(dissolveFrame);
+      /* ── WANDER (loop) ── */
+      } else if (phase === 'wander') {
+        if (!wanderStart) wanderStart = ts;
+        const t = (ts - wanderStart) / 1000; /* seconds */
+
+        /* 2.5초 후 "CLICK" 힌트 표시 */
+        if (!hintShown && t > 2.5 && enterPrompt) {
+          hintShown = true;
+          enterPrompt.textContent = 'CLICK';
+          enterPrompt.classList.add('visible');
+        }
+
+        particles.forEach(p => {
+          p.cx = p.tx + p.ax * Math.sin(p.wx * t + p.phx);
+          p.cy = p.ty + p.ay * Math.sin(p.wy * t + p.phy);
+          ctx.beginPath();
+          ctx.arc(p.cx, p.cy, p.size, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(255,255,255,0.88)';
+          ctx.fill();
+        });
+
+      /* ── SETTLE ── */
+      } else if (phase === 'settle') {
+        if (!settleStart) settleStart = ts;
+        const prog = Math.min((ts - settleStart) / SETTLE_DUR, 1);
+        const e    = easeInOut(prog);
+
+        particles.forEach(p => {
+          p.cx = p.snapX + (p.tx - p.snapX) * e;
+          p.cy = p.snapY + (p.ty - p.snapY) * e;
+          ctx.beginPath();
+          ctx.arc(p.cx, p.cy, p.size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255,255,255,${0.88 + e * 0.12})`;
+          ctx.fill();
+        });
+
+        if (prog >= 1) {
+          phase = 'dissolve';
+          dissolveStart = ts;
+        }
+
+      /* ── DISSOLVE ── */
+      } else if (phase === 'dissolve') {
+        if (!dissolveStart) dissolveStart = ts;
+        const t = Math.min((ts - dissolveStart) / DISSOLVE_DUR, 1);
+        const e = smoothstep(t);
+
+        particles.forEach(p => {
+          const sz = p.size * (1 - e);
+          if (sz < 0.15) return;
+          ctx.beginPath();
+          ctx.arc(p.tx, p.ty, sz, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255,255,255,${(1 - e) * 0.95})`;
+          ctx.fill();
+        });
+
+        if (logoEl) {
+          const lt = Math.max(0, (t - 0.3) / 0.7);
+          logoEl.style.opacity = String(smoothstep(lt));
+        }
+
+        if (t >= 1) {
+          canvas.style.opacity = '0';
+          if (logoEl) logoEl.style.opacity = '1';
+
+          /* "CLICK TO ENTER" 힌트 리셋 후 표시 */
+          if (enterPrompt) {
+            enterPrompt.classList.remove('visible');
+            enterPrompt.textContent = 'CLICK TO ENTER';
+            setTimeout(() => enterPrompt.classList.add('visible'), 80);
+          }
+          loader.classList.add('ready');
+
+          /* ---- 두 번째 클릭: 메인 페이지 진입 ---- */
+          let entered = false;
+          function enterSite(ev) {
+            if (entered) return;
+            entered = true;
+            if (ev.type === 'touchend') ev.preventDefault();
+            loader.classList.add('hidden');
+            document.body.classList.add('loaded');
+            triggerHero();
+          }
+          loader.addEventListener('click',    enterSite);
+          loader.addEventListener('touchend', enterSite, { passive: false });
+          return; /* RAF 종료 */
+        }
       }
+
+      requestAnimationFrame(frame);
     }
 
     requestAnimationFrame(frame);

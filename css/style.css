@@ -57,10 +57,10 @@ button { font-family: inherit; }
   position: fixed; inset: 0;
   background: var(--black);
   z-index: 10000;
+  cursor: pointer;
   transition: opacity 0.4s ease, visibility 0.4s ease;
 }
-.loader.hidden { opacity: 0; visibility: hidden; }
-.loader.ready { cursor: pointer; }
+.loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
 
 #loaderCanvas {
   position: absolute; top: 0; left: 0;
