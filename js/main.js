@@ -6,224 +6,53 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- LOADER ---------- */
-  const loader = document.getElementById('loader');
-  const canvas = document.getElementById('loaderCanvas');
+  const loader      = document.getElementById('loader');
+  const gif         = document.getElementById('loaderGif');
+  const logoEl      = document.getElementById('loaderLogo');
+  const enterPrompt = document.getElementById('loaderEnter');
 
-  /* 캔버스 없는 페이지(about, projects 등)는 로더 즉시 숨김 */
-  if (!canvas) {
-    if (loader) {
-      loader.classList.add('hidden');
-      document.body.classList.add('loaded');
-    }
-  } else {
-  const ctx = canvas.getContext('2d');
-  canvas.width  = window.innerWidth;
-  canvas.height = window.innerHeight;
+  if (loader && gif) {
+    /* GIF 로더 페이지 (index.html) */
+    let clicked = false;
 
-  const _logoReady = new Promise(resolve => {
-    const img = new Image();
-    img.onload = () => resolve(img);
-    img.src = window.JPA_LOGO_B64;
-  });
+    /* 2초 후 CLICK TO ENTER 힌트 표시 */
+    setTimeout(() => {
+      if (enterPrompt) enterPrompt.classList.add('visible');
+    }, 2000);
 
-  _logoReady.then(logoImg => {
-    const cW = canvas.width;
-    const cH = canvas.height;
+    function onEnter() {
+      if (clicked) return;
+      clicked = true;
+      loader.removeEventListener('click',    onEnter);
+      loader.removeEventListener('touchend', onEnter);
 
-    /* --- 로고 이미지에서 점 좌표 샘플링 --- */
-    const sW  = Math.min(Math.round(cW * 0.52), 480);
-    const sH  = Math.round(sW * logoImg.naturalHeight / logoImg.naturalWidth);
-    const sc  = document.createElement('canvas');
-    sc.width  = sW;
-    sc.height = sH;
-    const sCtx = sc.getContext('2d');
-    sCtx.drawImage(logoImg, 0, 0, sW, sH);
+      /* 힌트 숨김 */
+      if (enterPrompt) enterPrompt.classList.remove('visible');
 
-    const px  = sCtx.getImageData(0, 0, sW, sH).data;
-    const raw = [];
-    for (let y = 0; y < sH; y += 4) {
-      for (let x = 0; x < sW; x += 4) {
-        const i = (y * sW + x) * 4;
-        if (px[i + 3] > 120 && px[i] < 100) raw.push([x, y]);
-      }
-    }
-    for (let i = raw.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [raw[i], raw[j]] = [raw[j], raw[i]];
-    }
-    const ox = Math.round((cW - sW) / 2);
-    const oy = Math.round((cH - sH) / 2);
+      /* GIF 페이드 아웃 */
+      gif.style.opacity = '0';
 
-    const isMobile = cW < 768;
-    const particles = raw.map(([tx, ty]) => {
-      const ftx   = tx + ox;
-      const fty   = ty + oy;
-      const angle = Math.random() * Math.PI * 2;
-      const dist  = 140 + Math.random() * Math.max(cW, cH) * 0.38;
-      const sx    = cW / 2 + Math.cos(angle) * dist;
-      const sy    = cH / 2 + Math.sin(angle) * dist;
-      return {
-        sx, sy,
-        tx: ftx, ty: fty,
-        cpX: (sx + ftx) / 2 + (Math.random() - 0.5) * 240,
-        cpY: (sy + fty) / 2 + (Math.random() - 0.5) * 180,
-        /* wander oscillation params */
-        ax:  3  + Math.random() * 5,
-        ay:  3  + Math.random() * 4,
-        wx:  0.25 + Math.random() * 0.55,
-        wy:  0.20 + Math.random() * 0.60,
-        phx: Math.random() * Math.PI * 2,
-        phy: Math.random() * Math.PI * 2,
-        size: isMobile ? Math.random() * 1.0 + 1.2 : Math.random() * 1.2 + 1.5,
-        cx: sx, cy: sy   /* current drawn position, updated each frame */
-      };
-    });
+      /* 로고 페이드 인 */
+      setTimeout(() => {
+        if (logoEl) logoEl.style.opacity = '1';
+      }, 300);
 
-    const CONVERGE_DUR = 1000;
-    const SETTLE_DUR   = 400;
-    const DISSOLVE_DUR = 1000;
-
-    /* phase: 'converge' → 'wander' → 'settle' → 'dissolve' */
-    let phase         = 'converge';
-    let convergeStart = null;
-    let wanderStart   = null;
-    let settleStart   = null;
-    let dissolveStart = null;
-
-    function easeOut(t)    { return 1 - Math.pow(1 - t, 3); }
-    function easeInOut(t)  { return t < 0.5 ? 2*t*t : 1 - Math.pow(-2*t+2,2)/2; }
-    function smoothstep(t) { return t * t * (3 - 2 * t); }
-
-    const logoEl      = document.getElementById('loaderLogo');
-    const enterPrompt = document.getElementById('loaderEnter');
-
-    /* ---- 첫 번째 클릭: wander 중단 → settle 시작 ---- */
-    let firstClicked = false;
-    let hintShown    = false;
-
-    function onFirstClick() {
-      if (firstClicked) return;
-      if (phase !== 'converge' && phase !== 'wander') return;
-      firstClicked = true;
-      loader.removeEventListener('click',    onFirstClick);
-      loader.removeEventListener('touchend', onFirstClick);
-      /* 현재 위치 스냅샷 → settle 보간 시작점 */
-      particles.forEach(p => { p.snapX = p.cx; p.snapY = p.cy; });
-      /* 첫 클릭 힌트 숨김 */
-      if (enterPrompt && hintShown) {
-        enterPrompt.classList.remove('visible');
-      }
-      phase = 'settle';
+      /* 로고 잠깐 보인 뒤 메인 페이지 진입 */
+      setTimeout(() => {
+        loader.classList.add('hidden');
+        document.body.classList.add('loaded');
+        triggerHero();
+      }, 1300);
     }
 
-    loader.addEventListener('click',    onFirstClick);
-    loader.addEventListener('touchend', onFirstClick, { passive: true });
+    loader.addEventListener('click',    onEnter);
+    loader.addEventListener('touchend', onEnter, { passive: true });
 
-    /* ---- RAF 메인 루프 ---- */
-    function frame(ts) {
-      ctx.clearRect(0, 0, cW, cH);
-
-      /* ── CONVERGE ── */
-      if (phase === 'converge') {
-        if (!convergeStart) convergeStart = ts;
-        const prog = Math.min((ts - convergeStart) / CONVERGE_DUR, 1);
-        const e    = easeOut(prog);
-
-        particles.forEach(p => {
-          const mt = 1 - e;
-          p.cx = mt*mt*p.sx + 2*mt*e*p.cpX + e*e*p.tx;
-          p.cy = mt*mt*p.sy + 2*mt*e*p.cpY + e*e*p.ty;
-          ctx.beginPath();
-          ctx.arc(p.cx, p.cy, p.size, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(255,255,255,${0.2 + e * 0.8})`;
-          ctx.fill();
-        });
-
-        if (prog >= 1) {
-          phase = 'wander';
-          wanderStart = ts;
-        }
-
-      /* ── WANDER (loop) ── */
-      } else if (phase === 'wander') {
-        if (!wanderStart) wanderStart = ts;
-        const t = (ts - wanderStart) / 1000; /* seconds */
-
-        /* 2.5초 후 "CLICK" 힌트 표시 */
-        if (!hintShown && t > 2.5 && enterPrompt) {
-          hintShown = true;
-          enterPrompt.textContent = 'CLICK';
-          enterPrompt.classList.add('visible');
-        }
-
-        particles.forEach(p => {
-          p.cx = p.tx + p.ax * Math.sin(p.wx * t + p.phx);
-          p.cy = p.ty + p.ay * Math.sin(p.wy * t + p.phy);
-          ctx.beginPath();
-          ctx.arc(p.cx, p.cy, p.size, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(255,255,255,0.88)';
-          ctx.fill();
-        });
-
-      /* ── SETTLE ── */
-      } else if (phase === 'settle') {
-        if (!settleStart) settleStart = ts;
-        const prog = Math.min((ts - settleStart) / SETTLE_DUR, 1);
-        const e    = easeInOut(prog);
-
-        particles.forEach(p => {
-          p.cx = p.snapX + (p.tx - p.snapX) * e;
-          p.cy = p.snapY + (p.ty - p.snapY) * e;
-          ctx.beginPath();
-          ctx.arc(p.cx, p.cy, p.size, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(255,255,255,${0.88 + e * 0.12})`;
-          ctx.fill();
-        });
-
-        if (prog >= 1) {
-          phase = 'dissolve';
-          dissolveStart = ts;
-        }
-
-      /* ── DISSOLVE ── */
-      } else if (phase === 'dissolve') {
-        if (!dissolveStart) dissolveStart = ts;
-        const t = Math.min((ts - dissolveStart) / DISSOLVE_DUR, 1);
-        const e = smoothstep(t);
-
-        particles.forEach(p => {
-          const sz = p.size * (1 - e);
-          if (sz < 0.15) return;
-          ctx.beginPath();
-          ctx.arc(p.tx, p.ty, sz, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(255,255,255,${(1 - e) * 0.95})`;
-          ctx.fill();
-        });
-
-        if (logoEl) {
-          const lt = Math.max(0, (t - 0.15) / 0.85);
-          logoEl.style.opacity = String(smoothstep(lt));
-        }
-
-        if (t >= 1) {
-          canvas.style.opacity = '0';
-          if (logoEl) logoEl.style.opacity = '1';
-          /* 로고가 잠깐 보인 뒤 자연스럽게 메인 페이지로 진입 */
-          setTimeout(() => {
-            loader.classList.add('hidden');
-            document.body.classList.add('loaded');
-            triggerHero();
-          }, 450);
-          return; /* RAF 종료 */
-        }
-      }
-
-      requestAnimationFrame(frame);
-    }
-
-    requestAnimationFrame(frame);
-  }); // _logoReady.then
-  } // canvas 존재 시 블록 끝
+  } else if (loader) {
+    /* 캔버스/GIF 없는 다른 페이지 — 로더 즉시 숨김 */
+    loader.classList.add('hidden');
+    document.body.classList.add('loaded');
+  }
 
   /* ---------- HEADER HIDE ON SCROLL DOWN ---------- */
   const header = document.getElementById('siteHeader');
