@@ -62,16 +62,32 @@ button { font-family: inherit; }
 }
 .loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
 
-.loader-gif {
+.loader-gif-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(65vw, 660px);
+  width: min(90vw, 960px);
+  max-height: 90vh;
+  pointer-events: none;
+}
+
+.loader-gif {
+  width: 100%;
   height: auto;
+  display: block;
   opacity: 1;
   transition: opacity 0.5s ease;
-  pointer-events: none;
+}
+
+/* MOSH 워터마크 가리기 — GIF 우하단 고정 위치 */
+.loader-gif-mask {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 13%;
+  height: 9%;
+  background: var(--black);
 }
 
 .loader-logo {

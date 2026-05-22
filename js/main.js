@@ -29,8 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
       /* 힌트 숨김 */
       if (enterPrompt) enterPrompt.classList.remove('visible');
 
-      /* GIF 페이드 아웃 */
-      gif.style.opacity = '0';
+      /* GIF(래퍼 전체) 페이드 아웃 */
+      gif.closest('.loader-gif-wrap').style.opacity = '0';
+      gif.closest('.loader-gif-wrap').style.transition = 'opacity 0.5s ease';
 
       /* 로고 페이드 인 */
       setTimeout(() => {
