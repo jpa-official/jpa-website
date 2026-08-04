@@ -287,7 +287,7 @@ window.PROJECTS = [
   /* ---- 2024 ---- */
   {
     id: 'sfc-oled-community',
-    thumbnail: '',
+    thumbnail: 'images/projects/sfc-oled-community.jpg',
     name: 'SFC Community Center',
     nameKo: 'SFC OLED 캠퍼스 커뮤니티센터 공간기획 및 공간환경설계',
     desc: 'SFC OLED 캠퍼스 커뮤니티센터 공간기획 및 공간환경설계',
@@ -312,7 +312,7 @@ window.PROJECTS = [
   },
   {
     id: 'sfc-oled-storage',
-    thumbnail: '',
+    thumbnail: 'images/projects/sfc-oled-storage.jpg',
     name: 'SFC Storage Center',
     nameKo: 'SFC OLED 캠퍼스 스토리지센터 공간기획 및 공간환경설계',
     desc: 'SFC OLED 캠퍼스 스토리지센터 공간기획 및 공간환경설계',
