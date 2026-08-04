@@ -57,6 +57,7 @@ window.PROJECTS = [
   {
     id: 'sejong-center',
     thumbnail: 'images/projects/sejong-center.jpg',
+    images: ['images/projects/sejong-center-2.jpg'],
     name: 'Sejong Center',
     nameKo: '세종문화회관 플레이스 브랜딩',
     desc: '세종문화회관 플레이스 브랜딩',
