@@ -91,10 +91,15 @@ window.PROJECTS = [
     scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
     summary: '의학 교육과 연구가 교차하는 캠퍼스의 일상 공간. 학생·교수·연구자의 협업 방식을 반영한 학습·연구 공간이다.',
     body: [
-      '연세대학교 원주의과대학은 의학 교육과 연구가 통합된 미래 캠퍼스를 지향한다. jpa.는 강의·실습·휴식의 흐름이 자연스럽게 이어지는 공간 구성을 통해, 학생과 연구자들이 일상 속에서 교류할 수 있도록 했다.',
-      '캠퍼스의 정체성을 유지하면서도, 다음 세대 의학 교육 환경에 요구되는 유연성과 협업 친화성을 공간 언어로 풀어냈다.'
+      '연세대학교 원주의과대학 유휴공간 플레이스브랜딩 프로젝트는 대학 내 유휴공간을 단순한 남는 공간이 아닌, 캠퍼스 구성원의 이용 경험과 대학의 정체성을 담아낼 수 있는 전략적 자산으로 바라보는 데서 출발하였다.',
+      '본 프로젝트는 공간의 물리적 현황, 이용 행태, 학생들의 니즈를 종합적으로 분석하여 각 유휴공간이 캠퍼스 안에서 수행해야 할 역할을 재정의하는 것을 목표로 하였다. 이를 위해 학생 FGI, 현장조사, 공간별 기능 분석을 바탕으로 공간의 문제점과 가능성을 도출하고, 단순한 리모델링이나 디자인 제안을 넘어 사용자 경험 기반의 플레이스브랜딩 방향을 제시하였다.',
+      '이를 통해 각 공간이 캠퍼스 경험 안에서 갖는 의미와 역할을 재해석하고, 향후 단계적 개선과 운영까지 고려한 전략적 공간 브랜딩 방향을 제안하였다.'
     ],
-    bodyEn: []
+    bodyEn: [
+      'The Place Branding Project for Underutilized Spaces at Yonsei University Wonju College of Medicine began with the perspective that unused campus spaces should be viewed not simply as leftover areas, but as strategic assets capable of reflecting both the user experience of campus members and the identity of the university.',
+      'The project aimed to redefine the role of each underutilized space within the campus through a comprehensive analysis of physical conditions, usage patterns, and student needs. Based on student FGIs, site investigations, and functional analysis of each space, the project identified both the limitations and potential of the spaces, proposing a user experience–based place branding strategy beyond simple remodeling or design improvements.',
+      'Through this process, the project reinterpreted the meaning and role of each space within the overall campus experience and suggested a strategic spatial branding direction that considers future phased improvements and operations.'
+    ]
   },
   {
     id: 'loft-one-ground',
