@@ -376,7 +376,10 @@ window.PROJECTS = [
       '김포 라베니체 프로젝트는 30·40 영패밀리가 많은 베드타운형 도시인 김포의 입지적 강점을 바탕으로, 주변 거주민뿐 아니라 외부 방문객까지 끌어들이는 문화 앵커시설을 제안하는 데 목적이 있다. 특히 라베니체가 F&B 중심으로 구성되어 일상적 방문 수요가 약해지는 한계를 극복하고, 대상지 건축을 통해 라베니체 전체의 활성화를 도모하고자 했다.',
       '메인 테마를 음악으로 설정하고, 음악을 "듣는", "사는", "체험하는" 공간으로 프로그램을 구성했다. 1층은 누구나 머물 수 있는 공유공간이자 행사와 이벤트가 가능한 열린 공간으로, 상층부는 음악 관련 리테일과 F&B 공간으로, 최상층은 라베니체를 조망할 수 있는 루프탑 뷰포인트로 계획하였다.'
     ],
-    bodyEn: []
+    bodyEn: [
+      'The Gimpo LaVenice project aims to propose a cultural anchor facility that draws not only local residents but also outside visitors, leveraging the locational strengths of Gimpo, a bedroom-town city with a large population of young families in their 30s and 40s. In particular, the project seeks to overcome the limitation of LaVenice\'s F&B-centered composition, which weakens everyday visitation demand, and to revitalize LaVenice as a whole through the architecture of the target site.',
+      'With music set as the main theme, the program was organized around spaces for "listening to," "buying," and "experiencing" music. The first floor was planned as an open, shared space where anyone can stay and that can host events, the upper floors as music-related retail and F&B spaces, and the top floor as a rooftop viewpoint overlooking LaVenice.'
+    ]
   },
   {
     id: 'cheonan-cultural',
