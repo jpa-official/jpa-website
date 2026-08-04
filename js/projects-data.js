@@ -41,10 +41,17 @@ window.PROJECTS = [
     scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
     summary: '북촌의 결을 담은 다도 공간. 한국 차 문화를 동시대적으로 재해석한 리테일 브랜드 경험 공간이다.',
     body: [
-      'TEA THE HAN은 북촌 한옥 거리의 켜를 살리면서, 한국 차의 의례성을 현대적 라이프스타일로 번역한 리테일 공간이다. jpa.는 브랜드의 톤 매뉴얼부터 공간 경험 시퀀스, 환경 디자인까지 통합형 솔루션을 제공했다.',
-      '차를 마시는 행위의 감각적 디테일—온도, 향, 빛, 소리—을 공간 곳곳에 배치해 한국 차 문화의 정수가 현대 도시인의 감각에 가깝게 다가가도록 설계했다.'
+      '티더한은 럭셔리 한옥호텔 노스텔지어의 헤리티지와 뉴욕 티 브랜드 타바론의 20년 전문성이 결합되어 탄생한 합작 법인이다. 한국의 티 헤리티지를 바탕으로 차를 접하는 새로운 문화를 제안한다.',
+      '티더한의 정체성을 구현하는 첫 번째 플래그십 스토어로서, 공간 기획부터 디자인 구현까지 전 과정을 jpa.가 일관되게 설계하고 실행했다. 브랜드가 지향하는 현대적인 감각을 하나의 공간 경험으로 연결하여, 고객이 자연스럽게 브랜드를 이해하고 체류할 수 있는 공간을 목표로 한다. 매장 파사드와 내부 마감재는 현대적인 미를 위해 붉은색 타일을 중심으로 구성하여 차분하고 깊이 있는 고급스러움을 전달한다. 강한 장식 대신 절제된 소재감과 컬러로 프리미엄 이미지를 형성하고, 브랜드의 첫인상을 명확하게 각인시킨다. 파사드 전면의 외부 좌석은 단순한 대기석이 아니라, 북촌의 정겨움을 표현한 개방형 체류 공간이다.',
+      '메인 공간은 진입 동선에 맞춘 전면 디스플레이와 시선의 흐름을 통해 제품이 자연스럽게 노출되도록 했으며, 차를 경험하며 공간 안쪽으로 관심이 이어지도록 계획했다. 몰입 공간은 곡선형 디스플레이와 간접 조명으로 제품의 존재감을 극대화하고, 브랜드 스토리가 하나의 전시처럼 전달되도록 했다.',
+      '결과적으로 티더한 플래그십 스토어는 단순히 차를 판매하는 매장을 넘어, 머무르며 브랜드를 점진적으로 마주하는 \'티 경험 공간\'으로 완성된다.'
     ],
-    bodyEn: []
+    bodyEn: [
+      'Tea The Han is a joint venture combining the heritage of luxury Hanok hotel Nostalgia with the 20-year expertise of New York tea brand Tavalon. Rooted in Korea\'s tea heritage, the brand proposes a new tea culture.',
+      'As the first flagship store embodying Tea The Han\'s identity, jpa. managed the entire process from spatial planning to design execution. The store connects the brand\'s modern sensibility into a cohesive spatial experience, allowing customers to naturally understand the brand and linger. The facade and interior feature a red tile finish to deliver a calm, deep sense of modern luxury. Instead of heavy ornamentation, restrained textures and colors create a premium image and leave a clear first impression. The front outdoor seating is not just a waiting zone, but an open space reflecting the warm charm of Bukchon.',
+      'The main space features a front display aligned with the entry flow, naturally exposing products along the customer\'s line of sight and drawing them deeper into the space. The immersive space uses a curved display and indirect lighting to maximize product presence, presenting the brand story like an exhibition.',
+      'Ultimately, the Tea The Han flagship store goes beyond a retail shop, serving as an experiential space where visitors can stay and gradually discover the brand.'
+    ]
   },
   /* ---- 2025 ---- */
   {
