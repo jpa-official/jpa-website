@@ -299,10 +299,16 @@ window.PROJECTS = [
     scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
     summary: 'SFC OLED 캠퍼스의 임직원의 협업·재충전·교류가 일어나는 통합 커뮤니티 센터.',
     body: [
-      'SFC OLED 캠퍼스의 커뮤니티 센터는 임직원의 일과를 풍성하게 만드는 통합 공간이다. jpa.는 다이닝, 라운지, 피트니스, 회의·이벤트 등 다층적 프로그램을 캠퍼스 일상 시퀀스에 맞춰 배치했다.',
-      '산업단지 특유의 기능 중심 구성을 넘어, 임직원의 라이프스타일과 웰빙을 함께 고려한 캠퍼스형 공간 모델을 구현했다.'
+      '오창 과학산업단지 내에 위치한 SFC OLED 캠퍼스는 정밀 화학소재를 연구, 개발, 생산하는 SFC(주)의 거점이다.',
+      'SFC OLED 캠퍼스의 마스터플랜을 기반으로 2013년 준공된 연구소 그 이후 후속적으로 생산동, 연구실험동 등 단계적 증축으로 현재의 캠퍼스가 구성되었다. SFC OLED 캠퍼스의 규모가 커지고 사용자도 늘어나게 되면서 직원들의 복지공간의 부족과 클린룸 및 창고공간도 추가로 확보되어야했다.',
+      '단지 내 남서쪽의 유휴부지와 단지 내 숨통 공간이었던 90m X 70m 축구장 규격의 잔디공간에 직원들을 위한 회의실, 휴게공간, 식당 등이 담긴 커뮤니티센터와 부족했던 실험실, 클린룸, 자재창고 등이 담긴 클린룸&스토리지센터를 증축하는 프로젝트이다.',
+      '커뮤니티센터는 OLED 캠퍼스 중앙에 위치하여 임직원들의 복지공간을 담으며 기존 건물에서의 접근 편의를 고려하여 원형의 형태로 계획한다. 이는 방향성 없는 디자인 통해 캠퍼스의 모든 건물이 연계되는 것을 고려하고 임직원들이 위계없이 편안하게 휴식 할 수 있는 공간을 계획한다. 건물 중앙에는 원형의 오픈스페이스를 계획하여 기존의 단지의 내 숨통공간을 유지하고 커뮤니티센터 내에서도 자연과의 접점을 높이도록 계획하였다.'
     ],
-    bodyEn: []
+    bodyEn: [
+      'Located within the Ochang Scientific Industrial Complex, the SFC OLED Campus serves as the core hub for SFC Co., Ltd., a company dedicated to the research, development, and production of fine chemical materials.',
+      'Following the completion of the research institute in 2013 based on the campus master plan, the current site was shaped through phased expansions, including subsequent production and research laboratory buildings. As the scale of the SFC OLED Campus expanded and the number of users grew, the campus faced a shortage of welfare spaces for employees, alongside a pressing need for additional cleanrooms and storage areas.',
+      'This expansion project utilizes an idle plot on the southwest side of the complex, as well as a 90m x 70m soccer-field-sized green space that previously served as the campus\'s open "breathing room." The project aims to construct a Community Center—housing conference rooms, rest areas, and a cafeteria for employees—and a Cleanroom & Storage Center to accommodate the much-needed laboratories, cleanrooms, and material warehouses.'
+    ]
   },
   {
     id: 'sfc-oled-storage',
