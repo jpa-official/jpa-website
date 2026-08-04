@@ -324,10 +324,16 @@ window.PROJECTS = [
     scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
     summary: '산업 운영의 효율과 환경의 품격을 동시에 담은 스토리지 센터.',
     body: [
-      'SFC OLED 캠퍼스의 스토리지 센터는 산업 운영의 핵심 인프라이자, 캠퍼스 외관의 일부이다. jpa.는 기능적 효율과 동시에, 산업 시설이 지닐 수 있는 환경의 품격을 함께 고려한 공간환경 설계를 진행했다.',
-      '내부 운영 동선의 효율성과 외부 마감의 미학을 분리하지 않고 통합적으로 설계하여, 산업 시설의 새로운 표준을 제시한다.'
+      '오창 과학산업단지 내에 위치한 SFC OLED 캠퍼스는 정밀 화학소재를 연구, 개발, 생산하는 SFC(주)의 거점이다.',
+      'SFC OLED 캠퍼스의 마스터플랜을 기반으로 2013년 준공된 연구소 그 이후 후속적으로 생산동, 연구실험동 등 단계적 증축으로 현재의 캠퍼스가 구성되었다. SFC OLED 캠퍼스의 규모가 커지고 사용자도 늘어나게 되면서 직원들의 복지공간의 부족과 클린룸 및 창고공간도 추가로 확보되어야했다.',
+      '단지 내 남서쪽의 유휴부지와 단지 내 숨통 공간이었던 90m X 70m 축구장 규격의 잔디공간에 직원들을 위한 회의실, 휴게공간, 식당 등이 담긴 커뮤니티센터와 부족했던 실험실, 클린룸, 자재창고 등이 담긴 클린룸&스토리지센터를 증축하는 프로젝트이다.',
+      '스토리지센터는 단지 내 남서쪽의 유휴부지에 계획되어 기존의 부족한 시설인 실험실과 클린룸, 자재창고를 담는다. 기존 OLED 캠퍼스 내의 건물군과 동일한 디자인 어휘로 입면을 계획하여 단지의 통일성을 유지한다.'
     ],
-    bodyEn: []
+    bodyEn: [
+      'The SFC OLED Campus, located in the Ochang Scientific Industrial Complex, is the main base of SFC Co., Ltd. for the research, development, and production of precision chemical materials. Since the completion of the original research center in 2013, the campus has gradually expanded with additional production and laboratory buildings.',
+      'As the campus grew, the need for employee welfare facilities, cleanrooms, and storage space also increased. This project adds a Community Center with meeting rooms, lounges, and dining facilities, along with a Cleanroom & Storage Center containing laboratories, cleanrooms, and material storage areas.',
+      'The Storage Center is planned on the vacant southwest site and follows the same architectural language as the existing OLED Campus buildings to maintain a unified campus identity.'
+    ]
   },
   {
     id: 'sfc-biopark',
