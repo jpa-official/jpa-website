@@ -62,32 +62,78 @@ button { font-family: inherit; }
 }
 .loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
 
-.loader-gif-wrap {
+.loader-mark {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(90vw, 960px);
-  max-height: 90vh;
   pointer-events: none;
 }
 
-.loader-gif {
+.loader-mark-text {
+  position: relative;
+  display: inline-block;
+  font-family: 'Switzer', sans-serif;
+  font-weight: 700;
+  font-size: clamp(56px, 13vw, 180px);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--white);
+  user-select: none;
+  animation: markJitter 3.4s infinite steps(2, end);
+}
+.loader-mark-text::before,
+.loader-mark-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  display: block;
-  opacity: 1;
-  transition: opacity 0.5s ease;
+  background: var(--black);
+}
+.loader-mark-text::before {
+  color: var(--accent);
+  animation: glitchTop 2.2s infinite linear alternate-reverse;
+}
+.loader-mark-text::after {
+  color: #2ee6ff;
+  animation: glitchBottom 2.6s infinite linear alternate-reverse;
+}
+/* 클릭 시 글리치를 멈추고 깨끗한 워드마크로 정착 */
+.loader-mark.settled .loader-mark-text {
+  animation: none;
+  transform: translate(0, 0);
+}
+.loader-mark.settled .loader-mark-text::before,
+.loader-mark.settled .loader-mark-text::after {
+  animation: none;
+  opacity: 0;
 }
 
-/* MOSH 워터마크 가리기 — GIF 우하단 고정 위치 */
-.loader-gif-mask {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 13%;
-  height: 9%;
-  background: var(--black);
+@keyframes markJitter {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-2px, 1px); }
+  20% { transform: translate(2px, -1px); }
+  30% { transform: translate(-1px, -1px); }
+  45% { transform: translate(0, 0); }
+  60% { transform: translate(1px, 2px); }
+  70% { transform: translate(-2px, 0); }
+  85% { transform: translate(0, 0); }
+}
+@keyframes glitchTop {
+  0%   { clip-path: inset(0 0 85% 0); transform: translate(-3px, -1px); }
+  20%  { clip-path: inset(10% 0 60% 0); transform: translate(3px, 1px); }
+  40%  { clip-path: inset(40% 0 30% 0); transform: translate(-2px, 2px); }
+  60%  { clip-path: inset(70% 0 5% 0); transform: translate(3px, -2px); }
+  80%  { clip-path: inset(20% 0 65% 0); transform: translate(-3px, 1px); }
+  100% { clip-path: inset(0 0 90% 0); transform: translate(2px, -1px); }
+}
+@keyframes glitchBottom {
+  0%   { clip-path: inset(85% 0 0 0); transform: translate(2px, 1px); }
+  25%  { clip-path: inset(50% 0 20% 0); transform: translate(-3px, -1px); }
+  50%  { clip-path: inset(10% 0 70% 0); transform: translate(2px, 2px); }
+  75%  { clip-path: inset(60% 0 10% 0); transform: translate(-2px, -2px); }
+  100% { clip-path: inset(90% 0 0 0); transform: translate(3px, 1px); }
 }
 
 .loader-logo {

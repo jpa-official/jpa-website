@@ -7,12 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- LOADER ---------- */
   const loader      = document.getElementById('loader');
-  const gif         = document.getElementById('loaderGif');
-  const logoEl      = document.getElementById('loaderLogo');
+  const mark        = document.getElementById('loaderMark');
   const enterPrompt = document.getElementById('loaderEnter');
 
-  if (loader && gif) {
-    /* GIF 로더 페이지 (index.html) */
+  if (loader && mark) {
+    /* 애니메이션 워드마크 로더 페이지 (index.html) */
     let clicked = false;
 
     /* 2초 후 CLICK TO ENTER 힌트 표시 */
@@ -29,21 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
       /* 힌트 숨김 */
       if (enterPrompt) enterPrompt.classList.remove('visible');
 
-      /* GIF(래퍼 전체) 페이드 아웃 */
-      gif.closest('.loader-gif-wrap').style.opacity = '0';
-      gif.closest('.loader-gif-wrap').style.transition = 'opacity 0.5s ease';
+      /* 글리치 정착 — 깨끗한 워드마크로 */
+      mark.classList.add('settled');
 
-      /* 로고 페이드 인 */
-      setTimeout(() => {
-        if (logoEl) logoEl.style.opacity = '1';
-      }, 300);
-
-      /* 로고 잠깐 보인 뒤 메인 페이지 진입 */
+      /* 정착 후 메인 페이지 진입 */
       setTimeout(() => {
         loader.classList.add('hidden');
         document.body.classList.add('loaded');
         triggerHero();
-      }, 1300);
+      }, 900);
     }
 
     loader.addEventListener('click',    onEnter);
