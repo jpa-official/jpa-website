@@ -14,11 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     /* 클릭으로 진입하는 로더 페이지 (index.html) — 로고만 바로 표시 */
     let clicked = false;
 
-    /* 2초 후 CLICK TO ENTER 힌트 표시 */
-    setTimeout(() => {
-      if (enterPrompt) enterPrompt.classList.add('visible');
-    }, 2000);
-
     function onEnter() {
       if (clicked) return;
       clicked = true;
