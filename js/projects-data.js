@@ -7,7 +7,7 @@ window.PROJECTS = [
   {
     id: 'ozx-branding',
     thumbnail: 'images/projects/ozx-branding.jpg',
-    images: ['images/projects/ozx-branding-2.jpg', 'images/projects/ozx-branding-3.jpg'],
+    images: ['images/projects/ozx-branding-2.jpg', 'images/projects/ozx-branding-3.jpg', 'images/projects/ozx-branding-4.jpg', 'images/projects/ozx-branding-5.jpg', 'images/projects/ozx-branding-6.jpg', 'images/projects/ozx-branding-7.jpg'],
     name: 'OZX',
     nameKo: '오즈엑스',
     desc: 'OZX_스페이스 콘텐츠 오퍼레이터 브랜드 아이덴티티 및 커뮤니케이션 디자인',
