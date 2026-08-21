@@ -5,33 +5,6 @@
 window.PROJECTS = [
   /* ---- 2026 ---- */
   {
-    id: 'ozx-branding',
-    thumbnail: 'images/projects/ozx-branding.jpg',
-    images: ['images/projects/ozx-branding-2.jpg', 'images/projects/ozx-branding-3.jpg', 'images/projects/ozx-branding-4.jpg', 'images/projects/ozx-branding-5.jpg', 'images/projects/ozx-branding-6.jpg', 'images/projects/ozx-branding-7.jpg'],
-    name: 'OZX',
-    nameKo: '오즈엑스',
-    desc: 'OZX_스페이스 콘텐츠 오퍼레이터 브랜드 아이덴티티 및 커뮤니케이션 디자인',
-    category: 'Branding',
-    location: 'SEOUL',
-    year: '2026',
-    client: 'OZX',
-    scopeCode: 'SP',
-    scope: ['Space BX Planning'],
-    summary: '상업·문화·예술·IP·콘텐츠·미디어가 결합된 도심형 복합 플랫폼, OZX의 브랜드 아이덴티티 및 커뮤니케이션 디자인이다.',
-    body: [
-      'OZX는 각기 다른 분야에서 경험을 쌓아온 다섯 명의 전문가가 모여, 문화성·공공성·사업성을 함께 담은 새로운 공간 프로젝트를 위해 시작됐다. 이름의 \'OZ\'는 다섯 명이 모여 하나의 문화적 가능성을 만든다는 의미이자 \'Organize\'로 확장되어 흩어진 공간·콘텐츠·브랜드·운영 경험을 하나의 구조로 조직한다는 뜻을 담고, 더해진 \'X\'는 교차·확장·협업·실험을 상징한다. 공간의 가능성을 발견하고 도심 속 새로운 장면을 구축한다는 미션 아래, jpa.는 브랜드 아이덴티티 수립부터 비주얼 시스템, 응용 디자인까지 커뮤니케이션 브랜딩 전 과정을 진행했다.',
-      'OZX의 사업 구조는 공간의 가능성을 발굴하는 Space Discovery, 공간에 맞는 콘텐츠를 연결하는 Content Curation, 사람이 모이고 다시 찾는 운영 구조를 설계하는 Experience Operation 세 축으로 이뤄진다. 비어 있거나 충분히 활용되지 못한 공간을 발견해 리모델링과 새로운 시스템으로 잠재력을 재설계하고, 어울리는 브랜드·IP와 연결해 공간과 브랜드가 함께 성장하는 경험 비즈니스를 만든다.',
-      '디자인 컨셉은 \'MUTED IMPACT\'. 자극적인 컬러와 시각 정보로 가득한 도심 속에서, 오히려 차분한 톤과 유기적인 조형으로 오래 시선이 머무는 존재감을 만든다는 접근이다. 로고는 O, Z, X 세 알파벳이 하나의 유기적인 곡선으로 응축되어 교차하고 확장되는 구조로, 공간·콘텐츠·브랜드·사람이 연결되는 지점을 상징한다.',
-      '버건디, 아이보리, 실버, 틸 등 자연 기반의 컬러 시스템과 타이틀·본문 서체를 구조화하고, 명함과 웹사이트 등 핵심 응용 디자인까지 가이드라인으로 제작해 브랜드가 일관되게 확장될 수 있는 기반을 마련했다.'
-    ],
-    bodyEn: [
-      "OZX was founded by five experts from different fields who came together to build a new kind of space project balancing cultural value, public relevance, and business viability. The 'OZ' in the name reflects five people converging on one cultural possibility, and expands into 'Organize' — bringing scattered spatial resources, content, brand partners, and operational know-how into a single structure — while the added 'X' stands for crossing, expansion, collaboration, and experimentation. Under the mission of discovering the potential of space and building new scenes within the city, jpa. led the full communication branding process, from identity development to the visual system and application design.",
-      "OZX's business model rests on three pillars: Space Discovery, which uncovers the potential of a space; Content Curation, which connects the right content to it; and Experience Operation, which designs a sustainable structure that brings people back again and again. It identifies vacant or underused spaces and redesigns their potential through remodeling and new operational systems, then connects them with fitting brands and IP to build an experience business where space and brand grow together.",
-      "The design concept, 'MUTED IMPACT,' takes a different approach from the city's saturation of loud color and visual noise — building presence through calm tones and organic form that hold attention over time rather than compete for it. The logo condenses the letters O, Z, and X into a single organic, curving form, its crossing and expanding structure symbolizing the point where space, content, brand, and people connect.",
-      'jpa. developed a nature-rooted color system — burgundy, ivory, silver, and teal — alongside a structured typography system, then extended the identity into core applications including business cards and the website, delivering a full guideline for consistent brand growth.'
-    ]
-  },
-  {
     id: 'gwanghwa169',
     thumbnail: 'images/projects/gwanghwa169.jpg',
     images: ['images/projects/gwanghwa169-2.jpg', 'images/projects/gwanghwa169-3.jpg'],
@@ -127,6 +100,41 @@ window.PROJECTS = [
       'The Place Branding Project for Underutilized Spaces at Yonsei University Wonju College of Medicine began with the perspective that unused campus spaces should be viewed not simply as leftover areas, but as strategic assets capable of reflecting both the user experience of campus members and the identity of the university.',
       'The project aimed to redefine the role of each underutilized space within the campus through a comprehensive analysis of physical conditions, usage patterns, and student needs. Based on student FGIs, site investigations, and functional analysis of each space, the project identified both the limitations and potential of the spaces, proposing a user experience–based place branding strategy beyond simple remodeling or design improvements.',
       'Through this process, the project reinterpreted the meaning and role of each space within the overall campus experience and suggested a strategic spatial branding direction that considers future phased improvements and operations.'
+    ]
+  },
+  {
+    id: 'ozx-branding',
+    thumbnail: 'images/projects/ozx-branding.jpg',
+    images: [
+      'images/projects/ozx-branding-2.jpg',
+      'images/projects/ozx-branding-3.jpg',
+      'images/projects/ozx-branding-4.jpg',
+      'images/projects/ozx-branding-5.jpg',
+      'images/projects/ozx-branding-6.jpg',
+      'images/projects/ozx-branding-7.jpg',
+      'images/projects/ozx-branding-8.jpg'
+    ],
+    name: 'OZX',
+    nameKo: '오즈엑스',
+    desc: 'OZX_스페이스 콘텐츠 오퍼레이터 브랜드 아이덴티티 및 커뮤니케이션 디자인',
+    category: 'Branding',
+    location: 'SEOUL',
+    year: '2026',
+    client: 'OZX',
+    scopeCode: 'SP',
+    scope: ['Space BX Planning'],
+    summary: '상업·문화·예술·IP·콘텐츠·미디어가 결합된 도심형 복합 플랫폼, OZX의 브랜드 아이덴티티 및 커뮤니케이션 디자인이다.',
+    body: [
+      'OZX는 각기 다른 분야에서 경험을 쌓아온 다섯 명의 전문가가 모여, 문화성·공공성·사업성을 함께 담은 새로운 공간 프로젝트를 위해 시작됐다. 이름의 \'OZ\'는 다섯 명이 모여 하나의 문화적 가능성을 만든다는 의미이자 \'Organize\'로 확장되어 흩어진 공간·콘텐츠·브랜드·운영 경험을 하나의 구조로 조직한다는 뜻을 담고, 더해진 \'X\'는 교차·확장·협업·실험을 상징한다. 공간의 가능성을 발견하고 도심 속 새로운 장면을 구축한다는 미션 아래, jpa.는 브랜드 아이덴티티 수립부터 비주얼 시스템, 응용 디자인까지 커뮤니케이션 브랜딩 전 과정을 진행했다.',
+      'OZX의 사업 구조는 공간의 가능성을 발굴하는 Space Discovery, 공간에 맞는 콘텐츠를 연결하는 Content Curation, 사람이 모이고 다시 찾는 운영 구조를 설계하는 Experience Operation 세 축으로 이뤄진다. 비어 있거나 충분히 활용되지 못한 공간을 발견해 리모델링과 새로운 시스템으로 잠재력을 재설계하고, 어울리는 브랜드·IP와 연결해 공간과 브랜드가 함께 성장하는 경험 비즈니스를 만든다.',
+      '디자인 컨셉은 \'MUTED IMPACT\'. 자극적인 컬러와 시각 정보로 가득한 도심 속에서, 오히려 차분한 톤과 유기적인 조형으로 오래 시선이 머무는 존재감을 만든다는 접근이다. 로고는 O, Z, X 세 알파벳이 하나의 유기적인 곡선으로 응축되어 교차하고 확장되는 구조로, 공간·콘텐츠·브랜드·사람이 연결되는 지점을 상징한다.',
+      '버건디, 아이보리, 실버, 틸 등 자연 기반의 컬러 시스템과 타이틀·본문 서체를 구조화하고, 명함과 웹사이트 등 핵심 응용 디자인까지 가이드라인으로 제작해 브랜드가 일관되게 확장될 수 있는 기반을 마련했다.'
+    ],
+    bodyEn: [
+      "OZX was founded by five experts from different fields who came together to build a new kind of space project balancing cultural value, public relevance, and business viability. The 'OZ' in the name reflects five people converging on one cultural possibility, and expands into 'Organize' — bringing scattered spatial resources, content, brand partners, and operational know-how into a single structure — while the added 'X' stands for crossing, expansion, collaboration, and experimentation. Under the mission of discovering the potential of space and building new scenes within the city, jpa. led the full communication branding process, from identity development to the visual system and application design.",
+      "OZX's business model rests on three pillars: Space Discovery, which uncovers the potential of a space; Content Curation, which connects the right content to it; and Experience Operation, which designs a sustainable structure that brings people back again and again. It identifies vacant or underused spaces and redesigns their potential through remodeling and new operational systems, then connects them with fitting brands and IP to build an experience business where space and brand grow together.",
+      "The design concept, 'MUTED IMPACT,' takes a different approach from the city's saturation of loud color and visual noise — building presence through calm tones and organic form that hold attention over time rather than compete for it. The logo condenses the letters O, Z, and X into a single organic, curving form, its crossing and expanding structure symbolizing the point where space, content, brand, and people connect.",
+      'jpa. developed a nature-rooted color system — burgundy, ivory, silver, and teal — alongside a structured typography system, then extended the identity into core applications including business cards and the website, delivering a full guideline for consistent brand growth.'
     ]
   },
   {
