@@ -112,7 +112,8 @@ window.PROJECTS = [
       'images/projects/ozx-branding-5.jpg',
       'images/projects/ozx-branding-6.jpg',
       'images/projects/ozx-branding-7.jpg',
-      'images/projects/ozx-branding-8.jpg'
+      'images/projects/ozx-branding-8.jpg',
+      'images/projects/ozx-branding-9.jpg'
     ],
     name: 'OZX',
     nameKo: '오즈엑스',
