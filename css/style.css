@@ -62,34 +62,6 @@ button { font-family: inherit; }
 }
 .loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
 
-.loader-gif-wrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: min(90vw, 960px);
-  max-height: 90vh;
-  pointer-events: none;
-}
-
-.loader-gif {
-  width: 100%;
-  height: auto;
-  display: block;
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}
-
-/* MOSH 워터마크 가리기 — GIF 우하단 고정 위치 */
-.loader-gif-mask {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 13%;
-  height: 9%;
-  background: var(--black);
-}
-
 .loader-logo {
   position: absolute;
   top: 50%;
@@ -101,6 +73,11 @@ button { font-family: inherit; }
   opacity: 0;
   transition: opacity 0.6s ease;
   pointer-events: none;
+}
+
+/* index.html 로더는 인트로 영상 없이 로고를 바로 보여준다 */
+#loaderLogo {
+  opacity: 1;
 }
 
 .loader-enter {

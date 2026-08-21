@@ -7,12 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- LOADER ---------- */
   const loader      = document.getElementById('loader');
-  const gif         = document.getElementById('loaderGif');
   const logoEl      = document.getElementById('loaderLogo');
   const enterPrompt = document.getElementById('loaderEnter');
 
-  if (loader && gif) {
-    /* GIF 로더 페이지 (index.html) */
+  if (loader && logoEl) {
+    /* 클릭으로 진입하는 로더 페이지 (index.html) — 로고만 바로 표시 */
     let clicked = false;
 
     /* 2초 후 CLICK TO ENTER 힌트 표시 */
@@ -29,28 +28,19 @@ document.addEventListener('DOMContentLoaded', () => {
       /* 힌트 숨김 */
       if (enterPrompt) enterPrompt.classList.remove('visible');
 
-      /* GIF(래퍼 전체) 페이드 아웃 */
-      gif.closest('.loader-gif-wrap').style.opacity = '0';
-      gif.closest('.loader-gif-wrap').style.transition = 'opacity 0.5s ease';
-
-      /* 로고 페이드 인 */
-      setTimeout(() => {
-        if (logoEl) logoEl.style.opacity = '1';
-      }, 300);
-
-      /* 로고 잠깐 보인 뒤 메인 페이지 진입 */
+      /* 메인 페이지 진입 */
       setTimeout(() => {
         loader.classList.add('hidden');
         document.body.classList.add('loaded');
         triggerHero();
-      }, 1300);
+      }, 400);
     }
 
     loader.addEventListener('click',    onEnter);
     loader.addEventListener('touchend', onEnter, { passive: true });
 
   } else if (loader) {
-    /* 캔버스/GIF 없는 다른 페이지 — 로더 즉시 숨김 */
+    /* 다른 페이지 — 로더 즉시 숨김 */
     loader.classList.add('hidden');
     document.body.classList.add('loaded');
   }
