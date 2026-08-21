@@ -5,6 +5,31 @@
 window.PROJECTS = [
   /* ---- 2026 ---- */
   {
+    id: 'ozx-branding',
+    thumbnail: 'images/projects/ozx-branding.jpg',
+    images: ['images/projects/ozx-branding-2.jpg', 'images/projects/ozx-branding-3.jpg'],
+    name: 'OZX',
+    nameKo: '오즈엑스',
+    desc: 'OZX_스페이스 콘텐츠 오퍼레이터 브랜드 아이덴티티 및 커뮤니케이션 디자인',
+    category: 'Branding',
+    location: 'SEOUL',
+    year: '2026',
+    client: 'OZX',
+    scopeCode: 'SP',
+    scope: ['Space BX Planning'],
+    summary: '상업·문화·예술·IP·콘텐츠·미디어가 결합된 도심형 복합 플랫폼, OZX의 브랜드 아이덴티티 및 커뮤니케이션 디자인이다.',
+    body: [
+      'OZX는 공간의 가능성을 발견하고 도심 속 새로운 장면을 구축한다는 미션 아래, 상업·문화·예술·IP·콘텐츠·미디어가 결합된 도심형 복합 플랫폼을 지향하는 스페이스 콘텐츠 오퍼레이터 브랜드다. jpa.는 브랜드 아이덴티티 수립부터 비주얼 시스템, 응용 디자인까지 커뮤니케이션 브랜딩 전 과정을 진행했다.',
+      '디자인 컨셉은 \'MUTED IMPACT\'. 자극적인 컬러와 시각 정보로 가득한 도심 속에서, 오히려 차분한 톤과 유기적인 조형으로 오래 시선이 머무는 존재감을 만든다는 접근이다. 로고는 O, Z, X 세 알파벳이 하나의 유기적인 곡선으로 응축되어 교차하고 확장되는 구조로, 공간·콘텐츠·브랜드·사람이 연결되는 지점을 상징한다.',
+      '버건디, 아이보리, 실버, 틸 등 자연 기반의 컬러 시스템과 타이틀·본문 서체를 구조화하고, 명함과 웹사이트 등 핵심 응용 디자인까지 가이드라인으로 제작해 브랜드가 일관되게 확장될 수 있는 기반을 마련했다.'
+    ],
+    bodyEn: [
+      'OZX is a Space Content Operator that organizes and connects spaces, content, brands, and people, built around commercial, cultural, artistic, IP, content, and media assets. jpa. led the full communication branding process, from identity development to the visual system and application design.',
+      "The design concept, 'MUTED IMPACT,' takes a different approach from the city's saturation of loud color and visual noise — building presence through calm tones and organic form that hold attention over time rather than compete for it. The logo condenses the letters O, Z, and X into a single organic, curving form, its crossing and expanding structure symbolizing the point where space, content, brand, and people connect.",
+      'jpa. developed a nature-rooted color system — burgundy, ivory, silver, and teal — alongside a structured typography system, then extended the identity into core applications including business cards and the website, delivering a full guideline for consistent brand growth.'
+    ]
+  },
+  {
     id: 'gwanghwa169',
     thumbnail: 'images/projects/gwanghwa169.jpg',
     images: ['images/projects/gwanghwa169-2.jpg', 'images/projects/gwanghwa169-3.jpg'],
