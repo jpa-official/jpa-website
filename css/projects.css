@@ -144,6 +144,7 @@
 }
 
 .pj-item-img {
+  position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
@@ -158,6 +159,31 @@
 }
 .pj-item:hover .pj-item-img img {
   transform: scale(1.03);
+}
+
+.pj-item-scope {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 0.4s var(--transition);
+  pointer-events: none;
+}
+.pj-item:hover .pj-item-scope {
+  opacity: 1;
+}
+.pj-item-scope span {
+  font-family: 'Pretendard Variable', Pretendard, sans-serif;
+  font-size: clamp(13px, 1.3vw, 17px);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--white);
+  text-align: center;
+  line-height: 1.6;
 }
 .pj-item-img-placeholder {
   width: 100%;

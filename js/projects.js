@@ -16,8 +16,11 @@ function buildCard(project) {
     ? `<img src="${project.thumbnail}" alt="${project.name}" loading="lazy">`
     : `<div class="pj-item-img-placeholder"></div>`;
 
+  const scopeText = Array.isArray(project.scope) ? project.scope.join(' / ') : '';
+  const scopeHtml = scopeText ? `<div class="pj-item-scope"><span>${scopeText}</span></div>` : '';
+
   a.innerHTML = `
-    <div class="pj-item-img">${imgHtml}</div>
+    <div class="pj-item-img">${imgHtml}${scopeHtml}</div>
     <div class="pj-item-info">
       <div class="pj-item-left">
         <h2 class="pj-item-name">${project.name}</h2>
