@@ -112,7 +112,11 @@ window.PROJECTS = [
       'images/projects/ozx-branding-5.jpg',
       'images/projects/ozx-branding-6.jpg',
       'images/projects/ozx-branding-7.jpg',
-      'images/projects/ozx-branding-8.jpg'
+      'images/projects/ozx-branding-8.jpg',
+      'images/projects/ozx-branding-9.jpg',
+      'images/projects/ozx-branding-10.jpg',
+      'images/projects/ozx-branding-11.jpg',
+      'images/projects/ozx-branding-12.jpg'
     ],
     name: 'OZX BRANDING',
     nameKo: '공간 운영사 OZX의 브랜드 아이덴티티 및 커뮤니케이션 체계 구축',
