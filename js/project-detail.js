@@ -49,11 +49,7 @@
       allImages.forEach((src, i) => {
         const slide = document.createElement('div');
         slide.className = 'pd-slide' + (i === 0 ? ' active pd-slide-main' : '');
-        const img = document.createElement('img');
-        img.src = src;
-        img.alt = project.name;
-        img.loading = 'eager';
-        slide.appendChild(img);
+        slide.appendChild(createMedia(src, project.name));
         track.appendChild(slide);
       });
       $mainImg.appendChild(track);
@@ -106,10 +102,7 @@
       $mainImg.appendChild(counter);
 
     } else if (allImages.length === 1) {
-      const img = document.createElement('img');
-      img.src = allImages[0];
-      img.alt = project.name;
-      $mainImg.appendChild(img);
+      $mainImg.appendChild(createMedia(allImages[0], project.name));
     }
   }
 
@@ -158,5 +151,23 @@
   function setText(id, value) {
     const el = document.getElementById(id);
     if (el) el.textContent = value;
+  }
+
+  function createMedia(src, alt) {
+    if (/\.mp4$/i.test(src)) {
+      const video = document.createElement('video');
+      video.src = src;
+      video.autoplay = true;
+      video.loop = true;
+      video.muted = true;
+      video.playsInline = true;
+      video.setAttribute('aria-label', alt);
+      return video;
+    }
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = alt;
+    img.loading = 'eager';
+    return img;
   }
 })();
