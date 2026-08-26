@@ -325,12 +325,14 @@ window.PROJECTS = [
     scope: ['Space BX Planning'],
     summary: '스페이스콘텐츠푸드(SCF)의 신규 F&B 브랜드 \'카츠쇼신\'의 브랜드 철학과 아이덴티티를 정의하고, 이를 그래픽·제품·공간까지 확장하는 통합 브랜딩과 디자인 가이드라인을 구축하였다.',
     body: [
-      '스페이스콘텐츠푸드(SCF)의 신규 F&B 브랜드 \'카츠쇼신\'의 브랜드 철학과 아이덴티티를 정의하고, 이를 그래픽·제품·공간까지 확장하는 통합 브랜딩과 디자인 가이드라인을 구축하였다. 카츠쇼신은 일본 현지에서 그대로 가져온 듯한 음식과 정교함, 안정감이 느껴지는 다이닝 공간을 위한 브랜드로, jpa.는 깊은 전통성과 초심이 느껴지는 차별화된 브랜드로 이를 재정의했다.',
-      '가로형·세로형으로 구성된 로고는 일본어 타이포그래피 \'かつしょしん\'과 한글 \'카츠쇼신\'을 함께 배치해 전통성과 정체성을 동시에 담았다. 브랜드 스토리는 나무와 초석이라는 두 재료로 전개되는데, 나무는 전통성과 아름다움을, 초석은 기초와 초심을 상징한다. 블랙·화이트를 기본으로 오렌지를 서브 컬러로 사용해 정제된 인상 속에 온기를 더했다.'
+      '스페이스콘텐츠푸드(SCF)의 신규 F&B 브랜드 \'카츠쇼신\'의 브랜드 철학과 아이덴티티를 정의하고, 이를 그래픽·제품·공간까지 확장하는 통합 브랜딩과 디자인 가이드라인을 구축하였다. \'카츠쇼신\'은 일본 현지의 전통성과 높은 음식의 퀄리티, 깔끔하고 정교한 인상을 바탕으로 탄생한 브랜드이다. \'장인\'과 \'초심\'을 브랜드 아이덴티티의 핵심으로 설정하고, 가장 기초가 되는 것과 가장 중요한 것을 추구하는 태도를 브랜드에 담았다.',
+      '전통성과 전문성에서 나오는 간결함과 아름다움은 \'나무\'로, 가장 기초가 되는 것과 근본을 추구하는 태도는 \'초석\'으로 표현하였다. 나무가 가진 자연스러움과 따뜻함, 초석이 가진 단단함을 통해 깊은 전통성과 초심이 느껴지는 브랜드 이미지를 구축하였다.',
+      '이를 바탕으로 로고, 컬러, 지정 서체 등의 브랜드 아이덴티티를 정립하고 명함, 냅킨, 메뉴판, 쇼핑백, 행잉 메뉴판 등의 제작물까지 구체화하였다. 또한 나무, 초석, 간살, 닷찌와 캐노피 등의 요소를 공간에 적용하여 "카츠 한 입. 초심 한 마음"이라는 브랜드의 이야기가 그래픽과 공간 전반에서 이어지도록 디자인하였다.'
     ],
     bodyEn: [
-      "This project defined the brand philosophy and identity of Katsu Shoshin, a new F&B brand by Space Content Food (SCF), and built an integrated branding and design guideline extending it across graphics, products, and space. Katsu Shoshin is a brand for a dining space built around food that feels as if it were brought straight from Japan, paired with a sense of precision and stability; jpa. redefined it as a distinctive brand carrying deep tradition and a beginner's mind.",
-      "The logo combines horizontal and vertical compositions, pairing the Japanese typography 'かつしょしん' with the Korean lettering '카츠쇼신' to convey both heritage and identity. The brand story unfolds through two materials — wood, symbolizing tradition and beauty, and cornerstone, symbolizing foundation and beginner's mind. A black-and-white base paired with orange as a sub color adds warmth to an otherwise refined impression."
+      "This project defined the brand philosophy and identity of Katsu Shoshin, a new F&B brand by Space Content Food (SCF), and built an integrated branding and design guideline extending it across graphics, products, and space. Katsu Shoshin is a brand born from the authenticity of Japan, the high quality of its food, and a clean, refined impression. With 'craftsmanship' and 'beginner's mind' set as the core of the brand identity, the brand embodies an attitude of pursuing both what is most fundamental and what matters most.",
+      "The simplicity and beauty born of tradition and expertise are expressed through 'wood,' while the attitude of pursuing what is most foundational and essential is expressed through 'cornerstone.' Through the natural warmth of wood and the solidity of the cornerstone, the brand built an image that conveys deep tradition and a beginner's mind.",
+      "Building on this, the brand identity — logo, color, and a designated typeface — was established and extended into concrete application items such as business cards, napkins, menus, shopping bags, and hanging menu boards. Elements such as wood, cornerstone, louvers, and the datchi and canopy were also applied to the space, so that the brand story of \"One Bite of Katsu, One Heart of Beginner's Mind\" continues seamlessly across both graphics and space."
     ]
   },
   {
@@ -353,12 +355,14 @@ window.PROJECTS = [
     scope: ['Space BX Planning'],
     summary: '스페이스콘텐츠푸드(SCF)의 신규 F&B 브랜드 \'크래킹 커피\'의 브랜드 전략부터 아이덴티티, 그래픽, 제품, 공간 경험까지 통합적인 브랜드 시스템을 구축하였다.',
     body: [
-      '스페이스콘텐츠푸드(SCF)의 신규 F&B 브랜드 \'크래킹 커피\'의 브랜드 전략부터 아이덴티티, 그래픽, 제품, 공간 경험까지 통합적인 브랜드 시스템을 구축하였다. 크래킹은 커피빈이 로스팅되며 갈라질 때 가장 짙고 좋은 향과 소리를 낸다는 점에서 출발한 브랜드로, 일상적인 본래의 모습을 잠시 깨고 그 틈 안으로 쉼과 새로움을 채우는 브랜드가 되고자 하는 철학을 담아 아이덴티티를 구축했다.',
-      '로고는 \'crackin\'\'이라는 워드마크와 66˚·155˚·80˚·20˚의 불규칙한 각도로 이루어진 삼각형 심볼로 구성되어 갈라짐의 순간을 형상화한다. 브랜드는 돌·나무·커피빈 등 자연물이 갈라지는 \'크랙(CRACK)\'과 유리·아크릴·거울 등 가공물이 채워지는 \'필(FILL)\'이라는 두 개념으로 확장되며, 그레이·화이트에 브라운을 더한 컬러 시스템으로 완성된다.'
+      '스페이스콘텐츠푸드(SCF)의 신규 F&B 브랜드 \'크래킹 커피\'의 브랜드 전략부터 아이덴티티, 그래픽, 제품, 공간 경험까지 통합적인 브랜드 시스템을 구축하였다. \'크래킹 커피\'는 커피빈이 로스팅 과정에서 갈라지며 가장 짙고 좋은 향과 소리를 내는 현상에서 출발했다. 성장과 변화를 위해 깨지고 갈라지는 경험을 \'Crack\', 그 틈에 새로움을 채워 넣는 것을 \'Fill\'로 정의하고, "Break the Routine"이라는 슬로건을 통해 일상의 틀을 깨고 그 안에 쉼과 새로움을 채우는 브랜드를 제안하였다.',
+      '돌·나무·커피빈과 같은 자연물은 본연의 모습을, 유리·아크릴·거울과 같은 가공물은 변화된 모습을 상징하는 브랜드 모티브로 설정하였다. 이러한 개념을 바탕으로 로고, 컬러, 지정 서체 등의 브랜드 아이덴티티를 구축하고 명함, 입간판, 종이컵, 머그컵, 냅킨, 메뉴판, 원두 설명서 등의 그래픽 제작물로 확장하였다.',
+      '공간에서도 크랙의 비정형적이고 사선적인 형태와 자연물·가공물의 대비를 적용하여 브랜드의 모티브가 그래픽과 공간에서 일관되게 드러나도록 디자인하였다.'
     ],
     bodyEn: [
-      "This project built an integrated brand system for Cracking Coffee, a new F&B brand by Space Content Food (SCF), spanning brand strategy, identity, graphics, products, and spatial experience. Crackin' is a brand born from the idea that coffee beans release their deepest aroma and sound at the very moment they crack while roasting, built on the philosophy of momentarily breaking the ordinary and filling that crack with rest and renewal.",
-      "The logo pairs the 'crackin'' wordmark with a triangular symbol built from irregular angles of 66˚, 155˚, 80˚, and 20˚, visualizing the moment of cracking. The brand expands through two concepts: CRACK, where natural materials such as stone, wood, and coffee beans split open, and FILL, where fabricated materials such as glass, acrylic, and mirror fill that space — completed with a color system of gray and white accented by brown."
+      "This project built an integrated brand system for Cracking Coffee, a new F&B brand by Space Content Food (SCF), spanning brand strategy, identity, graphics, products, and spatial experience. Cracking Coffee began with the phenomenon of coffee beans releasing their deepest aroma and sound at the very moment they crack and split during roasting. The experience of breaking and cracking for growth and change was defined as 'Crack,' and filling that crack with something new was defined as 'Fill'; through the slogan \"Break the Routine,\" the brand proposes breaking the frame of everyday life and filling it with rest and renewal.",
+      "Natural materials such as stone, wood, and coffee beans were set as a brand motif symbolizing the original, unaltered state, while fabricated materials such as glass, acrylic, and mirror were set as a motif symbolizing a transformed state. Based on this concept, the brand identity — logo, color, and a designated typeface — was built and extended into graphic application items such as business cards, standing signage, paper cups, mugs, napkins, menus, and bean information cards.",
+      "In the space as well, the irregular, diagonal forms of the crack and the contrast between natural and fabricated materials were applied so that the brand motif consistently reveals itself across both graphics and space."
     ]
   },
   {
