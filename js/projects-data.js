@@ -323,13 +323,13 @@ window.PROJECTS = [
     client: 'Space Content Food (SCF)',
     scopeCode: 'SP',
     scope: ['Space BX Planning'],
-    summary: '일본 현지의 정교함과 안정감을 담은 다이닝 브랜드, 카츠쇼신의 브랜드 아이덴티티 및 커뮤니케이션 디자인이다.',
+    summary: '스페이스콘텐츠푸드(SCF)의 신규 F&B 브랜드 \'카츠쇼신\'의 브랜드 철학과 아이덴티티를 정의하고, 이를 그래픽·제품·공간까지 확장하는 통합 브랜딩과 디자인 가이드라인을 구축하였다.',
     body: [
-      '카츠쇼신은 일본 현지에서 그대로 가져온 듯한 음식과 정교함, 안정감이 느껴지는 다이닝 공간을 위한 브랜드 아이덴티티 프로젝트다. jpa.는 깊은 전통성과 초심이 느껴지는 차별화된 브랜드로 카츠쇼신을 재정의했다.',
+      '스페이스콘텐츠푸드(SCF)의 신규 F&B 브랜드 \'카츠쇼신\'의 브랜드 철학과 아이덴티티를 정의하고, 이를 그래픽·제품·공간까지 확장하는 통합 브랜딩과 디자인 가이드라인을 구축하였다. 카츠쇼신은 일본 현지에서 그대로 가져온 듯한 음식과 정교함, 안정감이 느껴지는 다이닝 공간을 위한 브랜드로, jpa.는 깊은 전통성과 초심이 느껴지는 차별화된 브랜드로 이를 재정의했다.',
       '가로형·세로형으로 구성된 로고는 일본어 타이포그래피 \'かつしょしん\'과 한글 \'카츠쇼신\'을 함께 배치해 전통성과 정체성을 동시에 담았다. 브랜드 스토리는 나무와 초석이라는 두 재료로 전개되는데, 나무는 전통성과 아름다움을, 초석은 기초와 초심을 상징한다. 블랙·화이트를 기본으로 오렌지를 서브 컬러로 사용해 정제된 인상 속에 온기를 더했다.'
     ],
     bodyEn: [
-      "Katsu Shoshin is a brand identity project for a dining space built around food that feels as if it were brought straight from Japan, paired with a sense of precision and stability. jpa. redefined Katsu Shoshin as a distinctive brand carrying deep tradition and a beginner's mind.",
+      "This project defined the brand philosophy and identity of Katsu Shoshin, a new F&B brand by Space Content Food (SCF), and built an integrated branding and design guideline extending it across graphics, products, and space. Katsu Shoshin is a brand for a dining space built around food that feels as if it were brought straight from Japan, paired with a sense of precision and stability; jpa. redefined it as a distinctive brand carrying deep tradition and a beginner's mind.",
       "The logo combines horizontal and vertical compositions, pairing the Japanese typography 'かつしょしん' with the Korean lettering '카츠쇼신' to convey both heritage and identity. The brand story unfolds through two materials — wood, symbolizing tradition and beauty, and cornerstone, symbolizing foundation and beginner's mind. A black-and-white base paired with orange as a sub color adds warmth to an otherwise refined impression."
     ]
   },
@@ -351,13 +351,13 @@ window.PROJECTS = [
     client: 'Space Content Food (SCF)',
     scopeCode: 'SP',
     scope: ['Space BX Planning'],
-    summary: '갈라짐의 순간에서 가장 좋은 향과 소리가 난다는 발상에서 출발한 커피 브랜드, 크래킹의 브랜드 아이덴티티 및 커뮤니케이션 디자인이다.',
+    summary: '스페이스콘텐츠푸드(SCF)의 신규 F&B 브랜드 \'크래킹 커피\'의 브랜드 전략부터 아이덴티티, 그래픽, 제품, 공간 경험까지 통합적인 브랜드 시스템을 구축하였다.',
     body: [
-      '크래킹은 커피빈이 로스팅되며 갈라질 때 가장 짙고 좋은 향과 소리를 낸다는 점에서 출발한 브랜드다. 일상적인 본래의 모습을 잠시 깨고, 그 틈 안으로 쉼과 새로움을 채우는 브랜드가 되고자 하는 철학을 담아 아이덴티티를 구축했다.',
+      '스페이스콘텐츠푸드(SCF)의 신규 F&B 브랜드 \'크래킹 커피\'의 브랜드 전략부터 아이덴티티, 그래픽, 제품, 공간 경험까지 통합적인 브랜드 시스템을 구축하였다. 크래킹은 커피빈이 로스팅되며 갈라질 때 가장 짙고 좋은 향과 소리를 낸다는 점에서 출발한 브랜드로, 일상적인 본래의 모습을 잠시 깨고 그 틈 안으로 쉼과 새로움을 채우는 브랜드가 되고자 하는 철학을 담아 아이덴티티를 구축했다.',
       '로고는 \'crackin\'\'이라는 워드마크와 66˚·155˚·80˚·20˚의 불규칙한 각도로 이루어진 삼각형 심볼로 구성되어 갈라짐의 순간을 형상화한다. 브랜드는 돌·나무·커피빈 등 자연물이 갈라지는 \'크랙(CRACK)\'과 유리·아크릴·거울 등 가공물이 채워지는 \'필(FILL)\'이라는 두 개념으로 확장되며, 그레이·화이트에 브라운을 더한 컬러 시스템으로 완성된다.'
     ],
     bodyEn: [
-      "Crackin' is a brand born from the idea that coffee beans release their deepest aroma and sound at the very moment they crack while roasting. The identity is built on the philosophy of momentarily breaking the ordinary and filling that crack with rest and renewal.",
+      "This project built an integrated brand system for Cracking Coffee, a new F&B brand by Space Content Food (SCF), spanning brand strategy, identity, graphics, products, and spatial experience. Crackin' is a brand born from the idea that coffee beans release their deepest aroma and sound at the very moment they crack while roasting, built on the philosophy of momentarily breaking the ordinary and filling that crack with rest and renewal.",
       "The logo pairs the 'crackin'' wordmark with a triangular symbol built from irregular angles of 66˚, 155˚, 80˚, and 20˚, visualizing the moment of cracking. The brand expands through two concepts: CRACK, where natural materials such as stone, wood, and coffee beans split open, and FILL, where fabricated materials such as glass, acrylic, and mirror fill that space — completed with a color system of gray and white accented by brown."
     ]
   },
