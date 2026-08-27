@@ -262,7 +262,7 @@ window.PROJECTS = [
   {
     id: 'crackin',
     thumbnail: 'images/projects/crackin.jpg',
-    images: ['images/projects/crackin-2.jpg', 'images/projects/crackin-3.jpg'],
+    images: ['images/projects/crackin-2.jpg', 'images/projects/crackin-3.jpg', 'images/projects/crackin-4.jpg'],
     name: "Crack'in",
     nameKo: '크래킹커피 1호점 — 공간기획 및 공간경험설계',
     desc: '크래킹커피 1호점 — 공간기획 및 공간경험설계',
@@ -342,7 +342,9 @@ window.PROJECTS = [
       'images/projects/crackin-branding-2.jpg',
       'images/projects/crackin-branding-3.jpg',
       'images/projects/crackin-branding-4.jpg',
-      'images/projects/crackin-branding-5.jpg'
+      'images/projects/crackin-branding-5.jpg',
+      'images/projects/crackin-branding-6.jpg',
+      'images/projects/crackin-branding-7.jpg'
     ],
     name: "Crackin' Branding",
     nameKo: '크래킹 브랜드 아이덴티티 및 커뮤니케이션 디자인',
@@ -368,7 +370,7 @@ window.PROJECTS = [
   {
     id: 'slipper-mansion',
     thumbnail: 'images/projects/slipper-mansion.jpg',
-    images: ['images/projects/slipper-mansion-2.jpg', 'images/projects/slipper-mansion-3.jpg', 'images/projects/slipper-mansion-4.jpg'],
+    images: ['images/projects/slipper-mansion-2.jpg', 'images/projects/slipper-mansion-3.jpg', 'images/projects/slipper-mansion-4.jpg', 'images/projects/slipper-mansion-5.jpg', 'images/projects/slipper-mansion-6.jpg', 'images/projects/slipper-mansion-7.jpg', 'images/projects/slipper-mansion-8.jpg'],
     name: 'Slipper Mansion',
     nameKo: 'jpa. 브랜디드 스페이스 — 슬리퍼맨션',
     desc: 'jpa. 브랜디드 스페이스 — 슬리퍼맨션',
