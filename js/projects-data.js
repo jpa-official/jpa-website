@@ -30,6 +30,14 @@ window.PROJECTS = [
   {
     id: 'tea-the-han',
     thumbnail: 'images/projects/tea-the-han.jpg',
+    images: [
+      'images/projects/tea-the-han-2.jpg',
+      'images/projects/tea-the-han-3.jpg',
+      'images/projects/tea-the-han-4.jpg',
+      'images/projects/tea-the-han-5.jpg',
+      'images/projects/tea-the-han-6.jpg',
+      'images/projects/tea-the-han-7.jpg'
+    ],
     name: 'Tea the Han',
     nameKo: '북촌 티더한',
     desc: 'HAN_북촌 TEA THE HAN 공간브랜딩 및 공간경험·환경디자인',
