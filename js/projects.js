@@ -1,6 +1,6 @@
 const PROJECTS = window.PROJECTS || [];
 let currentFilter = 'all';
-let currentView = 'gallery';
+let currentView = window.innerWidth <= 768 ? 'gallery' : 'gallery';
 
 const $list = document.getElementById('pjList');
 const $filter = document.getElementById('projFilter');
@@ -16,8 +16,11 @@ function buildCard(project) {
     ? `<img src="${project.thumbnail}" alt="${project.name}" loading="lazy">`
     : `<div class="pj-item-img-placeholder"></div>`;
 
+  const scopeText = Array.isArray(project.scope) ? project.scope.join(' / ') : '';
+  const scopeHtml = scopeText ? `<div class="pj-item-scope"><span>${scopeText}</span></div>` : '';
+
   a.innerHTML = `
-    <div class="pj-item-img">${imgHtml}</div>
+    <div class="pj-item-img">${imgHtml}${scopeHtml}</div>
     <div class="pj-item-info">
       <div class="pj-item-left">
         <h2 class="pj-item-name">${project.name}</h2>
@@ -93,6 +96,7 @@ $filter.addEventListener('click', (e) => {
 });
 
 $viewToggle.addEventListener('click', (e) => {
+  if (window.innerWidth <= 768) return;
   const btn = e.target.closest('.pj-view-btn');
   if (!btn || btn.dataset.view === currentView) return;
   currentView = btn.dataset.view;

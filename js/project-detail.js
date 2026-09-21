@@ -13,8 +13,7 @@
   const project = PROJECTS.find(p => p.id === id);
 
   if (!project) {
-    if ($main) $main.style.display = 'none';
-    if ($notFound) $notFound.hidden = false;
+    window.location.href = 'projects.html';
     return;
   }
 
@@ -35,13 +34,76 @@
     : (project.scope || '—');
   setText('pdMetaScope', scopeVal);
 
-  // Main image
+  // Main image + slider
   const $mainImg = document.getElementById('pdMainImg');
-  if ($mainImg && project.thumbnail) {
-    const img = document.createElement('img');
-    img.src = project.thumbnail;
-    img.alt = project.name;
-    $mainImg.appendChild(img);
+  if ($mainImg) {
+    const allImages = [];
+    if (project.thumbnail) allImages.push(project.thumbnail);
+    if (Array.isArray(project.images)) allImages.push(...project.images);
+
+    if (allImages.length > 1) {
+      $mainImg.classList.add('pd-slider');
+
+      const track = document.createElement('div');
+      track.className = 'pd-slider-track';
+      allImages.forEach((src, i) => {
+        const slide = document.createElement('div');
+        slide.className = 'pd-slide' + (i === 0 ? ' active pd-slide-main' : '');
+        slide.appendChild(createMedia(src, project.name));
+        track.appendChild(slide);
+      });
+      $mainImg.appendChild(track);
+
+      const isMobile = window.matchMedia('(max-width: 900px)').matches;
+
+      const btnPrev = document.createElement('button');
+      btnPrev.className = 'pd-slider-btn pd-slider-prev';
+      btnPrev.setAttribute('aria-label', 'Previous image');
+      btnPrev.innerHTML = `<svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+      if (isMobile) btnPrev.style.display = 'none';
+
+      const btnNext = document.createElement('button');
+      btnNext.className = 'pd-slider-btn pd-slider-next';
+      btnNext.setAttribute('aria-label', 'Next image');
+      btnNext.innerHTML = `<svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+      if (isMobile) btnNext.style.display = 'none';
+
+      const counter = document.createElement('div');
+      counter.className = 'pd-slider-counter';
+      counter.textContent = `1 / ${allImages.length}`;
+
+      let current = 0;
+      const slides = track.querySelectorAll('.pd-slide');
+
+      function goTo(n) {
+        slides[current].classList.remove('active');
+        current = (n + allImages.length) % allImages.length;
+        slides[current].classList.add('active');
+        track.style.transform = `translateX(-${current * $mainImg.offsetWidth}px)`;
+        counter.textContent = `${current + 1} / ${allImages.length}`;
+      }
+
+      btnPrev.addEventListener('click', () => goTo(current - 1));
+      btnNext.addEventListener('click', () => goTo(current + 1));
+
+      let touchStartX = 0;
+      $mainImg.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+      $mainImg.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (diff <= -40) {
+          goTo(current - 1);
+        } else {
+          goTo(current + 1);
+        }
+      }, { passive: true });
+
+      $mainImg.appendChild(btnPrev);
+      $mainImg.appendChild(btnNext);
+      $mainImg.appendChild(counter);
+
+    } else if (allImages.length === 1) {
+      $mainImg.appendChild(createMedia(allImages[0], project.name));
+    }
   }
 
   // Body — Korean
@@ -61,21 +123,6 @@
       const p = document.createElement('p');
       p.textContent = text;
       $bodyEn.appendChild(p);
-    });
-  }
-
-  // Extra images (optional field: project.images = ['path1', 'path2', ...])
-  const $extra = document.getElementById('pdExtraImgs');
-  if ($extra && Array.isArray(project.images) && project.images.length) {
-    project.images.forEach(src => {
-      const div = document.createElement('div');
-      div.className = 'pd-extra-img';
-      const img = document.createElement('img');
-      img.src = src;
-      img.alt = project.name;
-      img.loading = 'lazy';
-      div.appendChild(img);
-      $extra.appendChild(div);
     });
   }
 
@@ -104,5 +151,23 @@
   function setText(id, value) {
     const el = document.getElementById(id);
     if (el) el.textContent = value;
+  }
+
+  function createMedia(src, alt) {
+    if (/\.mp4$/i.test(src)) {
+      const video = document.createElement('video');
+      video.src = src;
+      video.autoplay = true;
+      video.loop = true;
+      video.muted = true;
+      video.playsInline = true;
+      video.setAttribute('aria-label', alt);
+      return video;
+    }
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = alt;
+    img.loading = 'eager';
+    return img;
   }
 })();

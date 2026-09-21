@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>JUNGLIM PLANNING ADVISORY ©2026</title>
 <meta name="description" content="End-to-End spatial strategy services optimized for your business lifecycle." />
+<meta name="google-site-verification" content="eKLzyLrf8rKwWbhB4uHDSqF0Gpa61p9kruaK-NJL3io" />
 <link rel="preconnect" href="https://api.fontshare.com" />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 <!-- Switzer (English) via Fontshare -->
@@ -12,6 +13,9 @@
 <!-- Pretendard (Korean) via jsDelivr -->
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -19,9 +23,8 @@
 <!-- LOADER / INTRO -->
 <div class="loader" id="loader">
   <video id="loaderVideo" class="loader-video" src="videos/jpa-intro.mp4" muted playsinline preload="auto"></video>
-  <button type="button" class="loader-enter" id="loaderEnter" aria-label="Enter jpa.">
-    <span>ENTER</span>
-  </button>
+  <img src="images/jpa-logo.png" alt="jpa." id="loaderLogo" class="loader-logo" />
+  <span class="loader-enter visible" id="loaderEnter">CLICK TO ENTER</span>
 </div>
 
 
@@ -36,6 +39,7 @@
       <a href="about.html" data-text="ABOUT">ABOUT</a>
       <a href="services.html" data-text="SERVICES">SERVICES</a>
       <a href="projects.html" data-text="PROJECTS">PROJECTS</a>
+      <a href="insight-reports.html" data-text="INSIGHTS">INSIGHTS</a>
       <a href="#contact" data-text="CONTACT">CONTACT</a>
     </nav>
   </div>
@@ -59,10 +63,7 @@
 
     <div class="hero-bottom">
       <p class="hero-desc">
-        We provide End-to-End spatial strategy services<br/>
-        optimized for your business lifecycle: from location strategy,<br/>
-        brand planning, design, and implementation to the practical operation<br/>
-        of the space.
+        We provide End-to-End spatial strategy services optimized for your business lifecycle: from location strategy, brand planning, design, and implementation to the practical operation of the space.
       </p>
       <a href="about.html" class="more-link">
         <span>MORE ABOUT ME</span>
@@ -85,32 +86,42 @@
   <ul class="service-list">
     <li class="service-item reveal" data-num="01">
       <span class="srv-num">01</span>
-      <h3 class="srv-title">DEVELOPMENT<br/>STRATEGY</h3>
-      <span class="srv-kr">개발 전략</span>
+      <div class="srv-content">
+        <h3 class="srv-title">DEVELOPMENT<br/>STRATEGY</h3>
+        <span class="srv-kr">개발 전략</span>
+      </div>
       <div class="srv-hover-bg"></div>
     </li>
     <li class="service-item reveal" data-num="02">
       <span class="srv-num">02</span>
-      <h3 class="srv-title">SPACE BX<br/>PLANNING</h3>
-      <span class="srv-kr">공간 기획</span>
+      <div class="srv-content">
+        <h3 class="srv-title">SPACE BX<br/>PLANNING</h3>
+        <span class="srv-kr">공간 기획</span>
+      </div>
       <div class="srv-hover-bg"></div>
     </li>
     <li class="service-item reveal" data-num="03">
       <span class="srv-num">03</span>
-      <h3 class="srv-title">SPACE<br/>DESIGN</h3>
-      <span class="srv-kr">공간 디자인</span>
+      <div class="srv-content">
+        <h3 class="srv-title">SPACE<br/>DESIGN</h3>
+        <span class="srv-kr">공간 디자인</span>
+      </div>
       <div class="srv-hover-bg"></div>
     </li>
     <li class="service-item reveal" data-num="04">
       <span class="srv-num">04</span>
-      <h3 class="srv-title">DESIGN<br/>BUILD</h3>
-      <span class="srv-kr">공간 구현</span>
+      <div class="srv-content">
+        <h3 class="srv-title">DESIGN<br/>BUILD</h3>
+        <span class="srv-kr">공간 구현</span>
+      </div>
       <div class="srv-hover-bg"></div>
     </li>
     <li class="service-item reveal" data-num="05">
       <span class="srv-num">05</span>
-      <h3 class="srv-title">OPERATING<br/>ADVISORY</h3>
-      <span class="srv-kr">공간 운영</span>
+      <div class="srv-content">
+        <h3 class="srv-title">OPERATING<br/>ADVISORY</h3>
+        <span class="srv-kr">공간 운영</span>
+      </div>
       <div class="srv-hover-bg"></div>
     </li>
   </ul>
@@ -181,6 +192,7 @@
       <a href="about.html">ABOUT</a>
       <a href="#services">SERVICES</a>
       <a href="projects.html">PROJECTS</a>
+      <a href="insight-reports.html">INSIGHTS</a>
     </div>
   </div>
 

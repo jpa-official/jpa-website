@@ -3,9 +3,11 @@
    ============================================ */
 
 window.PROJECTS = [
+  /* ---- 2026 ---- */
   {
     id: 'gwanghwa169',
     thumbnail: 'images/projects/gwanghwa169.jpg',
+    images: ['images/projects/gwanghwa169-2.jpg', 'images/projects/gwanghwa169-3.jpg'],
     name: 'Gwanghwa169',
     nameKo: '광화문169',
     desc: '광화문169 공간경험 및 공간환경설계',
@@ -27,26 +29,43 @@ window.PROJECTS = [
   },
   {
     id: 'tea-the-han',
-    thumbnail: '',
+    thumbnail: 'images/projects/tea-the-han.jpg',
+    images: [
+      'images/projects/tea-the-han-2.jpg',
+      'images/projects/tea-the-han-3.jpg',
+      'images/projects/tea-the-han-4.jpg',
+      'images/projects/tea-the-han-5.jpg',
+      'images/projects/tea-the-han-6.jpg',
+      'images/projects/tea-the-han-7.jpg'
+    ],
     name: 'Tea the Han',
     nameKo: '북촌 티더한',
     desc: 'HAN_북촌 TEA THE HAN 공간브랜딩 및 공간경험·환경디자인',
     category: 'Retail',
     location: 'SEOUL',
-    year: '2025',
+    year: '2026',
     client: 'HAN',
     scopeCode: 'DS · SP · SD',
     scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
     summary: '북촌의 결을 담은 다도 공간. 한국 차 문화를 동시대적으로 재해석한 리테일 브랜드 경험 공간이다.',
     body: [
-      'TEA THE HAN은 북촌 한옥 거리의 켜를 살리면서, 한국 차의 의례성을 현대적 라이프스타일로 번역한 리테일 공간이다. jpa.는 브랜드의 톤 매뉴얼부터 공간 경험 시퀀스, 환경 디자인까지 통합형 솔루션을 제공했다.',
-      '차를 마시는 행위의 감각적 디테일—온도, 향, 빛, 소리—을 공간 곳곳에 배치해 한국 차 문화의 정수가 현대 도시인의 감각에 가깝게 다가가도록 설계했다.'
+      '티더한은 럭셔리 한옥호텔 노스텔지어의 헤리티지와 뉴욕 티 브랜드 타바론의 20년 전문성이 결합되어 탄생한 합작 법인이다. 한국의 티 헤리티지를 바탕으로 차를 접하는 새로운 문화를 제안한다.',
+      '티더한의 정체성을 구현하는 첫 번째 플래그십 스토어로서, 공간 기획부터 디자인 구현까지 전 과정을 jpa.가 일관되게 설계하고 실행했다. 브랜드가 지향하는 현대적인 감각을 하나의 공간 경험으로 연결하여, 고객이 자연스럽게 브랜드를 이해하고 체류할 수 있는 공간을 목표로 한다. 매장 파사드와 내부 마감재는 현대적인 미를 위해 붉은색 타일을 중심으로 구성하여 차분하고 깊이 있는 고급스러움을 전달한다. 강한 장식 대신 절제된 소재감과 컬러로 프리미엄 이미지를 형성하고, 브랜드의 첫인상을 명확하게 각인시킨다. 파사드 전면의 외부 좌석은 단순한 대기석이 아니라, 북촌의 정겨움을 표현한 개방형 체류 공간이다.',
+      '메인 공간은 진입 동선에 맞춘 전면 디스플레이와 시선의 흐름을 통해 제품이 자연스럽게 노출되도록 했으며, 차를 경험하며 공간 안쪽으로 관심이 이어지도록 계획했다. 몰입 공간은 곡선형 디스플레이와 간접 조명으로 제품의 존재감을 극대화하고, 브랜드 스토리가 하나의 전시처럼 전달되도록 했다.',
+      '결과적으로 티더한 플래그십 스토어는 단순히 차를 판매하는 매장을 넘어, 머무르며 브랜드를 점진적으로 마주하는 \'티 경험 공간\'으로 완성된다.'
     ],
-    bodyEn: []
+    bodyEn: [
+      'Tea The Han is a joint venture combining the heritage of luxury Hanok hotel Nostalgia with the 20-year expertise of New York tea brand Tavalon. Rooted in Korea\'s tea heritage, the brand proposes a new tea culture.',
+      'As the first flagship store embodying Tea The Han\'s identity, jpa. managed the entire process from spatial planning to design execution. The store connects the brand\'s modern sensibility into a cohesive spatial experience, allowing customers to naturally understand the brand and linger. The facade and interior feature a red tile finish to deliver a calm, deep sense of modern luxury. Instead of heavy ornamentation, restrained textures and colors create a premium image and leave a clear first impression. The front outdoor seating is not just a waiting zone, but an open space reflecting the warm charm of Bukchon.',
+      'The main space features a front display aligned with the entry flow, naturally exposing products along the customer\'s line of sight and drawing them deeper into the space. The immersive space uses a curved display and indirect lighting to maximize product presence, presenting the brand story like an exhibition.',
+      'Ultimately, the Tea The Han flagship store goes beyond a retail shop, serving as an experiential space where visitors can stay and gradually discover the brand.'
+    ]
   },
+  /* ---- 2025 ---- */
   {
     id: 'sejong-center',
     thumbnail: 'images/projects/sejong-center.jpg',
+    images: ['images/projects/sejong-center-2.jpg'],
     name: 'Sejong Center',
     nameKo: '세종문화회관 플레이스 브랜딩',
     desc: '세종문화회관 플레이스 브랜딩',
@@ -69,6 +88,7 @@ window.PROJECTS = [
   {
     id: 'yonsei-wonju',
     thumbnail: 'images/projects/yonsei-wonju.jpg',
+    images: ['images/projects/yonsei-wonju-2.jpg', 'images/projects/yonsei-wonju-3.jpg', 'images/projects/yonsei-wonju-4.jpg'],
     name: 'Yonsei University Wonju College',
     nameKo: '연세대학교 원주의과대학 공간디자인',
     desc: '연세대학교 원주의과대학 공간디자인',
@@ -80,14 +100,63 @@ window.PROJECTS = [
     scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
     summary: '의학 교육과 연구가 교차하는 캠퍼스의 일상 공간. 학생·교수·연구자의 협업 방식을 반영한 학습·연구 공간이다.',
     body: [
-      '연세대학교 원주의과대학은 의학 교육과 연구가 통합된 미래 캠퍼스를 지향한다. jpa.는 강의·실습·휴식의 흐름이 자연스럽게 이어지는 공간 구성을 통해, 학생과 연구자들이 일상 속에서 교류할 수 있도록 했다.',
-      '캠퍼스의 정체성을 유지하면서도, 다음 세대 의학 교육 환경에 요구되는 유연성과 협업 친화성을 공간 언어로 풀어냈다.'
+      '연세대학교 원주의과대학 유휴공간 플레이스브랜딩 프로젝트는 대학 내 유휴공간을 단순한 남는 공간이 아닌, 캠퍼스 구성원의 이용 경험과 대학의 정체성을 담아낼 수 있는 전략적 자산으로 바라보는 데서 출발하였다.',
+      '본 프로젝트는 공간의 물리적 현황, 이용 행태, 학생들의 니즈를 종합적으로 분석하여 각 유휴공간이 캠퍼스 안에서 수행해야 할 역할을 재정의하는 것을 목표로 하였다. 이를 위해 학생 FGI, 현장조사, 공간별 기능 분석을 바탕으로 공간의 문제점과 가능성을 도출하고, 단순한 리모델링이나 디자인 제안을 넘어 사용자 경험 기반의 플레이스브랜딩 방향을 제시하였다.',
+      '이를 통해 각 공간이 캠퍼스 경험 안에서 갖는 의미와 역할을 재해석하고, 향후 단계적 개선과 운영까지 고려한 전략적 공간 브랜딩 방향을 제안하였다.'
     ],
-    bodyEn: []
+    bodyEn: [
+      'The Place Branding Project for Underutilized Spaces at Yonsei University Wonju College of Medicine began with the perspective that unused campus spaces should be viewed not simply as leftover areas, but as strategic assets capable of reflecting both the user experience of campus members and the identity of the university.',
+      'The project aimed to redefine the role of each underutilized space within the campus through a comprehensive analysis of physical conditions, usage patterns, and student needs. Based on student FGIs, site investigations, and functional analysis of each space, the project identified both the limitations and potential of the spaces, proposing a user experience–based place branding strategy beyond simple remodeling or design improvements.',
+      'Through this process, the project reinterpreted the meaning and role of each space within the overall campus experience and suggested a strategic spatial branding direction that considers future phased improvements and operations.'
+    ]
+  },
+  {
+    id: 'ozx-branding',
+    thumbnail: 'images/projects/ozx-branding.jpg',
+    images: [
+      'images/projects/ozx-branding-2.jpg',
+      'images/projects/ozx-branding-3.jpg',
+      'images/projects/ozx-branding-4.jpg',
+      'images/projects/ozx-branding-5.jpg',
+      'images/projects/ozx-branding-6.jpg',
+      'images/projects/ozx-branding-7.jpg',
+      'images/projects/ozx-branding-8.jpg',
+      'images/projects/ozx-branding-9.jpg',
+      'images/projects/ozx-branding-10.jpg',
+      'images/projects/ozx-branding-11.jpg',
+      'images/projects/ozx-branding-12.jpg',
+      'images/projects/ozx-branding-13.jpg',
+      'images/projects/ozx-branding-14.mp4'
+    ],
+    name: 'OZX BRANDING',
+    nameKo: '공간 운영사 OZX의 브랜드 아이덴티티 및 커뮤니케이션 체계 구축',
+    desc: 'OZX_스페이스 콘텐츠 오퍼레이터 브랜드 아이덴티티 및 커뮤니케이션 디자인',
+    category: 'Branding',
+    location: 'SEOUL',
+    year: '2026',
+    client: 'OZX',
+    scopeCode: 'SP',
+    scope: ['Space BX Planning'],
+    summary: '상업·문화·예술·IP·콘텐츠·미디어가 결합된 도심형 복합 플랫폼, OZX의 브랜드 아이덴티티 및 커뮤니케이션 디자인이다.',
+    body: [
+      'OZX 브랜딩 프로젝트는 각기 다른 분야에서 경험을 쌓아온 다섯 명의 전문가가 모여 시작한 공간 운영사 OZX의 기업 정체성과 브랜드 커뮤니케이션 체계를 구축하기 위한 프로젝트이다. OZX는 도심의 공간을 단순한 자산이 아닌, 공간·콘텐츠·브랜드·사람이 만나 새로운 경험을 만들어내는 플랫폼으로 바라보며 문화성·공공성·사업성을 함께 담은 공간 프로젝트를 지향한다. 이름의 \'OZ\'에는 다섯 명이 모여 하나의 문화적 가능성을 만든다는 의미와 함께, 흩어진 공간·콘텐츠·브랜드·운영 경험을 하나의 구조로 조직한다는 \'Organize\'의 의미를 담고 있으며, \'X\'는 교차·확장·협업·실험을 상징한다.',
+      'jpa.는 이러한 OZX의 사업 방향과 철학을 바탕으로 브랜드 미션과 비전, 핵심 가치와 메시지를 체계화하고, 이를 일관된 브랜드 경험으로 확장할 수 있도록 브랜드 아이덴티티, 비주얼 시스템 및 응용 디자인 전반을 구축하였다.',
+      'OZX의 사업 구조는 공간의 가능성을 발굴하는 Space Discovery, 공간에 맞는 콘텐츠를 연결하는 Content Curation, 사람이 모이고 다시 찾는 운영 구조를 설계하는 Experience Operation 세 축으로 이뤄진다. 비어 있거나 충분히 활용되지 못한 공간을 발견해 리모델링과 새로운 시스템으로 잠재력을 재설계하고, 어울리는 브랜드·IP와 연결해 공간과 브랜드가 함께 성장하는 경험 비즈니스를 만든다.',
+      '이러한 OZX의 사업을 시각적으로 확장하는 브랜드 아이덴티티와 디자인 시스템을 개발하였다. 디자인 컨셉 \'MUTED IMPACT\'는 강한 시각적 자극 대신 차분한 톤과 유기적인 조형을 통해 오래 머무는 존재감을 만드는 접근으로, OZX가 하나의 곡선으로 연결되고 교차하는 로고를 통해 공간과 콘텐츠, 브랜드와 사람의 관계를 상징적으로 표현하였다. 또한 버건디, 아이보리, 실버, 틸 등 자연 기반의 컬러 시스템과 타이틀·본문 서체를 구조화하고, 명함과 웹사이트 등 핵심 응용 디자인까지 가이드라인으로 제작해 브랜드가 일관되게 확장될 수 있는 기반을 마련했다.',
+      '이를 통해 OZX가 앞으로 다양한 브랜드 협업을 전개하는 과정에서도 일관된 정체성과 커뮤니케이션을 유지하며 확장할 수 있는 브랜드 기반을 마련하였다.'
+    ],
+    bodyEn: [
+      "The OZX Branding project builds the corporate identity and brand communication system for OZX, a space operator founded by five experts from different fields. OZX views urban space not as a mere asset but as a platform where space, content, brand, and people meet to create new experiences, pursuing space projects that balance cultural value, public relevance, and business viability. The 'OZ' in the name reflects five people converging on one cultural possibility, while also carrying the meaning of 'Organize' — bringing scattered spatial resources, content, brand partners, and operational know-how into a single structure — and the 'X' stands for crossing, expansion, collaboration, and experimentation.",
+      "Based on OZX's business direction and philosophy, jpa. systematized the brand mission, vision, core values, and messaging, and built the brand identity, visual system, and overall application design so they could extend into a consistent brand experience.",
+      "OZX's business model rests on three pillars: Space Discovery, which uncovers the potential of a space; Content Curation, which connects the right content to it; and Experience Operation, which designs a sustainable structure that brings people back again and again. It identifies vacant or underused spaces and redesigns their potential through remodeling and new operational systems, then connects them with fitting brands and IP to build an experience business where space and brand grow together.",
+      "A brand identity and design system were developed to visually extend OZX's business. The design concept 'MUTED IMPACT' takes an approach of building a lasting presence through calm tones and organic form rather than strong visual stimulation, expressing the relationship between space, content, brand, and people through a logo where OZX connects and crosses in a single curved form. A nature-rooted color system of burgundy, ivory, silver, and teal was also structured alongside title and body typography, with guidelines produced down to core applications such as business cards and the website, laying the foundation for the brand to expand consistently.",
+      "Through this, OZX now has a brand foundation that lets it maintain a consistent identity and communication as it expands through a range of brand collaborations going forward."
+    ]
   },
   {
     id: 'loft-one-ground',
     thumbnail: 'images/projects/loft-one-ground.jpg',
+    images: ['images/projects/loft-one-ground-2.jpg', 'images/projects/loft-one-ground-3.jpg', 'images/projects/loft-one-ground-4.jpg', 'images/projects/loft-one-ground-5.jpg'],
     name: 'Loft-One G:ROUND',
     nameKo: '중랑구 묵동70번지 임대주택 개발사업기획 및 공간기획',
     desc: '중랑구 묵동70번지 임대주택 개발사업기획 및 공간기획',
@@ -103,13 +172,14 @@ window.PROJECTS = [
       '사업 측면에서는 자율주택정비사업 방식을 적용해 공공기여 부담과 인허가 리스크를 줄이고, 용적률 및 연면적을 극대화하여 사업성과 안정성을 확보했다. 저층부에는 리테일과 입주자 커뮤니티 공간을 결합하고, 골목길의 흐름을 반영한 동선과 개방형 입면을 적용해 지역과 자연스럽게 연결되도록 했다.'
     ],
     bodyEn: [
-      'Muk-dong G:ROUND is a co-living and retail mixed-use development in Jungnang-gu that responds to young adults\' housing needs while revitalizing the local neighborhood. Reflecting the context of the existing residential area, the project proposes an integrated living experience that goes beyond conventional housing.',
+      'Muk-dong G:ROUND is a co-living and retail mixed-use development in Jungnang-gu that responds to young adults\'s housing needs while revitalizing the local neighborhood. Reflecting the context of the existing residential area, the project proposes an integrated living experience that goes beyond conventional housing.',
       'From a development perspective, the project adopts a self-managed housing improvement model to reduce public contribution burdens and approval risks, while maximizing floor area ratio and gross floor area to enhance feasibility. At the lower levels, retail and resident community spaces are combined, with circulation and an open façade designed to connect naturally with the surrounding streets.'
     ]
   },
   {
     id: 'odyssey-village',
     thumbnail: 'images/projects/odyssey-village.jpg',
+    images: ['images/projects/odyssey-village-2.png'],
     name: 'Odyssey Village',
     nameKo: '인천 운북동 시니어타운 공간기획',
     desc: '인천 운북동 시니어타운 공간기획',
@@ -132,6 +202,7 @@ window.PROJECTS = [
   {
     id: 'innocean-hq',
     thumbnail: 'images/projects/innocean-hq.jpg',
+    images: ['images/projects/innocean-2.jpg', 'images/projects/innocean-3.jpg', 'images/projects/innocean-diagram-2.jpeg'],
     name: 'Innocean Headquarter',
     nameKo: '이노션 사옥 공간기획 컨설팅, 공간경험설계',
     desc: '이노션 사옥 공간기획 컨설팅, 공간경험설계',
@@ -152,68 +223,9 @@ window.PROJECTS = [
     ]
   },
   {
-    id: 'sfc-oled-community',
-    thumbnail: '',
-    name: 'SFC Community Center',
-    nameKo: 'SFC OLED 캠퍼스 커뮤니티센터 공간기획 및 공간환경설계',
-    desc: 'SFC OLED 캠퍼스 커뮤니티센터 공간기획 및 공간환경설계',
-    category: 'Industrial',
-    location: 'OCHANG',
-    year: '2024',
-    client: 'SFC',
-    scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: 'SFC OLED 캠퍼스의 임직원의 협업·재충전·교류가 일어나는 통합 커뮤니티 센터.',
-    body: [
-      'SFC OLED 캠퍼스의 커뮤니티 센터는 임직원의 일과를 풍성하게 만드는 통합 공간이다. jpa.는 다이닝, 라운지, 피트니스, 회의·이벤트 등 다층적 프로그램을 캠퍼스 일상 시퀀스에 맞춰 배치했다.',
-      '산업단지 특유의 기능 중심 구성을 넘어, 임직원의 라이프스타일과 웰빙을 함께 고려한 캠퍼스형 공간 모델을 구현했다.'
-    ],
-    bodyEn: []
-  },
-  {
-    id: 'sfc-oled-storage',
-    thumbnail: '',
-    name: 'SFC Storage Center',
-    nameKo: 'SFC OLED 캠퍼스 스토리지센터 공간기획 및 공간환경설계',
-    desc: 'SFC OLED 캠퍼스 스토리지센터 공간기획 및 공간환경설계',
-    category: 'Industrial',
-    location: 'OCHANG',
-    year: '2024',
-    client: 'SFC',
-    scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: '산업 운영의 효율과 환경의 품격을 동시에 담은 스토리지 센터.',
-    body: [
-      'SFC OLED 캠퍼스의 스토리지 센터는 산업 운영의 핵심 인프라이자, 캠퍼스 외관의 일부이다. jpa.는 기능적 효율과 동시에, 산업 시설이 지닐 수 있는 환경의 품격을 함께 고려한 공간환경 설계를 진행했다.',
-      '내부 운영 동선의 효율성과 외부 마감의 미학을 분리하지 않고 통합적으로 설계하여, 산업 시설의 새로운 표준을 제시한다.'
-    ],
-    bodyEn: []
-  },
-  {
-    id: 'sfc-biopark',
-    thumbnail: 'images/projects/sfc-biopark.jpg',
-    name: 'SFC Biopark',
-    nameKo: 'SFC BIOPARK 공간기획 및 공간환경설계',
-    desc: 'SFC BIOPARK 공간기획 및 공간환경설계',
-    category: 'Industrial',
-    location: 'OCHANG',
-    year: '2024',
-    client: 'SFC',
-    scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: '이 프로젝트는 새로운 SFC BIO 연구센터를 위한 공간 브랜딩 및 디자인 이니셔티브로, 기획 단계부터 실행까지 회사의 브랜드 가치를 건축 공간에 통합하는 것을 목표로 한다.',
-    body: [
-      '이 프로젝트는 새로운 SFC BIO 연구센터를 위한 공간 브랜딩 및 디자인 이니셔티브로, 기획 단계부터 실행까지 회사의 브랜드 가치를 건축 공간에 통합하는 것을 목표로 한다. 브랜드의 아이덴티티를 "끊임없이 변화하는 환경에 유연하게 반응하는 존재"로 설정하고, 이를 공간 브랜딩에 반영하였다.',
-      '"순수하고 정밀한 축(Pure and Precise Axis)"이라는 개념을 통해 반응적인 환경을 만들어내는 공간 아이덴티티를 제안하였다. 이 개념은 모든 공간을 연결하는 주요 동선이자 상징적 요소인 긴 유리 복도, 즉 "HEART SPACE"로 구현되었다. 이 공간은 사무와 생산 공간을 연결하고, 고객과 회사를 잇고, 사람과 자연을 이어주는 중심 공간으로서 다양한 상호작용을 가능하게 하며 브랜드의 핵심 역할을 수행한다.'
-    ],
-    bodyEn: [
-      'This project is a spatial branding and design initiative for the new SFC BIO Research Center, aimed at integrating the company\'s brand values into the built environment from planning through execution. The brand identity was defined as one that responds flexibly to a constantly changing environment, and this idea was translated into the spatial concept.',
-      'Under the concept of "Pure and Precise Axis," the project proposes a responsive spatial identity centered on a long glass corridor called "HEART SPACE." As the symbolic spine of the project, it connects office and production areas, links the company with visitors, and brings people and nature together. The design was developed from the site\'s unique linear form, creating a dramatic spatial experience that expresses the essence of the brand while allowing seamless connection to future buildings.'
-    ]
-  },
-  {
     id: 'seoul-station-it',
     thumbnail: 'images/projects/seoul-station-it.jpg',
+    images: ['images/projects/seoul-station-it-2.jpg'],
     name: 'Seoul Station — IT Seoul',
     nameKo: '서울역 일대 공간기획 국제 공모',
     desc: '서울역 일대 공간기획 국제 공모',
@@ -234,8 +246,236 @@ window.PROJECTS = [
     ]
   },
   {
+    id: 'lgbr-senior-residence',
+    thumbnail: 'images/projects/lgbr-senior-residence.jpg',
+    name: 'LGBR Senior Residence',
+    nameKo: 'LGBR 공간연구소 시니어주거 미래전망, 공간 가이드라인 수립',
+    desc: 'LGBR 공간연구소 시니어주거 미래전망, 공간 가이드라인 수립',
+    category: 'Housing',
+    location: '—',
+    year: '2025',
+    client: 'LGBR',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '본 프로젝트는 50-70대 은퇴 전후 세대인 뉴시니어를 대상으로 한 주거공간의 미래 변화 방향을 제시한 연구이다.',
+    body: [
+      '본 프로젝트는 50-70대 은퇴 전후 세대인 뉴시니어를 대상으로 한 주거공간의 미래 변화 방향을 제시한 연구이다. 뉴시니어 세대의 생활방식, 신체적 변화, 라이프스타일, 그리고 공간 니즈를 철저히 분석해, 맞춤형 주거 평면 트렌드와 전략을 도출하였다.',
+      '뉴시니어의 특성을 기반으로 페르소나를 정의하고, 각 유형별 공간 요구를 분석하여 구체적인 주거 모델과 디자인 전략을 제안했다. 공간 유연성, 효율성, 안전성을 고려하여 다목적 공간, 비스포크 발코니, 독립 생활이 가능한 구조 등 뉴시니어의 미래 니즈를 반영한 평면 설계를 제안했다.'
+    ],
+    bodyEn: [
+      'This project explores the future of residential design for new seniors—people in their 50s to 70s who are approaching or entering retirement. It examines their lifestyles, physical changes, daily habits, and spatial needs to define tailored housing trends and planning strategies.',
+      'Based on persona development and typology analysis, the study proposes housing models and design solutions that reflect flexibility, efficiency, and safety. Key ideas include multi-purpose spaces, bespoke balconies, and layouts that support independent living. Conducted in three stages, the project combines expert interviews and case studies to present an innovative and sustainable vision for future senior housing.'
+    ]
+  },
+  {
+    id: 'crackin',
+    thumbnail: 'images/projects/crackin.jpg',
+    images: ['images/projects/crackin-2.jpg', 'images/projects/crackin-3.jpg', 'images/projects/crackin-4.jpg'],
+    name: "Crack'in",
+    nameKo: '크래킹커피 1호점 — 공간기획 및 공간경험설계',
+    desc: '크래킹커피 1호점 — 공간기획 및 공간경험설계',
+    category: 'Retail',
+    location: 'PANGYO',
+    year: '2025',
+    client: 'Space Content Food (SCF)',
+    scopeCode: 'DS · SP · SD · DB',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design Build'],
+    summary: 'F&B 비즈니스를 도전적으로 펼쳐내며 성과를 얻고 있는 스페이스콘텐츠푸드(SCF)의 자체 신규 F&B 브랜드의 통합 브랜딩과 디자인가이드 개발을 진행했다.',
+    body: [
+      'F&B 비즈니스를 도전적으로 펼쳐내며 성과를 얻고 있는 스페이스콘텐츠푸드(SCF)의 자체 신규 F&B 브랜드의 통합 브랜딩과 디자인가이드 개발을 진행했다. 고급 프랜차이즈 테넌트로서 가져야할 브랜드 모티브/스토리/슬로건의 기획은 나아가 브랜드 경험기획으로 발전한다. 인테리어설계와 VMD까지 맡아 공간의 디자인뿐 아니라 제품 디자인까지 모두 통합적으로 브랜딩/기획하였다.',
+      '"크래킹 커피"는 "Break the Routine"을 슬로건으로, 일상의 틀을 깨는 새로운 커피 경험을 제안한다. 단순한 카페를 넘어, 소비자가 커피를 통해 자신만의 순간을 재발견하고, 공간과 디자인의 조화를 느낄 수 있도록 기획했다. 감각적인 인테리어와 사용자의 동선을 고려한 공간 배치를 통해 머무는 시간 자체가 특별한 경험으로 다가올 수 있도록 설계하였다.'
+    ],
+    bodyEn: [
+      'An integrated branding and design guideline was developed for Cracking Coffee, a new in-house F&B brand by Space Content Food (SCF). The project covered the brand story, slogan, and overall experience strategy, extending from spatial branding to interior design, VMD, and product design to create a fully unified brand system.',
+      'Built around the slogan "Break the Routine," Cracking Coffee proposes a new coffee experience that goes beyond the conventional café model. Through a sensorial interior, intuitive circulation, and distinctive design elements such as the façade and point walls, the space was designed to help visitors rediscover everyday moments in a more engaging and memorable way.'
+    ]
+  },
+  {
+    id: 'katsu-shoshin',
+    thumbnail: 'images/projects/katsu-shoshin.jpg',
+    images: ['images/projects/katsu-shoshin-2.jpg', 'images/projects/katsu-shoshin-3.jpg'],
+    name: 'Katsu Shoshin',
+    nameKo: '카츠쇼신 1호점 — 공간기획 및 공간경험설계',
+    desc: '카츠쇼신 1호점 — 공간기획 및 공간경험설계',
+    category: 'Retail',
+    location: 'PANGYO',
+    year: '2025',
+    client: 'Space Content Food (SCF)',
+    scopeCode: 'DS · SP · SD · DB',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design Build'],
+    summary: '카츠쇼신은 기본에 충실한 깊이 있는 일식 다이닝 경험을 목표로 탄생했다. 전통과 현대를 조화롭게 아우르는 디자인과 기획을 통해 고객에게 단순한 식사를 넘어 특별한 가치를 제공하고자 했다.',
+    body: [
+      'F&B 비즈니스를 도전적으로 펼쳐내며 성과를 얻고 있는 스페이스콘텐츠푸드(SCF)의 자체 신규 F&B 브랜드의 통합 브랜딩과 디자인가이드 개발을 진행했다. "카츠쇼신"은 기본에 충실한 깊이 있는 일식 다이닝 경험을 목표로 탄생했다. 전통과 현대를 조화롭게 아우르는 디자인과 기획을 통해 고객에게 단순한 식사를 넘어 특별한 가치를 제공하고자 했다.',
+      '매장 파사드는 전통적인 나무와 돌의 소재를 현대적으로 해석하여 따뜻함과 견고함을 동시에 전달한다. "초심"이라는 주제에 맞춰 간결하면서도 품격 있는 조닝으로 구성되었으며, 일본 전통 서체와 현대적인 타이포그래피의 결합을 통해 독창적인 브랜드 이미지를 구현하였다.'
+    ],
+    bodyEn: [
+      'An integrated branding and design guideline was developed for Katsu Shoshin, a new in-house F&B brand by Space Content Food (SCF). The project covered the brand motive, story, and slogan, extending from spatial branding to interior design, VMD, and product design to create a fully unified brand system.',
+      'Built around the idea of "shoshin," or beginner\'s mind, Katsu Shoshin offers a refined Japanese dining experience rooted in sincerity and essentials. Through a balanced use of traditional and contemporary design elements—such as modern interpretations of wood and stone, clean zoning, and a blend of Japanese lettering with modern typography—the space was designed to communicate warmth, trust, and understated sophistication.'
+    ]
+  },
+  {
+    id: 'katsu-shoshin-branding',
+    thumbnail: 'images/projects/katsu-shoshin-branding.jpg',
+    images: [
+      'images/projects/katsu-shoshin-branding-2.jpg',
+      'images/projects/katsu-shoshin-branding-3.jpg',
+      'images/projects/katsu-shoshin-branding-4.jpg',
+      'images/projects/katsu-shoshin-branding-5.jpg'
+    ],
+    name: 'Katsu Shoshin Branding',
+    nameKo: '카츠쇼신 브랜드 아이덴티티 및 커뮤니케이션 디자인',
+    desc: '카츠쇼신_일식 다이닝 브랜드 아이덴티티 및 커뮤니케이션 디자인',
+    category: 'Branding',
+    location: 'SEOUL',
+    year: '2026',
+    client: 'Space Content Food (SCF)',
+    scopeCode: 'SP',
+    scope: ['Space BX Planning'],
+    summary: '스페이스콘텐츠푸드(SCF)의 신규 F&B 브랜드 \'카츠쇼신\'의 브랜드 철학과 아이덴티티를 정의하고, 이를 그래픽·제품·공간까지 확장하는 통합 브랜딩과 디자인 가이드라인을 구축하였다.',
+    body: [
+      '스페이스콘텐츠푸드(SCF)의 신규 F&B 브랜드 \'카츠쇼신\'의 브랜드 철학과 아이덴티티를 정의하고, 이를 그래픽·제품·공간까지 확장하는 통합 브랜딩과 디자인 가이드라인을 구축하였다. \'카츠쇼신\'은 일본 현지의 전통성과 높은 음식의 퀄리티, 깔끔하고 정교한 인상을 바탕으로 탄생한 브랜드이다. \'장인\'과 \'초심\'을 브랜드 아이덴티티의 핵심으로 설정하고, 가장 기초가 되는 것과 가장 중요한 것을 추구하는 태도를 브랜드에 담았다.',
+      '전통성과 전문성에서 나오는 간결함과 아름다움은 \'나무\'로, 가장 기초가 되는 것과 근본을 추구하는 태도는 \'초석\'으로 표현하였다. 나무가 가진 자연스러움과 따뜻함, 초석이 가진 단단함을 통해 깊은 전통성과 초심이 느껴지는 브랜드 이미지를 구축하였다.',
+      '이를 바탕으로 로고, 컬러, 지정 서체 등의 브랜드 아이덴티티를 정립하고 명함, 냅킨, 메뉴판, 쇼핑백, 행잉 메뉴판 등의 제작물까지 구체화하였다. 또한 나무, 초석, 간살, 닷찌와 캐노피 등의 요소를 공간에 적용하여 "카츠 한 입. 초심 한 마음"이라는 브랜드의 이야기가 그래픽과 공간 전반에서 이어지도록 디자인하였다.'
+    ],
+    bodyEn: [
+      "This project defined the brand philosophy and identity of Katsu Shoshin, a new F&B brand by Space Content Food (SCF), and built an integrated branding and design guideline extending it across graphics, products, and space. Katsu Shoshin is a brand born from the authenticity of Japan, the high quality of its food, and a clean, refined impression. With 'craftsmanship' and 'beginner's mind' set as the core of the brand identity, the brand embodies an attitude of pursuing both what is most fundamental and what matters most.",
+      "The simplicity and beauty born of tradition and expertise are expressed through 'wood,' while the attitude of pursuing what is most foundational and essential is expressed through 'cornerstone.' Through the natural warmth of wood and the solidity of the cornerstone, the brand built an image that conveys deep tradition and a beginner's mind.",
+      "Building on this, the brand identity — logo, color, and a designated typeface — was established and extended into concrete application items such as business cards, napkins, menus, shopping bags, and hanging menu boards. Elements such as wood, cornerstone, louvers, and the datchi and canopy were also applied to the space, so that the brand story of \"One Bite of Katsu, One Heart of Beginner's Mind\" continues seamlessly across both graphics and space."
+    ]
+  },
+  {
+    id: 'crackin-branding',
+    thumbnail: 'images/projects/crackin-branding.jpg',
+    images: [
+      'images/projects/crackin-branding-2.jpg',
+      'images/projects/crackin-branding-3.jpg',
+      'images/projects/crackin-branding-4.jpg',
+      'images/projects/crackin-branding-5.jpg',
+      'images/projects/crackin-branding-6.jpg',
+      'images/projects/crackin-branding-7.jpg'
+    ],
+    name: "Crackin' Branding",
+    nameKo: '크래킹 브랜드 아이덴티티 및 커뮤니케이션 디자인',
+    desc: '크래킹_커피 브랜드 아이덴티티 및 커뮤니케이션 디자인',
+    category: 'Branding',
+    location: 'SEOUL',
+    year: '2026',
+    client: 'Space Content Food (SCF)',
+    scopeCode: 'SP',
+    scope: ['Space BX Planning'],
+    summary: '스페이스콘텐츠푸드(SCF)의 신규 F&B 브랜드 \'크래킹 커피\'의 브랜드 전략부터 아이덴티티, 그래픽, 제품, 공간 경험까지 통합적인 브랜드 시스템을 구축하였다.',
+    body: [
+      '스페이스콘텐츠푸드(SCF)의 신규 F&B 브랜드 \'크래킹 커피\'의 브랜드 전략부터 아이덴티티, 그래픽, 제품, 공간 경험까지 통합적인 브랜드 시스템을 구축하였다. \'크래킹 커피\'는 커피빈이 로스팅 과정에서 갈라지며 가장 짙고 좋은 향과 소리를 내는 현상에서 출발했다. 성장과 변화를 위해 깨지고 갈라지는 경험을 \'Crack\', 그 틈에 새로움을 채워 넣는 것을 \'Fill\'로 정의하고, "Break the Routine"이라는 슬로건을 통해 일상의 틀을 깨고 그 안에 쉼과 새로움을 채우는 브랜드를 제안하였다.',
+      '돌·나무·커피빈과 같은 자연물은 본연의 모습을, 유리·아크릴·거울과 같은 가공물은 변화된 모습을 상징하는 브랜드 모티브로 설정하였다. 이러한 개념을 바탕으로 로고, 컬러, 지정 서체 등의 브랜드 아이덴티티를 구축하고 명함, 입간판, 종이컵, 머그컵, 냅킨, 메뉴판, 원두 설명서 등의 그래픽 제작물로 확장하였다.',
+      '공간에서도 크랙의 비정형적이고 사선적인 형태와 자연물·가공물의 대비를 적용하여 브랜드의 모티브가 그래픽과 공간에서 일관되게 드러나도록 디자인하였다.'
+    ],
+    bodyEn: [
+      "This project built an integrated brand system for Cracking Coffee, a new F&B brand by Space Content Food (SCF), spanning brand strategy, identity, graphics, products, and spatial experience. Cracking Coffee began with the phenomenon of coffee beans releasing their deepest aroma and sound at the very moment they crack and split during roasting. The experience of breaking and cracking for growth and change was defined as 'Crack,' and filling that crack with something new was defined as 'Fill'; through the slogan \"Break the Routine,\" the brand proposes breaking the frame of everyday life and filling it with rest and renewal.",
+      "Natural materials such as stone, wood, and coffee beans were set as a brand motif symbolizing the original, unaltered state, while fabricated materials such as glass, acrylic, and mirror were set as a motif symbolizing a transformed state. Based on this concept, the brand identity — logo, color, and a designated typeface — was built and extended into graphic application items such as business cards, standing signage, paper cups, mugs, napkins, menus, and bean information cards.",
+      "In the space as well, the irregular, diagonal forms of the crack and the contrast between natural and fabricated materials were applied so that the brand motif consistently reveals itself across both graphics and space."
+    ]
+  },
+  {
+    id: 'slipper-mansion',
+    thumbnail: 'images/projects/slipper-mansion.jpg',
+    images: ['images/projects/slipper-mansion-2.jpg', 'images/projects/slipper-mansion-3.jpg', 'images/projects/slipper-mansion-4.jpg', 'images/projects/slipper-mansion-5.jpg', 'images/projects/slipper-mansion-6.jpg', 'images/projects/slipper-mansion-7.jpg', 'images/projects/slipper-mansion-8.jpg'],
+    name: 'Slipper Mansion',
+    nameKo: 'jpa. 브랜디드 스페이스 — 슬리퍼맨션',
+    desc: 'jpa. 브랜디드 스페이스 — 슬리퍼맨션',
+    category: 'Office',
+    location: 'SEOUL',
+    year: '2025',
+    client: 'jpa.',
+    scopeCode: 'DS · SP · SD · DB · OA',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design Build', 'Operating Advisory'],
+    summary: 'Slipper Mansion은 jpa가 직접 기획·디자인한 공간으로, 멤버들의 워크플레이스이자 공간 비즈니스를 위한 테스트베드다.',
+    body: [
+      'Slipper Mansion은 jpa가 직접 기획·디자인한 공간으로, 멤버들의 워크플레이스이자 공간 비즈니스를 위한 테스트베드다. 신발을 벗고 들어가는 경험과 집 같은 편안함에서 오는 영감을 바탕으로 Home-like Studio 콘셉트로 계획되었으며, 자율좌석 기반의 유연한 업무환경을 갖추고 있다.',
+      '공간은 Idea LAB, Personal Zone, Chill Lounge, Nomadic Terrace 등 다양한 성격의 영역으로 구성되어 필요에 따라 자유롭게 활용할 수 있다. 또한 디자이너와 마케터를 위한 크리에이티브 스튜디오이자 브랜드 팝업, 소모임, 대관 등 다양한 용도로 사용할 수 있는 테스트베드 공간으로 기획되었다.'
+    ],
+    bodyEn: [
+      'Slipper Mansion is a space independently planned and designed by jpa, serving both as a workplace for its members and as a testbed for its spatial business. Based on the experience of taking off one\'s shoes and the comfort and inspiration associated with home, it was conceived under the concept of a "Home-like Studio."',
+      'It includes a variety of spatial settings such as the Idea LAB, Personal Zone, Chill Lounge, and Nomadic Terrace, each designed to support different work styles and needs. It was also planned as a creative studio for designers and marketers, while accommodating brand pop-ups, small gatherings, and rental events. Visual elements—including signage, furniture, and even the slippers—were all custom-designed to create a consistent and cohesive experience.'
+    ]
+  },
+  /* ---- 2024 ---- */
+  {
+    id: 'sfc-oled-community',
+    thumbnail: 'images/projects/sfc-oled-community.jpg',
+    name: 'SFC Community Center',
+    nameKo: 'SFC OLED 캠퍼스 커뮤니티센터 공간기획 및 공간환경설계',
+    desc: 'SFC OLED 캠퍼스 커뮤니티센터 공간기획 및 공간환경설계',
+    category: 'Industrial',
+    location: 'OCHANG',
+    year: '2024',
+    client: 'SFC',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: 'SFC OLED 캠퍼스의 임직원의 협업·재충전·교류가 일어나는 통합 커뮤니티 센터.',
+    body: [
+      '오창 과학산업단지 내에 위치한 SFC OLED 캠퍼스는 정밀 화학소재를 연구, 개발, 생산하는 SFC(주)의 거점이다.',
+      'SFC OLED 캠퍼스의 마스터플랜을 기반으로 2013년 준공된 연구소 그 이후 후속적으로 생산동, 연구실험동 등 단계적 증축으로 현재의 캠퍼스가 구성되었다. SFC OLED 캠퍼스의 규모가 커지고 사용자도 늘어나게 되면서 직원들의 복지공간의 부족과 클린룸 및 창고공간도 추가로 확보되어야했다.',
+      '단지 내 남서쪽의 유휴부지와 단지 내 숨통 공간이었던 90m X 70m 축구장 규격의 잔디공간에 직원들을 위한 회의실, 휴게공간, 식당 등이 담긴 커뮤니티센터와 부족했던 실험실, 클린룸, 자재창고 등이 담긴 클린룸&스토리지센터를 증축하는 프로젝트이다.',
+      '커뮤니티센터는 OLED 캠퍼스 중앙에 위치하여 임직원들의 복지공간을 담으며 기존 건물에서의 접근 편의를 고려하여 원형의 형태로 계획한다. 이는 방향성 없는 디자인 통해 캠퍼스의 모든 건물이 연계되는 것을 고려하고 임직원들이 위계없이 편안하게 휴식 할 수 있는 공간을 계획한다. 건물 중앙에는 원형의 오픈스페이스를 계획하여 기존의 단지의 내 숨통공간을 유지하고 커뮤니티센터 내에서도 자연과의 접점을 높이도록 계획하였다.'
+    ],
+    bodyEn: [
+      'Located within the Ochang Scientific Industrial Complex, the SFC OLED Campus serves as the core hub for SFC Co., Ltd., a company dedicated to the research, development, and production of fine chemical materials.',
+      'Following the completion of the research institute in 2013 based on the campus master plan, the current site was shaped through phased expansions, including subsequent production and research laboratory buildings. As the scale of the SFC OLED Campus expanded and the number of users grew, the campus faced a shortage of welfare spaces for employees, alongside a pressing need for additional cleanrooms and storage areas.',
+      'This expansion project utilizes an idle plot on the southwest side of the complex, as well as a 90m x 70m soccer-field-sized green space that previously served as the campus\'s open "breathing room." The project aims to construct a Community Center—housing conference rooms, rest areas, and a cafeteria for employees—and a Cleanroom & Storage Center to accommodate the much-needed laboratories, cleanrooms, and material warehouses.'
+    ]
+  },
+  {
+    id: 'sfc-oled-storage',
+    thumbnail: 'images/projects/sfc-oled-storage.jpg',
+    name: 'SFC Storage Center',
+    nameKo: 'SFC OLED 캠퍼스 스토리지센터 공간기획 및 공간환경설계',
+    desc: 'SFC OLED 캠퍼스 스토리지센터 공간기획 및 공간환경설계',
+    category: 'Industrial',
+    location: 'OCHANG',
+    year: '2024',
+    client: 'SFC',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '산업 운영의 효율과 환경의 품격을 동시에 담은 스토리지 센터.',
+    body: [
+      '오창 과학산업단지 내에 위치한 SFC OLED 캠퍼스는 정밀 화학소재를 연구, 개발, 생산하는 SFC(주)의 거점이다.',
+      'SFC OLED 캠퍼스의 마스터플랜을 기반으로 2013년 준공된 연구소 그 이후 후속적으로 생산동, 연구실험동 등 단계적 증축으로 현재의 캠퍼스가 구성되었다. SFC OLED 캠퍼스의 규모가 커지고 사용자도 늘어나게 되면서 직원들의 복지공간의 부족과 클린룸 및 창고공간도 추가로 확보되어야했다.',
+      '단지 내 남서쪽의 유휴부지와 단지 내 숨통 공간이었던 90m X 70m 축구장 규격의 잔디공간에 직원들을 위한 회의실, 휴게공간, 식당 등이 담긴 커뮤니티센터와 부족했던 실험실, 클린룸, 자재창고 등이 담긴 클린룸&스토리지센터를 증축하는 프로젝트이다.',
+      '스토리지센터는 단지 내 남서쪽의 유휴부지에 계획되어 기존의 부족한 시설인 실험실과 클린룸, 자재창고를 담는다. 기존 OLED 캠퍼스 내의 건물군과 동일한 디자인 어휘로 입면을 계획하여 단지의 통일성을 유지한다.'
+    ],
+    bodyEn: [
+      'The SFC OLED Campus, located in the Ochang Scientific Industrial Complex, is the main base of SFC Co., Ltd. for the research, development, and production of precision chemical materials. Since the completion of the original research center in 2013, the campus has gradually expanded with additional production and laboratory buildings.',
+      'As the campus grew, the need for employee welfare facilities, cleanrooms, and storage space also increased. This project adds a Community Center with meeting rooms, lounges, and dining facilities, along with a Cleanroom & Storage Center containing laboratories, cleanrooms, and material storage areas.',
+      'The Storage Center is planned on the vacant southwest site and follows the same architectural language as the existing OLED Campus buildings to maintain a unified campus identity.'
+    ]
+  },
+  {
+    id: 'sfc-biopark',
+    thumbnail: 'images/projects/sfc-biopark.jpg',
+    images: ['images/projects/sfc-biopark-2.jpg', 'images/projects/sfc-biopark-3.jpg'],
+    name: 'SFC Biopark',
+    nameKo: 'SFC BIOPARK 공간기획 및 공간환경설계',
+    desc: 'SFC BIOPARK 공간기획 및 공간환경설계',
+    category: 'Industrial',
+    location: 'OCHANG',
+    year: '2024',
+    client: 'SFC',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '이 프로젝트는 새로운 SFC BIO 연구센터를 위한 공간 브랜딩 및 디자인 이니셔티브로, 기획 단계부터 실행까지 회사의 브랜드 가치를 건축 공간에 통합하는 것을 목표로 한다.',
+    body: [
+      '이 프로젝트는 새로운 SFC BIO 연구센터를 위한 공간 브랜딩 및 디자인 이니셔티브로, 기획 단계부터 실행까지 회사의 브랜드 가치를 건축 공간에 통합하는 것을 목표로 한다. 브랜드의 아이덴티티를 "끊임없이 변화하는 환경에 유연하게 반응하는 존재"로 설정하고, 이를 공간 브랜딩에 반영하였다.',
+      '"순수하고 정밀한 축(Pure and Precise Axis)"이라는 개념을 통해 반응적인 환경을 만들어내는 공간 아이덴티티를 제안하였다. 이 개념은 모든 공간을 연결하는 주요 동선이자 상징적 요소인 긴 유리 복도, 즉 "HEART SPACE"로 구현되었다. 이 공간은 사무와 생산 공간을 연결하고, 고객과 회사를 잇고, 사람과 자연을 이어주는 중심 공간으로서 다양한 상호작용을 가능하게 하며 브랜드의 핵심 역할을 수행한다.'
+    ],
+    bodyEn: [
+      'This project is a spatial branding and design initiative for the new SFC BIO Research Center, aimed at integrating the company\'s brand values into the built environment from planning through execution. The brand identity was defined as one that responds flexibly to a constantly changing environment, and this idea was translated into the spatial concept.',
+      'Under the concept of "Pure and Precise Axis," the project proposes a responsive spatial identity centered on a long glass corridor called "HEART SPACE." As the symbolic spine of the project, it connects office and production areas, links the company with visitors, and brings people and nature together. The design was developed from the site\'s unique linear form, creating a dramatic spatial experience that expresses the essence of the brand while allowing seamless connection to future buildings.'
+    ]
+  },
+  {
     id: 'la-venice-c4-1bl',
     thumbnail: 'images/projects/la-venice-c4-1bl.jpg',
+    images: ['images/projects/la-venice-c4-1bl-2.jpg'],
     name: 'LaVenice C4-1BL',
     nameKo: '김포 라베니체 C4-1BL 복합문화공간 공간기획',
     desc: '김포 라베니체 C4-1BL 복합문화공간 공간기획',
@@ -250,7 +490,10 @@ window.PROJECTS = [
       '김포 라베니체 프로젝트는 30·40 영패밀리가 많은 베드타운형 도시인 김포의 입지적 강점을 바탕으로, 주변 거주민뿐 아니라 외부 방문객까지 끌어들이는 문화 앵커시설을 제안하는 데 목적이 있다. 특히 라베니체가 F&B 중심으로 구성되어 일상적 방문 수요가 약해지는 한계를 극복하고, 대상지 건축을 통해 라베니체 전체의 활성화를 도모하고자 했다.',
       '메인 테마를 음악으로 설정하고, 음악을 "듣는", "사는", "체험하는" 공간으로 프로그램을 구성했다. 1층은 누구나 머물 수 있는 공유공간이자 행사와 이벤트가 가능한 열린 공간으로, 상층부는 음악 관련 리테일과 F&B 공간으로, 최상층은 라베니체를 조망할 수 있는 루프탑 뷰포인트로 계획하였다.'
     ],
-    bodyEn: []
+    bodyEn: [
+      'The Gimpo LaVenice project aims to propose a cultural anchor facility that draws not only local residents but also outside visitors, leveraging the locational strengths of Gimpo, a bedroom-town city with a large population of young families in their 30s and 40s. In particular, the project seeks to overcome the limitation of LaVenice\'s F&B-centered composition, which weakens everyday visitation demand, and to revitalize LaVenice as a whole through the architecture of the target site.',
+      'With music set as the main theme, the program was organized around spaces for "listening to," "buying," and "experiencing" music. The first floor was planned as an open, shared space where anyone can stay and that can host events, the upper floors as music-related retail and F&B spaces, and the top floor as a rooftop viewpoint overlooking LaVenice.'
+    ]
   },
   {
     id: 'cheonan-cultural',
@@ -293,12 +536,13 @@ window.PROJECTS = [
     ],
     bodyEn: [
       'The master concept proposes a future-oriented mixed-use district that embodies Liquid Life—a flexible lifestyle where everyday living, leisure, work, and culture flow seamlessly together within a century-old natural forest. It envisions a new spatial experience where urban routine and retreat coexist, healthy lifestyles unfold, social connections form naturally, and creativity can emerge.',
-      'The Dongmak District is conceived as Creative Town, where leisure and work coexist, while the Condo District is planned as Networking Town, centered on shared interests, lifestyle content, and social exchange. Through this Hanwha Liquid-Life District master plan, the project aims to strengthen Hanwha Hotels & Resorts\' brand value, expand its business model, and propose a new value chain for the future of the leisure industry.'
+      'The Dongmak District is conceived as Creative Town, where leisure and work coexist, while the Condo District is planned as Networking Town, centered on shared interests, lifestyle content, and social exchange. Through this Hanwha Liquid-Life District master plan, the project aims to strengthen Hanwha Hotels & Resorts\'s brand value, expand its business model, and propose a new value chain for the future of the leisure industry.'
     ]
   },
   {
     id: 'courtyard-marriott-pyeongtaek',
     thumbnail: 'images/projects/courtyard-marriott-pyeongtaek.jpg',
+    images: ['images/projects/courtyard-marriott-pyeongtaek-2.jpg'],
     name: 'Courtyard by Marriott Pyeongtaek',
     nameKo: '코트야드 바이 메리어트 평택',
     desc: '코트야드 바이 메리어트 평택',
@@ -320,7 +564,7 @@ window.PROJECTS = [
   },
   {
     id: 'nft-lifestyle-platform',
-    thumbnail: '',
+    thumbnail: 'images/projects/nft-lifestyle-platform.jpg',
     name: 'NFT Lifestyle Platform',
     nameKo: '건축 및 공간 NFT 라이프스타일 플랫폼 구축',
     desc: '건축 및 공간 NFT 라이프스타일 플랫폼 구축',
@@ -341,91 +585,50 @@ window.PROJECTS = [
     ]
   },
   {
-    id: 'lgbr-senior-residence',
-    thumbnail: '',
-    name: 'LGBR Senior Residence',
-    nameKo: 'LGBR 공간연구소 시니어주거 미래전망, 공간 가이드라인 수립',
-    desc: 'LGBR 공간연구소 시니어주거 미래전망, 공간 가이드라인 수립',
-    category: 'Housing',
-    location: '—',
-    year: '2025',
-    client: 'LGBR',
+    id: 'sejong-ro-park-ground-one',
+    thumbnail: 'images/projects/sejong-ro-park-ground-one.jpg',
+    images: ['images/projects/sejong-ro-park-ground-one-2.jpg', 'images/projects/sejong-ro-park-ground-one-3.jpg', 'images/projects/sejong-ro-park-ground-one-4.jpg', 'images/projects/sejong-ro-park-ground-one-5.jpg', 'images/projects/sejong-ro-park-ground-one-6.jpg'],
+    name: 'Sejong-ro Park — Ground One',
+    nameKo: '세종로 공원 및 상징조형물 조성 설계공모',
+    desc: '세종로 공원 및 상징조형물 조성 설계공모',
+    category: 'Mixed-use',
+    location: 'SEOUL',
+    year: '2024',
+    client: 'Confidential',
     scopeCode: 'DS · SP · SD',
     scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: '본 프로젝트는 50-70대 은퇴 전후 세대인 뉴시니어를 대상으로 한 주거공간의 미래 변화 방향을 제시한 연구이다.',
+    summary: '광화문광장은 서울의 문화·역사적 중심지이자 국가를 상징하는 주요 공간입니다. 본 프로젝트는 세종로공원과 사계정원 일대를 국가 상징의 시작점이자 중심 공간으로 새롭게 정의하였습니다.',
     body: [
-      '본 프로젝트는 50-70대 은퇴 전후 세대인 뉴시니어를 대상으로 한 주거공간의 미래 변화 방향을 제시한 연구이다. 뉴시니어 세대의 생활방식, 신체적 변화, 라이프스타일, 그리고 공간 니즈를 철저히 분석해, 맞춤형 주거 평면 트렌드와 전략을 도출하였다.',
-      '뉴시니어의 특성을 기반으로 페르소나를 정의하고, 각 유형별 공간 요구를 분석하여 구체적인 주거 모델과 디자인 전략을 제안했다. 공간 유연성, 효율성, 안전성을 고려하여 다목적 공간, 비스포크 발코니, 독립 생활이 가능한 구조 등 뉴시니어의 미래 니즈를 반영한 평면 설계를 제안했다.'
+      '광화문광장은 서울의 문화·역사적 중심지이자 국가를 상징하는 주요 공간입니다. 본 프로젝트는 세종로공원과 사계정원 일대를 국가 상징의 시작점이자 중심 공간으로 새롭게 정의하였습니다. \'SEOUL GROUND ONE\'은 과거를 기억하고 미래로 이어지는 연결을 목표로 하며, 서울의 역사와 문화 축을 강화해 세계와 연결되는 대한민국 중심지의 장소성을 제안합니다.',
+      '\'모두의 공원\'은 기존 광화문광장에서 경험하기 어려웠던 풍부한 녹지를 제공하여 시민을 위한 진정한 공원으로 계획되었습니다. 주변 환경과 조화를 이루며 다양한 공간 경험을 제공하고, 상부 공원과 하부 시설을 통합해 역사와 현대를 연결하는 상징적 흐름을 형성합니다. 또한 하부에는 식음 중심의 편의시설을 배치해 광장과 공원을 찾는 방문객들이 머무를 수 있는 공간을 마련하였습니다.',
+      '\'하나의 정원\'은 상징 조형물이 위치한 공간으로, 희생과 감사의 의미를 되새길 수 있도록 계획되었습니다. 광화문광장보다 낮은 레벨로 조성해 몰입감을 높였으며, 6·25전쟁 당시 대한민국을 지원한 22개 국가를 상징하는 미디어월과 조형물을 함께 배치해 감사와 희생을 기리는 공간으로 구성하였습니다.'
     ],
     bodyEn: [
-      'This project explores the future of residential design for new seniors—people in their 50s to 70s who are approaching or entering retirement. It examines their lifestyles, physical changes, daily habits, and spatial needs to define tailored housing trends and planning strategies.',
-      'Based on persona development and typology analysis, the study proposes housing models and design solutions that reflect flexibility, efficiency, and safety. Key ideas include multi-purpose spaces, bespoke balconies, and layouts that support independent living. Conducted in three stages, the project combines expert interviews and case studies to present an innovative and sustainable vision for future senior housing.'
+      'Gwanghwamun Square is a symbolic space at the cultural and historical center of Seoul. This project redefines the Sejong-ro Park and Four Seasons Garden area as the starting point and center of national symbolism. "SEOUL GROUND ONE" connects the memory of the past with the future, strengthening Seoul\'s historical and cultural identity as a place connected to the world.',
+      '"Park for Everyone" was planned as a true public park with rich greenery and diverse spatial experiences. The integration of the upper park and lower-level facilities creates a symbolic connection between history and the present, while food and beverage amenities encourage visitors to stay and enjoy the space.',
+      '"One Garden" is a commemorative space centered around a symbolic monument reflecting sacrifice and gratitude. Set at a lower level than Gwanghwamun Square, it includes a media wall representing the 22 nations that supported South Korea during the Korean War, creating an immersive place of remembrance.'
     ]
   },
   {
-    id: 'crackin',
-    thumbnail: '',
-    name: "Crack'in",
-    nameKo: '크래킹커피 1호점 — 공간기획 및 공간경험설계',
-    desc: '크래킹커피 1호점 — 공간기획 및 공간경험설계',
-    category: 'Retail',
-    location: 'PANGYO',
-    year: '2025',
-    client: 'Space Content Food (SCF)',
-    scopeCode: 'DS · SP · SD · DB',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design Build'],
-    summary: 'F&B 비즈니스를 도전적으로 펼쳐내며 성과를 얻고 있는 스페이스콘텐츠푸드(SCF)의 자체 신규 F&B 브랜드의 통합 브랜딩과 디자인가이드 개발을 진행했다.',
+    id: 'luxury-house-hildesheim',
+    thumbnail: 'images/projects/luxury-house-hildesheim.jpg',
+    name: 'Luxury House Hildesheim',
+    nameKo: '힐데스하임 고급 주택 공간 환경 설계',
+    desc: '힐데스하임 고급 주택 공간 환경 설계',
+    category: 'Housing',
+    location: 'OCHANG',
+    year: '2024',
+    client: 'Confidential',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '주택단지 내 가장 높은 지점에 위치한 본 대지는 전면으로 시내 전경과 단지 조경을 동시에 조망할 수 있는 입지적 특성을 지니고 있습니다.',
     body: [
-      'F&B 비즈니스를 도전적으로 펼쳐내며 성과를 얻고 있는 스페이스콘텐츠푸드(SCF)의 자체 신규 F&B 브랜드의 통합 브랜딩과 디자인가이드 개발을 진행했다. 고급 프랜차이즈 테넌트로서 가져야할 브랜드 모티브/스토리/슬로건의 기획은 나아가 브랜드 경험기획으로 발전한다. 인테리어설계와 VMD까지 맡아 공간의 디자인뿐 아니라 제품 디자인까지 모두 통합적으로 브랜딩/기획하였다.',
-      '"크래킹 커피"는 "Break the Routine"을 슬로건으로, 일상의 틀을 깨는 새로운 커피 경험을 제안한다. 단순한 카페를 넘어, 소비자가 커피를 통해 자신만의 순간을 재발견하고, 공간과 디자인의 조화를 느낄 수 있도록 기획했다. 감각적인 인테리어와 사용자의 동선을 고려한 공간 배치를 통해 머무는 시간 자체가 특별한 경험으로 다가올 수 있도록 설계하였다.'
+      '주택단지 내 가장 높은 지점에 위치한 본 대지는 전면으로 시내 전경과 단지 조경을 동시에 조망할 수 있는 입지적 특성을 지니고 있습니다. 이러한 풍경과 정면으로 마주하는 배치를 건물의 기본 구성 개념으로 설정하였으며, 전면에서는 원경의 도시 풍경과 단지 전경이 펼쳐지고, 배면에서는 경사진 녹지와 맞닿아 근경의 자연을 마주하도록 계획하였습니다.',
+      '외장 마감은 트레버틴 석재와 알루미늄 아노다이징 패널을 적용하여 단순하면서도 부드러운 톤으로 건물을 구성하였습니다. 이를 통해 주변 환경과 조화를 이루는 동시에, 지형과 풍경에 자연스럽게 반응하는 건축을 구현하고자 하였습니다.'
     ],
     bodyEn: [
-      'An integrated branding and design guideline was developed for Cracking Coffee, a new in-house F&B brand by Space Content Food (SCF). The project covered the brand story, slogan, and overall experience strategy, extending from spatial branding to interior design, VMD, and product design to create a fully unified brand system.',
-      'Built around the slogan "Break the Routine," Cracking Coffee proposes a new coffee experience that goes beyond the conventional café model. Through a sensorial interior, intuitive circulation, and distinctive design elements such as the façade and point walls, the space was designed to help visitors rediscover everyday moments in a more engaging and memorable way.'
-    ]
-  },
-  {
-    id: 'katsu-shoshin',
-    thumbnail: '',
-    name: 'Katsu Shoshin',
-    nameKo: '카츠쇼신 1호점 — 공간기획 및 공간경험설계',
-    desc: '카츠쇼신 1호점 — 공간기획 및 공간경험설계',
-    category: 'Retail',
-    location: 'PANGYO',
-    year: '2025',
-    client: 'Space Content Food (SCF)',
-    scopeCode: 'DS · SP · SD · DB',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design Build'],
-    summary: '카츠쇼신은 기본에 충실한 깊이 있는 일식 다이닝 경험을 목표로 탄생했다. 전통과 현대를 조화롭게 아우르는 디자인과 기획을 통해 고객에게 단순한 식사를 넘어 특별한 가치를 제공하고자 했다.',
-    body: [
-      'F&B 비즈니스를 도전적으로 펼쳐내며 성과를 얻고 있는 스페이스콘텐츠푸드(SCF)의 자체 신규 F&B 브랜드의 통합 브랜딩과 디자인가이드 개발을 진행했다. "카츠쇼신"은 기본에 충실한 깊이 있는 일식 다이닝 경험을 목표로 탄생했다. 전통과 현대를 조화롭게 아우르는 디자인과 기획을 통해 고객에게 단순한 식사를 넘어 특별한 가치를 제공하고자 했다.',
-      '매장 파사드는 전통적인 나무와 돌의 소재를 현대적으로 해석하여 따뜻함과 견고함을 동시에 전달한다. "초심"이라는 주제에 맞춰 간결하면서도 품격 있는 조닝으로 구성되었으며, 일본 전통 서체와 현대적인 타이포그래피의 결합을 통해 독창적인 브랜드 이미지를 구현하였다.'
-    ],
-    bodyEn: [
-      'An integrated branding and design guideline was developed for Katsu Shoshin, a new in-house F&B brand by Space Content Food (SCF). The project covered the brand motive, story, and slogan, extending from spatial branding to interior design, VMD, and product design to create a fully unified brand system.',
-      'Built around the idea of "shoshin," or beginner\'s mind, Katsu Shoshin offers a refined Japanese dining experience rooted in sincerity and essentials. Through a balanced use of traditional and contemporary design elements—such as modern interpretations of wood and stone, clean zoning, and a blend of Japanese lettering with modern typography—the space was designed to communicate warmth, trust, and understated sophistication.'
-    ]
-  },
-  {
-    id: 'slipper-mansion',
-    thumbnail: '',
-    name: 'Slipper Mansion',
-    nameKo: 'jpa. 브랜디드 스페이스 — 슬리퍼맨션',
-    desc: 'jpa. 브랜디드 스페이스 — 슬리퍼맨션',
-    category: 'Office',
-    location: 'SEOUL',
-    year: '2025',
-    client: 'jpa.',
-    scopeCode: 'DS · SP · SD · DB · OA',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design Build', 'Operating Advisory'],
-    summary: 'Slipper Mansion은 jpa가 직접 기획·디자인한 공간으로, 멤버들의 워크플레이스이자 공간 비즈니스를 위한 테스트베드다.',
-    body: [
-      'Slipper Mansion은 jpa가 직접 기획·디자인한 공간으로, 멤버들의 워크플레이스이자 공간 비즈니스를 위한 테스트베드다. 신발을 벗고 들어가는 경험과 집 같은 편안함에서 오는 영감을 바탕으로 Home-like Studio 콘셉트로 계획되었으며, 자율좌석 기반의 유연한 업무환경을 갖추고 있다.',
-      '공간은 Idea LAB, Personal Zone, Chill Lounge, Nomadic Terrace 등 다양한 성격의 영역으로 구성되어 필요에 따라 자유롭게 활용할 수 있다. 또한 디자이너와 마케터를 위한 크리에이티브 스튜디오이자 브랜드 팝업, 소모임, 대관 등 다양한 용도로 사용할 수 있는 테스트베드 공간으로 기획되었다.'
-    ],
-    bodyEn: [
-      'Slipper Mansion is a space independently planned and designed by jpa, serving both as a workplace for its members and as a testbed for its spatial business. Based on the experience of taking off one\'s shoes and the comfort and inspiration associated with home, it was conceived under the concept of a "Home-like Studio."',
-      'It includes a variety of spatial settings such as the Idea LAB, Personal Zone, Chill Lounge, and Nomadic Terrace, each designed to support different work styles and needs. It was also planned as a creative studio for designers and marketers, while accommodating brand pop-ups, small gatherings, and rental events. Visual elements—including signage, furniture, and even the slippers—were all custom-designed to create a consistent and cohesive experience.'
+      'The site, located at the highest point within the residential complex, has the locational characteristic of overlooking both the city view and the landscape of the complex from the front. The building was planned based on the concept of directly facing these views. From the front, distant views of the city and the complex landscape unfold, while the rear faces the nearby natural scenery connected to the sloping green area.',
+      'Travertine stone and anodized aluminum panels were applied as exterior finishing materials to create a simple yet soft-toned building composition. Through this, the architecture was intended to harmonize with the surrounding environment while naturally responding to the topography and landscape.'
     ]
   }
 ];

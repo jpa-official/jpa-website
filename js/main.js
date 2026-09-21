@@ -6,29 +6,51 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- LOADER ---------- */
-  const loader = document.getElementById('loader');
-  const loaderVideo = document.getElementById('loaderVideo');
-  const enterBtn = document.getElementById('loaderEnter');
+  const loader      = document.getElementById('loader');
+  const logoEl      = document.getElementById('loaderLogo');
+  const enterPrompt = document.getElementById('loaderEnter');
+  const introVideo  = document.getElementById('loaderVideo');
 
-  /* 인트로 영상 없는 페이지(about, projects 등)는 로더 즉시 숨김 */
-  if (!loaderVideo) {
-    if (loader) {
-      loader.classList.add('hidden');
-      document.body.classList.add('loaded');
+  if (loader && logoEl) {
+    /* 클릭으로 진입하는 로더 페이지 (index.html) — 클릭 시 인트로 영상 재생 후 진입 */
+    let clicked = false;
+
+    function onEnter() {
+      if (clicked) return;
+      clicked = true;
+      loader.removeEventListener('click',    onEnter);
+      loader.removeEventListener('touchend', onEnter);
+
+      /* 힌트/로고 숨김 */
+      if (enterPrompt) enterPrompt.classList.remove('visible');
+      logoEl.style.opacity = 0;
+
+      if (introVideo) {
+        introVideo.classList.add('playing');
+        introVideo.currentTime = 0;
+        introVideo.play();
+        introVideo.addEventListener('ended', () => {
+          loader.classList.add('hidden');
+          document.body.classList.add('loaded');
+          triggerHero();
+        }, { once: true });
+      } else {
+        /* 메인 페이지 진입 (영상 없을 때 폴백) */
+        setTimeout(() => {
+          loader.classList.add('hidden');
+          document.body.classList.add('loaded');
+          triggerHero();
+        }, 400);
+      }
     }
-  } else {
-    enterBtn.addEventListener('click', () => {
-      enterBtn.classList.add('hidden');
-      loaderVideo.classList.add('playing');
-      loaderVideo.currentTime = 0;
-      loaderVideo.play();
-    });
 
-    loaderVideo.addEventListener('ended', () => {
-      loader.classList.add('hidden');
-      document.body.classList.add('loaded');
-      triggerHero();
-    });
+    loader.addEventListener('click',    onEnter);
+    loader.addEventListener('touchend', onEnter, { passive: true });
+
+  } else if (loader) {
+    /* 다른 페이지 — 로더 즉시 숨김 */
+    loader.classList.add('hidden');
+    document.body.classList.add('loaded');
   }
 
   /* ---------- HEADER HIDE ON SCROLL DOWN ---------- */
