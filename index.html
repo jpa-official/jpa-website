@@ -18,7 +18,10 @@
 
 <!-- LOADER / INTRO -->
 <div class="loader" id="loader">
-  <canvas id="loaderCanvas"></canvas>
+  <video id="loaderVideo" class="loader-video" src="videos/jpa-intro.mp4" muted playsinline preload="auto"></video>
+  <button type="button" class="loader-enter" id="loaderEnter" aria-label="Enter jpa.">
+    <span>ENTER</span>
+  </button>
 </div>
 
 
@@ -190,7 +193,6 @@
 </footer>
 
 <script src="js/projects-data.js"></script>
-<script src="js/logo-data.js"></script>
 <script src="js/main.js"></script>
 <script>
   /* Contact form — Formspree AJAX submit */

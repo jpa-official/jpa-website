@@ -7,109 +7,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- LOADER ---------- */
   const loader = document.getElementById('loader');
-  const canvas = document.getElementById('loaderCanvas');
+  const loaderVideo = document.getElementById('loaderVideo');
+  const enterBtn = document.getElementById('loaderEnter');
 
-  /* 캔버스 없는 페이지(about, projects 등)는 로더 즉시 숨김 */
-  if (!canvas) {
+  /* 인트로 영상 없는 페이지(about, projects 등)는 로더 즉시 숨김 */
+  if (!loaderVideo) {
     if (loader) {
       loader.classList.add('hidden');
       document.body.classList.add('loaded');
     }
   } else {
-  const ctx = canvas.getContext('2d');
-  canvas.width  = window.innerWidth;
-  canvas.height = window.innerHeight;
-
-  const _logoReady = new Promise(resolve => {
-    const img = new Image();
-    img.onload = () => resolve(img);
-    img.src = window.JPA_LOGO_B64;
-  });
-
-  _logoReady.then(logoImg => {
-    const cW = canvas.width;
-    const cH = canvas.height;
-
-    /* --- 실제 로고 이미지에서 점 좌표 샘플링 --- */
-    const sW  = Math.min(Math.round(cW * 0.52), 480);
-    const sH  = Math.round(sW * logoImg.naturalHeight / logoImg.naturalWidth);
-    const sc  = document.createElement('canvas');
-    sc.width  = sW;
-    sc.height = sH;
-    const sCtx = sc.getContext('2d');
-    sCtx.drawImage(logoImg, 0, 0, sW, sH);
-
-    const px  = sCtx.getImageData(0, 0, sW, sH).data;
-    const raw = [];
-    for (let y = 0; y < sH; y += 6) {
-      for (let x = 0; x < sW; x += 6) {
-        const i = (y * sW + x) * 4;
-        if (px[i + 3] > 120 && px[i] < 100) raw.push([x, y]);
-      }
-    }
-
-    /* 셔플 */
-    for (let i = raw.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [raw[i], raw[j]] = [raw[j], raw[i]];
-    }
-    const sample = raw;
-    const ox = Math.round((cW - sW) / 2);
-    const oy = Math.round((cH - sH) / 2);
-
-    /* 파티클: 사방에서 Bezier 곡선으로 수렴 */
-    const particles = sample.map(([tx, ty]) => {
-      const angle = Math.random() * Math.PI * 2;
-      const dist  = 160 + Math.random() * Math.max(cW, cH) * 0.4;
-      const sx    = cW / 2 + Math.cos(angle) * dist;
-      const sy    = cH / 2 + Math.sin(angle) * dist;
-      const ftx   = tx + ox;
-      const fty   = ty + oy;
-      return {
-        sx, sy,
-        tx: ftx, ty: fty,
-        cpX: (sx + ftx) / 2 + (Math.random() - 0.5) * 260,
-        cpY: (sy + fty) / 2 + (Math.random() - 0.5) * 200,
-        delay: Math.random() * 0.2,
-        size:  Math.random() * 3 + 4
-      };
+    enterBtn.addEventListener('click', () => {
+      enterBtn.classList.add('hidden');
+      loaderVideo.classList.add('playing');
+      loaderVideo.currentTime = 0;
+      loaderVideo.play();
     });
 
-    const DURATION = 1600;
-    let t0 = null;
-    function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
-
-    function frame(ts) {
-      if (!t0) t0 = ts;
-      const prog = Math.min((ts - t0) / DURATION, 1);
-
-      ctx.clearRect(0, 0, cW, cH);
-
-      particles.forEach(p => {
-        const local = Math.max(0, (prog - p.delay) / (1 - p.delay));
-        const e     = easeOut(Math.min(local, 1));
-        const mt    = 1 - e;
-        const x     = mt * mt * p.sx + 2 * mt * e * p.cpX + e * e * p.tx;
-        const y     = mt * mt * p.sy + 2 * mt * e * p.cpY + e * e * p.ty;
-
-        ctx.beginPath();
-        ctx.arc(x, y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255,255,255,${0.2 + e * 0.8})`;
-        ctx.fill();
-      });
-
-      if (prog < 1) {
-        requestAnimationFrame(frame);
-      } else {
-        loader.classList.add('hidden');
-        document.body.classList.add('loaded');
-        triggerHero();
-      }
-    }
-
-    requestAnimationFrame(frame);
-  }); // _logoReady.then
-  } // canvas 존재 시 블록 끝
+    loaderVideo.addEventListener('ended', () => {
+      loader.classList.add('hidden');
+      document.body.classList.add('loaded');
+      triggerHero();
+    });
+  }
 
   /* ---------- HEADER HIDE ON SCROLL DOWN ---------- */
   const header = document.getElementById('siteHeader');
