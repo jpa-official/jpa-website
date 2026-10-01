@@ -22,7 +22,7 @@ window.PROJECTS = [
       'images/projects/gaudi-back-to-the-origins-12.jpg'
     ],
     name: 'Gaudí: Back to the Origins',
-    nameKo: '가우디 100주기 기념전',
+    nameKo: '가우디 서거 100주년 기념 공식 월드 투어 서울 전시 기획·공간디자인·운영',
     desc: '가우디 서거 100주년 기념 공식 월드 투어 서울 전시 기획·공간디자인·운영',
     category: 'Exhibition',
     location: 'SEOUL',
@@ -167,7 +167,7 @@ window.PROJECTS = [
       'images/projects/ozx-branding-14.mp4'
     ],
     name: 'OZX BRANDING',
-    nameKo: '공간 운영사 OZX의 브랜드 아이덴티티 및 커뮤니케이션 체계 구축',
+    nameKo: 'OZX_스페이스 콘텐츠 오퍼레이터 브랜드 아이덴티티 및 커뮤니케이션 디자인',
     desc: 'OZX_스페이스 콘텐츠 오퍼레이터 브랜드 아이덴티티 및 커뮤니케이션 디자인',
     category: 'Branding',
     location: 'SEOUL',
@@ -361,7 +361,7 @@ window.PROJECTS = [
       'images/projects/katsu-shoshin-branding-5.jpg'
     ],
     name: 'Katsu Shoshin Branding',
-    nameKo: '카츠쇼신 브랜드 아이덴티티 및 커뮤니케이션 디자인',
+    nameKo: '카츠쇼신_일식 다이닝 브랜드 아이덴티티 및 커뮤니케이션 디자인',
     desc: '카츠쇼신_일식 다이닝 브랜드 아이덴티티 및 커뮤니케이션 디자인',
     category: 'Branding',
     location: 'SEOUL',
@@ -393,7 +393,7 @@ window.PROJECTS = [
       'images/projects/crackin-branding-7.jpg'
     ],
     name: "Crackin' Branding",
-    nameKo: '크래킹 브랜드 아이덴티티 및 커뮤니케이션 디자인',
+    nameKo: '크래킹_커피 브랜드 아이덴티티 및 커뮤니케이션 디자인',
     desc: '크래킹_커피 브랜드 아이덴티티 및 커뮤니케이션 디자인',
     category: 'Branding',
     location: 'SEOUL',
