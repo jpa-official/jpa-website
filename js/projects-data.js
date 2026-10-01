@@ -5,6 +5,43 @@
 window.PROJECTS = [
   /* ---- 2026 ---- */
   {
+    id: 'gaudi-back-to-the-origins',
+    thumbnail: 'images/projects/gaudi-back-to-the-origins.jpg',
+    images: [
+      'images/projects/gaudi-back-to-the-origins-2.jpg',
+      'images/projects/gaudi-back-to-the-origins-3.jpg',
+      'images/projects/gaudi-back-to-the-origins-4.jpg',
+      'images/projects/gaudi-back-to-the-origins-5.jpg',
+      'images/projects/gaudi-back-to-the-origins-6.jpg',
+      'images/projects/gaudi-back-to-the-origins-7.jpg',
+      'images/projects/gaudi-back-to-the-origins-8.jpg',
+      'images/projects/gaudi-back-to-the-origins-9.jpg',
+      'images/projects/gaudi-back-to-the-origins-10.jpg',
+      'images/projects/gaudi-back-to-the-origins-11.jpg',
+      'images/projects/gaudi-back-to-the-origins-12.jpg'
+    ],
+    name: 'Gaudí: Back to the Origins',
+    nameKo: '가우디 100주기 기념전',
+    desc: '가우디 서거 100주년 기념 공식 월드 투어 서울 전시 기획·공간디자인·운영',
+    category: 'Exhibition',
+    location: 'SEOUL',
+    year: '2026',
+    client: 'jpa.',
+    scopeCode: 'SP · SD · OA',
+    scope: ['Space BX Planning', 'Space Design', 'Operating Advisory'],
+    summary: '<Gaudí: Back to the Origins(가우디: 서울에서 다시 태어나다)>는 안토니 가우디 서거 100주년을 기념해 가우디 재단과 함께 선보인 공식 월드 투어의 서울 전시이다.',
+    body: [
+      '<Gaudí: Back to the Origins(가우디: 서울에서 다시 태어나다)>는 안토니 가우디 서거 100주년을 기념해 가우디 재단과 함께 선보인 공식 월드 투어의 서울 전시이다. jpa.는 서울 전시의 주관사로서, 해외 전시 콘텐츠를 서울이라는 도시와 장소에 맞게 풀어내는 기획과 로컬라이징부터 공간 디자인, 시공, 실제 전시 운영까지 전 과정을 함께하였다.',
+      '전시가 열린 신사하우스는 이로재의 승효상 건축가가 리모델링한 건물로, 약 2년 만에 다시 문을 열어 이번 전시의 무대가 되었다. jpa.는 대규모 전시장보다 기존 건축이 가진 공간의 성격을 살리면서, 관람객이 보다 가까이에서 가우디의 작품과 이야기를 경험할 수 있는 장소라는 점에 주목하였다.',
+      'jpa.는 전시물을 공간 안에 나열하는 방식보다, 관람객이 공간을 이동하는 과정 속에서 가우디의 작품과 생각을 단계적으로 마주하도록 전시 경험을 구성하는 데 집중했다. 신사하우스의 여러 층과 서로 다른 공간의 특성을 활용해 콘텐츠와 공간, 관람 동선을 연결하고, 각 전시 영역이 하나의 흐름으로 이어지도록 계획하였다. 또한 기획과 디자인에 머무르지 않고 시공과 실제 전시 운영까지 이어가며, 하나의 전시가 기획되고 공간으로 구현되어 관람객을 만나는 전 과정을 함께했다.'
+    ],
+    bodyEn: [
+      '<Gaudí: Back to the Origins> is the Seoul edition of the official world tour presented with the Gaudí Foundation to commemorate the 100th anniversary of Antoni Gaudí\'s death. As the organizer of the Seoul exhibition, jpa. took part in the entire process — from planning and localizing the international exhibition content for the city of Seoul and its venue, to spatial design, construction, and the actual operation of the exhibition.',
+      'The exhibition was held at Sinsa House, a building remodeled by architect Seung H-Sang of IROJE, which reopened after about two years to serve as the stage for this exhibition. Rather than a large-scale exhibition hall, jpa. focused on preserving the character of the existing architecture while creating a place where visitors could experience Gaudí\'s works and stories up close.',
+      'Instead of simply arranging exhibits within the space, jpa. focused on composing an exhibition experience in which visitors encounter Gaudí\'s works and ideas step by step as they move through the building. Drawing on the multiple floors and distinct spatial qualities of Sinsa House, the plan connects content, space, and circulation so that each exhibition zone flows into a single continuous narrative. Going beyond planning and design to construction and on-site operation, jpa. was involved in the full journey of an exhibition — from its conception and spatial realization to its encounter with visitors.'
+    ]
+  },
+  {
     id: 'gwanghwa169',
     thumbnail: 'images/projects/gwanghwa169.jpg',
     images: ['images/projects/gwanghwa169-2.jpg', 'images/projects/gwanghwa169-3.jpg'],
