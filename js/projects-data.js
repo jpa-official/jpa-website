@@ -167,8 +167,8 @@ window.PROJECTS = [
       'images/projects/ozx-branding-14.mp4'
     ],
     name: 'OZX BRANDING',
-    nameKo: 'OZX_스페이스 콘텐츠 오퍼레이터 브랜드 아이덴티티 및 커뮤니케이션 디자인',
-    desc: 'OZX_스페이스 콘텐츠 오퍼레이터 브랜드 아이덴티티 및 커뮤니케이션 디자인',
+    nameKo: 'OZX 스페이스 콘텐츠 오퍼레이터 브랜드 아이덴티티 및 커뮤니케이션 디자인',
+    desc: 'OZX 스페이스 콘텐츠 오퍼레이터 브랜드 아이덴티티 및 커뮤니케이션 디자인',
     category: 'Branding',
     location: 'SEOUL',
     year: '2026',
@@ -361,8 +361,8 @@ window.PROJECTS = [
       'images/projects/katsu-shoshin-branding-5.jpg'
     ],
     name: 'Katsu Shoshin Branding',
-    nameKo: '카츠쇼신_일식 다이닝 브랜드 아이덴티티 및 커뮤니케이션 디자인',
-    desc: '카츠쇼신_일식 다이닝 브랜드 아이덴티티 및 커뮤니케이션 디자인',
+    nameKo: '카츠쇼신 일식 다이닝 브랜드 아이덴티티 및 커뮤니케이션 디자인',
+    desc: '카츠쇼신 일식 다이닝 브랜드 아이덴티티 및 커뮤니케이션 디자인',
     category: 'Branding',
     location: 'SEOUL',
     year: '2026',
@@ -393,8 +393,8 @@ window.PROJECTS = [
       'images/projects/crackin-branding-7.jpg'
     ],
     name: "Crackin' Branding",
-    nameKo: '크래킹_커피 브랜드 아이덴티티 및 커뮤니케이션 디자인',
-    desc: '크래킹_커피 브랜드 아이덴티티 및 커뮤니케이션 디자인',
+    nameKo: '크래킹 커피 브랜드 아이덴티티 및 커뮤니케이션 디자인',
+    desc: '크래킹 커피 브랜드 아이덴티티 및 커뮤니케이션 디자인',
     category: 'Branding',
     location: 'SEOUL',
     year: '2026',
