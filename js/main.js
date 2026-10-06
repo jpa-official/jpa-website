@@ -78,38 +78,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const moreLink = grid.querySelector('.more-projects');
     const frag = document.createDocumentFragment();
 
+    // PROJECTS 페이지 카드(js/projects.js buildCard)와 동일한 마크업·스타일(css/projects.css)
     window.PROJECTS.slice(0, 4).forEach(p => {
-      const article = document.createElement('article');
-      article.className = 'project-card reveal';
+      const a = document.createElement('a');
+      a.className = 'pj-item';
+      a.href = `project.html?id=${encodeURIComponent(p.id)}`;
 
-      if (p.thumbnail) {
-        article.innerHTML = `
-          <a href="project.html?id=${p.id}" class="project-link">
-            <div class="project-visual">
-              <img src="${p.thumbnail}" alt="${p.name}" class="project-img" loading="lazy">
-              <div class="project-overlay"></div>
-            </div>
-            <div class="project-meta">
-              <h4>${p.name}</h4>
-              <p>${p.desc}</p>
-            </div>
-          </a>`;
-      } else {
-        article.innerHTML = `
-          <a href="project.html?id=${p.id}" class="project-link">
-            <div class="project-visual">
-              <div class="visual-layer layer-1"></div>
-              <div class="visual-layer layer-2"></div>
-              <div class="visual-shape"></div>
-            </div>
-            <div class="project-meta">
-              <h4>${p.name}</h4>
-              <p>${p.desc}</p>
-            </div>
-          </a>`;
-      }
+      const imgHtml = p.thumbnail
+        ? `<img src="${p.thumbnail}" alt="${p.name}" loading="lazy">`
+        : `<div class="pj-item-img-placeholder"></div>`;
+      const scopeText = Array.isArray(p.scope) ? p.scope.join(' / ') : '';
+      const scopeHtml = scopeText ? `<div class="pj-item-scope"><span>${scopeText}</span></div>` : '';
 
-      frag.appendChild(article);
+      a.innerHTML = `
+        <div class="pj-item-img">${imgHtml}${scopeHtml}</div>
+        <div class="pj-item-info">
+          <div class="pj-item-left">
+            <h2 class="pj-item-name">${p.name}</h2>
+            <p class="pj-item-desc">${p.desc}</p>
+          </div>
+          <span class="pj-item-cat">${p.category.toUpperCase()}</span>
+        </div>`;
+
+      frag.appendChild(a);
     });
 
     grid.insertBefore(frag, moreLink);
@@ -124,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.15 });
 
-  document.querySelectorAll('.reveal, .contact, .site-footer').forEach(el => io.observe(el));
+  document.querySelectorAll('.reveal, .pj-item, .contact, .site-footer').forEach(el => io.observe(el));
 
   /* ---------- PROJECT CARD MOUSE TRACK ---------- */
   document.querySelectorAll('.project-card').forEach(card => {
