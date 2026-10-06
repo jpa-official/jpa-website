@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const frag = document.createDocumentFragment();
 
     // PROJECTS 페이지 카드(js/projects.js buildCard)와 동일한 마크업·스타일(css/projects.css)
-    window.PROJECTS.slice(0, 4).forEach(p => {
+    window.PROJECTS.slice(0, 12).forEach(p => {
       const a = document.createElement('a');
       a.className = 'pj-item';
       a.href = `project.html?id=${encodeURIComponent(p.id)}`;
