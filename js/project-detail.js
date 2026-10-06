@@ -72,28 +72,61 @@
       counter.className = 'pd-slider-counter';
       counter.textContent = `1 / ${allImages.length}`;
 
-      let current = 0;
+      // 회전문(무한 루프): 양 끝에 복제 슬라이드를 두고, 복제본 도착 시 실제 슬라이드로 순간 이동
+      const total = allImages.length;
       const slides = track.querySelectorAll('.pd-slide');
+      const headClone = slides[total - 1].cloneNode(true);
+      const tailClone = slides[0].cloneNode(true);
+      headClone.classList.remove('active');
+      tailClone.classList.remove('active');
+      track.insertBefore(headClone, slides[0]);
+      track.appendChild(tailClone);
 
-      function goTo(n) {
-        slides[current].classList.remove('active');
-        current = (n + allImages.length) % allImages.length;
-        slides[current].classList.add('active');
-        track.style.transform = `translateX(-${current * $mainImg.offsetWidth}px)`;
-        counter.textContent = `${current + 1} / ${allImages.length}`;
+      let pos = 1;            // track 내 위치 (0 = 앞 복제, total + 1 = 뒤 복제)
+      let animating = false;
+
+      function setPos(p, animate) {
+        track.style.transition = animate ? '' : 'none';
+        track.style.transform = `translateX(-${p * 100}%)`;
+      }
+      setPos(pos, false);
+
+      function goTo(p) {
+        if (animating) return;
+        animating = true;
+        slides[(pos - 1 + total) % total].classList.remove('active');
+        pos = p;
+        const real = (pos - 1 + total) % total;
+        slides[real].classList.add('active');
+        counter.textContent = `${real + 1} / ${total}`;
+        setPos(pos, true);
+        clearTimeout(settleTimer);
+        settleTimer = setTimeout(settle, 400); // transitionend 누락 대비
       }
 
-      btnPrev.addEventListener('click', () => goTo(current - 1));
-      btnNext.addEventListener('click', () => goTo(current + 1));
+      let settleTimer;
+      function settle() {
+        clearTimeout(settleTimer);
+        if (!animating) return;
+        if (pos === 0) { pos = total; setPos(pos, false); }
+        else if (pos === total + 1) { pos = 1; setPos(pos, false); }
+        track.offsetHeight; // 순간 이동 반영 후 transition 복구
+        track.style.transition = '';
+        animating = false;
+      }
+      track.addEventListener('transitionend', e => { if (e.target === track) settle(); });
+
+      btnPrev.addEventListener('click', () => goTo(pos - 1));
+      btnNext.addEventListener('click', () => goTo(pos + 1));
 
       let touchStartX = 0;
       $mainImg.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
       $mainImg.addEventListener('touchend', e => {
         const diff = touchStartX - e.changedTouches[0].clientX;
         if (diff <= -40) {
-          goTo(current - 1);
+          goTo(pos - 1);
         } else {
-          goTo(current + 1);
+          goTo(pos + 1);
         }
       }, { passive: true });
 
