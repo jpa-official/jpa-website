@@ -105,6 +105,7 @@ button { font-family: inherit; }
   transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 .loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.skip-intro .loader { display: none; }
 
 .loader-logo {
   position: absolute;

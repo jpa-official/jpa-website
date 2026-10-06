@@ -9,7 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const loader     = document.getElementById('loader');
   const introVideo = document.getElementById('loaderVideo');
 
-  if (loader && introVideo) {
+  if (loader && document.documentElement.classList.contains('skip-intro')) {
+    /* index.html#contact (CONTACT 메뉴) — 인트로 없이 바로 CONTACT 섹션으로 */
+    if (introVideo) introVideo.pause();
+    loader.classList.add('hidden');
+    document.body.classList.add('loaded');
+    triggerHero();
+    requestAnimationFrame(() => {
+      const contact = document.getElementById('contact');
+      if (contact) contact.scrollIntoView();
+    });
+  } else if (loader && introVideo) {
     /* 인트로 영상 자동 재생 페이지 (index.html) — 영상이 끝나면 메인 페이지 진입 */
     introVideo.play().catch(() => {});
     introVideo.addEventListener('ended', () => {
