@@ -65,7 +65,7 @@
   font-weight: 500;
   letter-spacing: 0;
   margin-top: 50px;
-  color: var(--accent);
+  color: var(--white);
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.8s var(--transition) 1.2s forwards;

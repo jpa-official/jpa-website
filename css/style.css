@@ -633,10 +633,11 @@ body, .hero-title, .hero-desc, .more-link, .main-nav a,
   justify-content: center;
   transition: transform 0.5s var(--transition), color 0.4s var(--transition);
 }
-.mp-arrow svg {
-  width: clamp(32px, 4vw, 48px);
-  height: clamp(32px, 4vw, 48px);
-  display: block;
+/* SEND MESSAGE와 같은 → 글자. 기존 SVG 화살표와 같은 크기(가로 약 28px @1440)가 되도록 조정 */
+.mp-arrow {
+  font-family: 'Swiss 721', sans-serif;
+  font-size: calc(clamp(32px, 4vw, 48px) * 0.62);
+  line-height: 1;
 }
 .more-projects:hover .mp-arrow {
   transform: translateX(20px) rotate(-45deg);
