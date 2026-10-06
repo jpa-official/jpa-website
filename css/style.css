@@ -337,6 +337,12 @@ button { font-family: inherit; }
   letter-spacing: 0;
   font-weight: 600;
 }
+/* 메인 PROJECTS 섹션 제목은 크게 */
+.projects .section-label {
+  font-size: clamp(22px, 2.8vw, 40px);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
 
 /* Swiss 721는 전역 Semi-Bold(600)로 통일 */
 body, .hero-title, .hero-desc, .more-link, .main-nav a,
@@ -349,6 +355,7 @@ body, .hero-title, .hero-desc, .more-link, .main-nav a,
 
 @media (max-width: 768px) {
   .section-head { padding: 60px 20px 30px; }
+  .projects .section-label { font-size: 22px; }
 }
 
 /* ============================================
