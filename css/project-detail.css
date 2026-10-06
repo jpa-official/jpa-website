@@ -122,13 +122,13 @@
   justify-content: center;
   min-height: 640px;
 }
-/* 16:9 동일 틀, 이미지 전체 보이기(여백) */
+/* 16:9 동일 틀, 비율이 다른 이미지는 확대해 꽉 채움 */
 .pd-slide:not(.pd-slide-main) img,
 .pd-slide:not(.pd-slide-main) video {
   width: min(100%, 1138px);
   height: auto;
   aspect-ratio: 16 / 9;
-  object-fit: contain;
+  object-fit: cover;
 }
 .pd-slider-btn {
   position: absolute;
