@@ -8,7 +8,7 @@
 
 /* ---------- HERO ---------- */
 .sv-hero {
-  padding: 40px 40px 60px;
+  padding: 10px 40px 60px;
   border-bottom: 1px solid var(--black);
 }
 .sv-hero-label {
@@ -384,7 +384,7 @@
 /* ---------- MOBILE ---------- */
 @media (max-width: 900px) {
   .services-page main { padding-top: 65px; }
-  .sv-hero { padding: 24px 20px 40px; }
+  .sv-hero { padding: 13px 20px 40px; }
   .sv-title-en { font-size: 18px; }
   .sv-header { padding: 28px 20px; gap: 20px; }
   .sv-title-wrap { flex-direction: column; gap: 4px; align-items: flex-start; }

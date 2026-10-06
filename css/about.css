@@ -6,7 +6,7 @@
 .about-hero {
   background: var(--black);
   color: var(--white);
-  padding: 141px 40px 120px;
+  padding: 111px 40px 120px;
   min-height: auto;
   display: flex;
   align-items: flex-start;
@@ -83,7 +83,7 @@
 
 @media (max-width: 768px) {
   .about-hero {
-    padding: 89px 20px 60px;
+    padding: 78px 20px 60px;
     align-items: flex-start;
     min-height: auto;
   }

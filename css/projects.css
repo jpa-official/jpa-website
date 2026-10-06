@@ -8,7 +8,7 @@
 
 /* ---------- HERO ---------- */
 .pj-hero {
-  padding: 40px 40px 80px;
+  padding: 10px 40px 80px;
 }
 .pj-hero-title {
   font-family: 'Switzer', sans-serif;
@@ -335,7 +335,7 @@
   .pj-list { grid-template-columns: 1fr; }
   .pj-item:nth-child(odd) { border-right: none; }
   .pj-main { padding-top: 65px; }
-  .pj-hero { padding: 24px 20px 50px; }
+  .pj-hero { padding: 13px 20px 50px; }
   .pj-item-name { font-size: 15px; }
   .pj-item-desc { font-size: 11px; }
   .pj-filter-wrap { padding: 0 20px; }
