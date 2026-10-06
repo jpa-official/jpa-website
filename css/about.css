@@ -6,10 +6,10 @@
 .about-hero {
   background: var(--black);
   color: var(--white);
-  padding: 180px 40px 120px;
-  min-height: 100vh;
+  padding: 141px 40px 120px;
+  min-height: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   overflow: hidden;
 }
@@ -83,7 +83,7 @@
 
 @media (max-width: 768px) {
   .about-hero {
-    padding: 80px 20px 60px;
+    padding: 89px 20px 60px;
     align-items: flex-start;
     min-height: auto;
   }
