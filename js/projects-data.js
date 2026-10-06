@@ -3,7 +3,6 @@
    ============================================ */
 
 window.PROJECTS = [
-  /* ---- 2026 ---- */
   {
     id: 'gaudi-back-to-the-origins',
     thumbnail: 'images/projects/gaudi-back-to-the-origins-13.jpg',
@@ -66,6 +65,77 @@ window.PROJECTS = [
     ]
   },
   {
+    id: 'sejong-center',
+    thumbnail: 'images/projects/sejong-center.jpg',
+    images: ['images/projects/sejong-center-2.jpg'],
+    name: 'Sejong Center',
+    nameKo: '세종문화회관 플레이스 브랜딩',
+    desc: '세종문화회관 플레이스 브랜딩',
+    category: 'Mixed-use',
+    location: 'SEOUL',
+    year: '2025',
+    client: '세종문화회관',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '이 프로젝트는 광화문의 역사적 장소에 자리한 세종문화회관의 유휴공간, 세종라운지와 옥상 공간을 공공성과 수익성을 동시에 갖춘 복합문화공간으로 재구성하는 공간기획 프로젝트이다.',
+    body: [
+      '이 프로젝트는 광화문의 역사적 장소에 자리한 세종문화회관의 유휴공간, 세종라운지와 옥상 공간을 공공성과 수익성을 동시에 갖춘 복합문화공간으로 재구성하는 공간기획 프로젝트이다. 세종문화회관은 대한민국을 대표하는 문화예술의 중심지이지만, 공연 관람 중심의 활용으로 시민들이 일상 속에서 자유롭게 머물고 향유하기에는 한계가 있었다.',
+      '이번 프로젝트는 옥상과 1층 라운지를 서울 도심 속 현대적 풍류정원으로 재해석하여, 시민들이 자연과 예술, 휴식을 함께 경험할 수 있는 열린 공간으로 제안하였다. 옛 정자에서 즐기던 풍류의 정신을 현대적으로 이어가며, 세종문화회관이 앞으로는 단순한 공연장을 넘어 한국적 정체성과 예술적 감성을 담은 새로운 문화 향유의 장으로 진화하기를 기대한다.'
+    ],
+    bodyEn: [
+      'This project reimagines the underutilized Sejong Lounge and rooftop of Sejong Center for the Performing Arts in historic Gwanghwamun as a mixed-use cultural space with both public and commercial value. While the center has long served as a major cultural landmark in Korea, its use has been largely limited to performance audiences.',
+      'This proposal transforms the rooftop and first-floor lounge into a contemporary pungryu garden in the heart of Seoul, where visitors can enjoy nature, art, and rest in everyday life. By reinterpreting the spirit of traditional Korean pavilions in a modern way, the project envisions Sejong Center evolving into a new cultural destination that reflects both Korean identity and artistic sensibility.'
+    ]
+  },
+  {
+    id: 'sfc-oled-community',
+    thumbnail: 'images/projects/sfc-oled-community.jpg',
+    name: 'SFC Community Center',
+    nameKo: 'SFC OLED 캠퍼스 커뮤니티센터 공간기획 및 공간환경설계',
+    desc: 'SFC OLED 캠퍼스 커뮤니티센터 공간기획 및 공간환경설계',
+    category: 'Industrial',
+    location: 'OCHANG',
+    year: '2024',
+    client: 'SFC',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: 'SFC OLED 캠퍼스의 임직원의 협업·재충전·교류가 일어나는 통합 커뮤니티 센터.',
+    body: [
+      '오창 과학산업단지 내에 위치한 SFC OLED 캠퍼스는 정밀 화학소재를 연구, 개발, 생산하는 SFC(주)의 거점이다.',
+      'SFC OLED 캠퍼스의 마스터플랜을 기반으로 2013년 준공된 연구소 그 이후 후속적으로 생산동, 연구실험동 등 단계적 증축으로 현재의 캠퍼스가 구성되었다. SFC OLED 캠퍼스의 규모가 커지고 사용자도 늘어나게 되면서 직원들의 복지공간의 부족과 클린룸 및 창고공간도 추가로 확보되어야했다.',
+      '단지 내 남서쪽의 유휴부지와 단지 내 숨통 공간이었던 90m X 70m 축구장 규격의 잔디공간에 직원들을 위한 회의실, 휴게공간, 식당 등이 담긴 커뮤니티센터와 부족했던 실험실, 클린룸, 자재창고 등이 담긴 클린룸&스토리지센터를 증축하는 프로젝트이다.',
+      '커뮤니티센터는 OLED 캠퍼스 중앙에 위치하여 임직원들의 복지공간을 담으며 기존 건물에서의 접근 편의를 고려하여 원형의 형태로 계획한다. 이는 방향성 없는 디자인 통해 캠퍼스의 모든 건물이 연계되는 것을 고려하고 임직원들이 위계없이 편안하게 휴식 할 수 있는 공간을 계획한다. 건물 중앙에는 원형의 오픈스페이스를 계획하여 기존의 단지의 내 숨통공간을 유지하고 커뮤니티센터 내에서도 자연과의 접점을 높이도록 계획하였다.'
+    ],
+    bodyEn: [
+      'Located within the Ochang Scientific Industrial Complex, the SFC OLED Campus serves as the core hub for SFC Co., Ltd., a company dedicated to the research, development, and production of fine chemical materials.',
+      'Following the completion of the research institute in 2013 based on the campus master plan, the current site was shaped through phased expansions, including subsequent production and research laboratory buildings. As the scale of the SFC OLED Campus expanded and the number of users grew, the campus faced a shortage of welfare spaces for employees, alongside a pressing need for additional cleanrooms and storage areas.',
+      'This expansion project utilizes an idle plot on the southwest side of the complex, as well as a 90m x 70m soccer-field-sized green space that previously served as the campus\'s open "breathing room." The project aims to construct a Community Center—housing conference rooms, rest areas, and a cafeteria for employees—and a Cleanroom & Storage Center to accommodate the much-needed laboratories, cleanrooms, and material warehouses.'
+    ]
+  },
+  {
+    id: 'sfc-biopark',
+    thumbnail: 'images/projects/sfc-biopark.jpg',
+    images: ['images/projects/sfc-biopark-2.jpg', 'images/projects/sfc-biopark-3.jpg'],
+    name: 'SFC Biopark',
+    nameKo: 'SFC BIOPARK 공간기획 및 공간환경설계',
+    desc: 'SFC BIOPARK 공간기획 및 공간환경설계',
+    category: 'Industrial',
+    location: 'OCHANG',
+    year: '2024',
+    client: 'SFC',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '이 프로젝트는 새로운 SFC BIO 연구센터를 위한 공간 브랜딩 및 디자인 이니셔티브로, 기획 단계부터 실행까지 회사의 브랜드 가치를 건축 공간에 통합하는 것을 목표로 한다.',
+    body: [
+      '이 프로젝트는 새로운 SFC BIO 연구센터를 위한 공간 브랜딩 및 디자인 이니셔티브로, 기획 단계부터 실행까지 회사의 브랜드 가치를 건축 공간에 통합하는 것을 목표로 한다. 브랜드의 아이덴티티를 "끊임없이 변화하는 환경에 유연하게 반응하는 존재"로 설정하고, 이를 공간 브랜딩에 반영하였다.',
+      '"순수하고 정밀한 축(Pure and Precise Axis)"이라는 개념을 통해 반응적인 환경을 만들어내는 공간 아이덴티티를 제안하였다. 이 개념은 모든 공간을 연결하는 주요 동선이자 상징적 요소인 긴 유리 복도, 즉 "HEART SPACE"로 구현되었다. 이 공간은 사무와 생산 공간을 연결하고, 고객과 회사를 잇고, 사람과 자연을 이어주는 중심 공간으로서 다양한 상호작용을 가능하게 하며 브랜드의 핵심 역할을 수행한다.'
+    ],
+    bodyEn: [
+      'This project is a spatial branding and design initiative for the new SFC BIO Research Center, aimed at integrating the company\'s brand values into the built environment from planning through execution. The brand identity was defined as one that responds flexibly to a constantly changing environment, and this idea was translated into the spatial concept.',
+      'Under the concept of "Pure and Precise Axis," the project proposes a responsive spatial identity centered on a long glass corridor called "HEART SPACE." As the symbolic spine of the project, it connects office and production areas, links the company with visitors, and brings people and nature together. The design was developed from the site\'s unique linear form, creating a dramatic spatial experience that expresses the essence of the brand while allowing seamless connection to future buildings.'
+    ]
+  },
+  {
     id: 'tea-the-han',
     thumbnail: 'images/projects/tea-the-han.jpg',
     images: [
@@ -97,30 +167,6 @@ window.PROJECTS = [
       'As the first flagship store embodying Tea The Han\'s identity, jpa. managed the entire process from spatial planning to design execution. The store connects the brand\'s modern sensibility into a cohesive spatial experience, allowing customers to naturally understand the brand and linger. The facade and interior feature a red tile finish to deliver a calm, deep sense of modern luxury. Instead of heavy ornamentation, restrained textures and colors create a premium image and leave a clear first impression. The front outdoor seating is not just a waiting zone, but an open space reflecting the warm charm of Bukchon.',
       'The main space features a front display aligned with the entry flow, naturally exposing products along the customer\'s line of sight and drawing them deeper into the space. The immersive space uses a curved display and indirect lighting to maximize product presence, presenting the brand story like an exhibition.',
       'Ultimately, the Tea The Han flagship store goes beyond a retail shop, serving as an experiential space where visitors can stay and gradually discover the brand.'
-    ]
-  },
-  /* ---- 2025 ---- */
-  {
-    id: 'sejong-center',
-    thumbnail: 'images/projects/sejong-center.jpg',
-    images: ['images/projects/sejong-center-2.jpg'],
-    name: 'Sejong Center',
-    nameKo: '세종문화회관 플레이스 브랜딩',
-    desc: '세종문화회관 플레이스 브랜딩',
-    category: 'Mixed-use',
-    location: 'SEOUL',
-    year: '2025',
-    client: '세종문화회관',
-    scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: '이 프로젝트는 광화문의 역사적 장소에 자리한 세종문화회관의 유휴공간, 세종라운지와 옥상 공간을 공공성과 수익성을 동시에 갖춘 복합문화공간으로 재구성하는 공간기획 프로젝트이다.',
-    body: [
-      '이 프로젝트는 광화문의 역사적 장소에 자리한 세종문화회관의 유휴공간, 세종라운지와 옥상 공간을 공공성과 수익성을 동시에 갖춘 복합문화공간으로 재구성하는 공간기획 프로젝트이다. 세종문화회관은 대한민국을 대표하는 문화예술의 중심지이지만, 공연 관람 중심의 활용으로 시민들이 일상 속에서 자유롭게 머물고 향유하기에는 한계가 있었다.',
-      '이번 프로젝트는 옥상과 1층 라운지를 서울 도심 속 현대적 풍류정원으로 재해석하여, 시민들이 자연과 예술, 휴식을 함께 경험할 수 있는 열린 공간으로 제안하였다. 옛 정자에서 즐기던 풍류의 정신을 현대적으로 이어가며, 세종문화회관이 앞으로는 단순한 공연장을 넘어 한국적 정체성과 예술적 감성을 담은 새로운 문화 향유의 장으로 진화하기를 기대한다.'
-    ],
-    bodyEn: [
-      'This project reimagines the underutilized Sejong Lounge and rooftop of Sejong Center for the Performing Arts in historic Gwanghwamun as a mixed-use cultural space with both public and commercial value. While the center has long served as a major cultural landmark in Korea, its use has been largely limited to performance audiences.',
-      'This proposal transforms the rooftop and first-floor lounge into a contemporary pungryu garden in the heart of Seoul, where visitors can enjoy nature, art, and rest in everyday life. By reinterpreting the spirit of traditional Korean pavilions in a modern way, the project envisions Sejong Center evolving into a new cultural destination that reflects both Korean identity and artistic sensibility.'
     ]
   },
   {
@@ -436,32 +482,6 @@ window.PROJECTS = [
       'It includes a variety of spatial settings such as the Idea LAB, Personal Zone, Chill Lounge, and Nomadic Terrace, each designed to support different work styles and needs. It was also planned as a creative studio for designers and marketers, while accommodating brand pop-ups, small gatherings, and rental events. Visual elements—including signage, furniture, and even the slippers—were all custom-designed to create a consistent and cohesive experience.'
     ]
   },
-  /* ---- 2024 ---- */
-  {
-    id: 'sfc-oled-community',
-    thumbnail: 'images/projects/sfc-oled-community.jpg',
-    name: 'SFC Community Center',
-    nameKo: 'SFC OLED 캠퍼스 커뮤니티센터 공간기획 및 공간환경설계',
-    desc: 'SFC OLED 캠퍼스 커뮤니티센터 공간기획 및 공간환경설계',
-    category: 'Industrial',
-    location: 'OCHANG',
-    year: '2024',
-    client: 'SFC',
-    scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: 'SFC OLED 캠퍼스의 임직원의 협업·재충전·교류가 일어나는 통합 커뮤니티 센터.',
-    body: [
-      '오창 과학산업단지 내에 위치한 SFC OLED 캠퍼스는 정밀 화학소재를 연구, 개발, 생산하는 SFC(주)의 거점이다.',
-      'SFC OLED 캠퍼스의 마스터플랜을 기반으로 2013년 준공된 연구소 그 이후 후속적으로 생산동, 연구실험동 등 단계적 증축으로 현재의 캠퍼스가 구성되었다. SFC OLED 캠퍼스의 규모가 커지고 사용자도 늘어나게 되면서 직원들의 복지공간의 부족과 클린룸 및 창고공간도 추가로 확보되어야했다.',
-      '단지 내 남서쪽의 유휴부지와 단지 내 숨통 공간이었던 90m X 70m 축구장 규격의 잔디공간에 직원들을 위한 회의실, 휴게공간, 식당 등이 담긴 커뮤니티센터와 부족했던 실험실, 클린룸, 자재창고 등이 담긴 클린룸&스토리지센터를 증축하는 프로젝트이다.',
-      '커뮤니티센터는 OLED 캠퍼스 중앙에 위치하여 임직원들의 복지공간을 담으며 기존 건물에서의 접근 편의를 고려하여 원형의 형태로 계획한다. 이는 방향성 없는 디자인 통해 캠퍼스의 모든 건물이 연계되는 것을 고려하고 임직원들이 위계없이 편안하게 휴식 할 수 있는 공간을 계획한다. 건물 중앙에는 원형의 오픈스페이스를 계획하여 기존의 단지의 내 숨통공간을 유지하고 커뮤니티센터 내에서도 자연과의 접점을 높이도록 계획하였다.'
-    ],
-    bodyEn: [
-      'Located within the Ochang Scientific Industrial Complex, the SFC OLED Campus serves as the core hub for SFC Co., Ltd., a company dedicated to the research, development, and production of fine chemical materials.',
-      'Following the completion of the research institute in 2013 based on the campus master plan, the current site was shaped through phased expansions, including subsequent production and research laboratory buildings. As the scale of the SFC OLED Campus expanded and the number of users grew, the campus faced a shortage of welfare spaces for employees, alongside a pressing need for additional cleanrooms and storage areas.',
-      'This expansion project utilizes an idle plot on the southwest side of the complex, as well as a 90m x 70m soccer-field-sized green space that previously served as the campus\'s open "breathing room." The project aims to construct a Community Center—housing conference rooms, rest areas, and a cafeteria for employees—and a Cleanroom & Storage Center to accommodate the much-needed laboratories, cleanrooms, and material warehouses.'
-    ]
-  },
   {
     id: 'sfc-oled-storage',
     thumbnail: 'images/projects/sfc-oled-storage.jpg',
@@ -485,29 +505,6 @@ window.PROJECTS = [
       'The SFC OLED Campus, located in the Ochang Scientific Industrial Complex, is the main base of SFC Co., Ltd. for the research, development, and production of precision chemical materials. Since the completion of the original research center in 2013, the campus has gradually expanded with additional production and laboratory buildings.',
       'As the campus grew, the need for employee welfare facilities, cleanrooms, and storage space also increased. This project adds a Community Center with meeting rooms, lounges, and dining facilities, along with a Cleanroom & Storage Center containing laboratories, cleanrooms, and material storage areas.',
       'The Storage Center is planned on the vacant southwest site and follows the same architectural language as the existing OLED Campus buildings to maintain a unified campus identity.'
-    ]
-  },
-  {
-    id: 'sfc-biopark',
-    thumbnail: 'images/projects/sfc-biopark.jpg',
-    images: ['images/projects/sfc-biopark-2.jpg', 'images/projects/sfc-biopark-3.jpg'],
-    name: 'SFC Biopark',
-    nameKo: 'SFC BIOPARK 공간기획 및 공간환경설계',
-    desc: 'SFC BIOPARK 공간기획 및 공간환경설계',
-    category: 'Industrial',
-    location: 'OCHANG',
-    year: '2024',
-    client: 'SFC',
-    scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: '이 프로젝트는 새로운 SFC BIO 연구센터를 위한 공간 브랜딩 및 디자인 이니셔티브로, 기획 단계부터 실행까지 회사의 브랜드 가치를 건축 공간에 통합하는 것을 목표로 한다.',
-    body: [
-      '이 프로젝트는 새로운 SFC BIO 연구센터를 위한 공간 브랜딩 및 디자인 이니셔티브로, 기획 단계부터 실행까지 회사의 브랜드 가치를 건축 공간에 통합하는 것을 목표로 한다. 브랜드의 아이덴티티를 "끊임없이 변화하는 환경에 유연하게 반응하는 존재"로 설정하고, 이를 공간 브랜딩에 반영하였다.',
-      '"순수하고 정밀한 축(Pure and Precise Axis)"이라는 개념을 통해 반응적인 환경을 만들어내는 공간 아이덴티티를 제안하였다. 이 개념은 모든 공간을 연결하는 주요 동선이자 상징적 요소인 긴 유리 복도, 즉 "HEART SPACE"로 구현되었다. 이 공간은 사무와 생산 공간을 연결하고, 고객과 회사를 잇고, 사람과 자연을 이어주는 중심 공간으로서 다양한 상호작용을 가능하게 하며 브랜드의 핵심 역할을 수행한다.'
-    ],
-    bodyEn: [
-      'This project is a spatial branding and design initiative for the new SFC BIO Research Center, aimed at integrating the company\'s brand values into the built environment from planning through execution. The brand identity was defined as one that responds flexibly to a constantly changing environment, and this idea was translated into the spatial concept.',
-      'Under the concept of "Pure and Precise Axis," the project proposes a responsive spatial identity centered on a long glass corridor called "HEART SPACE." As the symbolic spine of the project, it connects office and production areas, links the company with visitors, and brings people and nature together. The design was developed from the site\'s unique linear form, creating a dramatic spatial experience that expresses the essence of the brand while allowing seamless connection to future buildings.'
     ]
   },
   {
