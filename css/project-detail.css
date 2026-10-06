@@ -123,13 +123,13 @@
   justify-content: center;
   min-height: 640px;
 }
-/* 16:9 동일 틀, 비율이 다른 이미지는 확대해 꽉 채움 */
+/* 원본 비율 그대로(잘림 없음): 높이 640px 고정, 폭은 이미지 비율대로 */
 .pd-slide:not(.pd-slide-main) img,
 .pd-slide:not(.pd-slide-main) video {
-  width: min(100%, 1138px);
-  height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  width: auto;
+  height: 640px;
+  max-width: 100%;
+  object-fit: contain;
 }
 .pd-slider-btn {
   position: absolute;
