@@ -1,10 +1,8 @@
 const PROJECTS = window.PROJECTS || [];
 let currentFilter = 'all';
-let currentView = window.innerWidth <= 768 ? 'gallery' : 'gallery';
 
 const $list = document.getElementById('pjList');
 const $filter = document.getElementById('projFilter');
-const $viewToggle = document.getElementById('viewToggle');
 
 function buildCard(project) {
   const a = document.createElement('a');
@@ -32,26 +30,6 @@ function buildCard(project) {
   return a;
 }
 
-function buildRow(project, index) {
-  const a = document.createElement('a');
-  a.className = 'pj-row';
-  a.href = `project.html?id=${encodeURIComponent(project.id)}`;
-  a.dataset.category = project.category;
-
-  const num = String(index + 1).padStart(2, '0');
-  a.innerHTML = `
-    <span class="pj-row-num">${num}</span>
-    <span class="pj-row-name">
-      <span class="pj-row-en">${project.name}</span>
-      ${project.nameKo ? `<span class="pj-row-ko">${project.nameKo}</span>` : ''}
-    </span>
-    <span class="pj-row-cat">${project.category.toUpperCase()}</span>
-    <span class="pj-row-year">${project.year || ''}</span>
-    <span class="pj-row-loc">${project.location || ''}</span>`;
-
-  return a;
-}
-
 function render(filter) {
   $list.innerHTML = '';
 
@@ -65,10 +43,7 @@ function render(filter) {
   }
 
   const frag = document.createDocumentFragment();
-  list.forEach((p, i) => {
-    const el = currentView === 'list' ? buildRow(p, i) : buildCard(p);
-    frag.appendChild(el);
-  });
+  list.forEach(p => frag.appendChild(buildCard(p)));
   $list.appendChild(frag);
 
   const io = new IntersectionObserver((entries) => {
@@ -80,7 +55,7 @@ function render(filter) {
     });
   }, { threshold: 0.05 });
 
-  $list.querySelectorAll('.pj-item, .pj-row').forEach((el, i) => {
+  $list.querySelectorAll('.pj-item').forEach((el, i) => {
     el.style.transitionDelay = `${Math.min(i, 6) * 0.05}s`;
     io.observe(el);
   });
@@ -91,16 +66,6 @@ $filter.addEventListener('click', (e) => {
   if (!btn || btn.dataset.filter === currentFilter) return;
   currentFilter = btn.dataset.filter;
   $filter.querySelectorAll('.pj-filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  render(currentFilter);
-});
-
-$viewToggle.addEventListener('click', (e) => {
-  if (window.innerWidth <= 768) return;
-  const btn = e.target.closest('.pj-view-btn');
-  if (!btn || btn.dataset.view === currentView) return;
-  currentView = btn.dataset.view;
-  $viewToggle.querySelectorAll('.pj-view-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   render(currentFilter);
 });

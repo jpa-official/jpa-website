@@ -129,7 +129,7 @@ button { font-family: inherit; }
 .main-nav a {
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0;
   color: var(--white);
   position: relative;
   padding: 4px 0;
@@ -161,7 +161,7 @@ button { font-family: inherit; }
     scrollbar-width: none;
   }
   .main-nav::-webkit-scrollbar { display: none; }
-  .main-nav a { font-size: 10px; letter-spacing: 0.06em; }
+  .main-nav a { font-size: 10px; letter-spacing: 0; }
   .main-nav a[href="#contact"],
   .main-nav a[href="index.html#contact"] { display: none; }
 }
@@ -250,7 +250,7 @@ button { font-family: inherit; }
   align-items: center;
   gap: 10px;
   font-size: 12px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
   font-weight: 600;
   border-bottom: 1px solid rgba(255,255,255,0.4);
   padding-bottom: 6px;
@@ -290,7 +290,7 @@ button { font-family: inherit; }
 }
 .section-label {
   font-size: 11px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
   font-weight: 600;
 }
 
@@ -368,7 +368,7 @@ body, .hero-title, .hero-desc, .more-link, .main-nav a,
 .srv-num {
   font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0;
 }
 .srv-title {
   font-family: 'Switzer', sans-serif;
@@ -380,7 +380,7 @@ body, .hero-title, .hero-desc, .more-link, .main-nav a,
 .srv-kr {
   font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
   /* 한글 Pretendard는 기존 weight 체계 유지 */
 }
 
@@ -627,7 +627,7 @@ body, .hero-title, .hero-desc, .more-link, .main-nav a,
 }
 .info-label {
   font-size: 11px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0;
   opacity: 0.5;
 }
 .info-block a, .info-block span:not(.info-label) {
@@ -779,7 +779,7 @@ body, .hero-title, .hero-desc, .more-link, .main-nav a,
 }
 .footer-links a {
   font-family: 'Switzer', sans-serif;
-  letter-spacing: 0.04em;
+  letter-spacing: 0;
   transition: opacity 0.3s ease;
 }
 .footer-links a:hover { opacity: 1; color: var(--white); }
