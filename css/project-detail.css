@@ -78,6 +78,7 @@
   letter-spacing: -0.01em;
   color: var(--black);
 }
+#pdMetaScope { text-transform: uppercase; }
 
 /* ---------- MAIN IMAGE ---------- */
 .pd-main-img {
