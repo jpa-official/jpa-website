@@ -11,7 +11,7 @@
   padding: 10px 40px 80px;
 }
 .pj-hero-title {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(32px, 6.5vw, 110px);
   line-height: 0.92;
@@ -97,7 +97,7 @@
   border-bottom: 2px solid transparent;
   color: var(--black);
   padding: 18px 20px;
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 0;
@@ -199,7 +199,7 @@
   gap: 20px;
 }
 .pj-item-name {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(16px, 2vw, 24px);
   letter-spacing: -0.02em;
@@ -214,7 +214,7 @@
   font-family: 'Pretendard Variable', Pretendard, sans-serif;
 }
 .pj-item-cat {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 0;
@@ -265,7 +265,7 @@
 .pj-row:hover { color: var(--white); }
 
 .pj-row-num {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0;
@@ -281,7 +281,7 @@
   padding: 0 32px 0 0;
 }
 .pj-row-en {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(14px, 1.6vw, 20px);
   letter-spacing: -0.02em;
@@ -296,7 +296,7 @@
   letter-spacing: 0;
 }
 .pj-row-cat {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0;
@@ -306,7 +306,7 @@
   flex-shrink: 0;
 }
 .pj-row-loc {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0;
@@ -316,7 +316,7 @@
   text-align: right;
 }
 .pj-row-year {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0;

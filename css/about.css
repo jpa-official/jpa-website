@@ -32,7 +32,7 @@
 }
 
 .about-hero-title {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(32px, 6.5vw, 110px);
   line-height: 0.92;
@@ -102,7 +102,7 @@
   align-items: start;
 }
 .intro-title {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(32px, 4.5vw, 64px);
   line-height: 1.05;
@@ -123,7 +123,7 @@
 }
 .intro-body strong {
   font-weight: 700;
-  color: var(--accent);
+  color: var(--black);
 }
 
 @media (max-width: 900px) {
@@ -163,14 +163,14 @@
 .phi-item:hover { background: rgba(255,255,255,0.03); }
 
 .phi-num {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: 28px;
   font-weight: 600;
   color: var(--accent);
   letter-spacing: -0.02em;
 }
 .phi-content h3 {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: clamp(20px, 2.5vw, 32px);
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -227,7 +227,7 @@
 }
 .cic-body strong {
   font-weight: 700;
-  color: var(--accent);
+  color: var(--black);
 }
 .cic-em {
   opacity: 0.55;
@@ -268,7 +268,7 @@
 }
 
 .num-value {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(56px, 7vw, 110px);
   line-height: 1;
@@ -276,11 +276,11 @@
   display: inline-block;
 }
 .num-suffix {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(40px, 5vw, 80px);
   line-height: 1;
-  color: var(--accent);
+  color: var(--black);
   margin-left: 4px;
 }
 .num-label {
@@ -319,7 +319,7 @@
 }
 .process-intro strong {
   font-weight: 700;
-  color: var(--accent);
+  color: var(--black);
 }
 
 @media (max-width: 900px) {
@@ -356,7 +356,7 @@
   opacity: 0.7;
 }
 .proc-step h4 {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: clamp(24px, 3vw, 36px);
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -372,7 +372,7 @@
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  color: var(--accent);
+  color: var(--black);
   font-weight: 600;
 }
 
@@ -400,7 +400,7 @@
   align-items: end;
 }
 .team-title {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(56px, 10vw, 160px);
   line-height: 0.95;
@@ -454,7 +454,7 @@
   padding: 30px;
   border-right: 1px solid var(--black);
   border-bottom: 1px solid var(--black);
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(22px, 2.4vw, 34px);
   letter-spacing: -0.02em;
@@ -530,7 +530,7 @@
   margin: 0 auto;
 }
 .cta-title {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(56px, 10vw, 160px);
   line-height: 0.92;
@@ -552,7 +552,7 @@
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: clamp(16px, 2vw, 22px);
   font-weight: 600;
   letter-spacing: 0;
@@ -563,8 +563,8 @@
   transition: background 0.4s var(--transition), color 0.4s var(--transition), border-color 0.4s var(--transition), gap 0.4s var(--transition);
 }
 .cta-link:hover {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--black);
+  border-color: var(--black);
   color: var(--white);
   gap: 24px;
 }

@@ -11,7 +11,7 @@
   padding: 50px 40px 30px;
 }
 .pd-title {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(28px, 5vw, 80px);
   line-height: 0.92;
@@ -65,14 +65,14 @@
   margin-right: 0;
 }
 .pd-meta-label {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0;
   opacity: 0.45;
 }
 .pd-meta-val {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: clamp(13px, 1.2vw, 16px);
   font-weight: 600;
   letter-spacing: -0.01em;
@@ -156,7 +156,7 @@
   right: 16px;
   background: rgba(0,0,0,0.45);
   color: #fff;
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0;
@@ -189,7 +189,7 @@
   font-family: 'Pretendard Variable', Pretendard, sans-serif;
 }
 .pd-body-en p {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
 }
 .pd-body-en:empty { display: none; }
@@ -269,14 +269,14 @@
 }
 .pd-nav-meta-right { align-items: flex-end; }
 .pd-nav-label {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: 10px;
   letter-spacing: 0;
   font-weight: 600;
   opacity: 0.45;
 }
 .pd-nav-name {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(14px, 1.6vw, 20px);
   letter-spacing: -0.02em;
@@ -297,12 +297,12 @@
   font-size: 11px;
   letter-spacing: 0;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--black);
   display: block;
   margin-bottom: 20px;
 }
 .pd-nf-title {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(36px, 6vw, 80px);
   letter-spacing: -0.04em;
@@ -310,7 +310,7 @@
 }
 .pd-nf-inner p { opacity: 0.6; margin-bottom: 40px; }
 .pd-back-link {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 0;

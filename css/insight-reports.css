@@ -46,7 +46,7 @@
   animation: loaderBarFill 1.2s var(--transition) 0.4s forwards;
 }
 .loader-percent {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0;
@@ -99,7 +99,7 @@
 }
 
 .ir-hero-title {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(32px, 6.5vw, 110px);
   line-height: 0.92;
@@ -160,7 +160,7 @@
   border-bottom: 2px solid transparent;
   color: var(--black);
   padding: 18px 20px;
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 0;
@@ -222,7 +222,7 @@
 .ir-item:hover .ir-item-inner { color: var(--white); }
 
 .ir-item-num {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 0;
@@ -235,16 +235,16 @@
 .ir-item-body { flex: 1; }
 
 .ir-item-cat {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: 11px;
   letter-spacing: 0;
-  color: var(--accent);
+  color: var(--black);
   margin-bottom: 16px;
   display: block;
   transition: color 0.35s ease;
 }
-.ir-item:hover .ir-item-cat { color: rgba(240,32,50,0.85); }
+.ir-item:hover .ir-item-cat { color: rgba(10,10,10,0.85); }
 
 .ir-item-title {
   font-family: 'Pretendard Variable', Pretendard, sans-serif;
@@ -275,7 +275,7 @@
   flex-shrink: 0;
 }
 .ir-item-date {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: 11px;
   letter-spacing: 0;
@@ -289,7 +289,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: 11px;
   letter-spacing: 0;
@@ -360,7 +360,7 @@
   left: 0;
   height: 2px;
   width: 0%;
-  background: var(--accent);
+  background: var(--black);
   z-index: 200;
   transition: width 0.1s linear;
 }
@@ -402,7 +402,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0;
@@ -425,7 +425,7 @@
 }
 
 .ird-cover-cat {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: 11px;
   letter-spacing: 0;
@@ -469,13 +469,13 @@
   letter-spacing: 0;
   font-weight: 600;
   opacity: 0.4;
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
 }
 .ird-meta-value {
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0;
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
 }
 
 /* ---------- CONTENT BODY ---------- */
@@ -513,7 +513,7 @@
 }
 
 .ird-section-title {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(20px, 2.5vw, 30px);
   letter-spacing: -0.02em;
@@ -521,7 +521,7 @@
   line-height: 1.2;
 }
 .ird-section-subtitle {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: 12px;
   letter-spacing: 0;
   font-weight: 600;
@@ -552,7 +552,7 @@
   gap: 32px;
 }
 .ird-highlight-stat {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(48px, 7vw, 80px);
   letter-spacing: -0.04em;
@@ -569,7 +569,7 @@
 
 /* Pull quote */
 .ird-pullquote {
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--black);
   padding: 24px 32px;
   margin: 40px 0;
   font-family: 'Pretendard Variable', Pretendard, sans-serif;
@@ -606,11 +606,11 @@
 }
 .ird-takeaway:first-child { border-top: 1px solid rgba(0,0,0,0.08); }
 .ird-takeaway-num {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0;
-  color: var(--accent);
+  color: var(--black);
   padding-top: 4px;
 }
 
@@ -652,7 +652,7 @@
 }
 
 .ird-cta-label {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: 11px;
   letter-spacing: 0;
   font-weight: 600;
@@ -662,7 +662,7 @@
 }
 
 .ird-cta-title {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(32px, 5vw, 64px);
   letter-spacing: -0.03em;
@@ -684,7 +684,7 @@
   gap: 14px;
   background: var(--white);
   color: var(--black);
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 0;
@@ -723,7 +723,7 @@
   font-size: 11px;
   letter-spacing: 0;
   opacity: 0.3;
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
 }
 
 /* ---------- MORE REPORTS LINK ---------- */
@@ -735,7 +735,7 @@
   border-top: 1px solid rgba(255,255,255,0.1);
   text-decoration: none;
   color: rgba(255,255,255,0.5);
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0;
@@ -757,7 +757,7 @@
   text-align: center;
 }
 .ird-not-found h2 {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: clamp(24px, 4vw, 48px);
   font-weight: 600;
   letter-spacing: -0.03em;
@@ -769,7 +769,7 @@
   margin-bottom: 40px;
 }
 .ird-not-found a {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0;

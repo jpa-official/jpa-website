@@ -6,9 +6,9 @@ window.PROJECTS = [
   /* ---- 2026 ---- */
   {
     id: 'gaudi-back-to-the-origins',
-    thumbnail: 'images/projects/gaudi-back-to-the-origins.jpg',
+    thumbnail: 'images/projects/gaudi-back-to-the-origins-13.jpg',
     images: [
-      'images/projects/gaudi-back-to-the-origins-13.jpg',
+      'images/projects/gaudi-back-to-the-origins.jpg',
       'images/projects/gaudi-back-to-the-origins-2.jpg',
       'images/projects/gaudi-back-to-the-origins-3.jpg',
       'images/projects/gaudi-back-to-the-origins-4.jpg',

@@ -12,7 +12,7 @@
   border-bottom: 1px solid var(--black);
 }
 .sv-hero-label {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0;
@@ -20,7 +20,7 @@
   margin-bottom: 24px;
 }
 .sv-hero-title {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(36px, 6.5vw, 100px);
   line-height: 0.9;
@@ -100,7 +100,7 @@
 }
 
 .sv-num {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0;
@@ -121,7 +121,7 @@
   flex-wrap: wrap;
 }
 .sv-title-en {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(14px, 2vw, 28px);
   letter-spacing: -0.02em;
@@ -192,7 +192,7 @@
   position: absolute;
   left: 0; bottom: -1px;
   height: 1px; width: 0;
-  background: var(--accent);
+  background: var(--black);
   transition: width 0.5s var(--transition);
 }
 .sv-item.open .sv-col-title {
@@ -246,7 +246,7 @@
   transform: translateX(6px);
 }
 .sv-list-items li:hover::before {
-  color: var(--accent);
+  color: var(--black);
   opacity: 1;
   transform: scale(1.15);
 }
@@ -257,7 +257,7 @@
   border-bottom: 1px solid var(--black);
 }
 .sv-section-label {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0;
@@ -265,7 +265,7 @@
   margin-bottom: 20px;
 }
 .sv-members-title {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(30px, 4.5vw, 72px);
   line-height: 0.95;
@@ -299,7 +299,7 @@
   border-right: none;
 }
 .sv-member-en {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-size: clamp(12px, 1.1vw, 14px);
   font-weight: 600;
   letter-spacing: -0.01em;
@@ -321,7 +321,7 @@
   margin-bottom: 56px;
 }
 .sv-partners-title {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(30px, 4.5vw, 72px);
   letter-spacing: -0.04em;
@@ -342,7 +342,7 @@
   gap: 20px;
 }
 .sv-partner-name {
-  font-family: 'Switzer', sans-serif;
+  font-family: 'Swiss 721', sans-serif;
   font-weight: 600;
   font-size: clamp(18px, 2vw, 28px);
   letter-spacing: -0.02em;
