@@ -184,6 +184,7 @@
   color: var(--white);
   text-align: center;
   line-height: 1.6;
+  text-transform: uppercase;
 }
 .pj-item-img-placeholder {
   width: 100%;
@@ -200,7 +201,7 @@
 }
 .pj-item-name {
   font-family: 'Swiss 721', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: clamp(16px, 2vw, 24px);
   letter-spacing: -0.02em;
   line-height: 1.2;
