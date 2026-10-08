@@ -129,17 +129,17 @@ window.PROJECTS = [
   },
   {
     id: 'tea-the-han',
-    thumbnail: 'images/projects/tea-the-han.jpg?v=20261008',
+    thumbnail: 'images/projects/tea-the-han.jpg?v=20261008c',
     images: [
-      'images/projects/tea-the-han-2.jpg?v=20261008',
-      'images/projects/tea-the-han-3.jpg?v=20261008',
-      'images/projects/tea-the-han-4.jpg?v=20261008',
-      'images/projects/tea-the-han-5.jpg?v=20261008',
-      'images/projects/tea-the-han-6.jpg?v=20261008',
-      'images/projects/tea-the-han-7.jpg?v=20261008',
-      'images/projects/tea-the-han-8.jpg?v=20261008',
-      'images/projects/tea-the-han-9.jpg?v=20261008',
-      'images/projects/tea-the-han-10.jpg?v=20261008'
+      'images/projects/tea-the-han-2.jpg?v=20261008c',
+      'images/projects/tea-the-han-3.jpg?v=20261008c',
+      'images/projects/tea-the-han-4.jpg?v=20261008c',
+      'images/projects/tea-the-han-5.jpg?v=20261008c',
+      'images/projects/tea-the-han-6.jpg?v=20261008c',
+      'images/projects/tea-the-han-7.jpg?v=20261008c',
+      'images/projects/tea-the-han-8.jpg?v=20261008c',
+      'images/projects/tea-the-han-9.jpg?v=20261008c',
+      'images/projects/tea-the-han-10.jpg?v=20261008c'
     ],
     name: 'Tea the Han',
     nameKo: '북촌 TEA THE HAN 공간브랜딩 및 공간경험&환경디자인',
