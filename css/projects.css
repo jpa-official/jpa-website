@@ -167,13 +167,24 @@
   background: #111;
 }
 
+/* 텍스트를 썸네일 이미지 위(하단)에 겹쳐 배치 */
+.pj-item { position: relative; }
 .pj-item-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 22px 40px 30px;
+  align-items: flex-end;
+  padding: 80px 20px 20px;
   gap: 20px;
+  color: var(--white);
+  background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0));
+  pointer-events: none;
 }
+.pj-item-info .pj-item-name { margin-bottom: 0; font-weight: 500; }
 .pj-item-name {
   font-family: 'Swiss 721', sans-serif;
   font-weight: 700;
@@ -317,7 +328,7 @@
   .pj-item-desc { font-size: 11px; }
   .pj-filter-wrap { padding: 0 20px; }
   .pj-filter-btn { padding: 16px 14px; font-size: 10px; letter-spacing: 0; }
-  .pj-item-info { padding: 8px 20px 12px; flex-direction: column; gap: 4px; }
+  .pj-item-info { padding: 40px 20px 20px; flex-direction: column; align-items: flex-start; gap: 4px; }
   .pj-row { padding: 0 20px; min-height: 68px; }
   .pj-row-cat, .pj-row-loc, .pj-row-year { display: none; }
   .pj-item-cat { display: none; }

@@ -44,7 +44,7 @@
 }
 .ps-title {
   font-family: 'Swiss 721', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: clamp(30px, 5vw, 88px);
   white-space: nowrap;
   line-height: 0.9;
