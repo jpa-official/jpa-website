@@ -5,20 +5,12 @@
 window.PROJECTS = [
   {
     id: 'gaudi-back-to-the-origins',
-    thumbnail: 'images/projects/gaudi-back-to-the-origins-13.jpg',
+    thumbnail: 'images/projects/gaudi-back-to-the-origins.jpg?v=20261008',
     images: [
-      'images/projects/gaudi-back-to-the-origins.jpg',
-      'images/projects/gaudi-back-to-the-origins-2.jpg',
-      'images/projects/gaudi-back-to-the-origins-3.jpg',
-      'images/projects/gaudi-back-to-the-origins-4.jpg',
-      'images/projects/gaudi-back-to-the-origins-5.jpg',
-      'images/projects/gaudi-back-to-the-origins-6.jpg',
-      'images/projects/gaudi-back-to-the-origins-7.jpg',
-      'images/projects/gaudi-back-to-the-origins-8.jpg',
-      'images/projects/gaudi-back-to-the-origins-9.jpg',
-      'images/projects/gaudi-back-to-the-origins-10.jpg',
-      'images/projects/gaudi-back-to-the-origins-11.jpg',
-      'images/projects/gaudi-back-to-the-origins-12.jpg'
+      'images/projects/gaudi-back-to-the-origins-2.jpg?v=20261008',
+      'images/projects/gaudi-back-to-the-origins-3.jpg?v=20261008',
+      'images/projects/gaudi-back-to-the-origins-4.jpg?v=20261008',
+      'images/projects/gaudi-back-to-the-origins-5.jpg?v=20261008'
     ],
     name: 'Gaudí: Back to the Origins',
     nameKo: '가우디 서거 100주년 기념 공식 월드 투어 서울 전시 기획·공간디자인·운영',
