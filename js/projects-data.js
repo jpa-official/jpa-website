@@ -5,12 +5,12 @@
 window.PROJECTS = [
   {
     id: 'gaudi-back-to-the-origins',
-    thumbnail: 'images/projects/gaudi-back-to-the-origins.jpg?v=20261008',
+    thumbnail: 'images/projects/gaudi-back-to-the-origins.jpg?v=20261008b',
     images: [
-      'images/projects/gaudi-back-to-the-origins-2.jpg?v=20261008',
-      'images/projects/gaudi-back-to-the-origins-3.jpg?v=20261008',
-      'images/projects/gaudi-back-to-the-origins-4.jpg?v=20261008',
-      'images/projects/gaudi-back-to-the-origins-5.jpg?v=20261008'
+      'images/projects/gaudi-back-to-the-origins-2.jpg?v=20261008b',
+      'images/projects/gaudi-back-to-the-origins-3.jpg?v=20261008b',
+      'images/projects/gaudi-back-to-the-origins-4.jpg?v=20261008b',
+      'images/projects/gaudi-back-to-the-origins-5.jpg?v=20261008b'
     ],
     name: 'Gaudí: Back to the Origins',
     nameKo: '가우디 서거 100주년 기념 공식 월드 투어 서울 전시 기획·공간디자인·운영',
@@ -129,14 +129,17 @@ window.PROJECTS = [
   },
   {
     id: 'tea-the-han',
-    thumbnail: 'images/projects/tea-the-han.jpg',
+    thumbnail: 'images/projects/tea-the-han.jpg?v=20261008',
     images: [
-      'images/projects/tea-the-han-2.jpg',
-      'images/projects/tea-the-han-3.jpg',
-      'images/projects/tea-the-han-4.jpg',
-      'images/projects/tea-the-han-5.jpg',
-      'images/projects/tea-the-han-6.jpg',
-      'images/projects/tea-the-han-7.jpg'
+      'images/projects/tea-the-han-2.jpg?v=20261008',
+      'images/projects/tea-the-han-3.jpg?v=20261008',
+      'images/projects/tea-the-han-4.jpg?v=20261008',
+      'images/projects/tea-the-han-5.jpg?v=20261008',
+      'images/projects/tea-the-han-6.jpg?v=20261008',
+      'images/projects/tea-the-han-7.jpg?v=20261008',
+      'images/projects/tea-the-han-8.jpg?v=20261008',
+      'images/projects/tea-the-han-9.jpg?v=20261008',
+      'images/projects/tea-the-han-10.jpg?v=20261008'
     ],
     name: 'Tea the Han',
     nameKo: '북촌 TEA THE HAN 공간브랜딩 및 공간경험&환경디자인',
