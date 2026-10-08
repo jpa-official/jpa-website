@@ -35,8 +35,18 @@ window.PROJECTS = [
   },
   {
     id: 'gwanghwa169',
-    thumbnail: 'images/projects/gwanghwa169.jpg',
-    images: ['images/projects/gwanghwa169-2.jpg', 'images/projects/gwanghwa169-3.jpg'],
+    thumbnail: 'images/projects/gwanghwa169.jpg?v=20261008',
+    images: [
+      'images/projects/gwanghwa169-diagram-1.png?v=20261008',
+      'images/projects/gwanghwa169-diagram-2.png?v=20261008',
+      'images/projects/gwanghwa169-diagram-3.png?v=20261008',
+      'images/projects/gwanghwa169-diagram-4.png?v=20261008',
+      'images/projects/gwanghwa169-2.jpg?v=20261008',
+      'images/projects/gwanghwa169-3.jpg?v=20261008',
+      'images/projects/gwanghwa169-4.jpg?v=20261008',
+      'images/projects/gwanghwa169-5.jpg?v=20261008',
+      'images/projects/gwanghwa169-6.jpg?v=20261008'
+    ],
     name: 'Gwanghwa169',
     nameKo: '광화문169 공간기획 및 컨셉디자인',
     desc: '광화문169 공간기획 및 컨셉디자인',
