@@ -1,206 +1,124 @@
 /* ============================================
-   PROJECT DETAIL — URL param renderer
+   PROJECT DETAIL — renderer (full-bleed hero + stacked gallery)
    ============================================ */
 
 (function () {
   const PROJECTS = window.PROJECTS || [];
-
-  const params = new URLSearchParams(window.location.search);
-  const id = params.get('id');
-
-  const $main = document.getElementById('pdMain');
-  const $notFound = document.getElementById('pdNotFound');
+  const id = new URLSearchParams(window.location.search).get('id');
   const project = PROJECTS.find(p => p.id === id);
+  if (!project) { window.location.href = 'projects.html'; return; }
 
-  if (!project) {
-    window.location.href = 'projects.html';
-    return;
-  }
-
-  // Document title
   document.title = `${project.name} — JUNGLIM PLANNING ADVISORY ©2026`;
 
-  // Hero
   setText('pdTitle', project.name.toUpperCase());
   setText('pdNameKo', project.nameKo || '');
-
-  // Meta row
   setText('pdMetaLocation', project.location || '—');
   setText('pdMetaYear', project.year || '—');
   setText('pdMetaCategory', (project.category || '—').toUpperCase());
+  setText('pdMetaScope', Array.isArray(project.scope) ? project.scope.join('  ·  ') : (project.scope || '—'));
 
-  const scopeVal = Array.isArray(project.scope)
-    ? project.scope.join('  ·  ')
-    : (project.scope || '—');
-  setText('pdMetaScope', scopeVal);
+  // Hero = thumbnail, gallery = the rest
+  const hero = document.getElementById('psHeroMedia');
+  if (hero && project.thumbnail) hero.appendChild(createMedia(project.thumbnail, project.name));
 
-  // Main image + slider
-  const $mainImg = document.getElementById('pdMainImg');
-  if ($mainImg) {
-    const allImages = [];
-    if (project.thumbnail) allImages.push(project.thumbnail);
-    if (Array.isArray(project.images)) allImages.push(...project.images);
+  buildSlider(document.getElementById('psGallery'), project.images || []);
 
-    if (allImages.length > 1) {
-      $mainImg.classList.add('pd-slider');
+  fill('pdBodyKo', project.body);
+  fill('pdBodyEn', project.bodyEn);
 
-      const track = document.createElement('div');
-      track.className = 'pd-slider-track';
-      allImages.forEach((src, i) => {
-        const slide = document.createElement('div');
-        slide.className = 'pd-slide' + (i === 0 ? ' active pd-slide-main' : '');
-        slide.appendChild(createMedia(src, project.name));
-        track.appendChild(slide);
-      });
-      $mainImg.appendChild(track);
-
-      const isMobile = window.matchMedia('(max-width: 900px)').matches;
-
-      const btnPrev = document.createElement('button');
-      btnPrev.className = 'pd-slider-btn pd-slider-prev';
-      btnPrev.setAttribute('aria-label', 'Previous image');
-      btnPrev.innerHTML = `<svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-      if (isMobile) btnPrev.style.display = 'none';
-
-      const btnNext = document.createElement('button');
-      btnNext.className = 'pd-slider-btn pd-slider-next';
-      btnNext.setAttribute('aria-label', 'Next image');
-      btnNext.innerHTML = `<svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-      if (isMobile) btnNext.style.display = 'none';
-
-      const counter = document.createElement('div');
-      counter.className = 'pd-slider-counter';
-      counter.textContent = `1 / ${allImages.length}`;
-
-      // 회전문(무한 루프): 양 끝에 복제 슬라이드를 두고, 복제본 도착 시 실제 슬라이드로 순간 이동
-      const total = allImages.length;
-      const slides = track.querySelectorAll('.pd-slide');
-      const headClone = slides[total - 1].cloneNode(true);
-      const tailClone = slides[0].cloneNode(true);
-      headClone.classList.remove('active');
-      tailClone.classList.remove('active');
-      track.insertBefore(headClone, slides[0]);
-      track.appendChild(tailClone);
-
-      let pos = 1;            // track 내 위치 (0 = 앞 복제, total + 1 = 뒤 복제)
-      let animating = false;
-
-      function setPos(p, animate) {
-        track.style.transition = animate ? '' : 'none';
-        track.style.transform = `translateX(-${p * 100}%)`;
-      }
-      setPos(pos, false);
-
-      function goTo(p) {
-        if (animating) return;
-        animating = true;
-        slides[(pos - 1 + total) % total].classList.remove('active');
-        pos = p;
-        const real = (pos - 1 + total) % total;
-        slides[real].classList.add('active');
-        counter.textContent = `${real + 1} / ${total}`;
-        setPos(pos, true);
-        clearTimeout(settleTimer);
-        settleTimer = setTimeout(settle, 400); // transitionend 누락 대비
-      }
-
-      let settleTimer;
-      function settle() {
-        clearTimeout(settleTimer);
-        if (!animating) return;
-        if (pos === 0) { pos = total; setPos(pos, false); }
-        else if (pos === total + 1) { pos = 1; setPos(pos, false); }
-        track.offsetHeight; // 순간 이동 반영 후 transition 복구
-        track.style.transition = '';
-        animating = false;
-      }
-      track.addEventListener('transitionend', e => { if (e.target === track) settle(); });
-
-      btnPrev.addEventListener('click', () => goTo(pos - 1));
-      btnNext.addEventListener('click', () => goTo(pos + 1));
-
-      let touchStartX = 0;
-      $mainImg.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-      $mainImg.addEventListener('touchend', e => {
-        const diff = touchStartX - e.changedTouches[0].clientX;
-        if (diff <= -40) {
-          goTo(pos - 1);
-        } else {
-          goTo(pos + 1);
-        }
-      }, { passive: true });
-
-      $mainImg.appendChild(btnPrev);
-      $mainImg.appendChild(btnNext);
-      $mainImg.appendChild(counter);
-
-    } else if (allImages.length === 1) {
-      $mainImg.appendChild(createMedia(allImages[0], project.name));
-    }
-  }
-
-  // Body — Korean
-  const $bodyKo = document.getElementById('pdBodyKo');
-  if ($bodyKo && Array.isArray(project.body)) {
-    project.body.forEach(text => {
-      const p = document.createElement('p');
-      p.textContent = text;
-      $bodyKo.appendChild(p);
-    });
-  }
-
-  // Body — English (optional field)
-  const $bodyEn = document.getElementById('pdBodyEn');
-  if ($bodyEn && Array.isArray(project.bodyEn) && project.bodyEn.length) {
-    project.bodyEn.forEach(text => {
-      const p = document.createElement('p');
-      p.textContent = text;
-      $bodyEn.appendChild(p);
-    });
-  }
-
-  // Prev / Next
   const idx = PROJECTS.findIndex(p => p.id === id);
   const prev = PROJECTS[(idx - 1 + PROJECTS.length) % PROJECTS.length];
   const next = PROJECTS[(idx + 1) % PROJECTS.length];
+  link('pdPrev', 'pdPrevName', prev);
+  link('pdNext', 'pdNextName', next);
 
-  const $prev = document.getElementById('pdPrev');
-  const $next = document.getElementById('pdNext');
-  if ($prev && prev) {
-    $prev.href = `project.html?id=${encodeURIComponent(prev.id)}`;
-    setText('pdPrevName', prev.name);
+  requestAnimationFrame(() => document.getElementById('pdHero').classList.add('in-view'));
+
+  // Sub images: same arrow slider as the live detail page (infinite loop)
+  function buildSlider(box, list) {
+    if (!box || !list.length) { if (box) box.remove(); return; }
+    if (list.length === 1) { box.appendChild(createMedia(list[0], project.name)); return; }
+    box.classList.add('pd-slider');
+    const track = document.createElement('div');
+    track.className = 'pd-slider-track';
+    list.forEach((src, i) => {
+      const s = document.createElement('div');
+      s.className = 'pd-slide' + (i === 0 ? ' active' : '');
+      s.appendChild(createMedia(src, project.name));
+      track.appendChild(s);
+    });
+    box.appendChild(track);
+
+    const total = list.length;
+    const slides = track.querySelectorAll('.pd-slide');
+    const head = slides[total - 1].cloneNode(true), tail = slides[0].cloneNode(true);
+    head.classList.remove('active'); tail.classList.remove('active');
+    track.insertBefore(head, slides[0]); track.appendChild(tail);
+
+    const arrow = d => `<svg viewBox="0 0 24 24" fill="none"><path d="${d}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+    const isMobile = window.matchMedia('(max-width: 900px)').matches;
+    const prevBtn = document.createElement('button');
+    prevBtn.className = 'pd-slider-btn pd-slider-prev'; prevBtn.setAttribute('aria-label', 'Previous image');
+    prevBtn.innerHTML = arrow('M19 12H5M5 12L11 6M5 12L11 18');
+    const nextBtn = document.createElement('button');
+    nextBtn.className = 'pd-slider-btn pd-slider-next'; nextBtn.setAttribute('aria-label', 'Next image');
+    nextBtn.innerHTML = arrow('M5 12H19M19 12L13 6M19 12L13 18');
+    if (isMobile) { prevBtn.style.display = 'none'; nextBtn.style.display = 'none'; }
+    const counter = document.createElement('div');
+    counter.className = 'pd-slider-counter';
+    counter.textContent = `1 / ${total}`;
+
+    let pos = 1, animating = false, timer;
+    const setPos = (p, anim) => { track.style.transition = anim ? '' : 'none'; track.style.transform = `translateX(-${p * 100}%)`; };
+    setPos(pos, false);
+    function goTo(p) {
+      if (animating) return;
+      animating = true;
+      slides[(pos - 1 + total) % total].classList.remove('active');
+      pos = p;
+      const real = (pos - 1 + total) % total;
+      slides[real].classList.add('active');
+      counter.textContent = `${real + 1} / ${total}`;
+      setPos(pos, true);
+      clearTimeout(timer); timer = setTimeout(settle, 400);
+    }
+    function settle() {
+      clearTimeout(timer);
+      if (!animating) return;
+      if (pos === 0) { pos = total; setPos(pos, false); }
+      else if (pos === total + 1) { pos = 1; setPos(pos, false); }
+      track.offsetHeight;
+      track.style.transition = '';
+      animating = false;
+    }
+    track.addEventListener('transitionend', e => { if (e.target === track) settle(); });
+    prevBtn.addEventListener('click', () => goTo(pos - 1));
+    nextBtn.addEventListener('click', () => goTo(pos + 1));
+    let x0 = 0;
+    box.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+    box.addEventListener('touchend', e => { goTo(x0 - e.changedTouches[0].clientX <= -40 ? pos - 1 : pos + 1); }, { passive: true });
+    box.append(prevBtn, nextBtn, counter);
   }
-  if ($next && next) {
-    $next.href = `project.html?id=${encodeURIComponent(next.id)}`;
-    setText('pdNextName', next.name);
+
+  function fill(elId, list) {
+    const el = document.getElementById(elId);
+    if (!el || !Array.isArray(list)) return;
+    list.forEach(t => { const p = document.createElement('p'); p.textContent = t; el.appendChild(p); });
   }
-
-  // Hero reveal
-  requestAnimationFrame(() => {
-    const hero = document.getElementById('pdHero');
-    if (hero) hero.classList.add('in-view');
-  });
-
-  function setText(id, value) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = value;
+  function link(aId, nameId, p) {
+    const a = document.getElementById(aId);
+    if (a && p) { a.href = `project.html?id=${encodeURIComponent(p.id)}`; setText(nameId, p.name); }
   }
-
+  function setText(elId, v) { const el = document.getElementById(elId); if (el) el.textContent = v; }
   function createMedia(src, alt) {
-    if (/\.mp4$/i.test(src)) {
-      const video = document.createElement('video');
-      video.src = src;
-      video.autoplay = true;
-      video.loop = true;
-      video.muted = true;
-      video.playsInline = true;
-      video.setAttribute('aria-label', alt);
-      return video;
+    if (/\.mp4/i.test(src)) {
+      const v = document.createElement('video');
+      Object.assign(v, { src, autoplay: true, loop: true, muted: true, playsInline: true });
+      v.setAttribute('aria-label', alt);
+      return v;
     }
     const img = document.createElement('img');
-    img.src = src;
-    img.alt = alt;
-    img.loading = 'eager';
+    img.src = src; img.alt = alt;
     return img;
   }
 })();

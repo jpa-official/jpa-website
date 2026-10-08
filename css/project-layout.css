@@ -1,0 +1,107 @@
+/* ============================================
+   PROJECT DETAIL — layout (full-bleed hero, OMA-style)
+   ============================================ */
+
+.ps-page main { padding-top: 0; }
+
+/* ---------- HERO ---------- */
+.ps-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 560px;
+  overflow: hidden;
+  background: var(--black);
+}
+.ps-hero-media,
+.ps-hero-media img,
+.ps-hero-media video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.ps-hero-media img,
+.ps-hero-media video {
+  object-fit: cover;
+  display: block;
+}
+/* bottom shade so the white title reads on bright photos */
+.ps-hero::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 45%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.45));
+  pointer-events: none;
+}
+.ps-hero-text {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 48px;
+  z-index: 2;
+  color: var(--white);
+}
+.ps-title {
+  font-family: 'Swiss 721', sans-serif;
+  font-weight: 700;
+  font-size: clamp(40px, 8vw, 140px);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.9s var(--transition), transform 0.9s var(--transition);
+}
+.ps-name-ko {
+  font-family: 'Pretendard Variable', Pretendard, sans-serif;
+  font-size: clamp(14px, 1.4vw, 18px);
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.9s 0.2s ease;
+}
+.ps-hero.in-view .ps-title { opacity: 1; transform: translateY(0); }
+.ps-hero.in-view .ps-name-ko { opacity: 1; }
+
+/* ---------- INFO (right under the hero) ---------- */
+.ps-info {
+  padding: 32px 40px 80px;
+}
+.ps-meta { padding: 0 0 48px; }
+
+/* ---------- SUB IMAGE SLIDER (same behaviour as the live page) ---------- */
+.ps-gallery { border-top: none; }
+/* arrows + counter: no background, black line only */
+.ps-gallery .pd-slider-btn,
+.ps-gallery .pd-slider-btn:hover {
+  background: transparent;
+  color: var(--black);
+}
+.ps-gallery .pd-slider-btn { transition: opacity 0.2s; }
+.ps-gallery .pd-slider-btn:hover { opacity: 0.5; }
+.ps-gallery .pd-slider-btn svg { width: 28px; height: 28px; }
+.ps-gallery .pd-slider-counter {
+  background: transparent;
+  color: var(--black);
+  padding: 5px 0;
+  font-size: 16px;
+  right: 24px;
+  bottom: 20px;
+}
+
+/* ---------- PREV / NEXT: text only (no lines, no arrows, no fill) ---------- */
+.ps-page .pd-nav-section { border: none; margin-top: 120px; padding-bottom: 40px; }
+.ps-page .pd-prev { border: none; }
+.ps-page .pd-nav-arrow { display: none; }
+.ps-page .pd-nav-link::before { display: none; }
+.ps-page .pd-nav-link { transition: opacity 0.3s ease; }
+.ps-page .pd-nav-link:hover { color: var(--black); gap: 24px; opacity: 0.5; }
+
+@media (max-width: 900px) {
+  .ps-hero { height: 100svh; min-height: 480px; }
+  .ps-hero-text { left: 20px; right: 20px; bottom: 32px; }
+  .ps-info { padding: 24px 20px 56px; }
+  .ps-meta { padding-bottom: 32px; }
+  .ps-page .pd-nav-section { margin-top: 64px; padding-bottom: 24px; }
+}

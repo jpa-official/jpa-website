@@ -32,49 +32,41 @@
   font-size: clamp(14px, 1.4vw, 18px);
   font-weight: 400;
   color: var(--black);
-  opacity: 0.65;
   letter-spacing: 0;
   opacity: 0;
   transition: opacity 0.9s 0.2s ease;
 }
 .pd-hero.in-view .pd-name-ko {
-  opacity: 0.65;
+  opacity: 1;
 }
 
 /* ---------- META ROW ---------- */
 .pd-meta {
-  border-top: 1px solid var(--black);
-  border-bottom: 1px solid var(--black);
-  padding: 0 40px;
+  padding: 0 40px 28px;
   margin-bottom: 0;
 }
 .pd-meta-row {
   display: flex;
-  gap: 0;
+  flex-direction: column;
 }
 .pd-meta-col {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 20px 40px 20px 0;
-  margin-right: 40px;
-  border-right: 1px solid rgba(0,0,0,0.15);
-}
-.pd-meta-col:last-child {
-  border-right: none;
-  margin-right: 0;
+  align-items: baseline;
+  gap: 8px;
+  padding: 2px 0;
+  line-height: 1.45;
 }
 .pd-meta-label {
   font-family: 'Swiss 721', sans-serif;
-  font-size: 10px;
-  font-weight: 600;
+  font-size: clamp(11px, 0.85vw, 13px);
+  font-weight: 700;
   letter-spacing: 0;
-  opacity: 0.45;
+  color: var(--black);
 }
 .pd-meta-val {
   font-family: 'Swiss 721', sans-serif;
-  font-size: clamp(13px, 1.2vw, 16px);
-  font-weight: 600;
+  font-size: clamp(11px, 0.85vw, 13px);
+  font-weight: 400;
   letter-spacing: -0.01em;
   color: var(--black);
 }
@@ -113,6 +105,12 @@
   width: 100%;
   height: auto;
   display: block;
+}
+/* 첫 장: 가로 꽉 채움 + 높이 900px, 여백 없이 크롭 */
+.pd-slide-main img,
+.pd-slide-main video {
+  height: 900px;
+  object-fit: cover;
 }
 
 /* sub slides */
@@ -323,9 +321,10 @@
   .project-detail-page main { padding-top: 65px; }
   .pd-hero { padding: 13px 20px 24px; }
   .pd-meta { padding: 0 20px; }
-  .pd-meta-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; }
-  .pd-meta-col { border-right: none; margin-right: 0; padding: 16px 0; }
-  .pd-meta-col:last-child { grid-column: 1 / -1; border-top: 1px solid rgba(0,0,0,0.1); }
+  .pd-meta { padding-bottom: 22px; }
+  .pd-meta-col { gap: 7px; padding: 2px 0; }
+  .pd-meta-label { flex-shrink: 0; }
+  .pd-meta-val { min-width: 0; line-height: 1.4; }
   .pd-meta-label { letter-spacing: 0; }
   .pd-main-img { padding: 0; }
   .pd-main-img img,
