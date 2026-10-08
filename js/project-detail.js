@@ -32,6 +32,17 @@
   link('pdPrev', 'pdPrevName', prev);
   link('pdNext', 'pdNextName', next);
 
+  // Keep the hero title on one line: shrink it only when a long name would overflow
+  const title = document.getElementById('pdTitle');
+  function fitTitle() {
+    title.style.fontSize = '';
+    const box = title.parentElement.clientWidth;
+    const w = title.scrollWidth;
+    if (w > box) title.style.fontSize = (parseFloat(getComputedStyle(title).fontSize) * box / w * 0.98) + 'px';
+  }
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(fitTitle);
+  window.addEventListener('resize', fitTitle);
+
   requestAnimationFrame(() => document.getElementById('pdHero').classList.add('in-view'));
 
   // Sub images: same arrow slider as the live detail page (infinite loop)
