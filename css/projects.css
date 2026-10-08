@@ -184,6 +184,7 @@
   text-transform: uppercase;
 }
 .pj-item-desc {
+  display: none; /* 썸네일 카드에서 한글 제목 숨김 */
   font-size: 13px;
   opacity: 0.6;
   letter-spacing: 0;
