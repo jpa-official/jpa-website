@@ -1,0 +1,85 @@
+/* ============================================
+   SERVICES — refined (same tone as the project pages)
+   fewer rules, no grey boxes or black fills, Medium headings, black text
+   ============================================ */
+
+/* ---------- HERO ---------- */
+.sv-hero { border-bottom: none; padding-bottom: 72px; }
+.sv-hero-title { font-weight: 500; }
+.sv-hero-sub { opacity: 1; }
+
+/* ---------- ACCORDION ---------- */
+.sv-list { border-bottom: 1px solid rgba(0,0,0,0.12); }
+.sv-item { border-top: 1px solid rgba(0,0,0,0.12); }
+.sv-header { padding: 28px 40px; gap: 24px; transition: opacity 0.3s ease; }
+.sv-header::before { display: none; }              /* no black fill on hover/open */
+.sv-item.open .sv-header,
+.sv-header:hover { color: var(--black); }
+.sv-header:hover { opacity: 0.5; }
+.sv-item.open .sv-header:hover { opacity: 1; }
+.sv-num { font-size: 12px; font-weight: 500; opacity: 1; width: 24px; }
+.sv-item.open .sv-num,
+.sv-header:hover .sv-num { opacity: 1; }
+.sv-title-wrap { gap: 12px; }
+.sv-title-en { font-weight: 500; font-size: clamp(16px, 1.8vw, 24px); }
+.sv-title-ko { opacity: 1; font-size: clamp(12px, 1vw, 14px); }
+.sv-icon svg { width: 20px; height: 20px; }
+
+/* body: aligned under the title, small bold column heads, plain list */
+.sv-cols { padding: 4px 40px 44px 88px; }
+.sv-col-title {
+  font-family: 'Swiss 721', 'Pretendard Variable', Pretendard, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+}
+.sv-col-title::after { display: none; }
+.sv-list-items { gap: 4px; }
+.sv-list-items li { padding-left: 0; font-size: clamp(12px, 1vw, 14px); line-height: 1.55; }
+.sv-list-items li::before { display: none; }
+.sv-list-items li:hover { transform: none; }
+
+/* ---------- MEMBERS ---------- */
+.sv-members { border-bottom: none; padding: 120px 40px 40px; }
+.sv-section-label { font-size: 12px; font-weight: 700; opacity: 1; margin-bottom: 16px; }
+.sv-members-title,
+.sv-partners-title { font-weight: 500; }
+.sv-members-desc { opacity: 1; margin-bottom: 48px; }
+.sv-members-grid { border-top: none; row-gap: 24px; }
+.sv-member { border: none; padding: 0 32px 0 0; gap: 2px; }
+.sv-member-en { font-weight: 500; }
+.sv-member-ko { opacity: 1; }
+
+/* ---------- PARTNERS ---------- */
+.sv-partners { padding: 120px 40px 120px; }
+.sv-partners-header { margin-bottom: 40px; }
+.sv-partners-grid { background: none; gap: 40px; }
+.sv-partner-card { padding: 0; gap: 12px; }
+.sv-partner-name { font-weight: 500; font-size: clamp(18px, 1.8vw, 24px); }
+.sv-partner-tags { gap: 0; }
+.sv-partner-tags span {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-family: 'Swiss 721', 'Pretendard Variable', Pretendard, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+.sv-partner-tags span:not(:last-child)::after { content: '\00a0·\00a0'; }
+.sv-partner-desc { opacity: 1; border-top: none; padding-top: 0; margin-top: 4px; font-size: clamp(12px, 1vw, 14px); }
+
+@media (max-width: 900px) {
+  .sv-hero { padding-bottom: 48px; }
+  .sv-header { padding: 22px 20px; gap: 16px; }
+  .sv-title-en { font-size: 17px; }
+  .sv-cols { padding: 0 20px 32px 60px; row-gap: 20px; }
+  .sv-members { padding: 72px 20px 24px; }
+  .sv-members-grid { row-gap: 18px; }
+  .sv-member { padding-right: 16px; }
+  .sv-member:nth-child(3n),
+  .sv-member:nth-child(2n) { border: none; }
+  .sv-partners { padding: 72px 20px 72px; }
+  .sv-partners-grid { gap: 32px; }
+}
