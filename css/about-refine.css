@@ -256,8 +256,7 @@
   .cta-link .arrow-icon { animation: none; }
 }
 
-/* one shared size: Define-the-space title = 02 intro = 03 CIC text (body size) */
-.intro-title,
+/* one shared size: 02 intro = 03 CIC text (body size) */
 .process-intro p,
 .cic-body {
   font-family: 'Swiss 721', 'Pretendard Variable', Pretendard, sans-serif;
@@ -266,12 +265,21 @@
   line-height: 1.7;
   letter-spacing: -0.01em;
 }
-.intro-title { margin-bottom: 28px; }
 .cic-body p { font-size: inherit; }
 .cic-body { gap: 0.8em; max-width: 900px; }
 .process-intro { max-width: 900px; }
+
+/* 01 VALUE key phrase: Define the space. */
+.intro-title {
+  font-family: 'Swiss 721', 'Pretendard Variable', Pretendard, sans-serif;
+  font-size: clamp(40px, 5.2vw, 84px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  margin-bottom: 56px;
+}
 @media (max-width: 768px) {
-  .intro-title,
   .process-intro p,
   .cic-body { font-size: 14px; line-height: 1.65; }
+  .intro-title { font-size: 34px; line-height: 1.12; margin-bottom: 32px; }
 }
