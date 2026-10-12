@@ -13,6 +13,11 @@
 }
 .about-hero-inner { max-width: none; margin: 0; }
 .about-hero-title { font-weight: 500; font-size: clamp(40px, 8vw, 140px); }
+@media (min-width: 769px) {
+  .about-hero-title { font-size: clamp(40px, 5.5vw, 96px); }
+  .about-hero-subtitle { margin-top: 20px; }
+  .about-hero-desc { margin-top: 12px; font-size: 13px; font-weight: 400; }
+}
 .about-hero-subtitle { margin-top: 36px; }
 
 /* ---------- 2-COLUMN EDITORIAL SECTIONS ---------- */
