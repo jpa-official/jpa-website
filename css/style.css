@@ -155,8 +155,8 @@ button { font-family: inherit; }
 .loader-statement .w { display: inline-block; transition-delay: calc(.35s + var(--i) * 45ms); }
 .loader-mark {
   position: absolute; left: 50%; bottom: 24px;
-  width: 60px; height: auto;
-  margin-left: -30px;
+  width: 40px; height: auto;
+  margin-left: -20px;
   filter: invert(1) blur(8px);
   transition-delay: .35s;
 }
@@ -175,7 +175,7 @@ button { font-family: inherit; }
 }
 @media (max-width: 768px) {
   .loader-statement { font-size: 22px; line-height: 1.25; margin: 0 24px; }
-  .loader-mark { bottom: 18px; width: 46px; margin-left: -23px; }
+  .loader-mark { bottom: 18px; width: 32px; margin-left: -16px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .loader-statement .w, .loader.in .w, .loader.out .w { filter: none; }
