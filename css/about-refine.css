@@ -20,6 +20,33 @@
 }
 .about-hero-subtitle { margin-top: 36px; }
 
+/* hero motion — editorial & minimal: no sliding. The title fades in with wide tracking
+   that slowly tightens into place; the copy below simply fades in afterwards */
+.about-hero-title .line { overflow: visible; }
+.about-hero-title .word {
+  transform: none;
+  letter-spacing: .12em;
+  animation: heroTrackIn 2.2s cubic-bezier(.16, 1, .3, 1) forwards;
+}
+.about-hero-title .line:nth-child(1) .word { animation-delay: .3s; }
+.about-hero-title .line:nth-child(2) .word { animation-delay: .45s; }
+.about-hero-subtitle,
+.about-hero-desc {
+  transform: none;
+  animation: heroFade 1.4s ease forwards;
+}
+.about-hero-subtitle { animation-delay: 1.3s; }
+.about-hero-desc { animation-delay: 1.5s; }
+@keyframes heroTrackIn {
+  0%   { opacity: 0; letter-spacing: .12em; }
+  60%  { opacity: 1; }
+  100% { opacity: 1; letter-spacing: -0.04em; }
+}
+@keyframes heroFade { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .about-hero-title .word { letter-spacing: -0.04em; animation: heroFade 1s ease .2s forwards; }
+}
+
 /* ---------- 2-COLUMN EDITORIAL SECTIONS ---------- */
 .about-intro,
 .philosophy,
