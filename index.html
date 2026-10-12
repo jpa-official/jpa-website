@@ -15,14 +15,19 @@
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
 <!-- CONTACT 메뉴로 들어오면 인트로 로딩 화면 생략 -->
 <script>if (location.hash === '#contact') document.documentElement.classList.add('skip-intro');</script>
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/style.css?v=20261012" />
 <link rel="stylesheet" href="css/projects.css?v=20261008f" />
 </head>
 <body>
 
 <!-- LOADER / INTRO -->
-<div class="loader" id="loader">
-  <video id="loaderVideo" class="loader-video" src="videos/jpa-intro.mp4" autoplay muted playsinline preload="auto"></video>
+<div class="loader loader-intro" id="loader" role="button" tabindex="0" aria-label="Enter site">
+  <h1 class="loader-statement" id="loaderStatement" lang="en">
+    <span class="line">We define space<br class="m"> beyond its physical form,</span>
+    <span class="line">transforming possibilities<br class="m"> into meaningful places</span>
+    <span class="line">through strategy, design,<br class="m"> and realization.</span>
+  </h1>
+  <img class="loader-mark" src="images/jpa-logo.png" alt="jpa." />
 </div>
 
 
@@ -125,7 +130,7 @@
 </main>
 
 <script src="js/projects-data.js?v=20261008f"></script>
-<script src="js/main.js?v=4"></script>
+<script src="js/main.js?v=5"></script>
 <script>
   /* Contact form — Formspree AJAX submit */
   const form = document.getElementById('contactForm');

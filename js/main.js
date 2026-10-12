@@ -6,12 +6,11 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- LOADER ---------- */
-  const loader     = document.getElementById('loader');
-  const introVideo = document.getElementById('loaderVideo');
+  const loader          = document.getElementById('loader');
+  const introStatement  = document.getElementById('loaderStatement');
 
   if (loader && document.documentElement.classList.contains('skip-intro')) {
     /* index.html#contact (CONTACT 메뉴) — 인트로 없이 바로 CONTACT 섹션으로 */
-    if (introVideo) introVideo.pause();
     loader.classList.add('hidden');
     document.body.classList.add('loaded');
     triggerHero();
@@ -19,14 +18,30 @@ document.addEventListener('DOMContentLoaded', () => {
       const contact = document.getElementById('contact');
       if (contact) contact.scrollIntoView();
     });
-  } else if (loader && introVideo) {
-    /* 인트로 영상 자동 재생 페이지 (index.html) — 영상이 끝나면 메인 페이지 진입 */
-    introVideo.play().catch(() => {});
-    introVideo.addEventListener('ended', () => {
-      loader.classList.add('hidden');
+  } else if (loader && introStatement) {
+    /* 문장 인트로 (index.html) — 단어별로 나타나고, 클릭하면 사라지며 메인 페이지 진입 */
+    let n = 0;
+    introStatement.querySelectorAll('.line').forEach(line => {
+      line.innerHTML = line.innerHTML.split(/<br class="m">/).map(part =>
+        part.trim().split(/\s+/).map(w => `<span class="w" style="--i:${n++}">${w}</span>`).join(' ')
+      ).join('<br class="m"> ') + ' ';
+    });
+    document.documentElement.classList.add('intro-open');
+    const show = () => requestAnimationFrame(() => loader.classList.add('in'));
+    document.fonts ? document.fonts.ready.then(show) : show();
+
+    const leave = () => {
+      if (loader.classList.contains('out')) return;
+      loader.classList.add('out');
+      document.documentElement.classList.remove('intro-open');
       document.body.classList.add('loaded');
-      triggerHero();
-    }, { once: true });
+      setTimeout(triggerHero, 500);
+      setTimeout(() => loader.classList.add('hidden'), 1500);
+    };
+    loader.addEventListener('click', leave);
+    document.addEventListener('keydown', e => {
+      if (!loader.classList.contains('out') && ['Enter', ' ', 'Escape'].includes(e.key)) { e.preventDefault(); leave(); }
+    });
   } else if (loader) {
     /* 다른 페이지 — 로더 즉시 숨김 */
     loader.classList.add('hidden');
