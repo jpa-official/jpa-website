@@ -291,7 +291,15 @@ window.PROJECTS = [
   {
     id: 'innocean-hq',
     thumbnail: 'images/projects/innocean-hq.jpg',
-    images: ['images/projects/innocean-2.jpg', 'images/projects/innocean-3.jpg', 'images/projects/innocean-diagram-2.jpeg'],
+    images: [
+      'images/projects/innocean-2.jpg',
+      'images/projects/innocean-3.jpg',
+      'images/projects/innocean-diagram-2.jpeg',
+      'images/projects/innocean-diagram-01.png?v=20261013',
+      'images/projects/innocean-diagram-02.png?v=20261013',
+      'images/projects/innocean-diagram-03.png?v=20261013',
+      'images/projects/innocean-diagram-04.png?v=20261013'
+    ],
     name: 'Innocean Headquarter',
     nameKo: '이노션 사옥 공간기획 컨설팅, 공간경험설계',
     desc: '이노션 사옥 공간기획 컨설팅, 공간경험설계',
