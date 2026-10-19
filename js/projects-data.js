@@ -4,6 +4,36 @@
 
 window.PROJECTS = [
   {
+    id: 'dongyeong-tour-hq',
+    thumbnail: 'images/projects/dongyeong.jpg?v=20261019',
+    images: [
+      'images/projects/dongyeong-2.jpg?v=20261019',
+      'images/projects/dongyeong-3.jpg?v=20261019',
+      'images/projects/dongyeong-4.jpg?v=20261019',
+      'images/projects/dongyeong-5.jpg?v=20261019'
+    ],
+    name: 'Dongyeong Tour HQ',
+    nameKo: '동영관광사옥 토털공간디자인',
+    desc: '동영관광사옥 토털공간디자인',
+    category: 'Office',
+    location: 'SEOUL',
+    year: '2026',
+    client: '동영관광',
+    scopeCode: 'DS · SP · SD · DB',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design-Build'],
+    summary: '동영관광사옥 공간기획 및 공간구현 프로젝트는 단기적으로는 기존 사옥의 라운지 공간을 디자인하고, 장기적으로는 전체 사옥의 공간 활용을 재구성하면서 기업의 정체성과 미래 성장 가능성을 공간으로 구체화하는 것을 목표로 하였다.',
+    body: [
+      '동영관광사옥 공간기획 및 공간구현 프로젝트는 단기적으로는 기존 사옥의 라운지 공간을 디자인하고, 장기적으로는 전체 사옥의 공간 활용을 재구성하면서 기업의 정체성과 미래 성장 가능성을 공간으로 구체화하는 것을 목표로 하였다.',
+      '일부 공간을 임대하고 나머지를 업무공간으로 사용하던 기존 사옥을 단순한 실내 개선을 넘어서, 업무환경과 자산 가치를 함께 높이는 통합적 공간기획의 대상으로 바라보았다. 법규 및 건축 규모 검토를 통해 수직증축의 최대 가능 규모를 검토하고, 향후 임대 수요에 유연하게 대응할 수 있도록 저층부의 공간 활용 전략을 제안하였다. 업무층은 임직원의 실제 이용 행태와 업무 특성을 바탕으로 집중·협업·교류를 지원하는 수요자 맞춤형 업무환경으로 재구성했으며, 동영관광의 브랜드 정체성을 드러내는 파사드 디자인을 함께 제안하였다. 또한 단기적으로는 구성원을 위한 업무공간 및 휴게라운지를 디자인하고 구현하여, 현재의 공간 수요에 대응하였다.',
+      '사옥의 공간 컨셉은 ‘Breathing Office’이다. 사옥 곳곳에 배치된 다양한 ‘여백’은 단순히 빈 공간이 아니라, 업무 중 휴식과 교류, 새로운 발상을 가능하게 하는 업무를 위한 여백이다. 업무공간의 효율성과 구성원의 만족과 기업의 지속가능한 성장을 함께 담아내는 새로운 사옥의 방향을 제시하였다.'
+    ],
+    bodyEn: [
+      'The Dongyeong Tour HQ space planning and implementation project set out to design the lounge of the existing headquarters in the short term, and in the long term to reorganize the use of the entire building, giving spatial form to the company\'s identity and its potential for future growth.',
+      'Rather than treating the existing headquarters — partly leased out and partly used as offices — as a simple interior upgrade, jpa. approached it as the subject of integrated space planning that raises both the quality of the work environment and the value of the asset. Through a review of regulations and building scale, the maximum feasible vertical extension was examined, and a strategy for the lower floors was proposed to respond flexibly to future leasing demand. The office floors were reorganized into a user-tailored work environment supporting focus, collaboration, and exchange, based on how employees actually work, and a facade design expressing Dongyeong Tour\'s brand identity was proposed as well. In the short term, workspaces and a lounge for employees were designed and built to meet current spatial needs.',
+      'The spatial concept of the headquarters is the \'Breathing Office.\' The various \'margins\' placed throughout the building are not merely empty spaces, but margins for work — places that make rest, exchange, and new ideas possible during the workday. The project proposes a new direction for the headquarters, one that brings together workplace efficiency, employee satisfaction, and the sustainable growth of the company.'
+    ]
+  },
+  {
     id: 'gaudi-back-to-the-origins',
     thumbnail: 'images/projects/gaudi-back-to-the-origins.jpg?v=20261008b',
     images: [
