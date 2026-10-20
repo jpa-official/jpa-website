@@ -32,7 +32,7 @@
   html, body { height: 100%; overflow: hidden; }
   .page { position: relative; height: 100%; overflow: hidden; }
   /* 단계 요소: 대본 순서대로 Enter를 누를 때마다 나타난다 */
-  .js [data-step] { opacity: 0; transition: opacity .8s ease, transform .9s cubic-bezier(.2, .7, .2, 1); }
+  .js [data-step] { opacity: 0; transition: opacity .53s ease, transform .6s cubic-bezier(.2, .7, .2, 1); }   /* 원본 대비 1.5배 빠르게 */
   .js .slide > [data-step]:not(svg.art) { transform: translateY(32px); }
   .js .slide > img.full[data-step], .js .slide > img.abs[data-step] { transform: scale(1.04); }
   .js [data-step].shown { opacity: 1; transform: none; }
@@ -169,7 +169,7 @@
       if (s.closest('mask, clipPath') || !s.getTotalLength) return;
       s.setAttribute('pathLength', '1');
       s.animate([{ strokeDasharray: '1 1', strokeDashoffset: 1 }, { strokeDasharray: '1 1', strokeDashoffset: 0 }],
-                { duration: 1400, delay, easing: 'cubic-bezier(.5, 0, .2, 1)', fill: 'backwards' });
+                { duration: 930, delay, easing: 'cubic-bezier(.5, 0, .2, 1)', fill: 'backwards' });
     }));
   }
 
@@ -192,7 +192,7 @@
   }
 
   // 슬라이더가 이 장을 보여줄 때: 발표 순서(data-step)대로 한 단계씩, 앞 단계가 끝나면 다음 단계
-  // 선을 그리는 단계는 그려지는 시간(1.4초)만큼, 글·사진만 있는 단계는 나타나는 시간만큼 기다린다
+  // 선을 그리는 단계는 그려지는 시간(약 0.9초)만큼, 글·사진만 있는 단계는 나타나는 시간만큼 기다린다 (원본의 1.5배 속도)
   const steps = [...new Set([...p.querySelectorAll('[data-step]')].map(e => +e.dataset.step))].sort((a, b) => a - b);
   const hasDraw = n => [...p.querySelectorAll(`[data-step="${n}"]`)].some(e => e.matches('.draw') || e.querySelector('.draw'));
   let timers = [];
@@ -201,16 +201,17 @@
     play() {
       stop();
       show(p, -1, { animate: false });
-      let t = 120;
+      let t = 80;
       steps.forEach(n => {
         timers.push(setTimeout(() => show(p, n), t));
-        t += DRAW_LINES && hasDraw(n) ? 1500 : 900;
+        t += DRAW_LINES && hasDraw(n) ? 1000 : 600;
       });
     },
     rest() { stop(); show(p, Infinity, { animate: false }); }
   };
   const host = window.frameElement;
-  (!host || host.closest('.active')) ? diagram.play() : diagram.rest();
+  // 슬라이더가 화면에 들어와 있고(.in-view) 이 장이 보이는 중일 때만 바로 재생
+  (!host || (host.closest('.active') && host.closest('.in-view'))) ? diagram.play() : diagram.rest();
 </script>
 </body>
 </html>

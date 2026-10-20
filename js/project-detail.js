@@ -110,13 +110,21 @@
     box.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
     box.addEventListener('touchend', e => { goTo(x0 - e.changedTouches[0].clientX <= -40 ? pos - 1 : pos + 1); }, { passive: true });
     box.append(prevBtn, nextBtn, counter);
+
+    // 첫 장이 모션 다이어그램이면 슬라이더가 화면에 들어올 때 재생
+    new IntersectionObserver(es => es.forEach(e => {
+      const was = box.classList.contains('in-view');
+      box.classList.toggle('in-view', e.isIntersecting);
+      if (e.isIntersecting && !was) motion(slides[(pos - 1 + total) % total]);
+    }), { threshold: 0.4 }).observe(box);
   }
 
   // 모션 다이어그램(iframe): 보이는 장은 처음부터 재생, 나머지는 완성된 모습으로
   function motion(active) {
+    const onScreen = active.closest('.in-view');
     document.querySelectorAll('.pd-embed').forEach(f => {
       const d = f.contentWindow && f.contentWindow.diagram;
-      if (d) f.closest('.pd-slide') === active ? d.play() : d.rest();
+      if (d) f.closest('.pd-slide') === active && onScreen ? d.play() : d.rest();
     });
   }
 
