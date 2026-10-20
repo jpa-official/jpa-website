@@ -96,18 +96,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---------- HOME SLIDES (프로젝트 대표·서브 이미지를 섞어 0.5초 간격) ---------- */
+  /* ---------- HOME SLIDES ----------
+     PC: 프로젝트 대표·서브 이미지를 섞어 0.5초 간격
+     모바일: 대표 이미지만 순서대로 1초 간격 */
   (function homeSlides() {
     const track = document.getElementById('homeSlides');
     if (!track || !window.PROJECTS) return;
+    const isPC = window.matchMedia('(min-width: 769px)').matches;
 
-    // 사진만 사용 (다이어그램·PNG·영상 제외), 순서는 매번 무작위
-    const srcs = window.PROJECTS
-      .flatMap(p => [p.thumbnail, ...(p.images || [])].map(src => ({ src, name: p.name })))
-      .filter(({ src }) => src && /\.(jpe?g|webp)(\?|$)/i.test(src) && !/diagram/i.test(src));
-    for (let i = srcs.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [srcs[i], srcs[j]] = [srcs[j], srcs[i]];
+    let srcs;
+    if (isPC) {
+      // 사진만 사용 (다이어그램·PNG·영상 제외), 순서는 매번 무작위
+      srcs = window.PROJECTS
+        .flatMap(p => [p.thumbnail, ...(p.images || [])].map(src => ({ src, name: p.name })))
+        .filter(({ src }) => src && /\.(jpe?g|webp)(\?|$)/i.test(src) && !/diagram/i.test(src));
+      for (let i = srcs.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [srcs[i], srcs[j]] = [srcs[j], srcs[i]];
+      }
+    } else {
+      srcs = window.PROJECTS.filter(p => p.thumbnail).map(p => ({ src: p.thumbnail, name: p.name }));
     }
 
     const imgs = srcs.map(({ src, name }, i) => {
@@ -132,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
       imgs[cur].classList.remove('active');
       imgs[next].classList.add('active');
       cur = next;
-    }, 500);
+    }, isPC ? 500 : 1000);
 
     // 슬라이드 위에서는 헤더 로고 숨김 (가운데 로고와 중복 방지)
     const section = track.closest('.home-slides');
