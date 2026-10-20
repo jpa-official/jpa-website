@@ -58,6 +58,34 @@ document.addEventListener('DOMContentLoaded', () => {
     lastY = y;
   });
 
+  /* ---------- HEADER COLOR (헤더 뒤 배경 밝기에 따라 글자색 전환) ---------- */
+  (function headerTone() {
+    if (!header) return;
+    const isDark = el => {
+      if (/^(IMG|VIDEO|CANVAS)$/.test(el.tagName)) return true;
+      const m = getComputedStyle(el).backgroundColor.match(/[\d.]+/g);
+      if (!m || (m[3] !== undefined && +m[3] === 0)) return null;     // 투명 → 아래 요소 확인
+      return (m[0] * 299 + m[1] * 587 + m[2] * 114) / 1000 < 128;
+    };
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      const y = header.getBoundingClientRect().top + header.offsetHeight / 2;
+      let dark = false;
+      for (const el of document.elementsFromPoint(60, Math.max(y, 1))) {
+        if (header.contains(el)) continue;
+        const d = isDark(el);
+        if (d !== null) { dark = d; break; }
+      }
+      header.classList.toggle('on-dark', dark);
+    };
+    const schedule = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    setInterval(schedule, 500);   // 로더 종료·아코디언 등 스크롤 없는 변화 대응
+    update();
+  })();
+
   /* ---------- HERO REVEAL ---------- */
   function triggerHero() {
     document.querySelector('.hero').classList.add('in-view');

@@ -195,7 +195,6 @@ button { font-family: inherit; }
   top: 0; left: 0; right: 0;
   padding: 14px 20px 14px 40px;   /* 상단·우측 여백 축소 */
   z-index: 100;
-  mix-blend-mode: difference;
   transition: transform 0.5s var(--transition);
 }
 .site-header.hidden {
@@ -205,7 +204,7 @@ button { font-family: inherit; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--white);
+  color: var(--black);
 }
 .logo {
   width: 42px;
@@ -219,8 +218,7 @@ button { font-family: inherit; }
   height: auto;
   display: block;
   margin-left: 0;
-  /* 원본 검정 로고를 헤더(블랙 배경/믹스블렌드)에서 흰색으로 반전 */
-  filter: invert(1);
+  transition: filter 0.3s ease;
 }
 .main-nav {
   display: flex;
@@ -233,7 +231,7 @@ button { font-family: inherit; }
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0;
-  color: var(--white);
+  color: var(--black);
   position: relative;
   padding: 4px 0;
   display: inline-block;
@@ -247,7 +245,7 @@ button { font-family: inherit; }
   bottom: 0;
   width: 0;
   height: 1px;
-  background: var(--white);
+  background: currentColor;
   transition: width 0.4s var(--transition);
 }
 /* hover: 라인 없이 포인트 컬러 */
@@ -263,10 +261,17 @@ button { font-family: inherit; }
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0;
-  color: var(--white);
+  color: var(--black);
   transition: color 0.3s var(--transition);
 }
-.search-btn:hover { color: var(--accent); }
+
+/* 헤더 글자색: 밝은 배경 위 검정, 어두운 배경 위 흰색 (js가 .on-dark 토글)
+   hover는 배경과 상관없이 항상 포인트 컬러(오렌지) */
+.site-header.on-dark .main-nav a,
+.site-header.on-dark .search-btn { color: var(--white); }
+.site-header.on-dark .logo-img { filter: invert(1); }
+.site-header .main-nav a:hover,
+.site-header .search-btn:hover { color: var(--accent); }
 
 /* PC: 로고 없이 메뉴는 좌측, SEARCH는 우측 상단 */
 @media (min-width: 769px) {
