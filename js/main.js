@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
       loader.classList.add('out');
       document.documentElement.classList.remove('intro-open');
       document.body.classList.add('loaded');
-      setTimeout(triggerHero, 500);
       setTimeout(() => loader.classList.add('hidden'), 1500);
     };
     loader.addEventListener('click', leave);
@@ -65,9 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- PARALLAX FOR HERO TITLE ---------- */
   const heroTitle = document.querySelector('.hero-title');
+  const heroEl    = document.querySelector('.hero');
   window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    if (heroTitle && y < window.innerHeight) {
+    if (!heroTitle || !heroEl) return;
+    const y = window.scrollY - heroEl.offsetTop;   // 메인에서는 슬라이드 아래에 위치
+    if (y > 0 && y < window.innerHeight) {
       heroTitle.style.transform = `translateY(${y * 0.15}px)`;
       heroTitle.style.opacity = Math.max(0, 1 - y / 600);
     }
@@ -95,38 +96,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---------- HOME PROJECT GRID ---------- */
-  (function renderHomeProjects() {
-    const grid = document.getElementById('homeProjectGrid');
-    if (!grid || !window.PROJECTS) return;
+  /* ---------- HOME SLIDES (프로젝트 대표 이미지, 1초 간격) ---------- */
+  (function homeSlides() {
+    const track = document.getElementById('homeSlides');
+    if (!track || !window.PROJECTS) return;
 
-    const moreLink = grid.querySelector('.more-projects');
-    const frag = document.createDocumentFragment();
-
-    // PROJECTS 페이지 카드(js/projects.js buildCard)와 동일한 마크업·스타일(css/projects.css)
-    window.PROJECTS.slice(0, 12).forEach(p => {
-      const a = document.createElement('a');
-      a.className = 'pj-item';
-      a.href = `project.html?id=${encodeURIComponent(p.id)}`;
-
-      const imgHtml = p.thumbnail
-        ? `<img src="${p.thumbnail}" alt="${p.name}" loading="lazy">`
-        : `<div class="pj-item-img-placeholder"></div>`;
-
-      a.innerHTML = `
-        <div class="pj-item-img">${imgHtml}</div>
-        <div class="pj-item-info">
-          <div class="pj-item-left">
-            <h2 class="pj-item-name">${p.name}</h2>
-            <p class="pj-item-desc">${p.desc}</p>
-          </div>
-          <span class="pj-item-cat">${p.category.toUpperCase()}</span>
-        </div>`;
-
-      frag.appendChild(a);
+    const imgs = window.PROJECTS.filter(p => p.thumbnail).map((p, i) => {
+      const img = document.createElement('img');
+      img.alt = p.name;
+      img.dataset.src = p.thumbnail;
+      if (i === 0) img.className = 'active';
+      track.appendChild(img);
+      return img;
     });
+    if (!imgs.length) return;
 
-    grid.insertBefore(frag, moreLink);
+    // 다음 몇 장만 미리 불러와 한꺼번에 받지 않도록
+    const load = i => { const img = imgs[i % imgs.length]; if (!img.src) img.src = img.dataset.src; };
+    let cur = 0;
+    [0, 1, 2].forEach(load);
+
+    setInterval(() => {
+      const next = (cur + 1) % imgs.length;
+      load(next + 2);
+      if (!imgs[next].complete || !imgs[next].naturalWidth) { load(next); return; }  // 아직 로딩 중이면 현재 장 유지
+      imgs[cur].classList.remove('active');
+      imgs[next].classList.add('active');
+      cur = next;
+    }, 1000);
+
+    // 슬라이드 위에서는 헤더 로고 숨김 (가운데 로고와 중복 방지)
+    const section = track.closest('.home-slides');
+    const toggle = () => document.body.classList.toggle('on-slides', window.scrollY < section.offsetHeight - 80);
+    toggle();
+    window.addEventListener('scroll', toggle, { passive: true });
   })();
 
   /* ---------- INTERSECTION OBSERVER (카드 생성 후 등록) ---------- */
@@ -138,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.15 });
 
-  document.querySelectorAll('.reveal, .pj-item, .contact, .site-footer').forEach(el => io.observe(el));
+  document.querySelectorAll('.reveal, .pj-item, .hero, .contact, .site-footer').forEach(el => io.observe(el));
 
   /* ---------- PROJECT CARD MOUSE TRACK ---------- */
   document.querySelectorAll('.project-card').forEach(card => {
