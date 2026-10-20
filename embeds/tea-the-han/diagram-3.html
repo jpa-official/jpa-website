@@ -37,7 +37,6 @@
   .js .slide > img.full[data-step], .js .slide > img.abs[data-step] { transform: scale(1.04); }
   .js [data-step].shown { opacity: 1; transform: none; }
   .js .instant [data-step] { transition: none !important; }
-  @media (prefers-reduced-motion: reduce) { .js [data-step] { transition: none !important; transform: none !important; } }
 
   .slide { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; overflow: hidden;
     transform: translate(-50%, -50%) scale(var(--s)); background: var(--bg); color: var(--text); }
@@ -371,7 +370,7 @@
   const root = document.documentElement;
   root.classList.add('js');
   const p = document.querySelector('.page');
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reduce = false;   // 윈도우 '애니메이션 효과' 꺼짐 설정과 상관없이 항상 모션 재생 (사용자 요청)
   const fit = () => root.style.setProperty('--s', Math.min(innerWidth / 1920, innerHeight / 1080));
   addEventListener('resize', fit); fit();
 
