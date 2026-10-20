@@ -273,9 +273,12 @@ button { font-family: inherit; }
 .site-header .main-nav a:hover,
 .site-header .search-btn:hover { color: var(--accent); }
 
-/* PC: 로고 없이 메뉴는 좌측, SEARCH는 우측 상단 */
+/* PC: 로고 없이 메뉴는 좌측, SEARCH는 우측 상단
+   메뉴 밑줄은 모든 페이지에서 없음 (현재 페이지 표시 포함) */
 @media (min-width: 769px) {
   .site-header .logo { display: none; }
+  .site-header .main-nav a::after { display: none; }
+  .site-header .main-nav a.nav-active { border-bottom: none; padding-bottom: 4px; }
 }
 
 /* ---------- PROJECT SEARCH OVERLAY ---------- */
