@@ -213,7 +213,7 @@ window.PROJECTS = [
       'images/projects/tea-the-han-diagram-2.png': 'embeds/tea-the-han/diagram-2.html?v=20261020e',
       'images/projects/tea-the-han-diagram-3.png': 'embeds/tea-the-han/diagram-3.html?v=20261020e',
       'images/projects/tea-the-han-diagram-4.png': 'embeds/tea-the-han/diagram-4.html?v=20261020e',
-      'images/projects/tea-the-han-diagram-5.png': 'embeds/tea-the-han/diagram-5.html?v=20261020e',
+      'images/projects/tea-the-han-diagram-5.png': 'embeds/tea-the-han/diagram-5.html?v=20261020f',
       'images/projects/tea-the-han-diagram-6.png': 'embeds/tea-the-han/diagram-6.html?v=20261020e'
     },
     name: 'Tea the Han',

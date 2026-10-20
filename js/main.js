@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let ready = null;
     const loadData = () => ready || (ready = window.PROJECTS ? Promise.resolve() : new Promise(resolve => {
       const sc = document.createElement('script');
-      sc.src = 'js/projects-data.js?v=20261020g';
+      sc.src = 'js/projects-data.js?v=20261020h';
       sc.onload = sc.onerror = resolve;
       document.head.appendChild(sc);
     }));
