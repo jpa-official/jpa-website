@@ -271,59 +271,6 @@ button { font-family: inherit; }
 }
 
 /* ============================================
-   HOME SLIDES — 전체 화면 프로젝트 이미지 + 가운데 로고
-   ============================================ */
-.home-slides {
-  position: relative;
-  height: 100vh;
-  height: 100svh;
-  overflow: hidden;
-  background: var(--black);
-}
-.hs-track img {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  max-width: none;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-.hs-track img.active { opacity: 1; }
-.hs-logo {
-  position: absolute;
-  top: 50%; left: 50%;
-  width: clamp(120px, 18vw, 320px);
-  transform: translate(-50%, -50%);
-  filter: invert(1);           /* 검정 로고 → 흰색 */
-  z-index: 1;
-  pointer-events: none;
-}
-.logo { transition: opacity 0.4s ease; }
-.on-slides .site-header .logo { opacity: 0; pointer-events: none; }
-
-/* PC: 21:9 이미지 + 바깥은 포인트 컬러 */
-@media (min-width: 769px) {
-  .home-slides {
-    background: var(--accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .hs-track {
-    position: relative;
-    width: min(100vw, 100svh * 21 / 9);
-    aspect-ratio: 21 / 9;
-    overflow: hidden;
-  }
-  .hs-track img { transition: opacity 0.15s ease; }
-  /* 포인트 컬러 배경 위에서는 메뉴를 검은 글씨로 (difference 블렌드 해제) */
-  .on-slides .site-header { mix-blend-mode: normal; }
-  .on-slides .main-nav a { color: var(--black); }
-  .on-slides .main-nav a::after { background: var(--black); }
-  .on-slides .main-nav a:hover { color: var(--white); }
-}
-
-/* ============================================
    HERO
    ============================================ */
 .hero {

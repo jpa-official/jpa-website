@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       loader.classList.add('out');
       document.documentElement.classList.remove('intro-open');
       document.body.classList.add('loaded');
+      setTimeout(triggerHero, 500);
       setTimeout(() => loader.classList.add('hidden'), 1500);
     };
     loader.addEventListener('click', leave);
@@ -67,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroEl    = document.querySelector('.hero');
   window.addEventListener('scroll', () => {
     if (!heroTitle || !heroEl) return;
-    const y = window.scrollY - heroEl.offsetTop;   // 메인에서는 슬라이드 아래에 위치
+    const y = window.scrollY - heroEl.offsetTop;
     if (y > 0 && y < window.innerHeight) {
       heroTitle.style.transform = `translateY(${y * 0.15}px)`;
       heroTitle.style.opacity = Math.max(0, 1 - y / 600);
@@ -96,59 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---------- HOME SLIDES ----------
-     PC: 프로젝트 대표·서브 이미지를 섞어 0.5초 간격
-     모바일: 대표 이미지만 순서대로 1초 간격 */
-  (function homeSlides() {
-    const track = document.getElementById('homeSlides');
-    if (!track || !window.PROJECTS) return;
-    const isPC = window.matchMedia('(min-width: 769px)').matches;
-
-    let srcs;
-    if (isPC) {
-      // 사진만 사용 (다이어그램·PNG·영상 제외), 순서는 매번 무작위
-      srcs = window.PROJECTS
-        .flatMap(p => [p.thumbnail, ...(p.images || [])].map(src => ({ src, name: p.name })))
-        .filter(({ src }) => src && /\.(jpe?g|webp)(\?|$)/i.test(src) && !/diagram/i.test(src));
-      for (let i = srcs.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [srcs[i], srcs[j]] = [srcs[j], srcs[i]];
-      }
-    } else {
-      srcs = window.PROJECTS.filter(p => p.thumbnail).map(p => ({ src: p.thumbnail, name: p.name }));
-    }
-
-    const imgs = srcs.map(({ src, name }, i) => {
-      const img = document.createElement('img');
-      img.alt = name;
-      img.dataset.src = src;
-      if (i === 0) img.className = 'active';
-      track.appendChild(img);
-      return img;
-    });
-    if (!imgs.length) return;
-
-    // 다음 몇 장만 미리 불러와 한꺼번에 받지 않도록
-    const load = i => { const img = imgs[i % imgs.length]; if (!img.src) img.src = img.dataset.src; };
-    let cur = 0;
-    [0, 1, 2, 3, 4].forEach(load);
-
-    setInterval(() => {
-      const next = (cur + 1) % imgs.length;
-      load(next + 4);
-      if (!imgs[next].complete || !imgs[next].naturalWidth) { load(next); return; }  // 아직 로딩 중이면 현재 장 유지
-      imgs[cur].classList.remove('active');
-      imgs[next].classList.add('active');
-      cur = next;
-    }, isPC ? 500 : 1000);
-
-    // 슬라이드 위에서는 헤더 로고 숨김 (가운데 로고와 중복 방지)
-    const section = track.closest('.home-slides');
-    const toggle = () => document.body.classList.toggle('on-slides', window.scrollY < section.offsetHeight - 80);
-    toggle();
-    window.addEventListener('scroll', toggle, { passive: true });
-  })();
-
   /* ---------- INTERSECTION OBSERVER (카드 생성 후 등록) ---------- */
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -158,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.15 });
 
-  document.querySelectorAll('.reveal, .pj-item, .hero, .contact, .site-footer').forEach(el => io.observe(el));
+  document.querySelectorAll('.reveal, .pj-item, .contact, .site-footer').forEach(el => io.observe(el));
 
   /* ---------- PROJECT CARD MOUSE TRACK ---------- */
   document.querySelectorAll('.project-card').forEach(card => {
