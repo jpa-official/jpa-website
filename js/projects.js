@@ -21,7 +21,7 @@ function buildCard(project) {
         <h2 class="pj-item-name">${project.name}</h2>
         <p class="pj-item-desc">${project.desc}</p>
       </div>
-      <span class="pj-item-cat">${project.category.toUpperCase()}</span>
+      <span class="pj-item-cat">${project.category}</span>
     </div>`;
 
   return a;

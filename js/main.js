@@ -134,8 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const terms = input.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
       const hits  = list.filter(p => { const h = haystack(p); return terms.every(t => h.includes(t)); });
 
-      count.textContent = terms.length ? `${hits.length} RESULTS` : `${list.length} PROJECTS`;
       results.innerHTML = '';
+      count.textContent = terms.length ? `${hits.length} RESULTS` : '';   // 입력 전에는 검색창만
+      if (!terms.length) return;
       hits.forEach(p => {
         const a = document.createElement('a');
         a.className = 'so-item';

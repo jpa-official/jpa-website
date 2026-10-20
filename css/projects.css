@@ -333,6 +333,44 @@
   .pj-item:nth-child(odd) { border-right: none; }
   /* 광화문169 썸네일: 하단 기준으로 크롭 */
   .pj-item-img img[src*="gwanghwa169"] { object-position: center bottom; }
+
+  /* 카드 배치: SEARCH 결과와 동일 (작은 16:9 썸네일 + 아래 이름 · 한글명 · 카테고리) */
+  .pj-list {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 32px 20px;
+    padding: 24px 40px 120px;
+  }
+  .pj-item { overflow: visible; }
+  .pj-item-img { background: var(--gray-100); margin-bottom: 12px; }
+  .pj-item-info {
+    position: static;
+    display: block;
+    padding: 0;
+    color: var(--black);
+    background: none;
+  }
+  .pj-item-left { display: contents; }
+  .pj-item-info .pj-item-name {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 4px;
+    transition: color 0.3s var(--transition);
+  }
+  .pj-item-desc,
+  .pj-item-cat {
+    display: inline;          /* 한글명 · 카테고리를 한 줄로 이어서 */
+    padding: 0;
+    line-height: 1.5;
+    font-family: 'Pretendard Variable', Pretendard, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: none;
+    opacity: 0.5;
+  }
+  .pj-item-cat::before { content: ' · '; }
+  .pj-item:hover .pj-item-name { color: var(--accent); }
 }
 
 @media (max-width: 768px) {
