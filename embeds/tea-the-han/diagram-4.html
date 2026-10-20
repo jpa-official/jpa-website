@@ -165,13 +165,14 @@
   const root = document.documentElement;
   root.classList.add('js');
   const p = document.querySelector('.page');
+  const DRAW_LINES = false;   // 이 장은 선 그리기 없이 단계별로 나타나기만
   const reduce = false;   // 윈도우 '애니메이션 효과' 꺼짐 설정과 상관없이 항상 모션 재생 (사용자 요청)
   const fit = () => root.style.setProperty('--s', Math.min(innerWidth / 1920, innerHeight / 1080));
   addEventListener('resize', fit); fit();
 
   // 선 그림은 그려지듯이 나타난다(점선·마스크 안 도형 제외)
   function draw(el, delay) {
-    if (reduce) return;
+    if (reduce || !DRAW_LINES) return;
     const targets = el.matches('.draw') ? [el] : [...el.querySelectorAll('.draw')];
     targets.forEach(t => t.querySelectorAll('[stroke]:not([stroke="none"]):not([stroke-dasharray])').forEach(s => {
       if (s.closest('mask, clipPath') || !s.getTotalLength) return;
@@ -212,7 +213,7 @@
       let t = 120;
       steps.forEach(n => {
         timers.push(setTimeout(() => show(p, n), t));
-        t += hasDraw(n) ? 1500 : 900;
+        t += DRAW_LINES && hasDraw(n) ? 1500 : 900;
       });
     },
     rest() { stop(); show(p, Infinity, { animate: false }); }
