@@ -370,6 +370,8 @@
     opacity: 0.5;
   }
   .pj-item-cat::before { content: ' · '; }
+  /* 한글명이 있으면 카테고리는 숨김 */
+  .pj-item-info:has(.pj-item-desc:not(:empty)) .pj-item-cat { display: none; }
   .pj-item:hover .pj-item-name { color: var(--accent); }
 }
 

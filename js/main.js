@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
         name.textContent = p.name;
         const meta = document.createElement('div');
         meta.className = 'so-item-meta';
-        meta.textContent = [p.nameKo, p.category].filter(Boolean).join(' · ');
+        meta.textContent = p.nameKo || p.category;   // 한글명이 있으면 카테고리는 생략
         a.append(box, name, meta);
         results.appendChild(a);
       });
