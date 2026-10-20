@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TEA THE HAN · 03 INFUSING</title>
+<!-- 원본: Desktop/HTML/tea_the_han.html 의 s03 장. 프로젝트 상세 슬라이더(project-detail.js)가 iframe으로 띄우고 diagram.play()를 부른다 -->
+<style>
+  /* 영문·숫자: Swiss 721 / 국문: Pretendard (피그마 원본과 같은 짝) */
+  @font-face { font-family: "JPA Swiss"; font-weight: 700;
+    src: url("../../fonts/swiss721-bold.woff2") format("woff2"); }
+  @font-face { font-family: "JPA Swiss"; font-weight: 500;
+    src: url("../../fonts/swiss721-medium.woff2") format("woff2"); }
+  @font-face { font-family: "JPA Pretendard"; font-weight: 500;
+    src: local("Pretendard Medium"), local("Pretendard-Medium"),
+         url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Medium.woff2") format("woff2"); }
+  @font-face { font-family: "JPA Pretendard"; font-weight: 600;
+    src: local("Pretendard SemiBold"), local("Pretendard-SemiBold"),
+         url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-SemiBold.woff2") format("woff2"); }
+  @font-face { font-family: "JPA Pretendard"; font-weight: 700;
+    src: local("Pretendard Bold"), local("Pretendard-Bold"),
+         url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Bold.woff2") format("woff2"); }
+
+  :root { --bg: #FFFFFF; --main: #740607; --sub: #75A4BE; --text: #000000; --s: 1;
+    --swiss: "JPA Swiss", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --kr: "JPA Pretendard", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+
+  html, body { margin: 0; background: var(--bg); }
+  body { -webkit-font-smoothing: antialiased; }
+
+  /* 1920×1080 한 장을 iframe 크기에 맞춰 비율 그대로 가운데 */
+  html, body { height: 100%; overflow: hidden; }
+  .page { position: relative; height: 100%; overflow: hidden; }
+  /* 단계 요소: 대본 순서대로 Enter를 누를 때마다 나타난다 */
+  .js [data-step] { opacity: 0; transition: opacity .8s ease, transform .9s cubic-bezier(.2, .7, .2, 1); }
+  .js .slide > [data-step]:not(svg.art) { transform: translateY(32px); }
+  .js .slide > img.full[data-step], .js .slide > img.abs[data-step] { transform: scale(1.04); }
+  .js [data-step].shown { opacity: 1; transform: none; }
+  .js .instant [data-step] { transition: none !important; }
+  @media (prefers-reduced-motion: reduce) { .js [data-step] { transition: none !important; transform: none !important; } }
+
+  .slide { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; overflow: hidden;
+    transform: translate(-50%, -50%) scale(var(--s)); background: var(--bg); color: var(--text); }
+  .slide.on-main { background: var(--main); color: #FFFFFF; }
+  .slide.on-sub { background: var(--sub); color: var(--text); }
+  .slide.on-photo { color: #FFFFFF; }
+  .slide .art, .slide .abs { position: absolute; left: 0; top: 0; }
+  .slide .full { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .slide .cover { object-fit: cover; }
+
+  /* 피그마 글자 박스는 대문자 윗선~기준선으로 잘려 있다 → 같은 기준으로 위치를 맞춘다 */
+  .slide p { position: absolute; margin: 0; text-box: trim-both cap alphabetic; white-space: nowrap; }
+  .t15  { font: 700 15px/1 var(--swiss); letter-spacing: -0.02em; }
+  .t20  { font: 700 20px/1.1 var(--swiss); letter-spacing: -0.02em; text-transform: uppercase; }
+  .t20n { font: 700 20px/1.3 var(--swiss); letter-spacing: -0.02em; }
+  .t20b { font: 700 20px/1.3 var(--swiss); letter-spacing: -0.02em; }
+  .t24  { font: 700 24px/1.34 var(--swiss); letter-spacing: -0.005em; }
+  .t30  { font: 700 30px/1.36 var(--swiss); letter-spacing: -0.02em; }
+  .t36  { font: 700 36px/1.2 var(--swiss); letter-spacing: -0.02em; }
+  .t45  { font: 700 45px/1.2 var(--swiss); letter-spacing: -0.02em; }
+  .t28  { font: 700 27.73px/33px var(--swiss); letter-spacing: -0.02em; }
+  .logo { line-height: 0.95; letter-spacing: -0.04em; }
+  .t170 { font: 500 170px/0.9 var(--swiss); letter-spacing: -0.02em; }
+  .kr18  { font: 600 18px/1.4 var(--kr); letter-spacing: -0.02em; }
+  .kr21  { font: 500 21px/1.4 var(--kr); letter-spacing: -0.02em; }
+  .kr21b { font: 700 21px/1.4 var(--kr); letter-spacing: -0.02em; }
+  .kr26  { font: 600 26px/1.5 var(--kr); letter-spacing: -0.02em; }
+  .kr28  { font: 600 28px/1.4 var(--kr); letter-spacing: -0.02em; }
+  .ctr { text-align: center; }
+  .hl, em.hl { color: var(--main); font-style: normal; }
+  .light { color: #FFFFFF; }
+
+  .head { position: absolute; left: 36px; top: 40px; width: 1400px; text-box: trim-both cap alphabetic; }
+  .slide .head p { position: static; text-box: normal; }
+
+  .disc { position: absolute; width: 380px; height: 380px; border-radius: 50%; object-fit: cover; display: block; }
+  .infuse-box { position: absolute; left: 796px; top: 273px; width: 659px; height: 445px; box-sizing: border-box;
+    background: color-mix(in srgb, var(--main) 10%, transparent); }
+  .infuse-box::after { content: ""; position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='659' height='445'%3E%3Crect x='1' y='1' width='657' height='443' fill='none' stroke='%23740607' stroke-width='2' stroke-dasharray='8 10'/%3E%3C/svg%3E"); }
+
+  .foot-line { position: absolute; left: 37px; top: 1026px; width: 1848px; height: 1px; background: currentColor; }
+  .foot { top: 1039px; }
+  .foot.l { left: 36px; }
+  .foot.c { left: 0; width: 1920px; text-align: center; }
+  .foot.r { right: 36px; text-align: right; }
+</style>
+</head>
+<body>
+  <div class="page" id="s03">
+    <section class="slide " aria-label="03 INFUSING">
+      <svg class="art" width="1920" height="1080" aria-hidden="true" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g class="draw" data-step="0">
+<mask id="mask0_16051_213" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="640" y="190" width="640" height="640">
+<path d="M1280 190H640V830H1280V190Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_16051_213)">
+<path d="M780 520.002C780 710.002 830 790.002 960 790.002C1090 790.002 1140 710.002 1140 520.002" fill="#FFFFFF"/><clipPath id="teaCut"><path d="M770 682 L816 682.002C824.667 678.002 833.333 678.002 842 682.002C850.667 686.002 859.333 686.002 868 682.002C876.667 678.002 885.333 678.002 894 682.002C902.667 686.002 911.333 686.002 920 682.002C928.667 678.002 937.333 678.002 946 682.002C954.667 686.002 963.333 686.002 972 682.002C980.667 678.002 989.333 678.002 998 682.002C1006.67 686.002 1015.33 686.002 1024 682.002C1032.67 678.002 1041.33 678.002 1050 682.002C1058.67 686.002 1067.33 686.002 1076 682.002C1084.67 678.002 1093.33 678.002 1102 682.002 L1150 682 L1150 800 L770 800Z"/></clipPath><path d="M802 532C802 698 846 774 960 774C1074 774 1118 698 1118 532Z" fill="#FFFFFF" clip-path="url(#teaCut)"/>
+<path d="M780 520.002C780 710.002 830 790.002 960 790.002C1090 790.002 1140 710.002 1140 520.002" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M802 532.002C802 698.002 846 774.002 960 774.002C1074 774.002 1118 698.002 1118 532.002" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M780 520.002C780 526.897 798.964 533.511 832.721 538.386C866.477 543.262 912.261 546.002 960 546.002C1007.74 546.002 1053.52 543.262 1087.28 538.386C1121.04 533.511 1140 526.897 1140 520.002" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M816 682.002C824.667 678.002 833.333 678.002 842 682.002C850.667 686.002 859.333 686.002 868 682.002C876.667 678.002 885.333 678.002 894 682.002C902.667 686.002 911.333 686.002 920 682.002C928.667 678.002 937.333 678.002 946 682.002C954.667 686.002 963.333 686.002 972 682.002C980.667 678.002 989.333 678.002 998 682.002C1006.67 686.002 1015.33 686.002 1024 682.002C1032.67 678.002 1041.33 678.002 1050 682.002C1058.67 686.002 1067.33 686.002 1076 682.002C1084.67 678.002 1093.33 678.002 1102 682.002" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M940 620.002V634.002" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M944 648.002V660.002" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M960 620.002V634.002" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M964 648.002V660.002" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M980 620.002V634.002" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M984 648.002V660.002" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M790 490.002C790 630.002 1130 630.002 1130 490.002H790Z" fill="#FFFFFF"/>
+<path d="M790 490.002C790 630.002 1130 630.002 1130 490.002" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M830 504.002V550.002" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M870 504.002V571.002" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M910 504.002V581.002" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M950 504.002V586.002" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M990 504.002V584.002" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1030 504.002V577.002" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1070 504.002V562.002" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M790 490.002C790 497.428 807.911 504.55 839.792 509.801C871.673 515.052 914.913 518.002 960 518.002C1005.09 518.002 1048.33 515.052 1080.21 509.801C1112.09 504.55 1130 497.428 1130 490.002C1130 482.576 1112.09 475.454 1080.210 470.203C1048.33 464.952 1005.09 462.002 960 462.002C914.913 462.002 871.673 464.952 839.792 470.203C807.911 475.454 790 482.576 790 490.002Z" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1130 486L1302 458" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M790 490.002L756 486.002C746.667 484.668 742.667 480.668 744 474.002" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M877.4 482.602C888.067 476.468 896.467 478.735 902.6 489.402C891.933 495.535 883.533 493.268 877.4 482.602ZM877.4 482.602L902.6 489.402L877.4 482.602Z" fill="#FFFFFF"/>
+<path d="M902.6 489.402C891.933 495.535 883.533 493.268 877.4 482.602C888.067 476.468 896.467 478.735 902.6 489.402ZM877.4 482.602L902.6 489.402" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M928.7 500.502C931.9 488.635 939.434 484.302 951.3 487.502C948.1 499.368 940.567 503.702 928.7 500.502ZM928.7 500.502L951.3 487.502L928.7 500.502Z" fill="#FFFFFF"/>
+<path d="M951.3 487.502C948.1 499.368 940.567 503.702 928.7 500.502C931.9 488.635 939.434 484.302 951.3 487.502ZM928.7 500.502L951.3 487.502" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M990 475.602C1002.27 474.535 1008.93 480.135 1010 492.402C997.733 493.468 991.067 487.868 990 475.602ZM990 475.602L1010 492.402L990 475.602Z" fill="#FFFFFF"/>
+<path d="M1010 492.402C997.733 493.468 991.067 487.868 990 475.602C1002.27 474.535 1008.93 480.135 1010 492.402ZM990 475.602L1010 492.402" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1037.2 494.302C1044.2 484.235 1052.73 482.702 1062.8 489.702C1055.8 499.768 1047.27 501.302 1037.2 494.302ZM1037.2 494.302L1062.8 489.702L1037.2 494.302Z" fill="#FFFFFF"/>
+<path d="M1062.8 489.702C1055.8 499.768 1047.27 501.302 1037.2 494.302C1044.2 484.235 1052.73 482.702 1062.8 489.702ZM1037.2 494.302L1062.8 489.702" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1094.41 453.452L1047.82 270.521C1095.95 219.688 1154.79 198.274 1224.33 206.277L1306.22 376.36L1094.41 453.452Z" fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1069.97 276.452C1110.61 241.670 1157.68 224.538 1211.18 225.057" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1114.78 221.068L1111.27 211.446L1137.75 201.810L1141.25 211.432" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1076 381.668C1036.98 395.869 999.932 397.844 952.272 391.871L957.605 419.913C1008.41 432.738 1042.13 434.41 1084.45 415.008" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M1280 190H640V830H1280V190Z" stroke="#000000" stroke-width="3"/>
+</g>
+<g class="draw" data-step="1">
+<mask id="mask1_16051_213" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="200" y="310" width="320" height="320">
+<path d="M360 630C448.366 630 520 558.366 520 470C520 381.634 448.366 310 360 310C271.634 310 200 381.634 200 470C200 558.366 271.634 630 360 630Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_16051_213)"><path d="M170 510C178.667 505.333 187.333 505.333 196 510C204.667 514.667 213.333 514.667 222 510C230.667 505.333 239.333 505.333 248 510C256.667 514.667 265.333 514.667 274 510C282.667 505.333 291.333 505.333 300 510C308.667 514.667 317.333 514.667 326 510C334.667 505.333 343.333 505.333 352 510C360.667 514.667 369.333 514.667 378 510C386.667 505.333 395.333 505.333 404 510C412.667 514.667 421.333 514.667 430 510C438.667 505.333 447.333 505.333 456 510C464.667 514.667 473.333 514.667 482 510C490.667 505.333 499.333 505.333 508 510C516.667 514.667 525.333 514.667 534 510C542.667 505.333 551.333 505.333 560 510 L560 640 L170 640Z" fill="#FFFFFF"/>
+<path d="M170 510C178.667 505.333 187.333 505.333 196 510C204.667 514.667 213.333 514.667 222 510C230.667 505.333 239.333 505.333 248 510C256.667 514.667 265.333 514.667 274 510C282.667 505.333 291.333 505.333 300 510C308.667 514.667 317.333 514.667 326 510C334.667 505.333 343.333 505.333 352 510C360.667 514.667 369.333 514.667 378 510C386.667 505.333 395.333 505.333 404 510C412.667 514.667 421.333 514.667 430 510C438.667 505.333 447.333 505.333 456 510C464.667 514.667 473.333 514.667 482 510C490.667 505.333 499.333 505.333 508 510C516.667 514.667 525.333 514.667 534 510C542.667 505.333 551.333 505.333 560 510" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M170 540C178.667 535.333 187.333 535.333 196 540C204.667 544.667 213.333 544.667 222 540C230.667 535.333 239.333 535.333 248 540C256.667 544.667 265.333 544.667 274 540C282.667 535.333 291.333 535.333 300 540C308.667 544.667 317.333 544.667 326 540C334.667 535.333 343.333 535.333 352 540C360.667 544.667 369.333 544.667 378 540C386.667 535.333 395.333 535.333 404 540C412.667 544.667 421.333 544.667 430 540C438.667 535.333 447.333 535.333 456 540C464.667 544.667 473.333 544.667 482 540C490.667 535.333 499.333 535.333 508 540C516.667 544.667 525.333 544.667 534 540C542.667 535.333 551.333 535.333 560 540" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M320 380V406" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M320 430V456" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M360 380V406" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M360 430V456" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M400 380V406" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M400 430V456" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M330 492C350 481.333 370 481.333 390 492" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M360 630C448.366 630 520 558.366 520 470C520 381.634 448.366 310 360 310C271.634 310 200 381.634 200 470C200 558.366 271.634 630 360 630Z" stroke="#000000" stroke-width="3"/>
+<path d="M520 470L960 642" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 9"/>
+<path d="M960 650C964.418 650 968 646.418 968 642C968 637.582 964.418 634 960 634C955.582 634 952 637.582 952 642C952 646.418 955.582 650 960 650Z" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+</g>
+<g class="draw" data-step="2">
+<mask id="mask2_16051_213" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1400" y="310" width="320" height="320">
+<path d="M1560 630C1648.37 630 1720 558.366 1720 470C1720 381.634 1648.37 310 1560 310C1471.63 310 1400 381.634 1400 470C1400 558.366 1471.63 630 1560 630Z" fill="white"/>
+</mask>
+<g mask="url(#mask2_16051_213)">
+<path d="M1420 300V640" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1390 330H1730" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1448 300V640" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1390 358H1730" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1476 300V640" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1390 386H1730" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1504 300V640" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1390 414H1730" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1532 300V640" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1390 442H1730" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1560 300V640" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1390 470H1730" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1588 300V640" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1390 498H1730" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1616 300V640" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1390 526H1730" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1644 300V640" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1390 554H1730" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1672 300V640" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1390 582H1730" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1700 300V640" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1390 610H1730" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1469.9 419.1C1497.23 406.3 1517.3 413.567 1530.1 440.9C1502.77 453.7 1482.7 446.433 1469.9 419.1ZM1469.9 419.1L1530.1 440.9L1469.9 419.1Z" fill="#FFFFFF"/>
+<path d="M1530.1 440.9C1502.77 453.7 1482.7 446.433 1469.9 419.1C1497.23 406.3 1517.3 413.567 1530.1 440.9ZM1469.9 419.1L1530.1 440.9" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1565.5 420.6C1568.1 390.533 1584.43 376.8 1614.5 379.4C1611.9 409.467 1595.57 423.2 1565.5 420.6ZM1565.5 420.6L1614.5 379.4L1565.5 420.6Z" fill="#FFFFFF"/>
+<path d="M1614.5 379.4C1611.9 409.467 1595.57 423.2 1565.5 420.6C1568.1 390.533 1584.43 376.8 1614.5 379.4ZM1565.5 420.6L1614.5 379.4" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1604 472.3C1633.13 480.1 1643.8 498.567 1636 527.7C1606.87 519.9 1596.2 501.433 1604 472.3ZM1604 472.3L1636 527.7L1604 472.3Z" fill="#FFFFFF"/>
+<path d="M1636 527.7C1606.87 519.9 1596.2 501.433 1604 472.3C1633.13 480.1 1643.8 498.567 1636 527.7ZM1604 472.3L1636 527.7" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1498.5 535.6C1515.77 510.867 1536.77 507.133 1561.5 524.4C1544.23 549.133 1523.23 552.867 1498.5 535.6ZM1498.5 535.6L1561.5 524.4L1498.5 535.6Z" fill="#FFFFFF"/>
+<path d="M1561.5 524.4C1544.23 549.133 1523.23 552.867 1498.5 535.6C1515.77 510.867 1536.77 507.133 1561.5 524.4ZM1498.5 535.6L1561.5 524.4" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M1560 630C1648.37 630 1720 558.366 1720 470C1720 381.634 1648.37 310 1560 310C1471.63 310 1400 381.634 1400 470C1400 558.366 1471.63 630 1560 630Z" stroke="#000000" stroke-width="3"/>
+<path d="M1400 470L970 490" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 9"/>
+<path d="M970 498C974.418 498 978 494.418 978 490C978 485.582 974.418 482 970 482C965.582 482 962 485.582 962 490C962 494.418 965.582 498 970 498Z" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+</g>
+</svg>
+      <div class="head" data-step="0"><p class="t24">INFUSING</p><p class="kr21">걸러내고, 우려내는 차의 과정 = TEAtheHAN이 소비자에게 경험을 전달하는 과정</p></div>
+      <p class="t45 ctr" style="left:560px;top:878px;width:800px" data-step="0">INFUSING</p>
+      <p class="t30 ctr" style="left:200px;top:670px;width:320px" data-step="1">BREWING</p>
+      <p class="kr21 ctr" style="left:200px;top:708px;width:320px" data-step="1">우려내기</p>
+      <p class="t30 ctr" style="left:1400px;top:670px;width:320px" data-step="2">STRAINING</p>
+      <p class="kr21 ctr" style="left:1400px;top:708px;width:320px" data-step="2">걸러내기</p>
+      <p class="kr21 ctr hl" style="left:460px;top:938px;width:1000px" data-step="3">소비자가 차를 경험하기 전, 브랜드 가치가 더욱 깊어지는 공간</p>
+    </section>
+  </div>
+<script>
+  const root = document.documentElement;
+  root.classList.add('js');
+  const p = document.querySelector('.page');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fit = () => root.style.setProperty('--s', Math.min(innerWidth / 1920, innerHeight / 1080));
+  addEventListener('resize', fit); fit();
+
+  // 선 그림은 그려지듯이 나타난다(점선·마스크 안 도형 제외)
+  function draw(el, delay) {
+    if (reduce) return;
+    const targets = el.matches('.draw') ? [el] : [...el.querySelectorAll('.draw')];
+    targets.forEach(t => t.querySelectorAll('[stroke]:not([stroke="none"]):not([stroke-dasharray])').forEach(s => {
+      if (s.closest('mask, clipPath') || !s.getTotalLength) return;
+      s.setAttribute('pathLength', '1');
+      s.animate([{ strokeDasharray: '1 1', strokeDashoffset: 1 }, { strokeDasharray: '1 1', strokeDashoffset: 0 }],
+                { duration: 1400, delay, easing: 'cubic-bezier(.5, 0, .2, 1)', fill: 'backwards' });
+    }));
+  }
+
+  function show(p, upto, { animate = true, stagger = 0 } = {}) {
+    p.classList.toggle('instant', !animate);
+    p.querySelectorAll('[data-step]').forEach(e => {
+      const n = +e.dataset.step;
+      if (n <= upto) {
+        if (e.classList.contains('shown')) return;
+        const delay = stagger * n;
+        e.style.transitionDelay = delay ? delay + 'ms' : '';
+        e.classList.add('shown');
+        if (animate) draw(e, delay);
+      } else {
+        e.classList.remove('shown');
+        e.style.transitionDelay = '';
+      }
+    });
+    if (!animate) requestAnimationFrame(() => requestAnimationFrame(() => p.classList.remove('instant')));
+  }
+
+  // 슬라이더가 이 장을 보여줄 때 처음부터 다시 재생, 다른 장일 때는 완성된 모습으로 둔다
+  window.diagram = {
+    play() { show(p, -1, { animate: false }); requestAnimationFrame(() => requestAnimationFrame(() => show(p, Infinity, { stagger: 160 }))); },
+    rest() { show(p, Infinity, { animate: false }); }
+  };
+  const host = window.frameElement;
+  (!host || host.closest('.active')) ? diagram.play() : diagram.rest();
+</script>
+</body>
+</html>

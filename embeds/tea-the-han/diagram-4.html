@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TEA THE HAN · 05 MULTI LAYER — PLAN</title>
+<!-- 원본: Desktop/HTML/tea_the_han.html 의 s05 장. 프로젝트 상세 슬라이더(project-detail.js)가 iframe으로 띄우고 diagram.play()를 부른다 -->
+<style>
+  /* 영문·숫자: Swiss 721 / 국문: Pretendard (피그마 원본과 같은 짝) */
+  @font-face { font-family: "JPA Swiss"; font-weight: 700;
+    src: url("../../fonts/swiss721-bold.woff2") format("woff2"); }
+  @font-face { font-family: "JPA Swiss"; font-weight: 500;
+    src: url("../../fonts/swiss721-medium.woff2") format("woff2"); }
+  @font-face { font-family: "JPA Pretendard"; font-weight: 500;
+    src: local("Pretendard Medium"), local("Pretendard-Medium"),
+         url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Medium.woff2") format("woff2"); }
+  @font-face { font-family: "JPA Pretendard"; font-weight: 600;
+    src: local("Pretendard SemiBold"), local("Pretendard-SemiBold"),
+         url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-SemiBold.woff2") format("woff2"); }
+  @font-face { font-family: "JPA Pretendard"; font-weight: 700;
+    src: local("Pretendard Bold"), local("Pretendard-Bold"),
+         url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Bold.woff2") format("woff2"); }
+
+  :root { --bg: #FFFFFF; --main: #740607; --sub: #75A4BE; --text: #000000; --s: 1;
+    --swiss: "JPA Swiss", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --kr: "JPA Pretendard", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+
+  html, body { margin: 0; background: var(--bg); }
+  body { -webkit-font-smoothing: antialiased; }
+
+  /* 1920×1080 한 장을 iframe 크기에 맞춰 비율 그대로 가운데 */
+  html, body { height: 100%; overflow: hidden; }
+  .page { position: relative; height: 100%; overflow: hidden; }
+  /* 단계 요소: 대본 순서대로 Enter를 누를 때마다 나타난다 */
+  .js [data-step] { opacity: 0; transition: opacity .8s ease, transform .9s cubic-bezier(.2, .7, .2, 1); }
+  .js .slide > [data-step]:not(svg.art) { transform: translateY(32px); }
+  .js .slide > img.full[data-step], .js .slide > img.abs[data-step] { transform: scale(1.04); }
+  .js [data-step].shown { opacity: 1; transform: none; }
+  .js .instant [data-step] { transition: none !important; }
+  @media (prefers-reduced-motion: reduce) { .js [data-step] { transition: none !important; transform: none !important; } }
+
+  .slide { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; overflow: hidden;
+    transform: translate(-50%, -50%) scale(var(--s)); background: var(--bg); color: var(--text); }
+  .slide.on-main { background: var(--main); color: #FFFFFF; }
+  .slide.on-sub { background: var(--sub); color: var(--text); }
+  .slide.on-photo { color: #FFFFFF; }
+  .slide .art, .slide .abs { position: absolute; left: 0; top: 0; }
+  .slide .full { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .slide .cover { object-fit: cover; }
+
+  /* 피그마 글자 박스는 대문자 윗선~기준선으로 잘려 있다 → 같은 기준으로 위치를 맞춘다 */
+  .slide p { position: absolute; margin: 0; text-box: trim-both cap alphabetic; white-space: nowrap; }
+  .t15  { font: 700 15px/1 var(--swiss); letter-spacing: -0.02em; }
+  .t20  { font: 700 20px/1.1 var(--swiss); letter-spacing: -0.02em; text-transform: uppercase; }
+  .t20n { font: 700 20px/1.3 var(--swiss); letter-spacing: -0.02em; }
+  .t20b { font: 700 20px/1.3 var(--swiss); letter-spacing: -0.02em; }
+  .t24  { font: 700 24px/1.34 var(--swiss); letter-spacing: -0.005em; }
+  .t30  { font: 700 30px/1.36 var(--swiss); letter-spacing: -0.02em; }
+  .t36  { font: 700 36px/1.2 var(--swiss); letter-spacing: -0.02em; }
+  .t45  { font: 700 45px/1.2 var(--swiss); letter-spacing: -0.02em; }
+  .t28  { font: 700 27.73px/33px var(--swiss); letter-spacing: -0.02em; }
+  .logo { line-height: 0.95; letter-spacing: -0.04em; }
+  .t170 { font: 500 170px/0.9 var(--swiss); letter-spacing: -0.02em; }
+  .kr18  { font: 600 18px/1.4 var(--kr); letter-spacing: -0.02em; }
+  .kr21  { font: 500 21px/1.4 var(--kr); letter-spacing: -0.02em; }
+  .kr21b { font: 700 21px/1.4 var(--kr); letter-spacing: -0.02em; }
+  .kr26  { font: 600 26px/1.5 var(--kr); letter-spacing: -0.02em; }
+  .kr28  { font: 600 28px/1.4 var(--kr); letter-spacing: -0.02em; }
+  .ctr { text-align: center; }
+  .hl, em.hl { color: var(--main); font-style: normal; }
+  .light { color: #FFFFFF; }
+
+  .head { position: absolute; left: 36px; top: 40px; width: 1400px; text-box: trim-both cap alphabetic; }
+  .slide .head p { position: static; text-box: normal; }
+
+  .disc { position: absolute; width: 380px; height: 380px; border-radius: 50%; object-fit: cover; display: block; }
+  .infuse-box { position: absolute; left: 796px; top: 273px; width: 659px; height: 445px; box-sizing: border-box;
+    background: color-mix(in srgb, var(--main) 10%, transparent); }
+  .infuse-box::after { content: ""; position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='659' height='445'%3E%3Crect x='1' y='1' width='657' height='443' fill='none' stroke='%23740607' stroke-width='2' stroke-dasharray='8 10'/%3E%3C/svg%3E"); }
+
+  .foot-line { position: absolute; left: 37px; top: 1026px; width: 1848px; height: 1px; background: currentColor; }
+  .foot { top: 1039px; }
+  .foot.l { left: 36px; }
+  .foot.c { left: 0; width: 1920px; text-align: center; }
+  .foot.r { right: 36px; text-align: right; }
+</style>
+</head>
+<body>
+  <div class="page" id="s05">
+    <section class="slide " aria-label="05 MULTI LAYER — PLAN">
+      <svg class="abs" style="left:0px;top:0px" aria-hidden="true" width="1903" height="1080" viewBox="0 0 1903 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<g>
+<g>
+<g clip-path="url(#clip0_lp)">
+
+<g>
+<g data-step="0" class="draw"><path d="M847 175H207V875H847V175Z" stroke="#000000" stroke-width="3" />
+<path d="M608.4 333.4H439.4V807.4H608.4V333.4Z" fill="#740607" fill-opacity="0.32" />
+<path d="M437.9 322.7V805.9H430.5V322.7H437.9Z" fill="white" stroke="#000000" stroke-width="3" />
+<path d="M567.9 322.7V331.9H430.5V322.7H567.9Z" fill="white" stroke="#000000" stroke-width="3" />
+<path d="M617.301 438.9V805.9H609.9V438.9H617.301Z" fill="white" stroke="#000000" stroke-width="3" />
+<path d="M703.101 273.8V283H609.9V273.8H703.101Z" fill="white" stroke="#000000" stroke-width="3" />
+<path d="M703.101 273.8V448.2H695.7V273.8H703.101Z" fill="white" stroke="#000000" stroke-width="3" />
+<path d="M703.101 438.9V448.1H609.9V438.9H703.101Z" fill="white" stroke="#000000" stroke-width="3" />
+<path d="M617.601 273.8V368.8H609.601V273.8H617.601Z" fill="white" stroke="#000000" stroke-width="3" />
+<path d="M508 272H498V332H508V272Z" stroke="#000000" stroke-width="2" />
+<path d="M508 272H498V332H508V272Z" stroke="#000000" stroke-width="2" />
+<path d="M557 282L557 272L508 272L508 282L557 282Z" stroke="#000000" stroke-width="2" />
+<path d="M557 282L557 272L508 272L508 282L557 282Z" stroke="#000000" stroke-width="2" />
+<path d="M608.4 281.4V232C595.298 232 582.733 237.205 573.469 246.469C564.205 255.733 559 268.298 559 281.4" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M608.4 370H541.1C541.1 378.838 542.84 387.589 546.223 395.755C549.605 403.92 554.562 411.339 560.811 417.588C567.061 423.838 574.48 428.795 582.645 432.177C590.81 435.559 599.562 437.3 608.4 437.3" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M608.4 807.4V758C595.298 758 582.733 763.205 573.469 772.469C564.205 781.733 559 794.298 559 807.4" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M583.8 859.4V541.4" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10" />
+<path d="M590.6 551.3L583.8 541.393L577 551.3" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M577 849.5L583.8 859.438L590.6 849.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+</g><g data-step="1" class="draw"><path d="M1389 272H1379V332H1389V272Z" stroke="#000000" stroke-width="2" />
+<path d="M1438 282L1438 272L1389 272L1389 282L1438 282Z" stroke="#000000" stroke-width="2" />
+<path d="M1727 175H1087V875H1727V175Z" stroke="#000000" stroke-width="3" />
+<path d="M1317.9 322.7V805.9H1310.5V322.7H1317.9Z" fill="white" stroke="#000000" stroke-width="3" />
+<path d="M1447.9 322.7V331.9H1310.5V322.7H1447.9Z" fill="white" stroke="#000000" stroke-width="3" />
+<path d="M1497.3 438.9V805.9H1489.9V438.9H1497.3Z" fill="white" stroke="#000000" stroke-width="3" />
+<path d="M1583.1 273.8V283H1489.9V273.8H1583.1Z" fill="white" stroke="#000000" stroke-width="3" />
+<path d="M1583.1 273.8V448.2H1575.7V273.8H1583.1Z" fill="white" stroke="#000000" stroke-width="3" />
+<path d="M1583.1 438.9V448.1H1489.9V438.9H1583.1Z" fill="white" stroke="#000000" stroke-width="3" />
+<path d="M1497.6 273.8V368.8H1489.6V273.8H1497.6Z" fill="white" stroke="#000000" stroke-width="3" />
+<path d="M1437.5 594.9V598H1320.9V594.9H1437.5Z" fill="white" stroke="#000000" stroke-width="3" />
+<path d="M873 507H985V495L1013 525L985 555V543H873V507Z" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+</g><g data-step="2" class="draw"><path d="M1489.4 281.4V232C1476.3 232 1463.73 237.205 1454.47 246.469C1445.2 255.733 1440 268.298 1440 281.4" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M1488.4 333.4H1319.4V449.6H1488.4V333.4Z" fill="#740607" fill-opacity="0.5" />
+<path d="M1488 450H1319V687H1488V450Z" fill="#740607" fill-opacity="0.32" />
+<path d="M1488 807H1319V687H1488V807Z" fill="#740607" fill-opacity="0.15" />
+<path d="M1179 449.6H1657.4" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10" />
+<path d="M1179 687H1657.4" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10" />
+<path d="M1488.4 370H1421.1C1421.1 378.838 1422.84 387.589 1426.22 395.755C1429.6 403.92 1434.56 411.339 1440.81 417.588C1447.06 423.838 1454.48 428.795 1462.65 432.177C1470.81 435.559 1479.56 437.3 1488.4 437.3" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M1488.4 596.4V547C1481.91 547 1475.49 548.278 1469.5 550.76C1463.5 553.243 1458.06 556.882 1453.47 561.469C1448.88 566.056 1445.24 571.502 1442.76 577.495C1440.28 583.489 1439 589.913 1439 596.4" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M1465 859.4V731C1455 632 1359.6 651.6 1370 700.5C1380.4 749.5 1465 731 1465 669.8V376.3" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10" />
+<path d="M1471.8 386.2L1465 376.255L1458.2 386.2" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M1458.2 849.5L1465 859.438L1471.8 849.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+</g></g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_lp">
+<rect width="1920" height="1080" fill="white" />
+</clipPath>
+</defs>
+</svg>
+      <div class="head" data-step="0"><p class="t24">INFUSING</p><p class="kr21">다층적 레이어</p></div>
+      <p class="kr28" style="left:224px;top:195px" data-step="0">기존</p>
+      <p class="kr21" style="left:674px;top:570px" data-step="0">실내공간</p>
+      <p class="kr28 hl" style="left:1104px;top:195px" data-step="1">TEAtheHAN</p>
+      <p class="kr21" style="left:1616px;top:376px" data-step="1">BOH</p>
+      <p class="kr21" style="left:1554px;top:578px" data-step="1">실내공간</p>
+      <p class="kr21" style="left:1554px;top:748px" data-step="1">전이공간</p>
+      <p class="kr21" style="left:1218px;top:747px" data-step="2">레이어01</p>
+      <p class="kr21" style="left:1215px;top:577px" data-step="2">레이어02</p>
+      <p class="kr21" style="left:1215px;top:376px" data-step="2">레이어03</p>
+      <p class="kr26 ctr" style="left:36px;top:940px;width:1848px" data-step="3">INFUSING의 과정을 <em class="hl">다층적 레이어</em>로 표현하여 <em class="hl">풍부한 경험과 다채로운 장면</em>을 연출</p>
+    </section>
+  </div>
+<script>
+  const root = document.documentElement;
+  root.classList.add('js');
+  const p = document.querySelector('.page');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fit = () => root.style.setProperty('--s', Math.min(innerWidth / 1920, innerHeight / 1080));
+  addEventListener('resize', fit); fit();
+
+  // 선 그림은 그려지듯이 나타난다(점선·마스크 안 도형 제외)
+  function draw(el, delay) {
+    if (reduce) return;
+    const targets = el.matches('.draw') ? [el] : [...el.querySelectorAll('.draw')];
+    targets.forEach(t => t.querySelectorAll('[stroke]:not([stroke="none"]):not([stroke-dasharray])').forEach(s => {
+      if (s.closest('mask, clipPath') || !s.getTotalLength) return;
+      s.setAttribute('pathLength', '1');
+      s.animate([{ strokeDasharray: '1 1', strokeDashoffset: 1 }, { strokeDasharray: '1 1', strokeDashoffset: 0 }],
+                { duration: 1400, delay, easing: 'cubic-bezier(.5, 0, .2, 1)', fill: 'backwards' });
+    }));
+  }
+
+  function show(p, upto, { animate = true, stagger = 0 } = {}) {
+    p.classList.toggle('instant', !animate);
+    p.querySelectorAll('[data-step]').forEach(e => {
+      const n = +e.dataset.step;
+      if (n <= upto) {
+        if (e.classList.contains('shown')) return;
+        const delay = stagger * n;
+        e.style.transitionDelay = delay ? delay + 'ms' : '';
+        e.classList.add('shown');
+        if (animate) draw(e, delay);
+      } else {
+        e.classList.remove('shown');
+        e.style.transitionDelay = '';
+      }
+    });
+    if (!animate) requestAnimationFrame(() => requestAnimationFrame(() => p.classList.remove('instant')));
+  }
+
+  // 슬라이더가 이 장을 보여줄 때 처음부터 다시 재생, 다른 장일 때는 완성된 모습으로 둔다
+  window.diagram = {
+    play() { show(p, -1, { animate: false }); requestAnimationFrame(() => requestAnimationFrame(() => show(p, Infinity, { stagger: 160 }))); },
+    rest() { show(p, Infinity, { animate: false }); }
+  };
+  const host = window.frameElement;
+  (!host || host.closest('.active')) ? diagram.play() : diagram.rest();
+</script>
+</body>
+</html>

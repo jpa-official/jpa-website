@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TEA THE HAN · 04 5 STEPS</title>
+<!-- 원본: Desktop/HTML/tea_the_han.html 의 s04 장. 프로젝트 상세 슬라이더(project-detail.js)가 iframe으로 띄우고 diagram.play()를 부른다 -->
+<style>
+  /* 영문·숫자: Swiss 721 / 국문: Pretendard (피그마 원본과 같은 짝) */
+  @font-face { font-family: "JPA Swiss"; font-weight: 700;
+    src: url("../../fonts/swiss721-bold.woff2") format("woff2"); }
+  @font-face { font-family: "JPA Swiss"; font-weight: 500;
+    src: url("../../fonts/swiss721-medium.woff2") format("woff2"); }
+  @font-face { font-family: "JPA Pretendard"; font-weight: 500;
+    src: local("Pretendard Medium"), local("Pretendard-Medium"),
+         url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Medium.woff2") format("woff2"); }
+  @font-face { font-family: "JPA Pretendard"; font-weight: 600;
+    src: local("Pretendard SemiBold"), local("Pretendard-SemiBold"),
+         url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-SemiBold.woff2") format("woff2"); }
+  @font-face { font-family: "JPA Pretendard"; font-weight: 700;
+    src: local("Pretendard Bold"), local("Pretendard-Bold"),
+         url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Bold.woff2") format("woff2"); }
+
+  :root { --bg: #FFFFFF; --main: #740607; --sub: #75A4BE; --text: #000000; --s: 1;
+    --swiss: "JPA Swiss", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --kr: "JPA Pretendard", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+
+  html, body { margin: 0; background: var(--bg); }
+  body { -webkit-font-smoothing: antialiased; }
+
+  /* 1920×1080 한 장을 iframe 크기에 맞춰 비율 그대로 가운데 */
+  html, body { height: 100%; overflow: hidden; }
+  .page { position: relative; height: 100%; overflow: hidden; }
+  /* 단계 요소: 대본 순서대로 Enter를 누를 때마다 나타난다 */
+  .js [data-step] { opacity: 0; transition: opacity .8s ease, transform .9s cubic-bezier(.2, .7, .2, 1); }
+  .js .slide > [data-step]:not(svg.art) { transform: translateY(32px); }
+  .js .slide > img.full[data-step], .js .slide > img.abs[data-step] { transform: scale(1.04); }
+  .js [data-step].shown { opacity: 1; transform: none; }
+  .js .instant [data-step] { transition: none !important; }
+  @media (prefers-reduced-motion: reduce) { .js [data-step] { transition: none !important; transform: none !important; } }
+
+  .slide { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; overflow: hidden;
+    transform: translate(-50%, -50%) scale(var(--s)); background: var(--bg); color: var(--text); }
+  .slide.on-main { background: var(--main); color: #FFFFFF; }
+  .slide.on-sub { background: var(--sub); color: var(--text); }
+  .slide.on-photo { color: #FFFFFF; }
+  .slide .art, .slide .abs { position: absolute; left: 0; top: 0; }
+  .slide .full { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .slide .cover { object-fit: cover; }
+
+  /* 피그마 글자 박스는 대문자 윗선~기준선으로 잘려 있다 → 같은 기준으로 위치를 맞춘다 */
+  .slide p { position: absolute; margin: 0; text-box: trim-both cap alphabetic; white-space: nowrap; }
+  .t15  { font: 700 15px/1 var(--swiss); letter-spacing: -0.02em; }
+  .t20  { font: 700 20px/1.1 var(--swiss); letter-spacing: -0.02em; text-transform: uppercase; }
+  .t20n { font: 700 20px/1.3 var(--swiss); letter-spacing: -0.02em; }
+  .t20b { font: 700 20px/1.3 var(--swiss); letter-spacing: -0.02em; }
+  .t24  { font: 700 24px/1.34 var(--swiss); letter-spacing: -0.005em; }
+  .t30  { font: 700 30px/1.36 var(--swiss); letter-spacing: -0.02em; }
+  .t36  { font: 700 36px/1.2 var(--swiss); letter-spacing: -0.02em; }
+  .t45  { font: 700 45px/1.2 var(--swiss); letter-spacing: -0.02em; }
+  .t28  { font: 700 27.73px/33px var(--swiss); letter-spacing: -0.02em; }
+  .logo { line-height: 0.95; letter-spacing: -0.04em; }
+  .t170 { font: 500 170px/0.9 var(--swiss); letter-spacing: -0.02em; }
+  .kr18  { font: 600 18px/1.4 var(--kr); letter-spacing: -0.02em; }
+  .kr21  { font: 500 21px/1.4 var(--kr); letter-spacing: -0.02em; }
+  .kr21b { font: 700 21px/1.4 var(--kr); letter-spacing: -0.02em; }
+  .kr26  { font: 600 26px/1.5 var(--kr); letter-spacing: -0.02em; }
+  .kr28  { font: 600 28px/1.4 var(--kr); letter-spacing: -0.02em; }
+  .ctr { text-align: center; }
+  .hl, em.hl { color: var(--main); font-style: normal; }
+  .light { color: #FFFFFF; }
+
+  .head { position: absolute; left: 36px; top: 40px; width: 1400px; text-box: trim-both cap alphabetic; }
+  .slide .head p { position: static; text-box: normal; }
+
+  .disc { position: absolute; width: 380px; height: 380px; border-radius: 50%; object-fit: cover; display: block; }
+  .infuse-box { position: absolute; left: 796px; top: 273px; width: 659px; height: 445px; box-sizing: border-box;
+    background: color-mix(in srgb, var(--main) 10%, transparent); }
+  .infuse-box::after { content: ""; position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='659' height='445'%3E%3Crect x='1' y='1' width='657' height='443' fill='none' stroke='%23740607' stroke-width='2' stroke-dasharray='8 10'/%3E%3C/svg%3E"); }
+
+  .foot-line { position: absolute; left: 37px; top: 1026px; width: 1848px; height: 1px; background: currentColor; }
+  .foot { top: 1039px; }
+  .foot.l { left: 36px; }
+  .foot.c { left: 0; width: 1920px; text-align: center; }
+  .foot.r { right: 36px; text-align: right; }
+</style>
+</head>
+<body>
+  <div class="page" id="s04">
+    <section class="slide " aria-label="04 5 STEPS">
+      <div class="head" data-step="0"><p class="t24">INFUSING</p><p class="kr21">5단계의 차를 우려내는 과정을 브랜드를 소비하는 과정으로 봄</p></div>
+      <div class="infuse-box" data-step="6"></div>
+      <svg class="abs draw" data-step="1" style="left:128.5px;top:298.5px" aria-hidden="true" width="283" height="283" viewBox="0 0 283 283" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<g>
+<g>
+<rect x="1.5" y="1.5" width="280" height="280" fill="#FFFFFF"/>
+<g>
+<g>
+<g>
+<mask id="mask0_st1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="281" height="281">
+<g>
+<path d="M281.5 1.5H1.5V281.5H281.5V1.5Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_st1)">
+<g>
+<path d="M151.5 75.5L321.5 35.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M96.5 77.5C96.5 80.9478 99.6607 84.2544 105.287 86.6924C110.913 89.1304 118.544 90.5 126.5 90.5C134.456 90.5 142.087 89.1304 147.713 86.6924C153.339 84.2544 156.5 80.9478 156.5 77.5C156.5 74.0522 153.339 70.7456 147.713 68.3076C142.087 65.8696 134.456 64.5 126.5 64.5C118.544 64.5 110.913 65.8696 105.287 68.3076C99.6607 70.7456 96.5 74.0522 96.5 77.5Z" fill="white" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M145.5 74.5C138.833 82.5 131.833 83.1667 124.5 76.5C118.5 83.1667 111.833 83.1667 104.5 76.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M123.5 105.5L120.5 117.5" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M129.5 131.5L125.5 143.5" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M119.5 151.5L117.5 161.5" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<g>
+<path d="M134.6 115.7C143.066 114.967 147.666 118.833 148.4 127.3C139.933 128.033 135.333 124.167 134.6 115.7ZM134.6 115.7L148.4 127.3L134.6 115.7Z" fill="white"/>
+<path d="M148.4 127.3C139.933 128.033 135.333 124.167 134.6 115.7C143.066 114.967 147.666 118.833 148.4 127.3ZM134.6 115.7L148.4 127.3" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g>
+<path d="M101 180.6C104.6 172.867 110.267 170.8 118 174.4C114.4 182.133 108.733 184.2 101 180.6ZM101 180.6L118 174.4L101 180.6Z" fill="white"/>
+<path d="M118 174.4C114.4 182.133 108.733 184.2 101 180.6C104.6 172.867 110.267 170.8 118 174.4ZM101 180.6L118 174.4" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M26.5 207.5C26.5 213.335 38.616 218.931 60.1827 223.056C81.7494 227.182 111 229.5 141.5 229.5C172 229.5 201.251 227.182 222.817 223.056C244.384 218.931 256.5 213.335 256.5 207.5C256.5 201.665 244.384 196.069 222.817 191.944C201.251 187.818 172 185.5 141.5 185.5C111 185.5 81.7494 187.818 60.1827 191.944C38.616 196.069 26.5 201.665 26.5 207.5Z" fill="white" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26.5 207.5C31.5 321.5 251.5 321.5 256.5 207.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M56.5 215.5C65.8333 210.167 75.1667 210.167 84.5 215.5C93.8333 220.833 103.167 220.833 112.5 215.5C121.833 210.167 131.167 210.167 140.5 215.5C149.833 220.833 159.167 220.833 168.5 215.5C177.833 210.167 187.167 210.167 196.5 215.5C205.833 220.833 215.167 220.833 224.5 215.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+<path d="M281.5 1.5H1.5V281.5H281.5V1.5Z" stroke="#000000" stroke-width="3"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>
+
+      <svg class="abs draw" data-step="2" style="left:458.5px;top:298.5px" aria-hidden="true" width="283" height="283" viewBox="0 0 283 283" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<g>
+<g>
+<rect x="1.5" y="1.5" width="280" height="280" fill="#FFFFFF"/>
+<g>
+<g>
+<g>
+<mask id="mask0_st2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="281" height="281">
+<g>
+<path d="M281.5 1.5H1.5V281.5H281.5V1.5Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_st2)">
+<g>
+<path d="M73.5 58.5H209.5V84.5H73.5V58.5Z" fill="white" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M129.5 58.5V46.5H153.5V58.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M127.5 96.5L125.5 106.5" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M151.5 100.5L153.5 110.5" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<g>
+<path d="M138.8 111C145.6 114.2 147.4 119.2 144.2 126C137.4 122.8 135.6 117.8 138.8 111ZM138.8 111L144.2 126L138.8 111Z" fill="white"/>
+<path d="M144.2 126C137.4 122.8 135.6 117.8 138.8 111C145.6 114.2 147.4 119.2 144.2 126ZM138.8 111L144.2 126" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M81.5 134.5V250.5C81.5 255.833 84.1667 258.5 89.5 258.5H193.5C198.833 258.5 201.5 255.833 201.5 250.5V134.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M81.5 134.5H201.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M81.5 164.5H201.5M81.5 232.5H201.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M116.5 178.5H166.5V218.5H116.5V178.5Z" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<g>
+<path d="M132 204C134.667 194 141 190.333 151 193C148.333 203 142 206.667 132 204ZM132 204L151 193L132 204Z" fill="white"/>
+<path d="M151 193C148.333 203 142 206.667 132 204C134.667 194 141 190.333 151 193ZM132 204L151 193" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+<path d="M281.5 1.5H1.5V281.5H281.5V1.5Z" stroke="#000000" stroke-width="3"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>
+
+      <svg class="abs draw" data-step="3" style="left:818.5px;top:298.5px" aria-hidden="true" width="283" height="283" viewBox="0 0 283 283" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<g>
+<g>
+<rect x="1.5" y="1.5" width="280" height="280" fill="#FFFFFF"/>
+<g>
+<g>
+<g>
+<path d="M281.5 1.5H1.5V281.5H281.5V1.5Z" fill="white" stroke="#000000" stroke-width="3"/>
+<g>
+<mask id="mask0_st3" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="281" height="281">
+<g>
+<path d="M281.5 1.5H1.5V281.5H281.5V1.5Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_st3)">
+<g>
+<g>
+<path d="M215.457 117.598L191.844 15.4734C219.289 -12.5921 252.543 -24.6957 291.607 -20.8372L337.168 73.2991L215.457 117.598Z" fill="white" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M204 17.8285C227.214 -1.16554 253.818 -10.8484 283.81 -11.22" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M204.422 72.4575C183.595 80.038 159.939 81.8696 133.453 77.9523L137.31 94.625C163.947 103.007 185.587 102.343 209.835 92.0109" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M141.944 130.5V141.5" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M141.944 152.5V163.5" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M141.944 174.5V185.5" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M141.944 196.5V207.5" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M85.9443 187.5L90.9443 259.5C92.2777 267.5 97.2777 271.5 105.944 271.5H185.944C194.611 271.5 199.611 267.5 200.944 259.5L205.944 187.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M86.9444 199.5H61.9444C57.2778 200.833 55.6111 204.167 56.9444 209.5L67.9444 237.9L88.9444 241.26" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M93.9443 231.5C102.611 227.5 111.278 227.5 119.944 231.5C128.611 235.5 137.278 235.5 145.944 231.5C154.611 227.5 163.278 227.5 171.944 231.5C180.611 235.5 189.278 235.5 197.944 231.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M281.5 1.5H1.5V281.5H281.5V1.5Z" stroke="#000000" stroke-width="3"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>
+
+      <svg class="abs draw" data-step="4" style="left:1148.5px;top:298.5px" aria-hidden="true" width="283" height="283" viewBox="0 0 283 283" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<g>
+<g>
+<rect x="1.5" y="1.5" width="280" height="280" fill="#FFFFFF"/>
+<g>
+<g>
+<g>
+<path d="M281.5 1.5H1.5V281.5H281.5V1.5Z" fill="white" stroke="#000000" stroke-width="3"/>
+<g>
+<mask id="mask0_st4" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="281" height="281">
+<g>
+<path d="M281.5 1.5H1.5V281.5H281.5V1.5Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_st4)">
+<g>
+<path d="M56.5 97.5C56.5 173.5 226.5 173.5 226.5 97.5H56.5Z" fill="white" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M226.5 97.5L311.5 83.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M93.5 113.5L105.5 141.5M125.5 107.5L131.5 149.5M157.5 107.5L151.5 149.5M189.5 113.5L177.5 141.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<g>
+<path d="M110.8 91.2C118.133 86.9333 123.933 88.4666 128.2 95.8C120.866 100.067 115.066 98.5333 110.8 91.2ZM110.8 91.2L128.2 95.8L110.8 91.2Z" fill="white"/>
+<path d="M128.2 95.8C120.866 100.067 115.066 98.5333 110.8 91.2C118.133 86.9333 123.933 88.4666 128.2 95.8ZM110.8 91.2L128.2 95.8" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g>
+<path d="M155.3 95.3C158.233 87.3 163.7 84.7667 171.7 87.7C168.766 95.7 163.3 98.2334 155.3 95.3ZM155.3 95.3L171.7 87.7L155.3 95.3Z" fill="white"/>
+<path d="M171.7 87.7C168.766 95.7 163.3 98.2334 155.3 95.3C158.233 87.3 163.7 84.7667 171.7 87.7ZM155.3 95.3L171.7 87.7" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M129.5 173.5V183.5" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M141.5 185.5V195.5" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M153.5 173.5V183.5" stroke="#000000" stroke-width="3" stroke-linecap="round"/>
+<path d="M71.5 205.5L76.5 259.5C77.8333 267.5 82.8333 271.5 91.5 271.5H191.5C200.167 271.5 205.167 267.5 206.5 259.5L211.5 205.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M210.5 217.5H235.5C240.167 218.833 241.833 222.167 240.5 227.5L229.5 245.1L208.5 247.74" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M81.5 239.5C89.5 236.167 97.5 236.167 105.5 239.5C113.5 242.833 121.5 242.833 129.5 239.5C137.5 236.167 145.5 236.167 153.5 239.5C161.5 242.833 169.5 242.833 177.5 239.5C185.5 236.167 193.5 236.167 201.5 239.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>
+
+      <svg class="abs draw" data-step="5" style="left:1507.5px;top:298.5px" aria-hidden="true" width="283" height="283" viewBox="0 0 283 283" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<g>
+<g>
+<rect x="1.5" y="1.5" width="280" height="280" fill="#FFFFFF"/>
+<g>
+<g>
+<g>
+<mask id="mask0_st5" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="281" height="281">
+<g>
+<path d="M281.5 1.5H1.5V281.5H281.5V1.5Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_st5)">
+<g>
+<path d="M31.5 253.5C31.5 255.076 34.3452 256.636 39.8732 258.092C45.4013 259.548 53.5038 260.871 63.7183 261.985C73.9327 263.1 86.059 263.983 99.4048 264.587C112.751 265.19 127.055 265.5 141.5 265.5C155.945 265.5 170.249 265.19 183.595 264.587C196.941 263.983 209.067 263.1 219.282 261.985C229.496 260.871 237.599 259.548 243.127 258.092C248.655 256.636 251.5 255.076 251.5 253.5C251.5 251.924 248.655 250.364 243.127 248.908C237.599 247.452 229.496 246.129 219.282 245.015C209.067 243.9 196.941 243.017 183.595 242.413C170.249 241.81 155.945 241.5 141.5 241.5C127.055 241.5 112.751 241.81 99.4048 242.413C86.059 243.017 73.9327 243.9 63.7183 245.015C53.5038 246.129 45.4013 247.452 39.8732 248.908C34.3452 250.364 31.5 251.924 31.5 253.5Z" fill="white" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<g>
+<path d="M61.5 161.5C64.1667 214.833 90.8333 241.5 141.5 241.5C192.167 241.5 218.833 214.833 221.5 161.5" fill="white"/>
+<path d="M61.5 161.5C64.1667 214.833 90.8333 241.5 141.5 241.5C192.167 241.5 218.833 214.833 221.5 161.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M61.5 161.5C61.5 165.213 69.9285 168.774 84.9315 171.399C99.9344 174.025 120.283 175.5 141.5 175.5C162.717 175.5 183.066 174.025 198.069 171.399C213.071 168.774 221.5 165.213 221.5 161.5C221.5 157.787 213.071 154.226 198.069 151.601C183.066 148.975 162.717 147.5 141.5 147.5C120.283 147.5 99.9344 148.975 84.9315 151.601C69.9285 154.226 61.5 157.787 61.5 161.5Z" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M79.5 163.5C87.8333 160.833 96.1667 160.833 104.5 163.5C112.833 166.167 121.167 166.167 129.5 163.5C137.833 160.833 146.167 160.833 154.5 163.5C162.833 166.167 171.167 166.167 179.5 163.5C187.833 160.833 196.167 160.833 204.5 163.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M219.5 175.5C248.833 175.5 259.5 186.167 251.5 207.5C244.833 218.167 231.5 220.833 211.5 215.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M111.5 131.5C99.5002 119.5 123.5 103.5 111.5 91.5C99.5002 79.5 123.5 63.5 111.5 51.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M141.5 131.5C129.5 119.5 153.5 103.5 141.5 91.5C129.5 79.5 153.5 63.5 141.5 51.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M171.5 131.5C159.5 119.5 183.5 103.5 171.5 91.5C159.5 79.5 183.5 63.5 171.5 51.5" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+<path d="M281.5 1.5H1.5V281.5H281.5V1.5Z" stroke="#000000" stroke-width="3"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>
+
+      <svg class="abs draw" data-step="2" style="left:416.5px;top:427.5px" aria-hidden="true" width="37" height="25" viewBox="0 0 37 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<g>
+<g>
+
+<path d="M1.5 5.45999H21.5V1.5L35.5 12.5L21.5 23.5V19.54H1.5V5.45999Z" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</svg>
+
+      <svg class="abs draw" data-step="3" style="left:746.5px;top:427.5px" aria-hidden="true" width="37" height="25" viewBox="0 0 37 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<g>
+<g>
+
+<path d="M1.5 5.45999H21.5V1.5L35.5 12.5L21.5 23.5V19.54H1.5V5.45999Z" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</svg>
+
+      <svg class="abs draw" data-step="4" style="left:1106.5px;top:427.5px" aria-hidden="true" width="37" height="25" viewBox="0 0 37 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<g>
+<g>
+
+<path d="M1.5 5.45999H21.5V1.5L35.5 12.5L21.5 23.5V19.54H1.5V5.45999Z" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</svg>
+
+      <svg class="abs draw" data-step="5" style="left:1465.5px;top:427.5px" aria-hidden="true" width="37" height="25" viewBox="0 0 37 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<g>
+<g>
+
+<path d="M1.5 5.45999H21.5V1.5L35.5 12.5L21.5 23.5V19.54H1.5V5.45999Z" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</svg>
+
+      <svg class="abs draw" style="left:920px;top:735px" width="376" height="36" aria-hidden="true" data-step="6">
+        <path d="M2 2V33H374V2" stroke="#740607" stroke-width="3" fill="none"/></svg>
+      <p class="t20n" style="left:130px;top:604px" data-step="1">01</p>
+      <p class="t30" style="left:130px;top:636px" data-step="1">BLENDING</p>
+      <p class="kr21" style="left:130px;top:680px" data-step="1">재료섞기</p>
+      <p class="kr18" style="left:130px;top:718px" data-step="1">이질적인 재료들을<br>창의적으로 섞어<br>새로운 가능성을 발견</p>
+      <p class="t20n" style="left:460px;top:604px" data-step="2">02</p>
+      <p class="t30" style="left:460px;top:636px" data-step="2">CONTAINING</p>
+      <p class="kr21" style="left:460px;top:680px" data-step="2">함에 담기</p>
+      <p class="kr18" style="left:460px;top:718px" data-step="2">브랜드 가치가 녹아든<br>함에 재료들을 담기</p>
+      <p class="t20n hl" style="left:820px;top:604px" data-step="3">03</p>
+      <p class="t30 hl" style="left:820px;top:636px" data-step="3">BREWING</p>
+      <p class="kr21 hl" style="left:820px;top:680px" data-step="3">우려내기</p>
+      <p class="t20n hl" style="left:1150px;top:604px" data-step="4">04</p>
+      <p class="t30 hl" style="left:1150px;top:636px" data-step="4">STRAINING</p>
+      <p class="kr21 hl" style="left:1150px;top:680px" data-step="4">걸러내기</p>
+      <p class="t20n" style="left:1509px;top:604px" data-step="5">05</p>
+      <p class="t30" style="left:1509px;top:636px" data-step="5">TASTING</p>
+      <p class="kr21" style="left:1509px;top:680px" data-step="5">맛보기</p>
+      <p class="kr18" style="left:1509px;top:718px" data-step="5">브랜드를 경험하고<br>여운을 가짐</p>
+      <p class="t36 ctr hl" style="left:909px;top:787px;width:400px" data-step="6">INFUSING</p>
+      <p class="kr18 ctr hl" style="left:859px;top:835px;width:500px" data-step="6">브랜드 가치가 소비자에게 전해지기 전<br>한 번 더 깊어지는 공간</p>
+    </section>
+  </div>
+<script>
+  const root = document.documentElement;
+  root.classList.add('js');
+  const p = document.querySelector('.page');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fit = () => root.style.setProperty('--s', Math.min(innerWidth / 1920, innerHeight / 1080));
+  addEventListener('resize', fit); fit();
+
+  // 선 그림은 그려지듯이 나타난다(점선·마스크 안 도형 제외)
+  function draw(el, delay) {
+    if (reduce) return;
+    const targets = el.matches('.draw') ? [el] : [...el.querySelectorAll('.draw')];
+    targets.forEach(t => t.querySelectorAll('[stroke]:not([stroke="none"]):not([stroke-dasharray])').forEach(s => {
+      if (s.closest('mask, clipPath') || !s.getTotalLength) return;
+      s.setAttribute('pathLength', '1');
+      s.animate([{ strokeDasharray: '1 1', strokeDashoffset: 1 }, { strokeDasharray: '1 1', strokeDashoffset: 0 }],
+                { duration: 1400, delay, easing: 'cubic-bezier(.5, 0, .2, 1)', fill: 'backwards' });
+    }));
+  }
+
+  function show(p, upto, { animate = true, stagger = 0 } = {}) {
+    p.classList.toggle('instant', !animate);
+    p.querySelectorAll('[data-step]').forEach(e => {
+      const n = +e.dataset.step;
+      if (n <= upto) {
+        if (e.classList.contains('shown')) return;
+        const delay = stagger * n;
+        e.style.transitionDelay = delay ? delay + 'ms' : '';
+        e.classList.add('shown');
+        if (animate) draw(e, delay);
+      } else {
+        e.classList.remove('shown');
+        e.style.transitionDelay = '';
+      }
+    });
+    if (!animate) requestAnimationFrame(() => requestAnimationFrame(() => p.classList.remove('instant')));
+  }
+
+  // 슬라이더가 이 장을 보여줄 때 처음부터 다시 재생, 다른 장일 때는 완성된 모습으로 둔다
+  window.diagram = {
+    play() { show(p, -1, { animate: false }); requestAnimationFrame(() => requestAnimationFrame(() => show(p, Infinity, { stagger: 160 }))); },
+    rest() { show(p, Infinity, { animate: false }); }
+  };
+  const host = window.frameElement;
+  (!host || host.closest('.active')) ? diagram.play() : diagram.rest();
+</script>
+</body>
+</html>

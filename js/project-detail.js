@@ -89,6 +89,7 @@
       pos = p;
       const real = (pos - 1 + total) % total;
       slides[real].classList.add('active');
+      motion(slides[real]);
       counter.textContent = `${real + 1} / ${total}`;
       setPos(pos, true);
       clearTimeout(timer); timer = setTimeout(settle, 400);
@@ -111,6 +112,14 @@
     box.append(prevBtn, nextBtn, counter);
   }
 
+  // 모션 다이어그램(iframe): 보이는 장은 처음부터 재생, 나머지는 완성된 모습으로
+  function motion(active) {
+    document.querySelectorAll('.pd-embed').forEach(f => {
+      const d = f.contentWindow && f.contentWindow.diagram;
+      if (d) f.closest('.pd-slide') === active ? d.play() : d.rest();
+    });
+  }
+
   function fill(elId, list) {
     const el = document.getElementById(elId);
     if (!el || !Array.isArray(list)) return;
@@ -122,6 +131,13 @@
   }
   function setText(elId, v) { const el = document.getElementById(elId); if (el) el.textContent = v; }
   function createMedia(src, alt) {
+    const embed = project.motion && project.motion[src.split('?')[0]];
+    if (embed && window.matchMedia('(min-width: 769px)').matches) {
+      const f = document.createElement('iframe');
+      Object.assign(f, { src: embed, className: 'pd-embed', title: alt, tabIndex: -1 });
+      f.setAttribute('aria-hidden', 'true');
+      return f;
+    }
     if (/\.mp4/i.test(src)) {
       const v = document.createElement('video');
       Object.assign(v, { src, autoplay: true, loop: true, muted: true, playsInline: true });

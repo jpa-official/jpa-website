@@ -121,6 +121,15 @@
   justify-content: center;
   min-height: 640px;
 }
+/* 모션 다이어그램(iframe, PC 전용): 이미지와 같은 높이 640px, 16:9 */
+.pd-embed {
+  display: block;
+  width: min(100%, 1138px);
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+  pointer-events: none;   /* 슬라이더 스와이프·커서 유지 */
+}
 /* 원본 비율 그대로(잘림 없음): 높이 640px 고정, 폭은 이미지 비율대로 */
 .pd-slide:not(.pd-slide-main) img,
 .pd-slide:not(.pd-slide-main) video {
