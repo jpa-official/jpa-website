@@ -209,12 +209,12 @@ window.PROJECTS = [
     ],
     // PC에서는 다이어그램 PNG 대신 모션 버전(HTML)을 보여줌 — 원본 Desktop/HTML/tea_the_han.html
     motion: {
-      'images/projects/tea-the-han-diagram-1.png': 'embeds/tea-the-han/diagram-1.html?v=20261020b',
-      'images/projects/tea-the-han-diagram-2.png': 'embeds/tea-the-han/diagram-2.html?v=20261020b',
-      'images/projects/tea-the-han-diagram-3.png': 'embeds/tea-the-han/diagram-3.html?v=20261020b',
-      'images/projects/tea-the-han-diagram-4.png': 'embeds/tea-the-han/diagram-4.html?v=20261020b',
-      'images/projects/tea-the-han-diagram-5.png': 'embeds/tea-the-han/diagram-5.html?v=20261020b',
-      'images/projects/tea-the-han-diagram-6.png': 'embeds/tea-the-han/diagram-6.html?v=20261020b'
+      'images/projects/tea-the-han-diagram-1.png': 'embeds/tea-the-han/diagram-1.html?v=20261020c',
+      'images/projects/tea-the-han-diagram-2.png': 'embeds/tea-the-han/diagram-2.html?v=20261020c',
+      'images/projects/tea-the-han-diagram-3.png': 'embeds/tea-the-han/diagram-3.html?v=20261020c',
+      'images/projects/tea-the-han-diagram-4.png': 'embeds/tea-the-han/diagram-4.html?v=20261020c',
+      'images/projects/tea-the-han-diagram-5.png': 'embeds/tea-the-han/diagram-5.html?v=20261020c',
+      'images/projects/tea-the-han-diagram-6.png': 'embeds/tea-the-han/diagram-6.html?v=20261020c'
     },
     name: 'Tea the Han',
     nameKo: '북촌 TEA THE HAN 공간브랜딩 및 공간경험&환경디자인',

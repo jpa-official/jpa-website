@@ -190,10 +190,23 @@
     if (!animate) requestAnimationFrame(() => requestAnimationFrame(() => p.classList.remove('instant')));
   }
 
-  // 슬라이더가 이 장을 보여줄 때 처음부터 다시 재생, 다른 장일 때는 완성된 모습으로 둔다
+  // 슬라이더가 이 장을 보여줄 때: 발표 순서(data-step)대로 한 단계씩, 앞 단계가 끝나면 다음 단계
+  // 선을 그리는 단계는 그려지는 시간(1.4초)만큼, 글·사진만 있는 단계는 나타나는 시간만큼 기다린다
+  const steps = [...new Set([...p.querySelectorAll('[data-step]')].map(e => +e.dataset.step))].sort((a, b) => a - b);
+  const hasDraw = n => [...p.querySelectorAll(`[data-step="${n}"]`)].some(e => e.matches('.draw') || e.querySelector('.draw'));
+  let timers = [];
+  const stop = () => { timers.forEach(clearTimeout); timers = []; };
   window.diagram = {
-    play() { show(p, -1, { animate: false }); requestAnimationFrame(() => requestAnimationFrame(() => show(p, Infinity, { stagger: 160 }))); },
-    rest() { show(p, Infinity, { animate: false }); }
+    play() {
+      stop();
+      show(p, -1, { animate: false });
+      let t = 120;
+      steps.forEach(n => {
+        timers.push(setTimeout(() => show(p, n), t));
+        t += hasDraw(n) ? 1500 : 900;
+      });
+    },
+    rest() { stop(); show(p, Infinity, { animate: false }); }
   };
   const host = window.frameElement;
   (!host || host.closest('.active')) ? diagram.play() : diagram.rest();
