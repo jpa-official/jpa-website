@@ -250,9 +250,8 @@ button { font-family: inherit; }
   background: var(--white);
   transition: width 0.4s var(--transition);
 }
-/* hover: 라인 없이 굵게 + 포인트 컬러
-   font-weight 대신 text-stroke로 두께만 키워 글자 폭(메뉴 위치)은 고정 */
-.main-nav a:hover { opacity: 1; color: var(--accent); -webkit-text-stroke: 0.9px currentColor; }
+/* hover: 라인 없이 포인트 컬러 */
+.main-nav a:hover { opacity: 1; color: var(--accent); }
 
 @media (max-width: 768px) {
   .site-header { padding: 18px 20px; }

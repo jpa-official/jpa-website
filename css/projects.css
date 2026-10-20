@@ -321,8 +321,10 @@
 
 /* PC: 카테고리 메뉴 크게, 페이지 내 선 모두 제거 */
 @media (min-width: 769px) {
-  .pj-filter-btn { font-size: 16px; }
+  .pj-filter-btn { font-size: 16px; color: #000000; opacity: 1; transition: color 0.3s var(--transition); }
   .pj-filter-btn.active { border-bottom-color: transparent; }
+  /* hover: 상단 메뉴와 동일하게 포인트 컬러 */
+  .pj-filter-btn:hover { color: var(--accent); opacity: 1; }
   .pj-filter-wrap { border-top: none; border-bottom: none; }
   .pj-view-toggle { border-left: none; }
   .pj-list { border-top: none; }
