@@ -96,15 +96,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---------- HOME SLIDES (프로젝트 대표 이미지, 1초 간격) ---------- */
+  /* ---------- HOME SLIDES (프로젝트 대표·서브 이미지를 섞어 0.5초 간격) ---------- */
   (function homeSlides() {
     const track = document.getElementById('homeSlides');
     if (!track || !window.PROJECTS) return;
 
-    const imgs = window.PROJECTS.filter(p => p.thumbnail).map((p, i) => {
+    // 사진만 사용 (다이어그램·PNG·영상 제외), 순서는 매번 무작위
+    const srcs = window.PROJECTS
+      .flatMap(p => [p.thumbnail, ...(p.images || [])].map(src => ({ src, name: p.name })))
+      .filter(({ src }) => src && /\.(jpe?g|webp)(\?|$)/i.test(src) && !/diagram/i.test(src));
+    for (let i = srcs.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [srcs[i], srcs[j]] = [srcs[j], srcs[i]];
+    }
+
+    const imgs = srcs.map(({ src, name }, i) => {
       const img = document.createElement('img');
-      img.alt = p.name;
-      img.dataset.src = p.thumbnail;
+      img.alt = name;
+      img.dataset.src = src;
       if (i === 0) img.className = 'active';
       track.appendChild(img);
       return img;
@@ -114,16 +123,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // 다음 몇 장만 미리 불러와 한꺼번에 받지 않도록
     const load = i => { const img = imgs[i % imgs.length]; if (!img.src) img.src = img.dataset.src; };
     let cur = 0;
-    [0, 1, 2].forEach(load);
+    [0, 1, 2, 3, 4].forEach(load);
 
     setInterval(() => {
       const next = (cur + 1) % imgs.length;
-      load(next + 2);
+      load(next + 4);
       if (!imgs[next].complete || !imgs[next].naturalWidth) { load(next); return; }  // 아직 로딩 중이면 현재 장 유지
       imgs[cur].classList.remove('active');
       imgs[next].classList.add('active');
       cur = next;
-    }, 1000);
+    }, 500);
 
     // 슬라이드 위에서는 헤더 로고 숨김 (가운데 로고와 중복 방지)
     const section = track.closest('.home-slides');
