@@ -83,3 +83,15 @@
   .sv-partners { padding: 72px 20px 72px; }
   .sv-partners-grid { gap: 32px; }
 }
+
+/* ---------- HOVER: point-color fill + reveal sub content (PC only) ---------- */
+@media (min-width: 769px) and (hover: hover) {
+  .sv-item { transition: background 0.35s ease; }
+  .sv-item:hover { background: var(--accent); }
+  .sv-item:hover .sv-header,
+  .sv-item:hover .sv-header:hover { color: var(--black); opacity: 1; }
+  .sv-item:hover .sv-body { max-height: 800px; background: transparent; }
+  .sv-item:hover .sv-icon { transform: rotate(45deg); }
+  .sv-item:hover .sv-col-title,
+  .sv-item:hover .sv-list-items li { opacity: 1; transform: translateY(0); color: var(--black); }
+}
