@@ -95,3 +95,220 @@
   .sv-item:hover .sv-col-title,
   .sv-item:hover .sv-list-items li { opacity: 1; transform: translateY(0); color: var(--black); }
 }
+
+/* ============================================
+   PC — Figma 회사소개서 8–15p 기준 (검은 배경, 가운데 정렬)
+   모바일(768px 이하)은 기존 .sv-mobile 아코디언 그대로
+   ============================================ */
+.sv2 { display: none; }
+@media (min-width: 769px) {
+  .services-page { background: #000; color: #fff; }
+  .services-page main { padding-top: 0; }
+  .sv-mobile { display: none; }
+  .sv2 { display: block; }
+
+  .sv2 sup { font-size: 0.55em; font-weight: 400; vertical-align: top; position: relative; top: -0.05em; margin-right: 0.15em; }
+  .sv2 .en { font-family: 'Swiss 721', sans-serif; font-weight: 700; letter-spacing: -0.035em; }
+  .sv2 .kr { font-family: 'Pretendard Variable', Pretendard, sans-serif; font-weight: 500; letter-spacing: -0.02em; }
+
+  .sv2-label {
+    font-family: 'Swiss 721', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .sv2-lead {
+    margin-top: 18px;
+    font-family: 'Pretendard Variable', Pretendard, sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  /* 8p — 서비스 목록 */
+  .sv2-intro {
+    min-height: 100vh;
+    padding: 96px 40px 80px;
+    display: flex;
+    flex-direction: column;
+  }
+  .sv2-index {
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .sv2-index a {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.6em;
+    font-size: clamp(30px, 2.65vw, 44px);
+    line-height: 1.18;
+    color: #fff;
+    transition: color 0.3s var(--transition);
+  }
+  .sv2-index sup { margin-right: -0.35em; }
+  .sv2-index .kr { font-size: 0.68em; font-weight: 400; }
+  .sv2-index a:hover { color: var(--accent); }
+
+  /* 9–13p — 서비스별 */
+  .sv2-service {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 96px;
+  }
+  .sv2-title {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.6em;
+    font-size: clamp(30px, 2.65vw, 44px);
+    line-height: 1.1;
+    margin: auto 0 0;
+  }
+  .sv2-title sup { margin-right: -0.35em; }
+  .sv2-title .kr { font-size: 0.68em; font-weight: 400; }
+  .sv2-cols {
+    display: flex;
+    justify-content: center;
+    gap: clamp(64px, 8vw, 140px);
+    margin: 44px 40px auto;
+  }
+  .sv2-col h3 {
+    font-family: 'Pretendard Variable', Pretendard, sans-serif;
+    font-size: clamp(18px, 1.55vw, 24px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+  .sv2-col li {
+    font-family: 'Pretendard Variable', Pretendard, sans-serif;
+    font-size: clamp(13px, 1.05vw, 16px);
+    font-weight: 400;
+    line-height: 1.65;
+  }
+  .sv2-photo { margin-top: 96px; }
+  .sv2-photo img { width: 100%; aspect-ratio: 1431 / 210; object-fit: cover; }
+
+  /* 14p — MEMBERS */
+  .sv2-members { padding: 120px 40px 120px; }
+  .sv2-roles { margin-top: 72px; }
+  .sv2-roles li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.45em;
+    font-size: clamp(36px, 3.75vw, 64px);
+    line-height: 1.05;
+  }
+  .sv2-roles .kr { font-size: max(15px, 0.33em); font-weight: 600; }
+
+  /* 15p — OUR PARTNERS (형광 그린 대신 포인트 컬러) */
+  .sv2-partners { padding: 120px 40px 140px; }
+  .sv2-chart {
+    --line: rgba(255,255,255,0.85);
+    margin: 72px auto 0;
+    max-width: 1250px;
+    display: grid;
+    grid-template-columns: 1fr 2.6fr 1fr;
+    align-items: end;
+    gap: 0 7%;
+    position: relative;
+    text-align: center;
+  }
+  .sv2-chart::before {              /* 좌우 박스 ↔ 가운데를 잇는 선 */
+    content: '';
+    position: absolute;
+    left: 10%; right: 10%;
+    top: calc(100% - 290px / 2 - 2px);
+    height: 1px;
+    background: var(--line);
+    z-index: 0;
+  }
+  .pc-side, .pc-cells > div {
+    position: relative;
+    z-index: 1;
+    background: #000;
+    border: 1px solid var(--line);
+    padding: 26px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-height: 290px;
+  }
+  .sv2-chart strong {
+    font-family: 'Swiss 721', sans-serif;
+    font-weight: 700;
+    font-size: clamp(14px, 1.25vw, 19px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .pc-side strong { font-size: clamp(18px, 1.75vw, 26px); }
+  .sv2-chart b {
+    font-family: 'Pretendard Variable', Pretendard, sans-serif;
+    font-weight: 600;
+    font-size: clamp(13px, 1.1vw, 16px);
+    line-height: 1.35;
+  }
+  .sv2-chart p, .sv2-chart small {
+    font-family: 'Pretendard Variable', Pretendard, sans-serif;
+    font-size: clamp(12px, 0.95vw, 14px);
+    line-height: 1.5;
+  }
+  .sv2-chart small { font-size: 11px; opacity: 0.85; margin-top: 6px; }
+  .pc-logo {
+    background: var(--accent);
+    display: grid;
+    place-items: center;
+    height: 104px;
+  }
+  .pc-logo img { width: 92px; }     /* 검정 로고 그대로 */
+  .pc-cells { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .pc-cells > div + div { border-left: none; }
+
+  .sv2-cluster {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    max-width: 1250px;
+    margin: 0 auto;
+    padding-top: 74px;
+    position: relative;
+    text-align: center;
+    font-family: 'Pretendard Variable', Pretendard, sans-serif;
+    font-size: clamp(12px, 1vw, 15px);
+    line-height: 1.35;
+  }
+  .sv2-cluster::before {            /* 가운데에서 내려와 가로로 퍼지는 선 */
+    content: '';
+    position: absolute;
+    left: 50%; top: 0;
+    height: 46px;
+    border-left: 1px solid rgba(255,255,255,0.85);
+  }
+  .sv2-cluster::after {
+    content: '';
+    position: absolute;
+    left: calc(100% / 18); right: calc(100% / 18); top: 46px;
+    border-top: 1px solid rgba(255,255,255,0.85);
+  }
+  .sv2-cluster li { position: relative; }
+  .sv2-cluster li::before {
+    content: '';
+    position: absolute;
+    left: 50%; top: -28px;
+    height: 20px;
+    border-left: 1px solid rgba(255,255,255,0.85);
+  }
+  .sv2-cluster strong {
+    display: block;
+    font-family: 'Swiss 721', sans-serif;
+    font-weight: 700;
+    font-size: clamp(12px, 1.1vw, 16px);
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+}

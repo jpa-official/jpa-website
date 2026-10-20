@@ -55,12 +55,12 @@
 .sv-list {
   border-bottom: 1px solid var(--black);
 }
-#sv-01 { border-top: none; }
-#sv-01.reveal { transition-delay: 0s; }
-#sv-02.reveal { transition-delay: 0.08s; }
-#sv-03.reveal { transition-delay: 0.16s; }
-#sv-04.reveal { transition-delay: 0.24s; }
-#sv-05.reveal { transition-delay: 0.32s; }
+.sv-item[data-sv="sv-01"] { border-top: none; }
+.sv-item[data-sv="sv-01"].reveal { transition-delay: 0s; }
+.sv-item[data-sv="sv-02"].reveal { transition-delay: 0.08s; }
+.sv-item[data-sv="sv-03"].reveal { transition-delay: 0.16s; }
+.sv-item[data-sv="sv-04"].reveal { transition-delay: 0.24s; }
+.sv-item[data-sv="sv-05"].reveal { transition-delay: 0.32s; }
 
 .sv-item {
   border-top: 1px solid var(--black);
