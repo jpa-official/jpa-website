@@ -193,7 +193,7 @@ button { font-family: inherit; }
 .site-header {
   position: fixed;
   top: 0; left: 0; right: 0;
-  padding: 24px 40px;
+  padding: 14px 20px 14px 40px;   /* 상단·우측 여백 축소 */
   z-index: 100;
   mix-blend-mode: difference;
   transition: transform 0.5s var(--transition);
@@ -208,7 +208,7 @@ button { font-family: inherit; }
   color: var(--white);
 }
 .logo {
-  width: 60px;
+  width: 42px;
   display: block;
   margin-right: auto;
   margin-left: 0;
