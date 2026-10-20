@@ -331,6 +331,8 @@
   .pj-item,
   .pj-row { border-bottom: none; }
   .pj-item:nth-child(odd) { border-right: none; }
+  /* 광화문169 썸네일: 하단 기준으로 크롭 */
+  .pj-item-img img[src*="gwanghwa169"] { object-position: center bottom; }
 }
 
 @media (max-width: 768px) {
