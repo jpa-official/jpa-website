@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
 <!-- CONTACT 메뉴로 들어오면 인트로 로딩 화면 생략 -->
 <script>if (location.hash === '#contact') document.documentElement.classList.add('skip-intro');</script>
-<link rel="stylesheet" href="css/style.css?v=20261020j" />
+<link rel="stylesheet" href="css/style.css?v=20261020k" />
 <link rel="stylesheet" href="css/projects.css?v=20261020d" />
 </head>
 <body>
@@ -39,12 +39,14 @@
       <img src="images/jpa-logo.png" alt="jpa." class="logo-img" />
     </a>
     <nav class="main-nav">
-      <a href="about.html" data-text="ABOUT">ABOUT</a>
-      <a href="services.html" data-text="SERVICES">SERVICES</a>
-      <a href="projects.html" data-text="PROJECTS">PROJECTS</a>
-      <a href="insight-reports.html" data-text="INSIGHTS">INSIGHTS</a>
-      <a href="#contact" data-text="CONTACT">CONTACT</a>
+      <a href="#top" class="nav-home">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="services.html">SERVICE</a>
+      <a href="projects.html">PROJECT</a>
+      <a href="insight-reports.html">INSIGHT</a>
+      <a href="#contact">CONTACT</a>
     </nav>
+    <button type="button" class="search-btn" id="searchBtn" aria-label="Search projects">SEARCH</button>
   </div>
 </header>
 
@@ -116,7 +118,7 @@
 </main>
 
 <script src="js/projects-data.js?v=20261019b"></script>
-<script src="js/main.js?v=9"></script>
+<script src="js/main.js?v=10"></script>
 <script>
   /* Contact form — Formspree AJAX submit */
   const form = document.getElementById('contactForm');

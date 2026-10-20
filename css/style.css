@@ -253,6 +253,108 @@ button { font-family: inherit; }
 /* hover: 라인 없이 포인트 컬러 */
 .main-nav a:hover { opacity: 1; color: var(--accent); }
 
+/* SEARCH 버튼 — 메뉴와 같은 글자 스타일 */
+.search-btn {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 4px 0;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--white);
+  transition: color 0.3s var(--transition);
+}
+.search-btn:hover { color: var(--accent); }
+
+/* PC: 로고 없이 메뉴는 좌측, SEARCH는 우측 상단 */
+@media (min-width: 769px) {
+  .site-header .logo { display: none; }
+}
+
+/* ---------- PROJECT SEARCH OVERLAY ---------- */
+body.search-open { overflow: hidden; }
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: var(--white);
+  color: var(--black);
+  overflow-y: auto;
+  padding: 14px 20px 80px 40px;
+  display: none;
+}
+.search-overlay.open { display: block; }
+.so-top {
+  display: flex;
+  justify-content: flex-end;
+}
+.so-close {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 4px 0;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--black);
+  cursor: inherit;
+  transition: color 0.3s var(--transition);
+}
+.so-close:hover { color: var(--accent); }
+.so-input {
+  display: block;
+  width: 100%;
+  margin-top: 56px;
+  padding: 0 20px 0 0;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: 'Swiss 721', 'Pretendard Variable', Pretendard, sans-serif;
+  font-size: clamp(32px, 4.5vw, 64px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--black);
+  caret-color: var(--accent);
+}
+.so-input::placeholder { color: rgba(0,0,0,0.2); }
+.so-count {
+  margin: 20px 0 32px;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.4;
+}
+.so-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px 20px;
+  padding-right: 20px;
+}
+.so-item { display: block; color: var(--black); }
+.so-item-img {
+  aspect-ratio: 16 / 9;
+  background: var(--gray-100);
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.so-item-img img { width: 100%; height: 100%; object-fit: cover; }
+.so-item-name {
+  font-family: 'Swiss 721', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  transition: color 0.3s var(--transition);
+}
+.so-item-meta {
+  margin-top: 4px;
+  font-family: 'Pretendard Variable', Pretendard, sans-serif;
+  font-size: 12px;
+  opacity: 0.5;
+}
+.so-item:hover .so-item-name { color: var(--accent); }
+
 @media (max-width: 768px) {
   .site-header { padding: 18px 20px; }
   .logo { width: 46px; }
@@ -267,6 +369,9 @@ button { font-family: inherit; }
   .main-nav a { font-size: 10px; letter-spacing: 0; }
   .main-nav a[href="#contact"],
   .main-nav a[href="index.html#contact"] { display: none; }
+  /* 모바일: 로고 유지, HOME·SEARCH는 숨김 */
+  .main-nav .nav-home,
+  .search-btn { display: none; }
 }
 
 /* ============================================

@@ -97,6 +97,89 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ---------- PROJECT SEARCH (헤더 우측 SEARCH) ---------- */
+  (function projectSearch() {
+    const btn = document.getElementById('searchBtn');
+    if (!btn) return;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'search-overlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-label', 'Search projects');
+    overlay.innerHTML = `
+      <div class="so-top"><button type="button" class="so-close">CLOSE</button></div>
+      <input class="so-input" type="text" enterkeyhint="search" placeholder="SEARCH PROJECTS" autocomplete="off" spellcheck="false" />
+      <p class="so-count"></p>
+      <div class="so-results"></div>`;
+    document.body.appendChild(overlay);
+
+    const input   = overlay.querySelector('.so-input');
+    const count   = overlay.querySelector('.so-count');
+    const results = overlay.querySelector('.so-results');
+
+    // 프로젝트 데이터가 없는 페이지에서는 처음 열 때 불러옴
+    let ready = null;
+    const loadData = () => ready || (ready = window.PROJECTS ? Promise.resolve() : new Promise(resolve => {
+      const sc = document.createElement('script');
+      sc.src = 'js/projects-data.js?v=20261019b';
+      sc.onload = sc.onerror = resolve;
+      document.head.appendChild(sc);
+    }));
+
+    const haystack = p => [p.name, p.nameKo, p.desc, p.category, p.location, p.client, p.year, ...(p.scope || [])]
+      .filter(Boolean).join(' ').toLowerCase();
+
+    function render() {
+      const list  = window.PROJECTS || [];
+      const terms = input.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+      const hits  = list.filter(p => { const h = haystack(p); return terms.every(t => h.includes(t)); });
+
+      count.textContent = terms.length ? `${hits.length} RESULTS` : `${list.length} PROJECTS`;
+      results.innerHTML = '';
+      hits.forEach(p => {
+        const a = document.createElement('a');
+        a.className = 'so-item';
+        a.href = `project.html?id=${encodeURIComponent(p.id)}`;
+        const box = document.createElement('div');
+        box.className = 'so-item-img';
+        if (p.thumbnail) {
+          const img = document.createElement('img');
+          img.src = p.thumbnail; img.alt = p.name; img.loading = 'lazy';
+          box.appendChild(img);
+        }
+        const name = document.createElement('div');
+        name.className = 'so-item-name';
+        name.textContent = p.name;
+        const meta = document.createElement('div');
+        meta.className = 'so-item-meta';
+        meta.textContent = [p.nameKo, p.category].filter(Boolean).join(' · ');
+        a.append(box, name, meta);
+        results.appendChild(a);
+      });
+    }
+
+    function open() {
+      overlay.classList.add('open');
+      document.body.classList.add('search-open');
+      input.focus();
+      loadData().then(render);
+    }
+    function close() {
+      overlay.classList.remove('open');
+      document.body.classList.remove('search-open');
+    }
+
+    btn.addEventListener('click', open);
+    overlay.querySelector('.so-close').addEventListener('click', close);
+    input.addEventListener('input', render);
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter') { const first = results.querySelector('.so-item'); if (first) location.href = first.href; }
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && overlay.classList.contains('open')) close();
+    });
+  })();
+
   /* ---------- INTERSECTION OBSERVER (카드 생성 후 등록) ---------- */
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
