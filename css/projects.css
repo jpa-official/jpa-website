@@ -185,6 +185,13 @@
   pointer-events: none;
 }
 .pj-item-info .pj-item-name { margin-bottom: 0; font-weight: 500; }
+/* 프로젝트명: 흰색 박스 + 검은 글씨 */
+.pj-item-info .pj-item-name {
+  display: inline-block;
+  background: var(--white);
+  color: var(--black);
+  padding: 6px 10px 5px;
+}
 .pj-item-name {
   font-family: 'Swiss 721', sans-serif;
   font-weight: 700;
