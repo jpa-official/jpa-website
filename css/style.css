@@ -238,7 +238,7 @@ button { font-family: inherit; }
   padding: 4px 0;
   display: inline-block;
   white-space: nowrap;
-  transition: opacity 0.3s var(--transition);
+  transition: opacity 0.3s var(--transition), color 0.3s var(--transition);
 }
 .main-nav a::after {
   content: '';
@@ -250,8 +250,8 @@ button { font-family: inherit; }
   background: var(--white);
   transition: width 0.4s var(--transition);
 }
-.main-nav a:hover { opacity: 0.7; }
-.main-nav a:hover::after { width: 100%; }
+/* hover: 라인 없이 Bold + 포인트 컬러 */
+.main-nav a:hover { opacity: 1; color: var(--accent); font-weight: 700; }
 
 @media (max-width: 768px) {
   .site-header { padding: 18px 20px; }
