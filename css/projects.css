@@ -185,13 +185,6 @@
   pointer-events: none;
 }
 .pj-item-info .pj-item-name { margin-bottom: 0; font-weight: 500; }
-/* 프로젝트명: 흰색 박스 + 검은 글씨 */
-.pj-item-info .pj-item-name {
-  display: inline-block;
-  background: var(--white);
-  color: var(--black);
-  padding: 6px 10px 5px;
-}
 .pj-item-name {
   font-family: 'Swiss 721', sans-serif;
   font-weight: 700;
@@ -325,6 +318,18 @@
 .pj-row:hover .pj-row-cat,
 .pj-row:hover .pj-row-loc,
 .pj-row:hover .pj-row-year { opacity: 0.65; }
+
+/* PC: 카테고리 메뉴 크게, 페이지 내 선 모두 제거 */
+@media (min-width: 769px) {
+  .pj-filter-btn { font-size: 16px; }
+  .pj-filter-btn.active { border-bottom-color: transparent; }
+  .pj-filter-wrap { border-top: none; border-bottom: none; }
+  .pj-view-toggle { border-left: none; }
+  .pj-list { border-top: none; }
+  .pj-item,
+  .pj-row { border-bottom: none; }
+  .pj-item:nth-child(odd) { border-right: none; }
+}
 
 @media (max-width: 768px) {
   .pj-list { grid-template-columns: 1fr; }
