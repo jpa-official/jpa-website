@@ -199,7 +199,13 @@ window.PROJECTS = [
       'images/projects/tea-the-han-7.jpg?v=20261008c',
       'images/projects/tea-the-han-8.jpg?v=20261008c',
       'images/projects/tea-the-han-9.jpg?v=20261008c',
-      'images/projects/tea-the-han-10.jpg?v=20261008c'
+      'images/projects/tea-the-han-10.jpg?v=20261008c',
+      'images/projects/tea-the-han-diagram-1.png?v=20261020',
+      'images/projects/tea-the-han-diagram-2.png?v=20261020',
+      'images/projects/tea-the-han-diagram-3.png?v=20261020',
+      'images/projects/tea-the-han-diagram-4.png?v=20261020',
+      'images/projects/tea-the-han-diagram-5.png?v=20261020',
+      'images/projects/tea-the-han-diagram-6.png?v=20261020'
     ],
     name: 'Tea the Han',
     nameKo: '북촌 TEA THE HAN 공간브랜딩 및 공간경험&환경디자인',
