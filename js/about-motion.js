@@ -25,26 +25,39 @@
   }));
   document.querySelectorAll('.section-label, .cta-link').forEach(el => el.classList.add('m-item'));
 
-  // 6 steps: stagger index only — the chain (dot → line → next dot) is driven by .flow-in on the list
-  document.querySelectorAll('.stp').forEach((el, i) => el.style.setProperty('--i', i));
-  const flow = document.querySelector('.stp-flow');
+  // 6 steps: appear one by one in order (01 → 06) as they scroll into view
+  const steps = Array.prototype.slice.call(document.querySelectorAll('.stp'));
+
+  // 6단계 모션은 '동작 줄이기' 설정과 상관없이 항상 재생 (observer 미지원 브라우저만 즉시 표시)
+  if (steps.length && 'IntersectionObserver' in window) {
+    const seen = new Set();
+    let next = 0, busy = false;
+    const GAP = 650;                              // 단계 사이 간격(ms)
+    const run = () => {
+      if (busy) return;
+      if (next < steps.length && seen.has(steps[next])) {
+        steps[next].classList.add('stp-in');
+        next++; busy = true;
+        setTimeout(() => { busy = false; run(); }, GAP);
+      }
+    };
+    const sio = new IntersectionObserver(es => {
+      es.forEach(e => { if (e.isIntersecting || e.boundingClientRect.top < 0) { seen.add(e.target); sio.unobserve(e.target); } });
+      run();
+    }, { threshold: 0.3, rootMargin: '0px 0px -8% 0px' });
+    steps.forEach(el => sio.observe(el));
+  }
 
   const targets = document.querySelectorAll('.m-item, .intro-title, .dts-keywords');
   if (reduce || !('IntersectionObserver' in window)) {
     targets.forEach(el => el.classList.add('m-in'));
-    if (flow) flow.classList.add('flow-in');
+    if (!('IntersectionObserver' in window)) steps.forEach(el => el.classList.add('stp-in'));
     return;
   }
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('m-in'); io.unobserve(e.target); } });
   }, { threshold: 0.2, rootMargin: '0px 0px -8% 0px' });
   targets.forEach(el => io.observe(el));
-  if (flow) {
-    const fio = new IntersectionObserver(es => {
-      if (es[0].isIntersecting) { flow.classList.add('flow-in'); fio.disconnect(); }
-    }, { threshold: 0.35 });
-    fio.observe(flow);
-  }
 
   // hero: title drifts up and fades as you scroll away
   const hero = document.querySelector('.about-hero-inner');

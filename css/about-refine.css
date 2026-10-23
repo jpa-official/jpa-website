@@ -328,81 +328,47 @@
 }
 
 /* ============================================
-   03 SPACE TOTAL SOLUTION — 6 steps, 3 + 3, connected clockwise
-     01 → 02 → 03
-                ↓
-     06 ← 05 ← 04
-   점 → 선 → 점 순서로 하나씩 이어지며 각 단계 텍스트가 나타남.
-   좁은 화면(900px 이하)은 세로 타임라인.
+   03 SPACE TOTAL SOLUTION — 6 steps, 3 + 3 (읽는 순서 그대로)
+     01  02  03
+     04  05  06
+   선·점 없이 블랙으로 통일. 스크롤해서 보이게 되면 01부터 한 단계씩 차례로 등장
+   (js/about-motion.js가 .stp-in을 순서대로 붙임):
+   번호가 튕기듯 나타나고 → 제목 → 한글명 → 설명이 이어서 올라옴.
    ============================================ */
 .stp-flow {
-  --step: 0.75s;
-  --gap-x: 40px;
-  --gap-y: 56px;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--gap-y) var(--gap-x);
+  gap: 64px 40px;
 }
-.stp { padding: 22px 0 0 24px; }
+.stp { padding-top: 0; }
+.stp::before, .stp::after { display: none; }   /* 점·선 없음 */
+.stp-num {
+  font-size: clamp(26px, 2.4vw, 38px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--black);
+}
+.stp-en { margin-top: 14px; }
 .stp-desc { max-width: 340px; }
-.stp::before { transition-delay: calc(var(--i, 0) * var(--step)); }
-.stp::after {
-  right: auto;
-  width: calc(100% + var(--gap-x));
-  transition: transform var(--step) linear;
-  transition-delay: calc(var(--ls, 0) * var(--step) + 0.2s);
-}
-/* 위 줄: 왼쪽 → 오른쪽 */
-.stp:nth-child(1) { --ls: 0; }
-.stp:nth-child(2) { --ls: 1; }
-/* 03 → 04: 오른쪽 끝에서 아래로 */
-.stp:nth-child(3) { --ls: 2; }
-.stp:nth-child(3)::after {
-  top: 0; left: 3px;
-  width: 1px;
-  height: calc(100% + var(--gap-y));
-  transform: scaleY(0);
-  transform-origin: top;
-}
-/* 아래 줄: 오른쪽 → 왼쪽 (04가 오른쪽, 06이 왼쪽) */
-.stp:nth-child(4) { grid-column: 3; grid-row: 2; }
-.stp:nth-child(4)::after { display: none; }
-.stp:nth-child(5) { grid-column: 2; grid-row: 2; --ls: 3; }
-.stp:nth-child(6) { grid-column: 1; grid-row: 2; --ls: 4; }
-.stp:nth-child(5)::after,
-.stp:nth-child(6)::after { transform-origin: right; }
-.stp:nth-child(6)::after { display: block; }
 
+/* 단계 안의 요소가 시차를 두고 등장 */
 .stp > * {
+  --t: 0s;
   opacity: 0;
-  translate: 0 14px;
-  transition: opacity 0.8s ease, translate 0.8s var(--transition), transform 0.4s var(--transition);
-  transition-delay: calc(var(--i, 0) * var(--step) + 0.15s), calc(var(--i, 0) * var(--step) + 0.15s), 0s;
+  translate: 0 22px;
+  transition: opacity 0.7s ease, translate 0.8s var(--transition), scale 0.7s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.4s var(--transition);
+  transition-delay: var(--t), var(--t), var(--t), 0s;
 }
-.stp-flow.flow-in .stp::before { transform: scale(1); }
-.stp-flow.flow-in .stp::after { transform: scaleX(1); }
-.stp-flow.flow-in .stp:nth-child(3)::after { transform: scaleY(1); }
-.stp-flow.flow-in .stp > * { opacity: 1; translate: 0 0; }
+.stp > .stp-num { scale: 0.6; transform-origin: left bottom; }
+.stp > .stp-en  { --t: 0.12s; }
+.stp > .stp-ko  { --t: 0.22s; }
+.stp > .stp-desc{ --t: 0.32s; }
+.stp.stp-in > * { opacity: 1; translate: 0 0; scale: 1; }
 
 @media (max-width: 900px) {
-  .stp-flow { --gap-y: 36px; grid-template-columns: 1fr; gap: var(--gap-y); }
-  .stp:nth-child(n) { grid-column: auto; grid-row: auto; padding: 0 0 0 30px; }
-  .stp::before { top: 6px; }
-  .stp:nth-child(n)::after {
-    display: block;
-    top: 12px; left: 3px;
-    width: 1px;
-    height: calc(100% + var(--gap-y) - 6px);
-    transform: scaleY(0);
-    transform-origin: top;
-    transition-delay: calc(var(--i, 0) * var(--step) + 0.2s);
-  }
-  .stp:last-child::after { display: none; }
-  .stp-flow.flow-in .stp:nth-child(n)::after { transform: scaleY(1); }
+  .stp-flow { grid-template-columns: 1fr; gap: 40px; }
   .stp-desc { font-size: 14px; max-width: 520px; }
 }
 @media (max-width: 768px) {
   .stp-desc { font-size: 13px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .stp > * { opacity: 1 !important; translate: none !important; transition: none !important; }
 }
