@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
-<link rel="stylesheet" href="css/style.css?v=20261020m" />
+<link rel="stylesheet" href="css/style.css?v=20261023c" />
 <link rel="stylesheet" href="css/project-detail.css?v=20261020" />
 <link rel="stylesheet" href="css/project-layout.css?v=20261008c" />
 </head>
@@ -31,8 +31,21 @@
       <a href="index.html#contact">CONTACT</a>
     </nav>
     <button type="button" class="search-btn" id="searchBtn" aria-label="Search projects">SEARCH</button>
+    <button type="button" class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
   </div>
 </header>
+<!-- MOBILE MENU (모바일 전용, PC에서는 표시되지 않음) -->
+<div class="m-menu" id="mMenu" aria-hidden="true">
+  <nav class="m-menu-nav">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="services.html">SERVICE</a>
+    <a href="projects.html">PROJECT</a>
+    <a href="insight-reports.html">INSIGHT</a>
+    <a href="index.html#contact">CONTACT</a>
+    <button type="button" class="m-menu-search" id="mMenuSearch">SEARCH</button>
+  </nav>
+</div>
 
 <main id="pdMain">
 
@@ -88,7 +101,7 @@
 
 </main>
 
-<script src="js/main.js?v=21"></script>
+<script src="js/main.js?v=22"></script>
 <script src="js/projects-data.js?v=202610200845"></script>
 <script src="js/project-detail.js?v=20261020b"></script>
 </body>

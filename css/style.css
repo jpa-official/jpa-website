@@ -1087,8 +1087,8 @@ body, .hero-title, .hero-desc, .more-link, .main-nav a,
 /* 모바일 메뉴 아이콘 + 반투명 메뉴 페이지 (PC에서는 숨김) */
 .menu-btn, .m-menu { display: none; }
 @media (max-width: 768px) {
-  body:has(.hero) .site-header .main-nav,
-  body:has(.hero) .site-header .search-btn { display: none; }
+  body:has(.m-menu) .site-header .main-nav,
+  body:has(.m-menu) .site-header .search-btn { display: none; }
   body:has(.hero) .site-header .header-inner { justify-content: flex-end; }
   .menu-btn {
     display: block;
@@ -1109,6 +1109,7 @@ body, .hero-title, .hero-desc, .more-link, .main-nav a,
   body.m-menu-open .menu-btn span:nth-child(1) { top: 12px; transform: rotate(45deg); }
   body.m-menu-open .menu-btn span:nth-child(2) { top: 12px; transform: rotate(-45deg); }
   body.m-menu-open .site-header { transform: none; }
+  body.m-menu-open .site-header .logo { opacity: 0; pointer-events: none; }
   body.m-menu-open { overflow: hidden; }
   .m-menu {
     display: flex;

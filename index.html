@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
 <!-- CONTACT 메뉴로 들어오면 인트로 로딩 화면 생략 -->
 <script>if (location.hash === '#contact') document.documentElement.classList.add('skip-intro');</script>
-<link rel="stylesheet" href="css/style.css?v=20261023b" />
+<link rel="stylesheet" href="css/style.css?v=20261023c" />
 <link rel="stylesheet" href="css/projects.css?v=20261020j" />
 </head>
 <body>
@@ -132,28 +132,7 @@
 </main>
 
 <script src="js/projects-data.js?v=202610200845"></script>
-<script src="js/main.js?v=21"></script>
-<script>
-  /* Mobile menu */
-  (function () {
-    const btn = document.getElementById('menuBtn');
-    const menu = document.getElementById('mMenu');
-    if (!btn || !menu) return;
-    const set = (open) => {
-      document.body.classList.toggle('m-menu-open', open);
-      btn.setAttribute('aria-expanded', open);
-      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      menu.setAttribute('aria-hidden', !open);
-    };
-    btn.addEventListener('click', () => set(!document.body.classList.contains('m-menu-open')));
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => set(false)));
-    document.getElementById('mMenuSearch').addEventListener('click', () => {
-      set(false);
-      document.getElementById('searchBtn').click();
-    });
-    window.addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
-  })();
-</script>
+<script src="js/main.js?v=22"></script>
 <script>
   /* Contact form — Formspree AJAX submit */
   const form = document.getElementById('contactForm');

@@ -249,4 +249,24 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- COPYRIGHT YEAR DYNAMIC ---------- */
   // Already set to 2026 in markup
 
+  /* ---------- MOBILE MENU (모바일 전용) ---------- */
+  (function () {
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mMenu');
+    if (!btn || !menu) return;
+    const set = (open) => {
+      document.body.classList.toggle('m-menu-open', open);
+      btn.setAttribute('aria-expanded', open);
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      menu.setAttribute('aria-hidden', !open);
+    };
+    btn.addEventListener('click', () => set(!document.body.classList.contains('m-menu-open')));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => set(false)));
+    document.getElementById('mMenuSearch').addEventListener('click', () => {
+      set(false);
+      document.getElementById('searchBtn').click();
+    });
+    window.addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+  })();
+
 });
