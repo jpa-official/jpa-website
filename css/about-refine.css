@@ -326,3 +326,54 @@
 @media (max-width: 768px) {
   .intro-title { font-size: 4.9vw; line-height: 1.15; }
 }
+
+/* ============================================
+   03 SPACE TOTAL SOLUTION — 6 steps as one connected chain
+   dot 1 → line → dot 2 → line … (순서대로 이어지며 각 단계 텍스트가 나타남)
+   PC: 6칸 가로 타임라인 / 좁은 화면: 세로 타임라인
+   ============================================ */
+.stp-flow {
+  --step: 0.75s;
+  --gap: 32px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0 var(--gap);
+}
+.stp-desc { font-size: 13px; max-width: none; }
+.stp::before { transition-delay: calc(var(--i, 0) * var(--step)); }
+.stp::after {
+  right: auto;
+  width: calc(100% + var(--gap));
+  transition: transform var(--step) linear;
+  transition-delay: calc(var(--i, 0) * var(--step) + 0.2s);
+}
+.stp:last-child::after { display: none; }
+.stp > * {
+  opacity: 0;
+  translate: 0 14px;
+  transition: opacity 0.8s ease, translate 0.8s var(--transition), transform 0.4s var(--transition);
+  transition-delay: calc(var(--i, 0) * var(--step) + 0.15s), calc(var(--i, 0) * var(--step) + 0.15s), 0s;
+}
+.stp-flow.flow-in .stp::before { transform: scale(1); }
+.stp-flow.flow-in .stp::after { transform: scaleX(1); }
+.stp-flow.flow-in .stp > * { opacity: 1; translate: 0 0; }
+
+@media (max-width: 1099px) {
+  .stp-flow { --gap: 36px; grid-template-columns: 1fr; gap: var(--gap); }
+  .stp { padding: 0 0 0 30px; }
+  .stp::before { top: 6px; }
+  .stp::after {
+    top: 12px; left: 3px;
+    width: 1px;
+    height: calc(100% + var(--gap) - 6px);
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  .stp-flow.flow-in .stp::after { transform: scaleY(1); }
+  .stp-desc { font-size: 14px; max-width: 520px; }
+}
+@media (max-width: 768px) {
+  .stp-desc { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stp > * { opacity: 1 !important; translate: none !important; transition: none !important; }
+}
