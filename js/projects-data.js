@@ -53,8 +53,8 @@ window.PROJECTS = [
     year: '2026',
     client: 'Confidential',
     subCrop: true,
-    scopeCode: '',
-    scope: [],
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
     summary: '이터널 마치는 신규 개발과 기존 주거 생활권이 만나는 천안 백석동에, 특별한 순간과 일상 속 쉼이 공존하는 웨딩복합문화공간을 제안한다.',
     body: [
       '이터널 마치는 신규 개발과 기존 주거 생활권이 만나는 천안 백석동에, 특별한 순간과 일상 속 쉼이 공존하는 웨딩복합문화공간을 제안한다. 주변 생활권의 풍부한 배후 수요와 공원·녹지의 부족에 주목해, 프리미엄 야외예식과 누구나 머물 수 있는 공원을 결합했다. 주말에는 웨딩 공간으로, 주중에는 카페·전시·대관 공간으로 활용해 일상적인 방문과 다양한 문화적 경험이 이어지는 장소를 계획했다.',
