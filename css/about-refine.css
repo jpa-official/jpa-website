@@ -8,8 +8,8 @@
 /* ---------- HERO: full screen, text anchored bottom-left ---------- */
 .about-hero {
   min-height: 100vh;
-  padding: 0 40px 56px;
-  align-items: flex-end;
+  padding: 0 40px;
+  align-items: center;
 }
 .about-hero-inner { max-width: none; margin: 0; }
 .about-hero-title { font-weight: 500; font-size: clamp(40px, 8vw, 140px); }
@@ -149,7 +149,7 @@
   .cta-link { grid-column: 1; }
 }
 @media (max-width: 768px) {
-  .about-hero { min-height: 100svh; padding: 0 20px 36px; }
+  .about-hero { min-height: 100svh; padding: 0 20px; }
   .num-block { padding: 0; }
   .cic-body, .process-intro p { font-size: 13px; line-height: 1.6; }
 }
@@ -314,4 +314,15 @@
   .process-intro p,
   .cic-body { font-size: 14px; line-height: 1.65; }
   .intro-title { font-size: 34px; line-height: 1.12; margin-bottom: 32px; }
+}
+
+/* 01 VALUE 문구: 같은 폰트·대문자·2줄 */
+.intro-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  white-space: nowrap;
+  font-size: clamp(28px, 3.6vw, 56px);
+}
+@media (max-width: 768px) {
+  .intro-title { font-size: 4.9vw; line-height: 1.15; }
 }

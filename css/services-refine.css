@@ -317,3 +317,182 @@
     margin-bottom: 4px;
   }
 }
+
+/* ============================================
+   모바일 — PC와 같은 구성 (검은 배경, 가운데 정렬 아코디언, MEMBERS, OUR PARTNERS)
+   PC(.sv2) 레이아웃을 그대로 쓰고 크기·배치만 모바일에 맞춤. PC 규칙은 건드리지 않음.
+   ============================================ */
+@media (max-width: 768px) {
+  .services-page { background: #000; color: #fff; }
+  .services-page main { padding-top: 0; }
+  .sv-mobile { display: none; }
+  .sv2 { display: block; }
+
+  .sv2 sup { font-size: 0.55em; font-weight: 400; vertical-align: top; position: relative; top: -0.05em; margin-right: 0.15em; }
+  .sv2 .en { font-family: 'Swiss 721', sans-serif; font-weight: 700; letter-spacing: -0.035em; }
+  .sv2 .kr { font-family: 'Pretendard Variable', Pretendard, sans-serif; font-weight: 500; letter-spacing: -0.02em; }
+
+  .sv2-label {
+    font-family: 'Swiss 721', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .sv2-lead {
+    margin-top: 14px;
+    font-family: 'Pretendard Variable', Pretendard, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  /* 서비스 목록 */
+  .sv2-intro { padding: 84px 20px 48px; }
+  .sv2-index {
+    margin: 40px -20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .sv2-acc { width: 100%; text-align: center; }
+  .sv2-acc-head {
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 0 20px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    column-gap: 0.5em;
+    font-size: clamp(19px, 5.6vw, 26px);
+    line-height: 1.2;
+    color: #fff;
+    transition: color 0.3s var(--transition);
+  }
+  .sv2-acc-head sup { margin-right: -0.3em; }
+  .sv2-acc-head .kr { font-size: 0.62em; font-weight: 400; }
+  .sv2-acc.open .sv2-acc-head { color: var(--accent); }
+
+  .sv2-acc-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.55s var(--transition);
+  }
+  .sv2-acc.open .sv2-acc-panel { grid-template-rows: 1fr; }
+  .sv2-acc-inner {
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .sv2-acc.open .sv2-acc-inner { opacity: 1; transition-delay: 0.15s; }
+
+  .sv2-cols {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin: 24px 20px 0;
+    text-align: left;
+  }
+  .sv2-col h3 {
+    font-family: 'Pretendard Variable', Pretendard, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .sv2-col li {
+    font-family: 'Pretendard Variable', Pretendard, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.65;
+  }
+  .sv2-photo { margin: 28px 0 32px; }
+  .sv2-photo img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; }
+
+  /* MEMBERS */
+  .sv2-members { padding: 80px 20px; }
+  .sv2-roles { margin-top: 40px; }
+  .sv2-roles li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 0.45em;
+    font-size: clamp(22px, 6.4vw, 30px);
+    line-height: 1.12;
+    margin-bottom: 6px;
+  }
+  .sv2-roles .kr { font-size: max(12px, 0.42em); font-weight: 600; }
+
+  /* OUR PARTNERS — 표는 세로로 쌓고 연결선 제거 */
+  .sv2-partners { padding: 80px 20px 100px; }
+  .sv2-chart {
+    --line: rgba(255,255,255,0.85);
+    margin: 40px 0 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .pc-side, .pc-cells > div {
+    background: #000;
+    border: 1px solid var(--line);
+    padding: 22px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .pc-core > div + div,
+  .pc-cells > div + div,
+  .sv2-chart > * + * { margin-top: -1px; }
+  .sv2-chart strong {
+    font-family: 'Swiss 721', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .pc-side strong { font-size: 20px; }
+  .sv2-chart b {
+    font-family: 'Pretendard Variable', Pretendard, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+  .sv2-chart p, .sv2-chart small {
+    font-family: 'Pretendard Variable', Pretendard, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .sv2-chart small { font-size: 11px; opacity: 0.85; margin-top: 4px; }
+  .pc-logo {
+    background: var(--accent);
+    display: grid;
+    place-items: center;
+    height: 80px;
+  }
+  .pc-logo img { width: 72px; }
+  .pc-cells { display: flex; flex-direction: column; }
+
+  .sv2-cluster {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px 8px;
+    margin: 40px 0 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Pretendard Variable', Pretendard, sans-serif;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+  .sv2-cluster strong {
+    display: block;
+    font-family: 'Swiss 721', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+}
