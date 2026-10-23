@@ -37,6 +37,32 @@ window.PROJECTS = [
     ]
   },
   {
+    id: 'eternal-march',
+    thumbnail: 'images/projects/march-wedding.jpg?v=20261023',
+    images: [
+      'images/projects/march-wedding-2.jpg?v=20261023',
+      'images/projects/march-wedding-3.jpg?v=20261023',
+      'images/projects/march-wedding-4.jpg?v=20261023',
+      'images/projects/march-wedding-5.jpg?v=20261023'
+    ],
+    name: 'Eternal March',
+    nameKo: '천안 백석동 하이엔드 웨딩복합문화공간',
+    desc: '천안 백석동 하이엔드 웨딩복합문화공간',
+    category: 'Hospitality',
+    location: 'CHEONAN',
+    year: '2026',
+    client: 'Confidential',
+    scopeCode: '',
+    scope: [],
+    summary: '천안 백석동 하이엔드 웨딩복합문화공간 프로젝트.',
+    body: [
+      '천안 백석동 하이엔드 웨딩복합문화공간 프로젝트.'
+    ],
+    bodyEn: [
+      'Eternal March is a high-end wedding and cultural complex in Baekseok-dong, Cheonan.'
+    ]
+  },
+  {
     id: 'gaudi-back-to-the-origins',
     thumbnail: 'images/projects/gaudi-back-to-the-origins.jpg?v=20261008b',
     images: [
