@@ -1083,3 +1083,57 @@ body, .hero-title, .hero-desc, .more-link, .main-nav a,
   body:has(.hero) .site-header .main-nav a::after { display: none; }
   body:has(.hero) .hero-desc { max-width: 100%; }
 }
+
+/* 모바일 메뉴 아이콘 + 반투명 메뉴 페이지 (PC에서는 숨김) */
+.menu-btn, .m-menu { display: none; }
+@media (max-width: 768px) {
+  body:has(.hero) .site-header .main-nav,
+  body:has(.hero) .site-header .search-btn { display: none; }
+  body:has(.hero) .site-header .header-inner { justify-content: flex-end; }
+  .menu-btn {
+    display: block;
+    position: relative;
+    width: 32px; height: 24px;
+    padding: 0; border: none; background: none;
+
+  }
+  .menu-btn span {
+    position: absolute; left: 4px; right: 4px; height: 1.5px;
+    background: var(--black);
+    transition: transform 0.35s var(--transition), top 0.35s var(--transition), background 0.3s;
+  }
+  .menu-btn span:nth-child(1) { top: 9px; }
+  .menu-btn span:nth-child(2) { top: 15px; }
+  .site-header.on-dark .menu-btn span { background: var(--white); }
+  body.m-menu-open .menu-btn span { background: var(--white); }
+  body.m-menu-open .menu-btn span:nth-child(1) { top: 12px; transform: rotate(45deg); }
+  body.m-menu-open .menu-btn span:nth-child(2) { top: 12px; transform: rotate(-45deg); }
+  body.m-menu-open .site-header { transform: none; }
+  body.m-menu-open { overflow: hidden; }
+  .m-menu {
+    display: flex;
+    position: fixed; inset: 0;
+    z-index: 99; /* 헤더(100) 아래 — 닫기 아이콘이 위에 보이도록 */
+    align-items: center;
+    padding: 0 20px;
+    background: rgba(10, 10, 10, 0.78);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0s linear 0.4s;
+  }
+  body.m-menu-open .m-menu { opacity: 1; visibility: visible; transition: opacity 0.4s ease; }
+  .m-menu-nav { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+  .m-menu-nav a, .m-menu-search {
+    appearance: none; background: none; border: none; padding: 4px 0;
+    font-family: 'Swiss 721', sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    color: var(--white);
+    cursor: pointer;
+  }
+  .m-menu-search { opacity: 0.5; }
+  .m-menu-nav a:active, .m-menu-search:active { color: var(--accent); }
+}
