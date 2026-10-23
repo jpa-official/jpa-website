@@ -12,11 +12,17 @@ window.PROJECTS = [
       'images/projects/gwanghwa169-4.jpg?v=20261008',
       'images/projects/gwanghwa169-5.jpg?v=20261008',
       'images/projects/gwanghwa169-6.jpg?v=20261008',
-      'images/projects/gwanghwa169-diagram-1.png?v=20261008',
-      'images/projects/gwanghwa169-diagram-2.png?v=20261008',
-      'images/projects/gwanghwa169-diagram-3.png?v=20261008',
-      'images/projects/gwanghwa169-diagram-4.png?v=20261008'
+      'images/projects/gwanghwa169-diagram-1.png?v=20261023',
+      'images/projects/gwanghwa169-diagram-2.png?v=20261023',
+      'images/projects/gwanghwa169-diagram-3.png?v=20261023',
+      'images/projects/gwanghwa169-diagram-4.png?v=20261023'
     ],
+    motion: {
+      'images/projects/gwanghwa169-diagram-1.png': 'embeds/gwanghwa169/diagram-1.html?v=202610230603',
+      'images/projects/gwanghwa169-diagram-2.png': 'embeds/gwanghwa169/diagram-2.html?v=202610230603',
+      'images/projects/gwanghwa169-diagram-3.png': 'embeds/gwanghwa169/diagram-3.html?v=202610230603',
+      'images/projects/gwanghwa169-diagram-4.png': 'embeds/gwanghwa169/diagram-4.html?v=202610230603'
+    },
     name: 'Gwanghwa169',
     nameKo: '광화문169 공간기획 및 컨셉디자인',
     desc: '광화문169 공간기획 및 컨셉디자인',
