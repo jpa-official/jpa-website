@@ -179,6 +179,21 @@ button { font-family: inherit; }
 @media (max-width: 768px) {
   .loader-statement { font-size: 22px; line-height: 1.25; margin: 0 24px; }
   .loader-mark { bottom: 18px; width: 32px; margin-left: -16px; }
+  /* 모바일 브라우저에서도 PC처럼 블러·상승 + 단어별 순차 퇴장이 보이도록 별도 레이어로 합성 */
+  .loader-statement .w,
+  .loader-mark {
+    will-change: opacity, filter, transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(0, .28em, 0);
+    transform: translate3d(0, .28em, 0);
+    -webkit-transition-property: opacity, -webkit-filter, -webkit-transform;
+    transition-property: opacity, filter, transform;
+  }
+  .loader.in .w,
+  .loader.in .loader-mark { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+  .loader.out .w,
+  .loader.out .loader-mark { -webkit-transform: translate3d(0, -.18em, 0); transform: translate3d(0, -.18em, 0); }
 }
 @media (prefers-reduced-motion: reduce) {
   .loader-statement .w, .loader.in .w, .loader.out .w { filter: none; }

@@ -52,14 +52,17 @@ window.PROJECTS = [
     location: 'CHEONAN',
     year: '2026',
     client: 'Confidential',
+    subCrop: true,
     scopeCode: '',
     scope: [],
-    summary: '천안 백석동 하이엔드 웨딩복합문화공간 프로젝트.',
+    summary: '이터널 마치는 신규 개발과 기존 주거 생활권이 만나는 천안 백석동에, 특별한 순간과 일상 속 쉼이 공존하는 웨딩복합문화공간을 제안한다.',
     body: [
-      '천안 백석동 하이엔드 웨딩복합문화공간 프로젝트.'
+      '이터널 마치는 신규 개발과 기존 주거 생활권이 만나는 천안 백석동에, 특별한 순간과 일상 속 쉼이 공존하는 웨딩복합문화공간을 제안한다. 주변 생활권의 풍부한 배후 수요와 공원·녹지의 부족에 주목해, 프리미엄 야외예식과 누구나 머물 수 있는 공원을 결합했다. 주말에는 웨딩 공간으로, 주중에는 카페·전시·대관 공간으로 활용해 일상적인 방문과 다양한 문화적 경험이 이어지는 장소를 계획했다.',
+      '대지의 높이차를 활용해 하부에는 주차장과 지원시설을, 상부에는 공원과 야외예식 공간을 배치하고 각 레벨에서의 접근성을 확보했다. 연회장과 가변형 카페, 담장으로 구획한 프라이빗 가든을 연계하고, 목구조 자체가 내부 마감이 되는 디자인으로 공간의 개성을 담았다. 향후 단계별 확장이 가능한 개발계획을 통해 초기 조성 부담을 줄이고, 운영의 유연성과 장기적인 활용 가능성을 함께 고려했다.'
     ],
     bodyEn: [
-      'Eternal March is a high-end wedding and cultural complex in Baekseok-dong, Cheonan.'
+      'ETERNAL MARCH proposes a wedding and cultural destination in Baekseok-dong, Cheonan, where special occasions and everyday moments of rest coexist. Responding to the surrounding residential communities and the shortage of local green space, the project combines premium outdoor weddings with a park open to everyday visitors. Spaces accommodate weddings on weekends and cafés, exhibitions, and private events during the week, encouraging regular visits and a variety of cultural experiences.',
+      'The plan uses the site’s level differences to place parking and support facilities beneath a landscaped park and outdoor wedding spaces, with access at each level. A banquet hall, adaptable café spaces, and a walled private garden form a connected setting, while exposed timber structures give the interiors their character. A phased development strategy reduces the initial development burden while allowing future expansion, supporting flexible operations and long-term use.'
     ]
   },
   {

@@ -50,6 +50,7 @@
     if (!box || !list.length) { if (box) box.remove(); return; }
     if (list.length === 1) { box.appendChild(createMedia(list[0], project.name)); return; }
     box.classList.add('pd-slider');
+    if (project.subCrop) box.classList.add('pd-crop169');   // 가로로 긴 서브 이미지를 다른 프로젝트와 같은 16:9 프레임으로
     const track = document.createElement('div');
     track.className = 'pd-slider-track';
     list.forEach((src, i) => {

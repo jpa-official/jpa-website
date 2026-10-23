@@ -355,3 +355,13 @@
   .pd-slide:not(.pd-slide-main) img,
   .pd-slide:not(.pd-slide-main) video { width: 100%; height: auto; }
 }
+
+/* 서브 이미지를 16:9 프레임(PC 1138×640)에 맞춤 — 가로로 긴 이미지용 (projects-data의 subCrop) */
+.pd-crop169 .pd-slide:not(.pd-slide-main) img {
+  width: min(100%, 1138px);
+  height: 640px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .pd-crop169 .pd-slide:not(.pd-slide-main) img { width: 100%; height: auto; aspect-ratio: 16 / 9; }
+}
