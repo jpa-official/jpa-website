@@ -21,7 +21,10 @@
   const hero = document.getElementById('psHeroMedia');
   if (hero && project.thumbnail) hero.appendChild(createMedia(project.thumbnail, project.name));
 
-  buildSlider(document.getElementById('psGallery'), project.images || []);
+  // 다이어그램(파일명에 'diagram')이 있으면 먼저, 이어서 나머지 상세 이미지 (각 그룹 안의 순서는 그대로)
+  const gallery = project.images || [];
+  const isDiagram = src => /diagram/i.test(src.split('?')[0]);
+  buildSlider(document.getElementById('psGallery'), gallery.filter(isDiagram).concat(gallery.filter(src => !isDiagram(src))));
 
   fill('pdBodyKo', project.body);
   fill('pdBodyEn', project.bodyEn);
