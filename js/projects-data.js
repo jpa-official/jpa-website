@@ -7,9 +7,8 @@ window.PROJECTS = [
     id: 'gwanghwa169',
     thumbnail: 'images/projects/gwanghwa169.jpg?v=20261008',
     images: [
-      'images/projects/gwanghwa169-2.jpg?v=20261008',
-      'images/projects/gwanghwa169-3.jpg?v=20261008',
-      'images/projects/gwanghwa169-4.jpg?v=20261008',
+      'images/projects/gwanghwa169-7.mp4?v=20261023',
+      'images/projects/gwanghwa169-8.mp4?v=20261023',
       'images/projects/gwanghwa169-5.jpg?v=20261008',
       'images/projects/gwanghwa169-6.jpg?v=20261008',
       'images/projects/gwanghwa169-diagram-2.png?v=20261023',
