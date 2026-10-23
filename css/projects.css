@@ -399,3 +399,57 @@
   .pj-view-toggle { display: none; }
   .pj-view-toggle { padding-left: 12px; }
 }
+
+/* 모바일: PC와 같은 카드 스타일 (선 없음, 작은 16:9 썸네일 + 아래 이름·한글명) */
+@media (max-width: 768px) {
+  .pj-filter-btn { font-size: 12px; color: #000000; opacity: 1; padding: 16px 14px; transition: color 0.3s var(--transition); }
+  .pj-filter-btn:first-child { padding-left: 0; }
+  .pj-filter-btn.active { border-bottom-color: transparent; }
+  .pj-filter-wrap { border-top: none; border-bottom: none; }
+  .pj-list { border-top: none; }
+  .pj-item,
+  .pj-row { border-bottom: none; }
+  .pj-item-img img[src*="gwanghwa169"] { object-position: center bottom; }
+
+  .pj-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 12px;
+    padding: 16px 20px 80px;
+  }
+  .pj-item { overflow: visible; }
+  .pj-item-img { background: none; margin-bottom: 8px; }
+  .pj-item-info {
+    position: static;
+    display: block;
+    padding: 0;
+    color: var(--black);
+    background: none;
+  }
+  .pj-item-left { display: contents; }
+  .pj-item-info .pj-item-name {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 3px;
+  }
+  .pj-item-desc,
+  .pj-item-cat {
+    display: inline;
+    padding: 0;
+    line-height: 1.5;
+    font-family: 'Pretendard Variable', Pretendard, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: none;
+    opacity: 0.5;
+  }
+  .pj-item-cat::before { content: ' · '; }
+  .pj-item-info:has(.pj-item-desc:not(:empty)) .pj-item-cat { display: none; }
+  .pj-item-img img { transition: filter 0.5s ease, opacity 0.5s ease; }
+}
+/* 터치 기기는 hover가 없으므로 컬러 유지, 마우스가 있는 좁은 창에서만 PC처럼 흑백→컬러 */
+@media (max-width: 768px) and (hover: hover) {
+  .pj-item-img img { filter: grayscale(1) brightness(1.2); opacity: 0.6; }
+  .pj-item:hover .pj-item-img img { filter: grayscale(0) brightness(1); opacity: 1; transform: none; }
+}
