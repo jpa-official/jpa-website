@@ -1064,3 +1064,22 @@ body, .hero-title, .hero-desc, .more-link, .main-nav a,
   .project-meta h4 { font-size: 12px; line-height: 1.1; }
   .project-meta p { font-size: 10px; }
 }
+
+/* 메인(index) 모바일: PC와 동일하게 — 로고 없이 메뉴 전체 + SEARCH, 소개문 화면 안에 맞춤 */
+@media (max-width: 768px) {
+  body:has(.hero) .site-header { padding: 14px 20px; }
+  body:has(.hero) .site-header .logo { display: none; }
+  body:has(.hero) .site-header .main-nav {
+    gap: 9px;
+    overflow: visible;
+    margin-right: auto;
+  }
+  body:has(.hero) .site-header { padding: 14px 16px; }
+  body:has(.hero) .site-header .main-nav a { font-size: 9px; }
+  body:has(.hero) .site-header .main-nav .nav-home,
+  body:has(.hero) .site-header .main-nav a[href="#contact"],
+  body:has(.hero) .site-header .search-btn { display: inline-block; }
+  body:has(.hero) .site-header .search-btn { font-size: 9px; margin-left: 9px; }
+  body:has(.hero) .site-header .main-nav a::after { display: none; }
+  body:has(.hero) .hero-desc { max-width: 100%; }
+}
