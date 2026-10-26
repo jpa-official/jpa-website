@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
 <link rel="stylesheet" href="css/style.css?v=20261023d" />
 <link rel="stylesheet" href="css/services.css?v=20261020" />
-<link rel="stylesheet" href="css/services-refine.css?v=20261023a" />
+<link rel="stylesheet" href="css/services-refine.css?v=20261026" />
 </head>
 <body class="services-page">
 
@@ -579,6 +579,19 @@
     });
   }
   pcItems.forEach(el => el.querySelector('.sv2-acc-head').addEventListener('click', () => openPc(el)));
+
+  /* 모바일: OUR PARTNERS 표를 PC와 같은 모양 그대로 화면 폭에 맞춰 축소 */
+  const partners = document.querySelector('.sv2-partners');
+  const mobileMq = window.matchMedia('(max-width: 768px)');
+  function fitPartners() {
+    if (!partners) return;
+    if (!mobileMq.matches) { partners.style.removeProperty('--pz'); return; }
+    const cs = getComputedStyle(partners);
+    const w = partners.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+    partners.style.setProperty('--pz', (w / 920).toFixed(4));
+  }
+  fitPartners();
+  window.addEventListener('resize', fitPartners);
 
   /* Hash deep-link: open & scroll to #sv-01 ~ #sv-05 */
   const hash = window.location.hash;

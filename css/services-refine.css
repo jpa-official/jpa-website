@@ -426,72 +426,107 @@
   }
   .sv2-roles .kr { font-size: max(12px, 0.42em); font-weight: 600; }
 
-  /* OUR PARTNERS — 표는 세로로 쌓고 연결선 제거 */
+  /* OUR PARTNERS — PC와 같은 표를 PC 최소폭(920px) 기준으로 그린 뒤 화면 폭에 맞춰 통째로 축소 (--pz는 services.html 스크립트가 계산) */
   .sv2-partners { padding: 80px 20px 100px; }
+  .sv2-chart, .sv2-cluster { width: 920px; max-width: none; zoom: var(--pz, 0.36); }
   .sv2-chart {
     --line: rgba(255,255,255,0.85);
-    margin: 40px 0 0;
-    display: flex;
-    flex-direction: column;
+    margin: 72px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 2.6fr 1fr;
+    align-items: end;
+    gap: 0 7%;
+    position: relative;
     text-align: center;
   }
+  .sv2-chart::before {              /* 좌우 박스 ↔ 가운데를 잇는 선 */
+    content: '';
+    position: absolute;
+    left: 10%; right: 10%;
+    top: calc(100% - 290px / 2 - 2px);
+    height: 1px;
+    background: var(--line);
+    z-index: 0;
+  }
   .pc-side, .pc-cells > div {
+    position: relative;
+    z-index: 1;
     background: #000;
     border: 1px solid var(--line);
-    padding: 22px 16px;
+    padding: 26px 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+    min-height: 290px;
   }
-  .pc-core > div + div,
-  .pc-cells > div + div,
-  .sv2-chart > * + * { margin-top: -1px; }
   .sv2-chart strong {
     font-family: 'Swiss 721', sans-serif;
     font-weight: 700;
-    font-size: 15px;
+    font-size: clamp(14px, 1.25vw, 19px);
     line-height: 1.1;
     letter-spacing: -0.01em;
   }
-  .pc-side strong { font-size: 20px; }
+  .pc-side strong { font-size: clamp(18px, 1.75vw, 26px); }
   .sv2-chart b {
     font-family: 'Pretendard Variable', Pretendard, sans-serif;
     font-weight: 600;
-    font-size: 14px;
+    font-size: clamp(13px, 1.1vw, 16px);
     line-height: 1.35;
   }
   .sv2-chart p, .sv2-chart small {
     font-family: 'Pretendard Variable', Pretendard, sans-serif;
-    font-size: 12px;
+    font-size: clamp(12px, 0.95vw, 14px);
     line-height: 1.5;
   }
-  .sv2-chart small { font-size: 11px; opacity: 0.85; margin-top: 4px; }
+  .sv2-chart small { font-size: 11px; opacity: 0.85; margin-top: 6px; }
   .pc-logo {
     background: var(--accent);
     display: grid;
     place-items: center;
-    height: 80px;
+    height: 104px;
   }
-  .pc-logo img { width: 72px; }
-  .pc-cells { display: flex; flex-direction: column; }
+  .pc-logo img { width: 92px; }     /* 검정 로고 그대로 */
+  .pc-cells { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .pc-cells > div + div { border-left: none; }
 
   .sv2-cluster {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px 8px;
-    margin: 40px 0 0;
-    padding: 0;
+    grid-template-columns: repeat(9, 1fr);
+    margin: 0 auto;
+    padding-top: 74px;
+    position: relative;
     text-align: center;
     font-family: 'Pretendard Variable', Pretendard, sans-serif;
-    font-size: 12px;
+    font-size: clamp(12px, 1vw, 15px);
     line-height: 1.35;
+  }
+  .sv2-cluster::before {            /* 가운데에서 내려와 가로로 퍼지는 선 */
+    content: '';
+    position: absolute;
+    left: 50%; top: 0;
+    height: 46px;
+    border-left: 1px solid rgba(255,255,255,0.85);
+  }
+  .sv2-cluster::after {
+    content: '';
+    position: absolute;
+    left: calc(100% / 18); right: calc(100% / 18); top: 46px;
+    border-top: 1px solid rgba(255,255,255,0.85);
+  }
+  .sv2-cluster li { position: relative; }
+  .sv2-cluster li::before {
+    content: '';
+    position: absolute;
+    left: 50%; top: -28px;
+    height: 20px;
+    border-left: 1px solid rgba(255,255,255,0.85);
   }
   .sv2-cluster strong {
     display: block;
     font-family: 'Swiss 721', sans-serif;
     font-weight: 700;
-    font-size: 12px;
+    font-size: clamp(12px, 1.1vw, 16px);
     line-height: 1.1;
     margin-bottom: 4px;
   }
