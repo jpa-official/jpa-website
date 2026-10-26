@@ -133,7 +133,7 @@ window.PROJECTS = [
   {
     id: 'sejong-center',
     thumbnail: 'images/projects/sejong-center.jpg',
-    images: ['images/projects/sejong-center-2.jpg?v=20261008', 'images/projects/sejong-center-3.jpg?v=20261008'],
+    images: ['images/projects/sejong-center-2.jpg?v=20261008', 'images/projects/sejong-center-3.jpg?v=20261026', 'images/projects/sejong-center-4.jpg?v=20261026'],
     name: 'Sejong Center',
     nameKo: '세종문화회관 플레이스 브랜딩',
     desc: '세종문화회관 플레이스 브랜딩',
@@ -199,7 +199,14 @@ window.PROJECTS = [
   {
     id: 'yonsei-wonju',
     thumbnail: 'images/projects/yonsei-wonju.jpg',
-    images: ['images/projects/yonsei-wonju-2.jpg', 'images/projects/yonsei-wonju-3.jpg', 'images/projects/yonsei-wonju-4.jpg'],
+    images: [
+      'images/projects/yonsei-wonju-2.jpg?v=20261026',
+      'images/projects/yonsei-wonju-3.jpg?v=20261026',
+      'images/projects/yonsei-wonju-4.jpg?v=20261026',
+      'images/projects/yonsei-wonju-5.jpg?v=20261026',
+      'images/projects/yonsei-wonju-6.jpg?v=20261026',
+      'images/projects/yonsei-wonju-7.jpg?v=20261026'
+    ],
     name: 'Yonsei University Wonju College',
     nameKo: '연세대학교 원주의과대학 공간디자인',
     desc: '연세대학교 원주의과대학 공간디자인',
@@ -298,8 +305,8 @@ window.PROJECTS = [
   },
   {
     id: 'odyssey-village',
-    thumbnail: 'images/projects/odyssey-village.jpg',
-    images: ['images/projects/odyssey-village-2.png'],
+    thumbnail: 'images/projects/odyssey-village.jpg?v=20261026',
+    images: ['images/projects/odyssey-village-2.jpg?v=20261026', 'images/projects/odyssey-village-3.png'],
     name: 'Odyssey Village',
     nameKo: '인천 운북동 시니어타운 공간기획',
     desc: '인천 운북동 시니어타운 공간기획',
@@ -375,7 +382,8 @@ window.PROJECTS = [
   },
   {
     id: 'sfc-oled-community',
-    thumbnail: 'images/projects/sfc-oled-community.jpg',
+    thumbnail: 'images/projects/sfc-community-center.jpg',
+    images: ['images/projects/sfc-community-center-2.jpg', 'images/projects/sfc-community-center-3.jpg'],
     name: 'SFC Community Center',
     nameKo: 'SFC OLED 캠퍼스 커뮤니티센터 공간기획 및 공간환경설계',
     desc: 'SFC OLED 캠퍼스 커뮤니티센터 공간기획 및 공간환경설계',
@@ -564,7 +572,7 @@ window.PROJECTS = [
   {
     id: 'la-venice-c4-1bl',
     thumbnail: 'images/projects/la-venice-c4-1bl.jpg',
-    images: ['images/projects/la-venice-c4-1bl-2.jpg'],
+    images: ['images/projects/la-venice-c4-1bl-2.jpg?v=20261026'],
     name: 'LaVenice C4-1BL',
     nameKo: '김포 라베니체 C4-1BL 복합문화공간 공간기획',
     desc: '김포 라베니체 C4-1BL 복합문화공간 공간기획',
