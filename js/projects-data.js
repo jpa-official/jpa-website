@@ -133,7 +133,7 @@ window.PROJECTS = [
   {
     id: 'sejong-center',
     thumbnail: 'images/projects/sejong-center.jpg',
-    images: ['images/projects/sejong-center-2.jpg?v=20261008', 'images/projects/sejong-center-3.jpg?v=20261026', 'images/projects/sejong-center-4.jpg?v=20261026'],
+    images: ['images/projects/sejong-center-2.jpg?v=20261008', 'images/projects/sejong-center-3.jpg?v=20261026', 'images/projects/sejong-center-4.jpg?v=20261027'],
     name: 'Sejong Center',
     nameKo: '세종문화회관 플레이스 브랜딩',
     desc: '세종문화회관 플레이스 브랜딩',
@@ -282,7 +282,7 @@ window.PROJECTS = [
   },
   {
     id: 'loft-one-ground',
-    thumbnail: 'images/projects/loft-one-ground.jpg',
+    thumbnail: 'images/projects/loft-one-ground.jpg?v=20261027',
     images: ['images/projects/loft-one-ground-2.jpg', 'images/projects/loft-one-ground-3.jpg', 'images/projects/loft-one-ground-4.jpg', 'images/projects/loft-one-ground-5.jpg'],
     name: 'Loft-One G:ROUND',
     nameKo: '중랑구 묵동70번지 임대주택 개발사업기획 및 공간기획',
