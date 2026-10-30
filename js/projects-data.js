@@ -22,9 +22,9 @@ window.PROJECTS = [
       'images/projects/gwanghwa169-diagram-3.png': 'embeds/gwanghwa169/diagram-3.html?v=202610230603',
       'images/projects/gwanghwa169-diagram-4.png': 'embeds/gwanghwa169/diagram-4.html?v=202610230603'
     },
-    name: 'Gwanghwa169',
-    nameKo: '광화문169 공간기획 및 컨셉디자인',
-    desc: '광화문169 공간기획 및 컨셉디자인',
+    name: 'G-Planet',
+    nameKo: '광화문 169 공간경험 및 공간환경설계',
+    desc: '광화문 169 공간경험 및 공간환경설계',
     category: 'Mixed-use',
     location: 'SEOUL',
     year: '2026',
@@ -53,7 +53,7 @@ window.PROJECTS = [
     name: 'Eternal March',
     nameKo: '천안 백석동 하이엔드 웨딩복합문화공간',
     desc: '천안 백석동 하이엔드 웨딩복합문화공간',
-    category: 'Hospitality',
+    category: 'Mixed-use',
     location: 'CHEONAN',
     year: '2026',
     client: 'Confidential',
@@ -79,9 +79,9 @@ window.PROJECTS = [
       'images/projects/gaudi-back-to-the-origins-4.jpg?v=20261008b',
       'images/projects/gaudi-back-to-the-origins-5.jpg?v=20261008b'
     ],
-    name: 'Gaudí: Back to the Origins',
-    nameKo: '가우디 서거 100주년 기념 공식 월드 투어 서울 전시 기획·공간디자인·운영',
-    desc: '가우디 서거 100주년 기념 공식 월드 투어 서울 전시 기획·공간디자인·운영',
+    name: 'Gaudi: Back to the Origins',
+    nameKo: '가우디 서거 100주년 기념 공식 월드 투어 서울 전시',
+    desc: '가우디 서거 100주년 기념 공식 월드 투어 서울 전시',
     category: 'Exhibition',
     location: 'SEOUL',
     year: '2026',
@@ -109,9 +109,9 @@ window.PROJECTS = [
       'images/projects/dongyeong-4.jpg?v=20261019',
       'images/projects/dongyeong-5.jpg?v=20261019'
     ],
-    name: 'Dongyeong Tour HQ',
-    nameKo: '동영관광사옥 토털공간디자인',
-    desc: '동영관광사옥 토털공간디자인',
+    name: 'Dongyeong Tour Headquarter',
+    nameKo: '동영관광 사옥 토털공간디자인',
+    desc: '동영관광 사옥 토털공간디자인',
     category: 'Office',
     location: 'SEOUL',
     year: '2026',
@@ -171,7 +171,7 @@ window.PROJECTS = [
       'images/projects/ozx-branding-13.jpg',
       'images/projects/ozx-branding-14.mp4'
     ],
-    name: 'OZX BRANDING',
+    name: 'OZX',
     nameKo: 'OZX 스페이스 콘텐츠 오퍼레이터 브랜드 아이덴티티 및 커뮤니케이션 디자인',
     desc: 'OZX 스페이스 콘텐츠 오퍼레이터 브랜드 아이덴티티 및 커뮤니케이션 디자인',
     category: 'Branding',
@@ -339,8 +339,8 @@ window.PROJECTS = [
       'images/projects/innocean-diagram-04.png?v=20261013'
     ],
     name: 'Innocean Headquarter',
-    nameKo: '이노션 사옥 공간기획 컨설팅, 공간경험설계',
-    desc: '이노션 사옥 공간기획 컨설팅, 공간경험설계',
+    nameKo: '이노션 사옥 공간기획 컨설팅 및 공간경험설계',
+    desc: '이노션 사옥 공간기획 컨설팅 및 공간경험설계',
     category: 'Office',
     location: 'SEOUL',
     year: '2025',
@@ -362,9 +362,9 @@ window.PROJECTS = [
     thumbnail: 'images/projects/sfc-biopark.jpg',
     images: ['images/projects/sfc-biopark-2.jpg', 'images/projects/sfc-biopark-3.jpg'],
     name: 'SFC Biopark',
-    nameKo: 'SFC BIOPARK 공간기획 및 공간환경설계',
-    desc: 'SFC BIOPARK 공간기획 및 공간환경설계',
-    category: 'Industrial',
+    nameKo: 'SFC 바이오파크 공간기획 및 공간환경설계',
+    desc: 'SFC 바이오파크 공간기획 및 공간환경설계',
+    category: 'Mixed-use',
     location: 'OCHANG',
     year: '2024',
     client: 'SFC',
@@ -384,7 +384,7 @@ window.PROJECTS = [
     id: 'sfc-oled-community',
     thumbnail: 'images/projects/sfc-community-center.jpg',
     images: ['images/projects/sfc-community-center-2.jpg', 'images/projects/sfc-community-center-3.jpg'],
-    name: 'SFC Community Center',
+    name: 'SFC OLED Campus Community Center',
     nameKo: 'SFC OLED 캠퍼스 커뮤니티센터 공간기획 및 공간환경설계',
     desc: 'SFC OLED 캠퍼스 커뮤니티센터 공간기획 및 공간환경설계',
     category: 'Industrial',
@@ -409,7 +409,7 @@ window.PROJECTS = [
   {
     id: 'sfc-oled-storage',
     thumbnail: 'images/projects/sfc-oled-storage.jpg',
-    name: 'SFC Storage Center',
+    name: 'SFC OLED Campus Storage Center',
     nameKo: 'SFC OLED 캠퍼스 스토리지센터 공간기획 및 공간환경설계',
     desc: 'SFC OLED 캠퍼스 스토리지센터 공간기획 및 공간환경설계',
     category: 'Industrial',
@@ -429,51 +429,6 @@ window.PROJECTS = [
       'The SFC OLED Campus, located in the Ochang Scientific Industrial Complex, is the main base of SFC Co., Ltd. for the research, development, and production of precision chemical materials. Since the completion of the original research center in 2013, the campus has gradually expanded with additional production and laboratory buildings.',
       'As the campus grew, the need for employee welfare facilities, cleanrooms, and storage space also increased. This project adds a Community Center with meeting rooms, lounges, and dining facilities, along with a Cleanroom & Storage Center containing laboratories, cleanrooms, and material storage areas.',
       'The Storage Center is planned on the vacant southwest site and follows the same architectural language as the existing OLED Campus buildings to maintain a unified campus identity.'
-    ]
-  },
-  {
-    id: 'seoul-station-it',
-    thumbnail: 'images/projects/seoul-station-it.jpg',
-    images: ['images/projects/seoul-station-it-2.jpg'],
-    name: 'Seoul Station — IT Seoul',
-    nameKo: '서울역 일대 공간기획 국제 공모',
-    desc: '서울역 일대 공간기획 국제 공모',
-    category: 'Mixed-use',
-    location: 'SEOUL',
-    year: '2025',
-    client: '서울특별시 (국제공모)',
-    scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: '"IT SEOUL 서울 — Urban Breathway 도시를 잇는 숨길이 되다"를 주제로 서울역과 주변 지역의 물리적·사회적 단절을 해소하고 도시를 연결하는 새로운 상징적 공간 프로젝트이다.',
-    body: [
-      '"IT SEOUL 서울 — Urban Breathway 도시를 잇는 숨길이 되다"를 주제로 서울역과 주변 지역의 물리적·사회적 단절을 해소하고 도시를 연결하며 새로운 상징적 공간으로 재탄생시키는 것을 목표로 진행되었다. 도시 연결성을 강화하고, 서울역을 대한민국 국가중앙역으로서의 정체성을 갖춘 글로벌 게이트웨이로 재구성하며, 차량 중심의 공간구조를 시민 중심의 공공공간으로 전환하는 데 중점을 두었다.',
-      '"윝-서울(Upper Seoul)"과 "밑-서울(Lower Seoul)"의 수직적 조닝 컨셉을 제안했다. 통합 환승 허브, 보행 중심 서울 스트리트, 열린 광장 서울 데크, 녹지 공간 서울 힐즈, 그리고 K-브랜드 쇼룸과 문화 갤러리가 포함된다. 이 프로젝트는 서울역을 새로운 도시의 상징적 중심지로 전환하며, 물리적 공간을 넘어 도시의 가치와 정체성을 강화하는 데 기여했다.'
-    ],
-    bodyEn: [
-      'Under the theme "IT SEOUL SEOUL – Urban Breathway," this project reimagines Seoul Station and its surrounding area as a new symbolic urban gateway by reconnecting fragmented parts of the city. It focuses on strengthening urban connectivity, redefining Seoul Station as Korea\'s national central station, and transforming vehicle-oriented infrastructure into citizen-centered public space.',
-      'The proposal introduces a vertical zoning concept of "Upper Seoul" and "Lower Seoul," supported by key elements such as an integrated transit hub, pedestrian-oriented streets, open public decks, green spaces, and K-brand cultural content. Through this approach, the project positions Seoul Station as a new urban center that connects movement, culture, and identity.'
-    ]
-  },
-  {
-    id: 'hanwha-hotel-resort',
-    thumbnail: 'images/projects/hanwha-hotel-resort.jpg',
-    name: 'Hanwha Hotel & Resort',
-    nameKo: '한화 호텔앤드리조트 양평부지 최유효 개발전략 마스터플랜',
-    desc: '한화 호텔앤드리조트 양평부지 최유효 개발전략 마스터플랜',
-    category: 'Hospitality',
-    location: 'YANGPYEONG',
-    year: '2024',
-    client: '한화 호텔 & 리조트',
-    scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: '"천혜의 100년 숲과 함께 일상과 비일상을 유연하게 넘나드는 Liquid Life를 실현하는 미래형 복합단지"를 마스터 콘셉트로 제안했다.',
-    body: [
-      '"천혜의 100년 숲과 함께 일상과 비일상을 유연하게 넘나드는 Liquid Life를 실현하는 미래형 복합단지"를 마스터 콘셉트로 제안했다. 이 개념은 도심의 일상과 휴양·여가의 비일상적 경험이 공존하고, 건강한 라이프스타일과 취향 기반의 소셜네트워크, 창의적 영감과 생산이 자연스럽게 이어지는 새로운 공간 경험을 의미한다.',
-      '약 6만 평 규모의 동막지구는 휴양과 업무가 공존하는 Creative Town으로, 약 11만 평 규모의 콘도지구는 교류와 콘텐츠 중심의 Networking Town으로 계획해 차별화된 라이프스타일 프로그램을 제안했다. 이를 통해 휴양·일·문화가 일상 속에서 지속되는 Hanwha Liquid-Life District 마스터플랜을 구축했다.'
-    ],
-    bodyEn: [
-      'The master concept proposes a future-oriented mixed-use district that embodies Liquid Life—a flexible lifestyle where everyday living, leisure, work, and culture flow seamlessly together within a century-old natural forest. It envisions a new spatial experience where urban routine and retreat coexist, healthy lifestyles unfold, social connections form naturally, and creativity can emerge.',
-      'The Dongmak District is conceived as Creative Town, where leisure and work coexist, while the Condo District is planned as Networking Town, centered on shared interests, lifestyle content, and social exchange. Through this Hanwha Liquid-Life District master plan, the project aims to strengthen Hanwha Hotels & Resorts\'s brand value, expand its business model, and propose a new value chain for the future of the leisure industry.'
     ]
   },
   {
@@ -500,10 +455,55 @@ window.PROJECTS = [
     ]
   },
   {
+    id: 'hanwha-hotel-resort',
+    thumbnail: 'images/projects/hanwha-hotel-resort.jpg',
+    name: 'Hanwha Hotel&Resort',
+    nameKo: '한화 호텔 앤드 리조트 양평부지 최유효 개발전략 마스터플랜',
+    desc: '한화 호텔 앤드 리조트 양평부지 최유효 개발전략 마스터플랜',
+    category: 'Hospitality',
+    location: 'YANGPYEONG',
+    year: '2024',
+    client: '한화 호텔 & 리조트',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '"천혜의 100년 숲과 함께 일상과 비일상을 유연하게 넘나드는 Liquid Life를 실현하는 미래형 복합단지"를 마스터 콘셉트로 제안했다.',
+    body: [
+      '"천혜의 100년 숲과 함께 일상과 비일상을 유연하게 넘나드는 Liquid Life를 실현하는 미래형 복합단지"를 마스터 콘셉트로 제안했다. 이 개념은 도심의 일상과 휴양·여가의 비일상적 경험이 공존하고, 건강한 라이프스타일과 취향 기반의 소셜네트워크, 창의적 영감과 생산이 자연스럽게 이어지는 새로운 공간 경험을 의미한다.',
+      '약 6만 평 규모의 동막지구는 휴양과 업무가 공존하는 Creative Town으로, 약 11만 평 규모의 콘도지구는 교류와 콘텐츠 중심의 Networking Town으로 계획해 차별화된 라이프스타일 프로그램을 제안했다. 이를 통해 휴양·일·문화가 일상 속에서 지속되는 Hanwha Liquid-Life District 마스터플랜을 구축했다.'
+    ],
+    bodyEn: [
+      'The master concept proposes a future-oriented mixed-use district that embodies Liquid Life—a flexible lifestyle where everyday living, leisure, work, and culture flow seamlessly together within a century-old natural forest. It envisions a new spatial experience where urban routine and retreat coexist, healthy lifestyles unfold, social connections form naturally, and creativity can emerge.',
+      'The Dongmak District is conceived as Creative Town, where leisure and work coexist, while the Condo District is planned as Networking Town, centered on shared interests, lifestyle content, and social exchange. Through this Hanwha Liquid-Life District master plan, the project aims to strengthen Hanwha Hotels & Resorts\'s brand value, expand its business model, and propose a new value chain for the future of the leisure industry.'
+    ]
+  },
+  {
+    id: 'seoul-station-it',
+    thumbnail: 'images/projects/seoul-station-it.jpg',
+    images: ['images/projects/seoul-station-it-2.jpg'],
+    name: 'Seoul Station-IT Seoul',
+    nameKo: '서울역 일대 공간기획 국제 공모',
+    desc: '서울역 일대 공간기획 국제 공모',
+    category: 'Mixed-use',
+    location: 'SEOUL',
+    year: '2025',
+    client: '서울특별시 (국제공모)',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '"IT SEOUL 서울 — Urban Breathway 도시를 잇는 숨길이 되다"를 주제로 서울역과 주변 지역의 물리적·사회적 단절을 해소하고 도시를 연결하는 새로운 상징적 공간 프로젝트이다.',
+    body: [
+      '"IT SEOUL 서울 — Urban Breathway 도시를 잇는 숨길이 되다"를 주제로 서울역과 주변 지역의 물리적·사회적 단절을 해소하고 도시를 연결하며 새로운 상징적 공간으로 재탄생시키는 것을 목표로 진행되었다. 도시 연결성을 강화하고, 서울역을 대한민국 국가중앙역으로서의 정체성을 갖춘 글로벌 게이트웨이로 재구성하며, 차량 중심의 공간구조를 시민 중심의 공공공간으로 전환하는 데 중점을 두었다.',
+      '"윝-서울(Upper Seoul)"과 "밑-서울(Lower Seoul)"의 수직적 조닝 컨셉을 제안했다. 통합 환승 허브, 보행 중심 서울 스트리트, 열린 광장 서울 데크, 녹지 공간 서울 힐즈, 그리고 K-브랜드 쇼룸과 문화 갤러리가 포함된다. 이 프로젝트는 서울역을 새로운 도시의 상징적 중심지로 전환하며, 물리적 공간을 넘어 도시의 가치와 정체성을 강화하는 데 기여했다.'
+    ],
+    bodyEn: [
+      'Under the theme "IT SEOUL SEOUL – Urban Breathway," this project reimagines Seoul Station and its surrounding area as a new symbolic urban gateway by reconnecting fragmented parts of the city. It focuses on strengthening urban connectivity, redefining Seoul Station as Korea\'s national central station, and transforming vehicle-oriented infrastructure into citizen-centered public space.',
+      'The proposal introduces a vertical zoning concept of "Upper Seoul" and "Lower Seoul," supported by key elements such as an integrated transit hub, pedestrian-oriented streets, open public decks, green spaces, and K-brand cultural content. Through this approach, the project positions Seoul Station as a new urban center that connects movement, culture, and identity.'
+    ]
+  },
+  {
     id: 'sejong-ro-park-ground-one',
     thumbnail: 'images/projects/sejong-ro-park-ground-one.jpg',
     images: ['images/projects/sejong-ro-park-ground-one-2.jpg', 'images/projects/sejong-ro-park-ground-one-3.jpg', 'images/projects/sejong-ro-park-ground-one-4.jpg', 'images/projects/sejong-ro-park-ground-one-5.jpg', 'images/projects/sejong-ro-park-ground-one-6.jpg'],
-    name: 'Sejong-ro Park — Ground One',
+    name: 'Sejong-ro Park: Ground One',
     nameKo: '세종로 공원 및 상징조형물 조성 설계공모',
     desc: '세종로 공원 및 상징조형물 조성 설계공모',
     category: 'Mixed-use',
@@ -525,55 +525,10 @@ window.PROJECTS = [
     ]
   },
   {
-    id: 'luxury-house-hildesheim',
-    thumbnail: 'images/projects/luxury-house-hildesheim.jpg',
-    name: 'Luxury House Hildesheim',
-    nameKo: '힐데스하임 고급 주택 공간 환경 설계',
-    desc: '힐데스하임 고급 주택 공간 환경 설계',
-    category: 'Housing',
-    location: 'OCHANG',
-    year: '2024',
-    client: 'Confidential',
-    scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: '주택단지 내 가장 높은 지점에 위치한 본 대지는 전면으로 시내 전경과 단지 조경을 동시에 조망할 수 있는 입지적 특성을 지니고 있습니다.',
-    body: [
-      '주택단지 내 가장 높은 지점에 위치한 본 대지는 전면으로 시내 전경과 단지 조경을 동시에 조망할 수 있는 입지적 특성을 지니고 있습니다. 이러한 풍경과 정면으로 마주하는 배치를 건물의 기본 구성 개념으로 설정하였으며, 전면에서는 원경의 도시 풍경과 단지 전경이 펼쳐지고, 배면에서는 경사진 녹지와 맞닿아 근경의 자연을 마주하도록 계획하였습니다.',
-      '외장 마감은 트레버틴 석재와 알루미늄 아노다이징 패널을 적용하여 단순하면서도 부드러운 톤으로 건물을 구성하였습니다. 이를 통해 주변 환경과 조화를 이루는 동시에, 지형과 풍경에 자연스럽게 반응하는 건축을 구현하고자 하였습니다.'
-    ],
-    bodyEn: [
-      'The site, located at the highest point within the residential complex, has the locational characteristic of overlooking both the city view and the landscape of the complex from the front. The building was planned based on the concept of directly facing these views. From the front, distant views of the city and the complex landscape unfold, while the rear faces the nearby natural scenery connected to the sloping green area.',
-      'Travertine stone and anodized aluminum panels were applied as exterior finishing materials to create a simple yet soft-toned building composition. Through this, the architecture was intended to harmonize with the surrounding environment while naturally responding to the topography and landscape.'
-    ]
-  },
-  {
-    id: 'slipper-mansion',
-    thumbnail: 'images/projects/slipper-mansion.jpg',
-    images: ['images/projects/slipper-mansion-2.jpg', 'images/projects/slipper-mansion-3.jpg', 'images/projects/slipper-mansion-4.jpg', 'images/projects/slipper-mansion-5.jpg', 'images/projects/slipper-mansion-6.jpg', 'images/projects/slipper-mansion-7.jpg', 'images/projects/slipper-mansion-8.jpg'],
-    name: 'Slipper Mansion',
-    nameKo: 'jpa. 브랜디드 스페이스 — 슬리퍼맨션',
-    desc: 'jpa. 브랜디드 스페이스 — 슬리퍼맨션',
-    category: 'Office',
-    location: 'SEOUL',
-    year: '2025',
-    client: 'jpa.',
-    scopeCode: 'DS · SP · SD · DB · OA',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design Build', 'Operating Advisory'],
-    summary: 'Slipper Mansion은 jpa가 직접 기획·디자인한 공간으로, 멤버들의 워크플레이스이자 공간 비즈니스를 위한 테스트베드다.',
-    body: [
-      'Slipper Mansion은 jpa가 직접 기획·디자인한 공간으로, 멤버들의 워크플레이스이자 공간 비즈니스를 위한 테스트베드다. 신발을 벗고 들어가는 경험과 집 같은 편안함에서 오는 영감을 바탕으로 Home-like Studio 콘셉트로 계획되었으며, 자율좌석 기반의 유연한 업무환경을 갖추고 있다.',
-      '공간은 Idea LAB, Personal Zone, Chill Lounge, Nomadic Terrace 등 다양한 성격의 영역으로 구성되어 필요에 따라 자유롭게 활용할 수 있다. 또한 디자이너와 마케터를 위한 크리에이티브 스튜디오이자 브랜드 팝업, 소모임, 대관 등 다양한 용도로 사용할 수 있는 테스트베드 공간으로 기획되었다.'
-    ],
-    bodyEn: [
-      'Slipper Mansion is a space independently planned and designed by jpa, serving both as a workplace for its members and as a testbed for its spatial business. Based on the experience of taking off one\'s shoes and the comfort and inspiration associated with home, it was conceived under the concept of a "Home-like Studio."',
-      'It includes a variety of spatial settings such as the Idea LAB, Personal Zone, Chill Lounge, and Nomadic Terrace, each designed to support different work styles and needs. It was also planned as a creative studio for designers and marketers, while accommodating brand pop-ups, small gatherings, and rental events. Visual elements—including signage, furniture, and even the slippers—were all custom-designed to create a consistent and cohesive experience.'
-    ]
-  },
-  {
     id: 'la-venice-c4-1bl',
     thumbnail: 'images/projects/la-venice-c4-1bl.jpg',
     images: ['images/projects/la-venice-c4-1bl-2.jpg?v=20261026'],
-    name: 'LaVenice C4-1BL',
+    name: 'La Venice C4-1BL',
     nameKo: '김포 라베니체 C4-1BL 복합문화공간 공간기획',
     desc: '김포 라베니체 C4-1BL 복합문화공간 공간기획',
     category: 'Mixed-use',
@@ -595,7 +550,7 @@ window.PROJECTS = [
   {
     id: 'cheonan-cultural',
     thumbnail: 'images/projects/cheonan-cultural.jpg',
-    name: 'Cheonan Cultural Facility',
+    name: 'Cheonan Complex Cultural Facility',
     nameKo: '천안 백석동 복합문화공간 공간기획',
     desc: '천안 백석동 복합문화공간 공간기획',
     category: 'Mixed-use',
@@ -612,6 +567,28 @@ window.PROJECTS = [
     bodyEn: [
       'This Cheonan project proposes a new mixed-use cultural destination that combines commerce, culture, and public space in a highly accessible central location. Designed to serve nearby residential communities, it introduces a differentiated commercial program that responds to local demand while creating a broader destination appeal.',
       'The plan places parking underground and creates a pedestrian-focused environment above, organized into a plaza and a park with distinct experiences. Small-scale retail, outdoor terraces, music-themed tenants, and a pet-oriented care center work together to attract visitors while balancing business viability with public value.'
+    ]
+  },
+  {
+    id: 'nft-lifestyle-platform',
+    thumbnail: 'images/projects/nft-lifestyle-platform.jpg',
+    name: 'NFT Lifestyle Platform',
+    nameKo: '건축 및 공간 NFT 라이프스타일 플랫폼 구축',
+    desc: '건축 및 공간 NFT 라이프스타일 플랫폼 구축',
+    category: 'Metaverse',
+    location: 'METAVERSE',
+    year: '2024',
+    client: 'Confidential',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '힐링그라운드 프로젝트는 미래에 상상과 현실이 조우하는 공간환경과 공간경험을 실현한다. 메타버스 건축 작업을 통해 신앙과 예술을 결합하는 경험을 새로운 관점으로 제안하는 프로젝트이다.',
+    body: [
+      '힐링그라운드 프로젝트는 미래에 상상과 현실이 조우하는 공간환경(사람, 자연, 도시, 건축)과 공간경험(콘텐츠, 프로그램)을 실현한다. 메타버스 건축 작업을 통해 신앙과 예술을 결합하는 경험을 새로운 관점으로 제안하는 프로젝트이다.',
+      '프로젝트의 핵심 컨셉은 "회복의 빛"으로, 이를 통해 공간이 주는 힘을 최대한 활용하여 공간 경험을 제공하는 것이다. 비정형 지붕 구조 사이로 들어오는 강력한 빛으로 가장 깊은 곳에 위치한 코이노니아홀을 가장 밝은 공간이 될 수 있도록 하여 회복의 빛을 경험하도록 하였다.'
+    ],
+    bodyEn: [
+      'The Healing Ground Project proposes a future spatial experience where imagination and reality meet, bringing together people, nature, the city, and architecture through metaverse design. By combining faith and art, the project presents a new perspective on spiritual and artistic experience while focusing not only on form, but also on the user journey.',
+      'Its core concept, "Light of Restoration," uses space itself as a medium for healing. Strong light enters through the irregular roof, making the deepest space the brightest and allowing visitors to experience the restorative power of light. The architecture blurs the boundary between building and site, creating a poetic landscape that takes advantage of the metaverse to deliver a beauty difficult to achieve in reality.'
     ]
   },
   {
@@ -637,12 +614,34 @@ window.PROJECTS = [
     ]
   },
   {
+    id: 'luxury-house-hildesheim',
+    thumbnail: 'images/projects/luxury-house-hildesheim.jpg',
+    name: 'Luxury House Hildesheim',
+    nameKo: '힐데스하임 고급 주택 공간 환경 설계',
+    desc: '힐데스하임 고급 주택 공간 환경 설계',
+    category: 'Housing',
+    location: 'OCHANG',
+    year: '2024',
+    client: 'Confidential',
+    scopeCode: 'DS · SP · SD',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    summary: '주택단지 내 가장 높은 지점에 위치한 본 대지는 전면으로 시내 전경과 단지 조경을 동시에 조망할 수 있는 입지적 특성을 지니고 있습니다.',
+    body: [
+      '주택단지 내 가장 높은 지점에 위치한 본 대지는 전면으로 시내 전경과 단지 조경을 동시에 조망할 수 있는 입지적 특성을 지니고 있습니다. 이러한 풍경과 정면으로 마주하는 배치를 건물의 기본 구성 개념으로 설정하였으며, 전면에서는 원경의 도시 풍경과 단지 전경이 펼쳐지고, 배면에서는 경사진 녹지와 맞닿아 근경의 자연을 마주하도록 계획하였습니다.',
+      '외장 마감은 트레버틴 석재와 알루미늄 아노다이징 패널을 적용하여 단순하면서도 부드러운 톤으로 건물을 구성하였습니다. 이를 통해 주변 환경과 조화를 이루는 동시에, 지형과 풍경에 자연스럽게 반응하는 건축을 구현하고자 하였습니다.'
+    ],
+    bodyEn: [
+      'The site, located at the highest point within the residential complex, has the locational characteristic of overlooking both the city view and the landscape of the complex from the front. The building was planned based on the concept of directly facing these views. From the front, distant views of the city and the complex landscape unfold, while the rear faces the nearby natural scenery connected to the sloping green area.',
+      'Travertine stone and anodized aluminum panels were applied as exterior finishing materials to create a simple yet soft-toned building composition. Through this, the architecture was intended to harmonize with the surrounding environment while naturally responding to the topography and landscape.'
+    ]
+  },
+  {
     id: 'crackin',
     thumbnail: 'images/projects/crackin.jpg',
     images: ['images/projects/crackin-2.jpg', 'images/projects/crackin-3.jpg', 'images/projects/crackin-4.jpg'],
-    name: "Crack'in",
-    nameKo: '크래킹커피 1호점 — 공간기획 및 공간경험설계',
-    desc: '크래킹커피 1호점 — 공간기획 및 공간경험설계',
+    name: "F&B Brand - Crack'in",
+    nameKo: '크래킹커피 1호점 공간기획 및 공간경험설계',
+    desc: '크래킹커피 1호점 공간기획 및 공간경험설계',
     category: 'Retail',
     location: 'PANGYO',
     year: '2025',
@@ -695,9 +694,9 @@ window.PROJECTS = [
     id: 'katsu-shoshin',
     thumbnail: 'images/projects/katsu-shoshin.jpg',
     images: ['images/projects/katsu-shoshin-2.jpg', 'images/projects/katsu-shoshin-3.jpg'],
-    name: 'Katsu Shoshin',
-    nameKo: '카츠쇼신 1호점 — 공간기획 및 공간경험설계',
-    desc: '카츠쇼신 1호점 — 공간기획 및 공간경험설계',
+    name: 'F&B Brand - Katsu Shoshin',
+    nameKo: '카츠쇼신 1호점 공간기획 및 공간경험설계',
+    desc: '카츠쇼신 1호점 공간기획 및 공간경험설계',
     category: 'Retail',
     location: 'PANGYO',
     year: '2025',
@@ -745,25 +744,26 @@ window.PROJECTS = [
     ]
   },
   {
-    id: 'nft-lifestyle-platform',
-    thumbnail: 'images/projects/nft-lifestyle-platform.jpg',
-    name: 'NFT Lifestyle Platform',
-    nameKo: '건축 및 공간 NFT 라이프스타일 플랫폼 구축',
-    desc: '건축 및 공간 NFT 라이프스타일 플랫폼 구축',
-    category: 'Metaverse',
-    location: 'METAVERSE',
-    year: '2024',
-    client: 'Confidential',
-    scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
-    summary: '힐링그라운드 프로젝트는 미래에 상상과 현실이 조우하는 공간환경과 공간경험을 실현한다. 메타버스 건축 작업을 통해 신앙과 예술을 결합하는 경험을 새로운 관점으로 제안하는 프로젝트이다.',
+    id: 'slipper-mansion',
+    thumbnail: 'images/projects/slipper-mansion.jpg',
+    images: ['images/projects/slipper-mansion-2.jpg', 'images/projects/slipper-mansion-3.jpg', 'images/projects/slipper-mansion-4.jpg', 'images/projects/slipper-mansion-5.jpg', 'images/projects/slipper-mansion-6.jpg', 'images/projects/slipper-mansion-7.jpg', 'images/projects/slipper-mansion-8.jpg'],
+    name: 'Slipper Mansion',
+    nameKo: 'jpa. 브랜디드 스페이스 슬리퍼맨션',
+    desc: 'jpa. 브랜디드 스페이스 슬리퍼맨션',
+    category: 'Office',
+    location: 'SEOUL',
+    year: '2025',
+    client: 'jpa.',
+    scopeCode: 'DS · SP · SD · DB · OA',
+    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design Build', 'Operating Advisory'],
+    summary: 'Slipper Mansion은 jpa가 직접 기획·디자인한 공간으로, 멤버들의 워크플레이스이자 공간 비즈니스를 위한 테스트베드다.',
     body: [
-      '힐링그라운드 프로젝트는 미래에 상상과 현실이 조우하는 공간환경(사람, 자연, 도시, 건축)과 공간경험(콘텐츠, 프로그램)을 실현한다. 메타버스 건축 작업을 통해 신앙과 예술을 결합하는 경험을 새로운 관점으로 제안하는 프로젝트이다.',
-      '프로젝트의 핵심 컨셉은 "회복의 빛"으로, 이를 통해 공간이 주는 힘을 최대한 활용하여 공간 경험을 제공하는 것이다. 비정형 지붕 구조 사이로 들어오는 강력한 빛으로 가장 깊은 곳에 위치한 코이노니아홀을 가장 밝은 공간이 될 수 있도록 하여 회복의 빛을 경험하도록 하였다.'
+      'Slipper Mansion은 jpa가 직접 기획·디자인한 공간으로, 멤버들의 워크플레이스이자 공간 비즈니스를 위한 테스트베드다. 신발을 벗고 들어가는 경험과 집 같은 편안함에서 오는 영감을 바탕으로 Home-like Studio 콘셉트로 계획되었으며, 자율좌석 기반의 유연한 업무환경을 갖추고 있다.',
+      '공간은 Idea LAB, Personal Zone, Chill Lounge, Nomadic Terrace 등 다양한 성격의 영역으로 구성되어 필요에 따라 자유롭게 활용할 수 있다. 또한 디자이너와 마케터를 위한 크리에이티브 스튜디오이자 브랜드 팝업, 소모임, 대관 등 다양한 용도로 사용할 수 있는 테스트베드 공간으로 기획되었다.'
     ],
     bodyEn: [
-      'The Healing Ground Project proposes a future spatial experience where imagination and reality meet, bringing together people, nature, the city, and architecture through metaverse design. By combining faith and art, the project presents a new perspective on spiritual and artistic experience while focusing not only on form, but also on the user journey.',
-      'Its core concept, "Light of Restoration," uses space itself as a medium for healing. Strong light enters through the irregular roof, making the deepest space the brightest and allowing visitors to experience the restorative power of light. The architecture blurs the boundary between building and site, creating a poetic landscape that takes advantage of the metaverse to deliver a beauty difficult to achieve in reality.'
+      'Slipper Mansion is a space independently planned and designed by jpa, serving both as a workplace for its members and as a testbed for its spatial business. Based on the experience of taking off one\'s shoes and the comfort and inspiration associated with home, it was conceived under the concept of a "Home-like Studio."',
+      'It includes a variety of spatial settings such as the Idea LAB, Personal Zone, Chill Lounge, and Nomadic Terrace, each designed to support different work styles and needs. It was also planned as a creative studio for designers and marketers, while accommodating brand pop-ups, small gatherings, and rental events. Visual elements—including signage, furniture, and even the slippers—were all custom-designed to create a consistent and cohesive experience.'
     ]
   }
 ];
