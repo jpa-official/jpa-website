@@ -212,6 +212,7 @@
 
   /* 15p — OUR PARTNERS (형광 그린 대신 포인트 컬러) */
   .sv2-partners { padding: 120px 40px 140px; }
+  .sv2-partners-img { display: block; width: 100%; max-width: 1000px; height: auto; margin: 72px auto 0; }   /* 회사소개서 91p 표 그대로 (SVG) */
   .sv2-chart, .sv2-cluster { zoom: 0.75; }   /* 표 전체를 비율 그대로 축소 */
   .sv2-chart {
     --line: rgba(255,255,255,0.85);
@@ -428,6 +429,7 @@
 
   /* OUR PARTNERS — PC와 같은 표를 PC 최소폭(920px) 기준으로 그린 뒤 화면 폭에 맞춰 통째로 축소 (--pz는 services.html 스크립트가 계산) */
   .sv2-partners { padding: 80px 20px 100px; }
+  .sv2-partners-img { display: block; width: 100%; height: auto; margin: 32px auto 0; }
   .sv2-chart, .sv2-cluster { width: 920px; max-width: none; zoom: var(--pz, 0.36); }
   .sv2-chart {
     --line: rgba(255,255,255,0.85);
