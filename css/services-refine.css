@@ -206,7 +206,7 @@
     align-items: baseline;
     gap: 0.45em;
     font-size: clamp(18px, 1.875vw, 32px);   /* 기존의 1/2 */
-    line-height: 1.05;
+    line-height: 1.4;
   }
   .sv2-roles .kr { font-size: max(11px, 0.33em); font-weight: 600; }   /* 기존의 1/2 */
 
