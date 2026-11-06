@@ -372,3 +372,53 @@
 @media (max-width: 768px) {
   .stp-desc { font-size: 13px; }
 }
+
+/* ============================================
+   ABOUT HERO — 선언문 (회사소개서 5p · 홈 로딩 화면과 같은 문장)
+   로딩 화면과 같은 모션: 흐림 + 살짝 올라오며 한 줄씩 등장
+   ============================================ */
+.about-hero-title.about-hero-manifesto {
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -0.018em;
+}
+.about-hero-manifesto .word {
+  white-space: normal;
+  letter-spacing: -0.018em;
+  filter: blur(8px);
+  transform: translateY(0.28em);
+  animation: manifestoIn 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.about-hero-manifesto .line:nth-child(1) .word { animation-delay: .35s; }
+.about-hero-manifesto .line:nth-child(2) .word { animation-delay: .55s; }
+.about-hero-manifesto .line:nth-child(3) .word { animation-delay: .75s; }
+.about-hero-manifesto + .about-hero-subtitle { animation-delay: 1.5s; }
+@keyframes manifestoIn { to { opacity: 1; filter: blur(0); transform: none; } }
+@media (min-width: 769px) {
+  .about-hero-title.about-hero-manifesto { font-size: clamp(28px, 2.9vw, 50px); }
+  .about-hero-manifesto + .about-hero-subtitle { margin-top: 32px; font-size: 16px; font-weight: 400; }
+}
+@media (max-width: 768px) {
+  .about-hero-title.about-hero-manifesto { font-size: 22px; line-height: 1.25; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-hero-manifesto .word { animation: heroFade 1s ease .2s forwards; filter: none; transform: none; }
+}
+
+/* 01 — DEFINE · TRANSFORM · INTEGRATE : 3단 (근거가 된 선언문 한 줄을 키워드 아래에) */
+.values .stp-basis {
+  display: block;
+  margin-top: 8px;
+  font-family: 'Swiss 721', sans-serif;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+}
+.values .stp > .stp-basis { --t: 0.17s; }
+.values .stp.stp-in > .stp-basis { opacity: 0.5; }
+.values .stp-ko { display: block; margin-top: 18px; }
+.values .stp-desc { margin-top: 10px; }
+@media (min-width: 769px) {
+  .values .stp-ko { font-size: 17px; }
+  .values .stp-desc { max-width: 420px; }
+}
+.values .stp-ko, .values .stp-desc, .about-hero-manifesto + .about-hero-subtitle, .sv2-desc { word-break: keep-all; }

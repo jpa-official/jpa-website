@@ -107,7 +107,8 @@ window.PROJECTS = [
       'images/projects/dongyeong-2.jpg?v=20261019',
       'images/projects/dongyeong-3.jpg?v=20261019',
       'images/projects/dongyeong-4.jpg?v=20261019',
-      'images/projects/dongyeong-5.jpg?v=20261019'
+      'images/projects/dongyeong-5.jpg?v=20261019',
+      'images/projects/dongyeong-6.mp4'
     ],
     name: 'Dongyeong Tour Headquarter',
     nameKo: '동영관광 사옥 토털공간디자인',
@@ -572,6 +573,9 @@ window.PROJECTS = [
   {
     id: 'nft-lifestyle-platform',
     thumbnail: 'images/projects/nft-lifestyle-platform.jpg',
+    images: [
+      'images/projects/nft-lifestyle-platform-2.jpg'
+    ],
     name: 'NFT Lifestyle Platform',
     nameKo: '건축 및 공간 NFT 라이프스타일 플랫폼 구축',
     desc: '건축 및 공간 NFT 라이프스타일 플랫폼 구축',

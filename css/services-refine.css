@@ -533,3 +533,19 @@
     margin-bottom: 4px;
   }
 }
+
+/* 서비스 설명 2줄 (회사소개서 15–19p) — 펼친 패널 맨 위 */
+.sv2-desc {
+  font-family: 'Pretendard Variable', Pretendard, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  opacity: 0.75;
+}
+@media (min-width: 769px) {
+  .sv2-desc { margin: 28px 40px 0; font-size: 15px; line-height: 1.7; text-align: center; }
+}
+@media (max-width: 768px) {
+  .sv2-desc { margin: 18px 0 0; font-size: 13px; line-height: 1.6; text-align: left; }
+  .sv2-desc br { display: none; }
+}
+.sv2-desc { word-break: keep-all; }
