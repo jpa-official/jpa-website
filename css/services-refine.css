@@ -549,3 +549,47 @@
   .sv2-desc br { display: none; }
 }
 .sv2-desc { word-break: keep-all; }
+
+/* ============================================
+   SERVICES (PC) — 펼친 서비스 내용을 회사소개서 15–19p와 같게
+   1920px 기준 수치를 vw로 환산: 설명 16 Medium · 항목 제목 = 선 1px 알약(322×60, 26 SemiBold)
+   · 항목 18 Regular 가운데 정렬 · 칸 간격 200 · 알약↔항목 35 · 설명↔칸 98
+   덱처럼 사진은 표시하지 않음
+   ============================================ */
+@media (min-width: 769px) {
+  .sv2-desc {
+    margin: clamp(28px, 2.45vw, 47px) auto 0;
+    max-width: 62vw;
+    font-size: clamp(13px, 0.833vw, 16px);
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+    opacity: 1;
+  }
+  .sv2-cols {
+    gap: 10.4vw;
+    margin: clamp(48px, 5.1vw, 98px) 40px 0;
+    text-align: center;
+  }
+  .sv2-col { width: 16.8vw; min-width: 220px; }
+  .sv2-col h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: clamp(44px, 3.125vw, 60px);
+    margin-bottom: clamp(22px, 1.82vw, 35px);
+    border: 1px solid #fff;
+    border-radius: 999px;
+    font-size: clamp(17px, 1.354vw, 26px);
+    font-weight: 600;
+    letter-spacing: -0.022em;
+    white-space: nowrap;
+  }
+  .sv2-col li {
+    font-size: clamp(13px, 0.94vw, 18px);
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+  }
+  .sv2-photo { display: none; }
+  .sv2-acc-inner::after { content: ""; display: block; height: clamp(48px, 4.2vw, 80px); }
+}
