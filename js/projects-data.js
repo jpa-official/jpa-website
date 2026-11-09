@@ -361,7 +361,7 @@ window.PROJECTS = [
   {
     id: 'sfc-biopark',
     thumbnail: 'images/projects/sfc-biopark.jpg',
-    images: ['images/projects/sfc-biopark-2.jpg', 'images/projects/sfc-biopark-3.jpg'],
+    images: ['images/projects/sfc-biopark-2.jpg', 'images/projects/sfc-biopark-3.jpg', 'images/projects/sfc-biopark-4.jpg', 'images/projects/sfc-biopark-5.jpg', 'images/projects/sfc-biopark-6.jpg'],
     name: 'SFC Biopark',
     nameKo: 'SFC 바이오파크 공간기획 및 공간환경설계',
     desc: 'SFC 바이오파크 공간기획 및 공간환경설계',
