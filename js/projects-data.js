@@ -259,8 +259,8 @@ window.PROJECTS = [
       'images/projects/tea-the-han-diagram-6.png': 'embeds/tea-the-han/diagram-6.html?v=202610200845'
     },
     name: 'Tea the Han',
-    nameKo: '북촌 TEA THE HAN 공간브랜딩 및 공간경험&환경디자인',
-    desc: '북촌 TEA THE HAN 공간브랜딩 및 공간경험&환경디자인',
+    nameKo: '북촌 TEA THE HAN 공간경험 및 공간환경설계',
+    desc: '북촌 TEA THE HAN 공간경험 및 공간환경설계',
     category: 'Retail',
     location: 'SEOUL',
     year: '2026',
