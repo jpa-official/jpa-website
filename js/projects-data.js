@@ -643,7 +643,7 @@ window.PROJECTS = [
     id: 'crackin',
     thumbnail: 'images/projects/crackin.jpg',
     images: ['images/projects/crackin-2.jpg', 'images/projects/crackin-3.jpg', 'images/projects/crackin-4.jpg'],
-    name: "Crack'in",
+    name: "Crackin'",
     nameKo: 'F&B 브랜드 크래킹커피 공간기획 및 공간경험설계',
     desc: 'F&B 브랜드 크래킹커피 공간기획 및 공간경험설계',
     category: 'Retail',
