@@ -30,7 +30,7 @@ window.PROJECTS = [
     year: '2026',
     client: 'Confidential',
     scopeCode: 'DS · SP · SD · DB · OA',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design Build', 'Operating Advisory'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN', 'BUILD', 'OPERATING'],
     summary: '광화문에 위치한 광화문169는 한국을 깊이 경험하고자 광화문을 찾는 글로벌 방문객을 대상으로 리모델링을 진행하는 프로젝트이다.',
     body: [
       '광화문에 위치한 광화문169는 한국을 깊이 경험하고자 광화문을 찾는 글로벌 방문객을 대상으로 리모델링을 진행하는 프로젝트이다. 광화문 광장에 인접한 민간 클라이언트의 건물로서, 인근의 공공기관이나 기업 브랜드가 다루기 어려운 독창적인 콘텐츠를 담는 것을 목표로 한다. 이를 통해 K-브랜드, 문화, IP 등 한국의 자산이 세계로 확장되는 출발점이자 부싯돌 같은 역할을 지향한다.',
@@ -59,7 +59,7 @@ window.PROJECTS = [
     client: 'Confidential',
     subCrop: true,
     scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN'],
     summary: '이터널 마치는 신규 개발과 기존 주거 생활권이 만나는 천안 백석동에, 특별한 순간과 일상 속 쉼이 공존하는 웨딩복합문화공간을 제안한다.',
     body: [
       '이터널 마치는 신규 개발과 기존 주거 생활권이 만나는 천안 백석동에, 특별한 순간과 일상 속 쉼이 공존하는 웨딩복합문화공간을 제안한다. 주변 생활권의 풍부한 배후 수요와 공원·녹지의 부족에 주목해, 프리미엄 야외예식과 누구나 머물 수 있는 공원을 결합했다. 주말에는 웨딩 공간으로, 주중에는 카페·전시·대관 공간으로 활용해 일상적인 방문과 다양한 문화적 경험이 이어지는 장소를 계획했다.',
@@ -87,7 +87,7 @@ window.PROJECTS = [
     year: '2026',
     client: 'jpa.',
     scopeCode: 'SP · SD · DB · OA',
-    scope: ['Space BX Planning', 'Space Design', 'Design Build', 'Operating Advisory'],
+    scope: ['SPACE UX', 'DESIGN', 'BUILD', 'OPERATING'],
     summary: '<Gaudí: Back to the Origins(가우디: 서울에서 다시 태어나다)>는 안토니 가우디 서거 100주년을 기념해 가우디 재단과 함께 선보인 공식 월드 투어의 서울 전시이다.',
     body: [
       '<Gaudí: Back to the Origins(가우디: 서울에서 다시 태어나다)>는 안토니 가우디 서거 100주년을 기념해 가우디 재단과 함께 선보인 공식 월드 투어의 서울 전시이다. jpa.는 서울 전시의 주관사로서, 해외 전시 콘텐츠를 서울이라는 도시와 장소에 맞게 풀어내는 기획과 로컬라이징부터 공간 디자인, 시공, 실제 전시 운영까지 전 과정을 함께하였다.',
@@ -118,7 +118,7 @@ window.PROJECTS = [
     year: '2026',
     client: '동영관광',
     scopeCode: 'DS · SP · SD · DB',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design-Build'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN', 'BUILD'],
     summary: '동영관광사옥 공간기획 및 공간구현 프로젝트는 단기적으로는 기존 사옥의 라운지 공간을 디자인하고, 장기적으로는 전체 사옥의 공간 활용을 재구성하면서 기업의 정체성과 미래 성장 가능성을 공간으로 구체화하는 것을 목표로 하였다.',
     body: [
       '동영관광사옥 공간기획 및 공간구현 프로젝트는 단기적으로는 기존 사옥의 라운지 공간을 디자인하고, 장기적으로는 전체 사옥의 공간 활용을 재구성하면서 기업의 정체성과 미래 성장 가능성을 공간으로 구체화하는 것을 목표로 하였다.',
@@ -143,7 +143,7 @@ window.PROJECTS = [
     year: '2026',
     client: '세종문화회관',
     scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN'],
     summary: '이 프로젝트는 광화문의 역사적 장소에 자리한 세종문화회관의 유휴공간, 세종라운지와 옥상 공간을 공공성과 수익성을 동시에 갖춘 복합문화공간으로 재구성하는 공간기획 프로젝트이다.',
     body: [
       '이 프로젝트는 광화문의 역사적 장소에 자리한 세종문화회관의 유휴공간, 세종라운지와 옥상 공간을 공공성과 수익성을 동시에 갖춘 복합문화공간으로 재구성하는 공간기획 프로젝트이다. 세종문화회관은 대한민국을 대표하는 문화예술의 중심지이지만, 공연 관람 중심의 활용으로 시민들이 일상 속에서 자유롭게 머물고 향유하기에는 한계가 있었다.',
@@ -180,7 +180,7 @@ window.PROJECTS = [
     year: '2026',
     client: 'OZX',
     scopeCode: 'SP · SD',
-    scope: ['Space BX Planning', 'Space Design'],
+    scope: ['SPACE UX', 'DESIGN'],
     summary: '상업·문화·예술·IP·콘텐츠·미디어가 결합된 도심형 복합 플랫폼, OZX의 브랜드 아이덴티티 및 커뮤니케이션 디자인이다.',
     body: [
       'OZX 브랜딩 프로젝트는 각기 다른 분야에서 경험을 쌓아온 다섯 명의 전문가가 모여 시작한 공간 운영사 OZX의 기업 정체성과 브랜드 커뮤니케이션 체계를 구축하기 위한 프로젝트이다. OZX는 도심의 공간을 단순한 자산이 아닌, 공간·콘텐츠·브랜드·사람이 만나 새로운 경험을 만들어내는 플랫폼으로 바라보며 문화성·공공성·사업성을 함께 담은 공간 프로젝트를 지향한다. 이름의 \'OZ\'에는 다섯 명이 모여 하나의 문화적 가능성을 만든다는 의미와 함께, 흩어진 공간·콘텐츠·브랜드·운영 경험을 하나의 구조로 조직한다는 \'Organize\'의 의미를 담고 있으며, \'X\'는 교차·확장·협업·실험을 상징한다.',
@@ -216,7 +216,7 @@ window.PROJECTS = [
     year: '2026',
     client: '연세대학교',
     scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN'],
     summary: '의학 교육과 연구가 교차하는 캠퍼스의 일상 공간. 학생·교수·연구자의 협업 방식을 반영한 학습·연구 공간이다.',
     body: [
       '연세대학교 원주의과대학 유휴공간 플레이스브랜딩 프로젝트는 대학 내 유휴공간을 단순한 남는 공간이 아닌, 캠퍼스 구성원의 이용 경험과 대학의 정체성을 담아낼 수 있는 전략적 자산으로 바라보는 데서 출발하였다.',
@@ -266,7 +266,7 @@ window.PROJECTS = [
     year: '2026',
     client: 'HAN',
     scopeCode: 'DS · SP · SD · DB',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design Build'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN', 'BUILD'],
     summary: '북촌의 결을 담은 다도 공간. 한국 차 문화를 동시대적으로 재해석한 리테일 브랜드 경험 공간이다.',
     body: [
       '티더한은 럭셔리 한옥호텔 노스텔지어의 헤리티지와 뉴욕 티 브랜드 타바론의 20년 전문성이 결합되어 탄생한 합작 법인이다. 한국의 티 헤리티지를 바탕으로 차를 접하는 새로운 문화를 제안한다.',
@@ -293,7 +293,7 @@ window.PROJECTS = [
     year: '2025',
     client: 'Confidential',
     scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN'],
     summary: '묵동 G:ROUND는 중랑구 묵동 일대에 조성되는 코리빙&리테일 복합개발 프로젝트로, 청년층 주거 수요에 대응하는 동시에 지역 생활권에 활력을 더하는 새로운 주거 플랫폼을 제안한다.',
     body: [
       '묵동 G:ROUND는 중랑구 묵동 일대에 조성되는 코리빙&리테일 복합개발 프로젝트로, 청년층 주거 수요에 대응하는 동시에 지역 생활권에 활력을 더하는 새로운 주거 플랫폼을 제안한다. 기존 주거지 맥락을 반영한 공간 구성과 입주자 중심의 기획을 통해, 단순한 거주를 넘어선 통합적 주거 경험을 목표로 한다.',
@@ -316,7 +316,7 @@ window.PROJECTS = [
     year: '2025',
     client: 'Confidential',
     scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN'],
     summary: '오디세이 빌리지는 인천 중구 운북동 골든테라시티에 조성되는 리조트형 시니어 복합주거 프로젝트로, 액티브 시니어를 위한 새로운 주거 모델을 제안한다.',
     body: [
       '오디세이 빌리지는 인천 중구 운북동 골든테라시티에 조성되는 리조트형 시니어 복합주거 프로젝트로, 액티브 시니어를 위한 새로운 주거 모델을 제안한다. 나이가 들어서도 배우고, 관계 맺고, 탐험할 수 있다는 철학 아래 "Wellness Journey Town"을 공간으로 구현했다.',
@@ -347,7 +347,7 @@ window.PROJECTS = [
     year: '2025',
     client: '이노션 (INNOCEAN)',
     scopeCode: 'DS · SP · SD · DB',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design Build'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN', 'BUILD'],
     summary: '가장 이노션다운 워크플레이스를 만들기 위해, 임직원이 오피스에서 경험하는 EX(Employee eXperience)를 중심으로 기획한 프로젝트이다.',
     body: [
       '가장 이노션다운 워크플레이스를 만들기 위해, 임직원이 오피스에서 경험하는 EX(Employee eXperience)를 중심으로 기획한 프로젝트이다. 공간 기획의 출발점은 이노션의 정체성과 업무 특성을 깊이 이해하는 것이었다. 이를 위해 직원 FGI, 임원 인터뷰, 전사 설문조사를 진행했고, 이를 바탕으로 이노션의 밸류 키워드와 컨셉 키워드를 도출했다.',
@@ -370,7 +370,7 @@ window.PROJECTS = [
     year: '2025',
     client: 'SFC',
     scopeCode: 'DS · SP · SD · DB',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design Build'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN', 'BUILD'],
     summary: '이 프로젝트는 새로운 SFC BIO 연구센터를 위한 공간 브랜딩 및 디자인 이니셔티브로, 기획 단계부터 실행까지 회사의 브랜드 가치를 건축 공간에 통합하는 것을 목표로 한다.',
     body: [
       '이 프로젝트는 새로운 SFC BIO 연구센터를 위한 공간 브랜딩 및 디자인 이니셔티브로, 기획 단계부터 실행까지 회사의 브랜드 가치를 건축 공간에 통합하는 것을 목표로 한다. 브랜드의 아이덴티티를 "끊임없이 변화하는 환경에 유연하게 반응하는 존재"로 설정하고, 이를 공간 브랜딩에 반영하였다.',
@@ -393,7 +393,7 @@ window.PROJECTS = [
     year: '2025',
     client: 'SFC',
     scopeCode: 'DS · SP · SD · DB',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design Build'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN', 'BUILD'],
     summary: 'SFC OLED 캠퍼스의 임직원의 협업·재충전·교류가 일어나는 통합 커뮤니티 센터.',
     body: [
       '오창 과학산업단지 내에 위치한 SFC OLED 캠퍼스는 정밀 화학소재를 연구, 개발, 생산하는 SFC(주)의 거점이다.',
@@ -418,7 +418,7 @@ window.PROJECTS = [
     year: '2025',
     client: 'SFC',
     scopeCode: 'DS · SP · SD · DB',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design Build'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN', 'BUILD'],
     summary: '산업 운영의 효율과 환경의 품격을 동시에 담은 스토리지 센터.',
     body: [
       '오창 과학산업단지 내에 위치한 SFC OLED 캠퍼스는 정밀 화학소재를 연구, 개발, 생산하는 SFC(주)의 거점이다.',
@@ -444,7 +444,7 @@ window.PROJECTS = [
     year: '2024',
     client: 'Marriott',
     scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN'],
     summary: '평택 고덕국제신도시의 새로운 수요, 그리고 근방에 들어선 삼성 반도체 공장 및 벤더사의 수요를 위해 230실 규모의 코트야드 바이 메리어트 브랜드 호텔 프로젝트이다.',
     body: [
       '평택 고덕국제신도시의 새로운 수요, 그리고 근방에 들어선 삼성 반도체 공장 및 벤더사의 수요를 위해 230실 규모의 코트야드 바이 메리어트 브랜드 호텔 프로젝트이다. 스케줄 상 규모검토부터 프로그램 세팅을 진행하였고, 계획설계부터 개발행위허가를 포함한 각종 인허가를 수행하였다.',
@@ -466,7 +466,7 @@ window.PROJECTS = [
     year: '2024',
     client: '한화 호텔 & 리조트',
     scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN'],
     summary: '"천혜의 100년 숲과 함께 일상과 비일상을 유연하게 넘나드는 Liquid Life를 실현하는 미래형 복합단지"를 마스터 콘셉트로 제안했다.',
     body: [
       '"천혜의 100년 숲과 함께 일상과 비일상을 유연하게 넘나드는 Liquid Life를 실현하는 미래형 복합단지"를 마스터 콘셉트로 제안했다. 이 개념은 도심의 일상과 휴양·여가의 비일상적 경험이 공존하고, 건강한 라이프스타일과 취향 기반의 소셜네트워크, 창의적 영감과 생산이 자연스럽게 이어지는 새로운 공간 경험을 의미한다.',
@@ -489,7 +489,7 @@ window.PROJECTS = [
     year: '2024',
     client: '서울특별시 (국제공모)',
     scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN'],
     summary: '"IT SEOUL 서울 — Urban Breathway 도시를 잇는 숨길이 되다"를 주제로 서울역과 주변 지역의 물리적·사회적 단절을 해소하고 도시를 연결하는 새로운 상징적 공간 프로젝트이다.',
     body: [
       '"IT SEOUL 서울 — Urban Breathway 도시를 잇는 숨길이 되다"를 주제로 서울역과 주변 지역의 물리적·사회적 단절을 해소하고 도시를 연결하며 새로운 상징적 공간으로 재탄생시키는 것을 목표로 진행되었다. 도시 연결성을 강화하고, 서울역을 대한민국 국가중앙역으로서의 정체성을 갖춘 글로벌 게이트웨이로 재구성하며, 차량 중심의 공간구조를 시민 중심의 공공공간으로 전환하는 데 중점을 두었다.',
@@ -512,7 +512,7 @@ window.PROJECTS = [
     year: '2024',
     client: 'Confidential',
     scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN'],
     summary: '광화문광장은 서울의 문화·역사적 중심지이자 국가를 상징하는 주요 공간입니다. 본 프로젝트는 세종로공원과 사계정원 일대를 국가 상징의 시작점이자 중심 공간으로 새롭게 정의하였습니다.',
     body: [
       '광화문광장은 서울의 문화·역사적 중심지이자 국가를 상징하는 주요 공간입니다. 본 프로젝트는 세종로공원과 사계정원 일대를 국가 상징의 시작점이자 중심 공간으로 새롭게 정의하였습니다. \'SEOUL GROUND ONE\'은 과거를 기억하고 미래로 이어지는 연결을 목표로 하며, 서울의 역사와 문화 축을 강화해 세계와 연결되는 대한민국 중심지의 장소성을 제안합니다.',
@@ -537,7 +537,7 @@ window.PROJECTS = [
     year: '2024',
     client: 'Confidential',
     scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN'],
     summary: '김포 라베니체 프로젝트는 30·40 영패밀리가 많은 베드타운형 도시인 김포의 입지적 강점을 바탕으로, 주변 거주민뿐 아니라 외부 방문객까지 끌어들이는 문화 앵커시설을 제안한다.',
     body: [
       '김포 라베니체 프로젝트는 30·40 영패밀리가 많은 베드타운형 도시인 김포의 입지적 강점을 바탕으로, 주변 거주민뿐 아니라 외부 방문객까지 끌어들이는 문화 앵커시설을 제안하는 데 목적이 있다. 특히 라베니체가 F&B 중심으로 구성되어 일상적 방문 수요가 약해지는 한계를 극복하고, 대상지 건축을 통해 라베니체 전체의 활성화를 도모하고자 했다.',
@@ -559,7 +559,7 @@ window.PROJECTS = [
     year: '2024',
     client: '천안시',
     scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN'],
     summary: '천안 프로젝트는 충청남도권의 젊고 잠재력 있는 도시인 천안의 중심 입지를 바탕으로, 문화와 상업을 함께 경험할 수 있는 새로운 복합문화공간을 제안한다.',
     body: [
       '천안 프로젝트는 충청남도권의 젊고 잠재력 있는 도시인 천안의 중심 입지를 바탕으로, 문화와 상업을 함께 경험할 수 있는 새로운 복합문화공간을 제안한다. 인근 주거지에서의 접근성이 뛰어난 대상지에 주변 수요를 수용할 수 있는 차별화된 상업 프로그램을 개발하고자 했다.',
@@ -584,7 +584,7 @@ window.PROJECTS = [
     year: '2024',
     client: 'Confidential',
     scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN'],
     summary: '힐링그라운드 프로젝트는 미래에 상상과 현실이 조우하는 공간환경과 공간경험을 실현한다. 메타버스 건축 작업을 통해 신앙과 예술을 결합하는 경험을 새로운 관점으로 제안하는 프로젝트이다.',
     body: [
       '힐링그라운드 프로젝트는 미래에 상상과 현실이 조우하는 공간환경(사람, 자연, 도시, 건축)과 공간경험(콘텐츠, 프로그램)을 실현한다. 메타버스 건축 작업을 통해 신앙과 예술을 결합하는 경험을 새로운 관점으로 제안하는 프로젝트이다.',
@@ -606,7 +606,7 @@ window.PROJECTS = [
     year: '2024',
     client: 'LGBR',
     scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN'],
     summary: '본 프로젝트는 50-70대 은퇴 전후 세대인 뉴시니어를 대상으로 한 주거공간의 미래 변화 방향을 제시한 연구이다.',
     body: [
       '본 프로젝트는 50-70대 은퇴 전후 세대인 뉴시니어를 대상으로 한 주거공간의 미래 변화 방향을 제시한 연구이다. 뉴시니어 세대의 생활방식, 신체적 변화, 라이프스타일, 그리고 공간 니즈를 철저히 분석해, 맞춤형 주거 평면 트렌드와 전략을 도출하였다.',
@@ -628,7 +628,7 @@ window.PROJECTS = [
     year: '2025',
     client: 'Confidential',
     scopeCode: 'DS · SP · SD',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN'],
     summary: '주택단지 내 가장 높은 지점에 위치한 본 대지는 전면으로 시내 전경과 단지 조경을 동시에 조망할 수 있는 입지적 특성을 지니고 있습니다.',
     body: [
       '주택단지 내 가장 높은 지점에 위치한 본 대지는 전면으로 시내 전경과 단지 조경을 동시에 조망할 수 있는 입지적 특성을 지니고 있습니다. 이러한 풍경과 정면으로 마주하는 배치를 건물의 기본 구성 개념으로 설정하였으며, 전면에서는 원경의 도시 풍경과 단지 전경이 펼쳐지고, 배면에서는 경사진 녹지와 맞닿아 근경의 자연을 마주하도록 계획하였습니다.',
@@ -651,7 +651,7 @@ window.PROJECTS = [
     year: '2025',
     client: 'Space Content Food (SCF)',
     scopeCode: 'DS · SP · SD · DB',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design Build'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN', 'BUILD'],
     summary: 'F&B 비즈니스를 도전적으로 펼쳐내며 성과를 얻고 있는 스페이스콘텐츠푸드(SCF)의 자체 신규 F&B 브랜드의 통합 브랜딩과 디자인가이드 개발을 진행했다.',
     body: [
       'F&B 비즈니스를 도전적으로 펼쳐내며 성과를 얻고 있는 스페이스콘텐츠푸드(SCF)의 자체 신규 F&B 브랜드의 통합 브랜딩과 디자인가이드 개발을 진행했다. 고급 프랜차이즈 테넌트로서 가져야할 브랜드 모티브/스토리/슬로건의 기획은 나아가 브랜드 경험기획으로 발전한다. 인테리어설계와 VMD까지 맡아 공간의 디자인뿐 아니라 제품 디자인까지 모두 통합적으로 브랜딩/기획하였다.',
@@ -681,7 +681,7 @@ window.PROJECTS = [
     year: '2026',
     client: 'Space Content Food (SCF)',
     scopeCode: 'SP',
-    scope: ['Space BX Planning'],
+    scope: ['SPACE UX'],
     summary: '스페이스콘텐츠푸드(SCF)의 신규 F&B 브랜드 \'크래킹 커피\'의 브랜드 전략부터 아이덴티티, 그래픽, 제품, 공간 경험까지 통합적인 브랜드 시스템을 구축하였다.',
     body: [
       '스페이스콘텐츠푸드(SCF)의 신규 F&B 브랜드 \'크래킹 커피\'의 브랜드 전략부터 아이덴티티, 그래픽, 제품, 공간 경험까지 통합적인 브랜드 시스템을 구축하였다. \'크래킹 커피\'는 커피빈이 로스팅 과정에서 갈라지며 가장 짙고 좋은 향과 소리를 내는 현상에서 출발했다. 성장과 변화를 위해 깨지고 갈라지는 경험을 \'Crack\', 그 틈에 새로움을 채워 넣는 것을 \'Fill\'로 정의하고, "Break the Routine"이라는 슬로건을 통해 일상의 틀을 깨고 그 안에 쉼과 새로움을 채우는 브랜드를 제안하였다.',
@@ -706,7 +706,7 @@ window.PROJECTS = [
     year: '2025',
     client: 'Space Content Food (SCF)',
     scopeCode: 'DS · SP · SD · DB',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design Build'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN', 'BUILD'],
     summary: '카츠쇼신은 기본에 충실한 깊이 있는 일식 다이닝 경험을 목표로 탄생했다. 전통과 현대를 조화롭게 아우르는 디자인과 기획을 통해 고객에게 단순한 식사를 넘어 특별한 가치를 제공하고자 했다.',
     body: [
       'F&B 비즈니스를 도전적으로 펼쳐내며 성과를 얻고 있는 스페이스콘텐츠푸드(SCF)의 자체 신규 F&B 브랜드의 통합 브랜딩과 디자인가이드 개발을 진행했다. "카츠쇼신"은 기본에 충실한 깊이 있는 일식 다이닝 경험을 목표로 탄생했다. 전통과 현대를 조화롭게 아우르는 디자인과 기획을 통해 고객에게 단순한 식사를 넘어 특별한 가치를 제공하고자 했다.',
@@ -734,7 +734,7 @@ window.PROJECTS = [
     year: '2026',
     client: 'Space Content Food (SCF)',
     scopeCode: 'SP',
-    scope: ['Space BX Planning'],
+    scope: ['SPACE UX'],
     summary: '스페이스콘텐츠푸드(SCF)의 신규 F&B 브랜드 \'카츠쇼신\'의 브랜드 철학과 아이덴티티를 정의하고, 이를 그래픽·제품·공간까지 확장하는 통합 브랜딩과 디자인 가이드라인을 구축하였다.',
     body: [
       '스페이스콘텐츠푸드(SCF)의 신규 F&B 브랜드 \'카츠쇼신\'의 브랜드 철학과 아이덴티티를 정의하고, 이를 그래픽·제품·공간까지 확장하는 통합 브랜딩과 디자인 가이드라인을 구축하였다. \'카츠쇼신\'은 일본 현지의 전통성과 높은 음식의 퀄리티, 깔끔하고 정교한 인상을 바탕으로 탄생한 브랜드이다. \'장인\'과 \'초심\'을 브랜드 아이덴티티의 핵심으로 설정하고, 가장 기초가 되는 것과 가장 중요한 것을 추구하는 태도를 브랜드에 담았다.',
@@ -759,7 +759,7 @@ window.PROJECTS = [
     year: '2025',
     client: 'jpa.',
     scopeCode: 'DS · SP · SD · DB · OA',
-    scope: ['Development Strategy', 'Space BX Planning', 'Space Design', 'Design Build', 'Operating Advisory'],
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN', 'BUILD', 'OPERATING'],
     summary: 'Slipper Mansion은 jpa가 직접 기획·디자인한 공간으로, 멤버들의 워크플레이스이자 공간 비즈니스를 위한 테스트베드다.',
     body: [
       'Slipper Mansion은 jpa가 직접 기획·디자인한 공간으로, 멤버들의 워크플레이스이자 공간 비즈니스를 위한 테스트베드다. 신발을 벗고 들어가는 경험과 집 같은 편안함에서 오는 영감을 바탕으로 Home-like Studio 콘셉트로 계획되었으며, 자율좌석 기반의 유연한 업무환경을 갖추고 있다.',
