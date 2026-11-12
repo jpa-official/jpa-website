@@ -102,13 +102,18 @@ window.PROJECTS = [
   },
   {
     id: 'dongyeong-tour-hq',
-    thumbnail: 'images/projects/dongyeong.jpg?v=20261019',
+    thumbnail: 'images/projects/dongyeong-tour.jpg?v=20261112',
     images: [
-      'images/projects/dongyeong-2.jpg?v=20261019',
-      'images/projects/dongyeong-3.jpg?v=20261019',
-      'images/projects/dongyeong-4.jpg?v=20261019',
-      'images/projects/dongyeong-5.jpg?v=20261019',
-      'images/projects/dongyeong-6.mp4'
+      'images/projects/dongyeong-tour-2.jpg?v=20261112',
+      'images/projects/dongyeong-tour-3.jpg?v=20261112',
+      'images/projects/dongyeong-tour-4.jpg?v=20261112',
+      'images/projects/dongyeong-tour-5.jpg?v=20261112',
+      'images/projects/dongyeong-tour-7.jpg?v=20261112',
+      'images/projects/dongyeong-tour-8.jpg?v=20261112',
+      'images/projects/dongyeong-tour-9.jpg?v=20261112',
+      'images/projects/dongyeong-tour-10.jpg?v=20261112',
+      'images/projects/dongyeong-tour-11.jpg?v=20261112',
+      'images/projects/dongyeong-tour-12.mp4?v=20261112'
     ],
     name: 'Dongyeong Tour Headquarter',
     nameKo: '동영관광 사옥 토털공간디자인',
