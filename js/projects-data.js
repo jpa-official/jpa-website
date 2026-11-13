@@ -183,7 +183,12 @@ window.PROJECTS = [
       'images/projects/yonsei-wonju-4.jpg?v=20261026',
       'images/projects/yonsei-wonju-5.jpg?v=20261026',
       'images/projects/yonsei-wonju-6.jpg?v=20261026',
-      'images/projects/yonsei-wonju-7.jpg?v=20261026'
+      'images/projects/yonsei-wonju-7.jpg?v=20261026',
+      'images/projects/yonsei-wonju-8.jpg?v=20261113',
+      'images/projects/yonsei-wonju-9.jpg?v=20261113',
+      'images/projects/yonsei-wonju-10.jpg?v=20261113',
+      'images/projects/yonsei-wonju-11.jpg?v=20261113',
+      'images/projects/yonsei-wonju-12.jpg?v=20261113'
     ],
     name: 'Yonsei Univ. Wonju Campus',
     nameKo: '연세대학교 원주의과대학',
