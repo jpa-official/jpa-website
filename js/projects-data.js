@@ -11,6 +11,7 @@ window.PROJECTS = [
       'images/projects/gwanghwa169-8.mp4?v=20261023',
       'images/projects/gwanghwa169-5.jpg?v=20261008',
       'images/projects/gwanghwa169-6.jpg?v=20261008',
+      'images/projects/gwanghwa169-9.jpg?v=20261113',
       // [다이어그램 임시 숨김] 'images/projects/gwanghwa169-diagram-2.png?v=20261023',
       // [다이어그램 임시 숨김] 'images/projects/gwanghwa169-diagram-1.png?v=20261023',  // 1·2번 순서 교체: Why Gwanghwamun(diagram-2) → From Ad to Stay(diagram-1)
       // [다이어그램 임시 숨김] 'images/projects/gwanghwa169-diagram-3.png?v=20261023',
