@@ -207,7 +207,7 @@ window.PROJECTS = [
     id: 'yonsei-wonju',
     thumbnail: 'images/projects/yonsei-wonju.jpg',
     images: [
-      'images/projects/yonsei-wonju-2.jpg?v=20261026',
+      'images/projects/yonsei-wonju-2.jpg?v=20261113b',
       'images/projects/yonsei-wonju-3.jpg?v=20261026',
       'images/projects/yonsei-wonju-4.jpg?v=20261026',
       'images/projects/yonsei-wonju-5.jpg?v=20261026',
