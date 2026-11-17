@@ -51,7 +51,13 @@
   // Sub images: same arrow slider as the live detail page (infinite loop)
   function buildSlider(box, list) {
     if (!box || !list.length) { if (box) box.remove(); return; }
-    if (list.length === 1) { box.appendChild(createMedia(list[0], project.name)); return; }
+    if (list.length === 1) {   // 1장이어도 서브 이미지 규칙(PC 높이 640px, 원본 비율) 적용
+      const s = document.createElement('div');
+      s.className = 'pd-slide active';
+      s.appendChild(createMedia(list[0], project.name));
+      box.appendChild(s);
+      return;
+    }
     box.classList.add('pd-slider');
     if (project.subCrop) box.classList.add('pd-crop169');   // 가로로 긴 서브 이미지를 다른 프로젝트와 같은 16:9 프레임으로
     const track = document.createElement('div');
