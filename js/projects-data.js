@@ -264,6 +264,63 @@ window.PROJECTS = [
     ]
   },
   {
+    id: 'yeonnam-value-up',
+    thumbnail: 'images/projects/yeonnam.jpg?v=20261117',
+    images: [
+      'images/projects/yeonnam-2.jpg?v=20261117'
+    ],
+    name: 'Property Yeonnam Value-up',
+    nameKo: '연남동 뉴워크 컬쳐 오피스',
+    desc: '연남동 뉴워크 컬쳐 오피스',
+    category: 'Office',
+    location: 'SEOUL',
+    year: '2026',
+    client: 'Property Roastery',
+    scopeCode: 'DS · SP · SD',
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN'],
+    summary: '연남동은 낮에는 몰입하는 창작자들의 오피스, 저녁에는 감도 높은 핫플 상권, 주말에는 로컬 여행지가 되는 곳입니다.',
+    body: [
+      '연남동은 낮에는 몰입하는 창작자들의 오피스, 저녁에는 감도 높은 핫플 상권, 주말에는 로컬 여행지가 되는 곳입니다. 시시각각 변화하는 여러 모습의 얼굴(Poly face)을 가진 동네입니다. 독립 출판사, 1인 크리에이터, 디자인 에이전시와 콘텐츠 제작사들이 퍼즐 조각처럼 모여 \'창작과 일상의 조화\'라는 연남동만의 고유한 정체성을 만들어 왔습니다.',
+      '하지만 빠르게 진화하는 크리에이터들의 작업 방식과 달리, 기존의 낡은 주택을 개조한 건축물들은 비효율적인 구조와 답답한 공간감으로 성장을 가로막는 한계에 부딪혔습니다. 프로퍼티 로스터리의 첫 프로젝트는 이 지점에서 출발합니다. 작지만 고유한 필지의 특성을 살려, 연남동의 결에 맞는 새로운 일터 \'NEW WORK CULTURE OFFICE\'를 제안합니다.',
+      'jpa.는 창작자에게 필요한 집중과 교류, 환기의 순간을 연남동의 골목과 테라스, 주변 풍경 같은 일상과 연결했습니다. 과거 주택에서 카페와 공방으로 쓰여 온 대상지의 맥락을 재해석해, 한 기업이 한 층을 온전히 독립적으로 사용하며 자신들만의 문화를 구축할 수 있는 신축 오피스를 설계했습니다.'
+    ],
+    bodyEn: [
+      'Yeonnam-dong is an office for immersed creators by day, a hot spot with refined taste by night, and a local travel destination on weekends — a neighborhood with many faces (Poly face) that shift by the hour. Independent publishers, solo creators, design agencies, and content studios have gathered like puzzle pieces, shaping Yeonnam\'s distinctive identity as a harmony of creativity and everyday life.',
+      'Yet while creators\' ways of working evolve quickly, the old converted houses of the area have reached their limits, with inefficient layouts and cramped spaces holding back growth. Property Roastery\'s first project starts from this point. Making the most of a small but distinctive site, it proposes a new kind of workplace attuned to Yeonnam: the NEW WORK CULTURE OFFICE.',
+      'jpa. connected the moments of focus, exchange, and refreshment that creators need with the everyday fabric of Yeonnam — its alleys, terraces, and surrounding scenery. Reinterpreting the context of a site once used as a house, café, and workshop, jpa. designed a new office where each company can occupy an entire floor independently and build a culture of its own.'
+    ]
+  },
+  {
+    id: 'itaewon-value-up',
+    thumbnail: 'images/projects/itaewon-value-up.jpg?v=20261117',
+    images: [
+      'images/projects/itaewon-value-up-2.jpg?v=20261117',
+      'images/projects/itaewon-value-up-3.jpg?v=20261117',
+      'images/projects/itaewon-value-up-4.jpg?v=20261117',
+      'images/projects/itaewon-value-up-5.jpg?v=20261117'
+    ],
+    name: 'Property Itaewon Value-up',
+    nameKo: '경리단길 복합문화형 리테일',
+    desc: '경리단길 복합문화형 리테일',
+    category: 'Mixed-use',
+    location: 'SEOUL',
+    year: '2026',
+    client: 'Confidential',
+    scopeCode: 'DS · SP · SD',
+    scope: ['DEVELOPMENT', 'SPACE UX', 'DESIGN'],
+    summary: '경리단길은 한남동, 이태원, 해방촌을 잇는 결절점으로, 낮에는 로컬의 일상이, 밤과 주말에는 글로벌한 유동이 교차하는 곳입니다.',
+    body: [
+      '경리단길은 한남동, 이태원, 해방촌을 잇는 결절점으로, 낮에는 로컬의 일상이, 밤과 주말에는 글로벌한 유동이 교차하는 곳입니다. 여러 층위의 수요가 공존하는 이 상권은 최근 방문객 증가와 공실률 안정화를 거치며 새로운 회복의 흐름에 올라서 있습니다.',
+      '다만, 빠르게 진화하는 소비 방식에 비해 기존의 공간들은 여전히 과거의 틀에 머물러 있습니다. 이제 리테일은 \'얼마나 많이 파는가\'가 아니라 \'얼마나 오래 머무르는가\'를 전제로 설계되어야 합니다.',
+      '대상지는 경리단길 메인 스트리트와 직접 연결된 최적의 입지에, 남산을 정면으로 마주하는 파노라마 뷰를 품고 있습니다. 여기에 오랜 시간 자생력을 입증해 온 주변의 앵커 테넌트들이 더해져, 자연스러운 유입과 목적형 방문이 동시에 가능한 조건을 갖추고 있습니다. 본 프로젝트는 건물의 전 층을 하나의 완결된 브랜드 경험으로 확장하는 복합문화형 리테일을 제안합니다.'
+    ],
+    bodyEn: [
+      'Gyeongridan-gil is a junction linking Hannam-dong, Itaewon, and Haebangchon, where local daily life by day crosses paths with global foot traffic at night and on weekends. Home to many layers of demand, the district has recently entered a new phase of recovery, with growing visitor numbers and stabilizing vacancy rates.',
+      'Yet while consumption habits evolve rapidly, existing spaces remain bound to the frameworks of the past. Retail must now be designed not around how much it sells, but around how long people stay.',
+      'The site sits in a prime location directly connected to Gyeongridan-gil\'s main street and commands a panoramic view facing Namsan. Combined with surrounding anchor tenants that have long proven their resilience, it offers conditions for both natural walk-in traffic and destination visits. The project proposes a mixed-use cultural retail concept that extends every floor of the building into one complete brand experience.'
+    ]
+  },
+  {
     id: 'eternal-march',
     thumbnail: 'images/projects/march-wedding.jpg?v=20261023',
     images: [
@@ -342,13 +399,13 @@ window.PROJECTS = [
     id: 'innocean-hq',
     thumbnail: 'images/projects/innocean-hq.jpg',
     images: [
-      'images/projects/innocean-2.jpg',
-      'images/projects/innocean-3.jpg',
-      'images/projects/innocean-diagram-2.jpeg',
-      'images/projects/innocean-diagram-01.png?v=20261013',
-      'images/projects/innocean-diagram-02.png?v=20261013',
-      'images/projects/innocean-diagram-03.png?v=20261013',
-      'images/projects/innocean-diagram-04.png?v=20261013'
+      'images/projects/innocean-2.jpg?v=20261117',
+      'images/projects/innocean-3.jpg?v=20261117',
+      'images/projects/innocean-4.jpg?v=20261117',
+      'images/projects/innocean-5.jpg?v=20261117',
+      'images/projects/innocean-6.jpg?v=20261117',
+      'images/projects/innocean-7.jpg?v=20261117',
+      'images/projects/innocean-8.jpg?v=20261117'
     ],
     name: 'Innocean Headquarter',
     nameKo: '이노션 사옥',
