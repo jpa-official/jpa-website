@@ -642,7 +642,12 @@ window.PROJECTS = [
     id: 'nft-lifestyle-platform',
     thumbnail: 'images/projects/nft-lifestyle-platform.jpg',
     images: [
-      'images/projects/nft-lifestyle-platform-2.jpg'
+      'images/projects/nft-lifestyle-platform-2.jpg?v=20261120',
+      'images/projects/nft-lifestyle-platform-3.jpg?v=20261120',
+      'images/projects/nft-lifestyle-platform-4.jpg?v=20261120',
+      'images/projects/nft-lifestyle-platform-5.jpg?v=20261120',
+      'images/projects/nft-lifestyle-platform-6.jpg?v=20261120',
+      'images/projects/nft-lifestyle-platform-7.jpg?v=20261120'
     ],
     name: 'Healing Ground',
     nameKo: '건축 및 공간 NFT 라이프스타일 플랫폼',
@@ -665,7 +670,7 @@ window.PROJECTS = [
   },
   {
     id: 'lgbr-senior-residence',
-    thumbnail: 'images/projects/lgbr-senior-residence.jpg',
+    thumbnail: 'images/projects/lgbr-senior-residence.jpg?v=20261120',
     name: 'LGBR Senior Residence',
     nameKo: 'LGBR 공간연구소 시니어주거',
     desc: 'LGBR 공간연구소 시니어주거',
